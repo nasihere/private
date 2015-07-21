@@ -1,0 +1,64 @@
+﻿
+<div class="table-responsive" style="overflow-x:hidden">
+    <div class="row">
+        <div class="col-lg-6  ">
+            <div id="datatable_col_reorder_filter" class="dataTables_filter"><label class="pull-left "><span class="input-group-addon">
+                                                                                                           <i class="glyphicon glyphicon-search"></i>
+                                                                                                       </span> 
+                                                                                 <input type="search" ng-model="SearchRouterView" ng-init="SearchRouterView =''" class="form-control" placeholder="" aria-controls="datatable_col_reorder"></label></div>
+        </div>
+        <div class="col-lg-6">
+
+
+            <div class="  pull-right margin-right-5 ">
+                <div class="btn-group  ">
+                    <a class="btn btn-default" href="javascript:void(0);">Show / hide columns</a>
+                    <a class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);" aria-expanded="true"><span class="caret"></span></a>
+                    <ul class="dropdown-menu ">
+                        <li>
+                            <a ng-model="showhideName" ng-init="showhideName = true" ng-click="showhideName = !showhideName" href="javascript:void(0);">Name</a>
+                        </li>
+                        <li>
+                            <a ng-model="showhideURL" ng-init="showhideURL = true" ng-click="showhideURL = !showhideURL" href="javascript:void(0);">URL</a>
+                        </li>
+                        <li>
+                            <a ng-model="showhideViews" ng-init="showhideViews = true" ng-click="showhideViews = !showhideViews" href="javascript:void(0);">Views</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a ng-model="showhideController" ng-init="showhideController = true" ng-click="showhideController = !showhideController" href="javascript:void(0);">Controller</a>
+                        </li>
+                        <li>
+                            <a ng-init="showhideAccess = true" ng-model="showhideAccess" ng-click="showhideAccess = !showhideAccess" href="javascript:void(0);">Access</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div >
+        <table id="routerViewTable" class="table table-hover table-striped">
+            <thead>
+                <tr>
+                    <th ng-show="showhideName">Name</th>
+                    <th ng-show="showhideURL">URL</th>
+                    <th ng-show="showhideViews">Views</th>
+                    <th ng-show="showhideController">Controller</th>
+                    <th ng-show="showhideAccess">Access</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="repeatRouter" ng-repeat="item in StateURL | filter : SearchRouterView">
+                    <td ng-show="showhideName">{{item.name}}</td>
+                    <td ng-show="showhideURL">{{item.url}}</td>
+                    <td ng-show="showhideViews">{{item.views[""].templateUrl}}</td>
+                    <td ng-show="showhideController">{{item.views[""].controller}}</td>
+                    <td ng-show="showhideAccess">{{item.data.authorizedRoles}}</td>
+                </tr>
+
+        </table>
+    </div>
+</div>
+<script>
+    appinit();
+</script>

@@ -1,0 +1,484 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'msnodesql' ]
+2 info using npm@2.11.3
+3 info using node@v0.12.7
+4 verbose install initial load of c:\Nasir\nodejs\myapp\package.json
+5 warn package.json nasirapp@0.0.1 No repository field.
+6 warn package.json nasirapp@0.0.1 No README data
+7 warn package.json nasirapp@0.0.1 license should be a valid SPDX license expression
+8 verbose installManyTop reading scoped package data from c:\Nasir\nodejs\myapp\node_modules\express\package.json
+9 verbose readDependencies loading dependencies from c:\Nasir\nodejs\myapp\package.json
+10 silly cache add args [ 'msnodesql', null ]
+11 verbose cache add spec msnodesql
+12 silly cache add parsed spec { raw: 'msnodesql',
+12 silly cache add   scope: null,
+12 silly cache add   name: 'msnodesql',
+12 silly cache add   rawSpec: '',
+12 silly cache add   spec: '*',
+12 silly cache add   type: 'range' }
+13 silly addNamed msnodesql@*
+14 verbose addNamed "*" is a valid semver range for msnodesql
+15 silly addNameRange { name: 'msnodesql', range: '*', hasData: false }
+16 silly mapToRegistry name msnodesql
+17 silly mapToRegistry using default registry
+18 silly mapToRegistry registry http://registry.npmjs.org/
+19 silly mapToRegistry uri http://registry.npmjs.org/msnodesql
+20 verbose addNameRange registry:http://registry.npmjs.org/msnodesql not in flight; fetching
+21 verbose request uri http://registry.npmjs.org/msnodesql
+22 verbose request no auth needed
+23 info attempt registry request try #1 at 10:50:23 AM
+24 verbose request id 1b6c3d6470bc1ceb
+25 http request GET http://registry.npmjs.org/msnodesql
+26 http 403 http://registry.npmjs.org/msnodesql
+27 verbose bad json <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+27 verbose bad json <html><head>
+27 verbose bad json <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+27 verbose bad json <title>ERROR: The requested URL could not be retrieved</title>
+27 verbose bad json <style type="text/css"><!--
+27 verbose bad json  /*
+27 verbose bad json  Stylesheet for Squid Error pages
+27 verbose bad json  Adapted from design by Free CSS Templates
+27 verbose bad json  http://www.freecsstemplates.org
+27 verbose bad json  Released for free under a Creative Commons Attribution 2.5 License
+27 verbose bad json */
+27 verbose bad json
+27 verbose bad json /* Page basics */
+27 verbose bad json * {
+27 verbose bad json 	font-family: verdana, sans-serif;
+27 verbose bad json }
+27 verbose bad json
+27 verbose bad json html body {
+27 verbose bad json 	margin: 0;
+27 verbose bad json 	padding: 0;
+27 verbose bad json 	background: #efefef;
+27 verbose bad json 	font-size: 12px;
+27 verbose bad json 	color: #1e1e1e;
+27 verbose bad json }
+27 verbose bad json
+27 verbose bad json /* Page displayed title area */
+27 verbose bad json #titles {
+27 verbose bad json 	margin-left: 15px;
+27 verbose bad json 	padding: 10px;
+27 verbose bad json 	padding-left: 100px;
+27 verbose bad json 	background: url('http://www.squid-cache.org/Artwork/SN.png') no-repeat left;
+27 verbose bad json }
+27 verbose bad json
+27 verbose bad json /* initial title */
+27 verbose bad json #titles h1 {
+27 verbose bad json 	color: #000000;
+27 verbose bad json }
+27 verbose bad json #titles h2 {
+27 verbose bad json 	color: #000000;
+27 verbose bad json }
+27 verbose bad json
+27 verbose bad json /* special event: FTP success page titles */
+27 verbose bad json #titles ftpsuccess {
+27 verbose bad json 	background-color:#00ff00;
+27 verbose bad json 	width:100%;
+27 verbose bad json }
+27 verbose bad json
+27 verbose bad json /* Page displayed body content area */
+27 verbose bad json #content {
+27 verbose bad json 	padding: 10px;
+27 verbose bad json 	background: #ffffff;
+27 verbose bad json }
+27 verbose bad json
+27 verbose bad json /* General text */
+27 verbose bad json p {
+27 verbose bad json }
+27 verbose bad json
+27 verbose bad json /* error brief description */
+27 verbose bad json #error p {
+27 verbose bad json }
+27 verbose bad json
+27 verbose bad json /* some data which may have caused the problem */
+27 verbose bad json #data {
+27 verbose bad json }
+27 verbose bad json
+27 verbose bad json /* the error message received from the system or other software */
+27 verbose bad json #sysmsg {
+27 verbose bad json }
+27 verbose bad json
+27 verbose bad json pre {
+27 verbose bad json     font-family:sans-serif;
+27 verbose bad json }
+27 verbose bad json
+27 verbose bad json /* special event: FTP / Gopher directory listing */
+27 verbose bad json #dirmsg {
+27 verbose bad json     font-family: courier;
+27 verbose bad json     color: black;
+27 verbose bad json     font-size: 10pt;
+27 verbose bad json }
+27 verbose bad json #dirlisting {
+27 verbose bad json     margin-left: 2%;
+27 verbose bad json     margin-right: 2%;
+27 verbose bad json }
+27 verbose bad json #dirlisting tr.entry td.icon,td.filename,td.size,td.date {
+27 verbose bad json     border-bottom: groove;
+27 verbose bad json }
+27 verbose bad json #dirlisting td.size {
+27 verbose bad json     width: 50px;
+27 verbose bad json     text-align: right;
+27 verbose bad json     padding-right: 5px;
+27 verbose bad json }
+27 verbose bad json
+27 verbose bad json /* horizontal lines */
+27 verbose bad json hr {
+27 verbose bad json 	margin: 0;
+27 verbose bad json }
+27 verbose bad json
+27 verbose bad json /* page displayed footer area */
+27 verbose bad json #footer {
+27 verbose bad json 	font-size: 9px;
+27 verbose bad json 	padding-left: 10px;
+27 verbose bad json }
+27 verbose bad json
+27 verbose bad json
+27 verbose bad json body
+27 verbose bad json :lang(fa) { direction: rtl; font-size: 100%; font-family: Tahoma, Roya, sans-serif; float: right; }
+27 verbose bad json :lang(he) { direction: rtl; float: right; }
+27 verbose bad json  --></style>
+27 verbose bad json </head><body>
+27 verbose bad json <div id="titles">
+27 verbose bad json <h1>ERROR</h1>
+27 verbose bad json <h2>The requested URL could not be retrieved</h2>
+27 verbose bad json </div>
+27 verbose bad json <hr>
+27 verbose bad json
+27 verbose bad json <div id="content">
+27 verbose bad json <p>The following error was encountered while trying to retrieve the URL: <a href="http://registry.npmjs.org/msnodesql">http://registry.npmjs.org/msnodesql</a></p>
+27 verbose bad json
+27 verbose bad json <blockquote id="error">
+27 verbose bad json <p><b>Access Denied.</b></p>
+27 verbose bad json </blockquote>
+27 verbose bad json
+27 verbose bad json <p>Access control configuration prevents your request from being allowed at this time. Please contact your service provider if you feel this is incorrect.</p>
+27 verbose bad json
+27 verbose bad json <p>Your cache administrator is <a href="mailto:root?subject=CacheErrorInfo%20-%20ERR_ACCESS_DENIED&amp;body=CacheHost%3A%20deadend-sv.wellsfargo.com%0D%0AErrPage%3A%20ERR_ACCESS_DENIED%0D%0AErr%3A%20%5Bnone%5D%0D%0ATimeStamp%3A%20Mon,%2020%20Jul%202015%2017%3A50%3A24%20GMT%0D%0A%0D%0AClientIP%3A%2010.13.91.182%0D%0A%0D%0AHTTP%20Request%3A%0D%0AGET%20%2Fmsnodesql%20HTTP%2F1.1%0AAccept-Encoding%3A%20gzip%0D%0Aversion%3A%202.11.3%0D%0AAccept%3A%20application%2Fjson%0D%0AReferer%3A%20install%20msnodesql%0D%0Anpm-session%3A%201b6c3d6470bc1ceb%0D%0AUser-Agent%3A%20npm%2F2.11.3%20node%2Fv0.12.7%20win32%20x64%0D%0AHost%3A%20registry.npmjs.org%0D%0AConnection%3A%20keep-alive%0D%0A%0D%0A%0D%0A">root</a>.</p>
+27 verbose bad json <br>
+27 verbose bad json </div>
+27 verbose bad json
+27 verbose bad json <hr>
+27 verbose bad json <div id="footer">
+27 verbose bad json <p>Generated Mon, 20 Jul 2015 17:50:24 GMT by deadend-sv.wellsfargo.com (squid/3.1.10)</p>
+27 verbose bad json <!-- ERR_ACCESS_DENIED -->
+27 verbose bad json </div>
+27 verbose bad json </body></html>
+28 error registry error parsing json
+29 verbose headers { server: 'squid/3.1.10',
+29 verbose headers   'mime-version': '1.0',
+29 verbose headers   date: 'Mon, 20 Jul 2015 17:50:24 GMT',
+29 verbose headers   'content-type': 'text/html',
+29 verbose headers   'content-length': '3380',
+29 verbose headers   'x-squid-error': 'ERR_ACCESS_DENIED 0',
+29 verbose headers   vary: 'Accept-Language',
+29 verbose headers   'content-language': 'en',
+29 verbose headers   'x-cache': 'MISS from deadend-sv.wellsfargo.com',
+29 verbose headers   'x-cache-lookup': 'NONE from deadend-sv.wellsfargo.com:3128',
+29 verbose headers   via: '1.0 deadend-sv.wellsfargo.com (squid/3.1.10)',
+29 verbose headers   connection: 'close' }
+30 silly get cb [ 403,
+30 silly get   { server: 'squid/3.1.10',
+30 silly get     'mime-version': '1.0',
+30 silly get     date: 'Mon, 20 Jul 2015 17:50:24 GMT',
+30 silly get     'content-type': 'text/html',
+30 silly get     'content-length': '3380',
+30 silly get     'x-squid-error': 'ERR_ACCESS_DENIED 0',
+30 silly get     vary: 'Accept-Language',
+30 silly get     'content-language': 'en',
+30 silly get     'x-cache': 'MISS from deadend-sv.wellsfargo.com',
+30 silly get     'x-cache-lookup': 'NONE from deadend-sv.wellsfargo.com:3128',
+30 silly get     via: '1.0 deadend-sv.wellsfargo.com (squid/3.1.10)',
+30 silly get     connection: 'close' } ]
+31 verbose stack SyntaxError: Unexpected token <
+31 verbose stack <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+31 verbose stack <html><head>
+31 verbose stack <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+31 verbose stack <title>ERROR: The requested URL could not be retrieved</title>
+31 verbose stack <style type="text/css"><!--
+31 verbose stack  /*
+31 verbose stack  Stylesheet for Squid Error pages
+31 verbose stack  Adapted from design by Free CSS Templates
+31 verbose stack  http://www.freecsstemplates.org
+31 verbose stack  Released for free under a Creative Commons Attribution 2.5 License
+31 verbose stack */
+31 verbose stack
+31 verbose stack /* Page basics */
+31 verbose stack * {
+31 verbose stack 	font-family: verdana, sans-serif;
+31 verbose stack }
+31 verbose stack
+31 verbose stack html body {
+31 verbose stack 	margin: 0;
+31 verbose stack 	padding: 0;
+31 verbose stack 	background: #efefef;
+31 verbose stack 	font-size: 12px;
+31 verbose stack 	color: #1e1e1e;
+31 verbose stack }
+31 verbose stack
+31 verbose stack /* Page displayed title area */
+31 verbose stack #titles {
+31 verbose stack 	margin-left: 15px;
+31 verbose stack 	padding: 10px;
+31 verbose stack 	padding-left: 100px;
+31 verbose stack 	background: url('http://www.squid-cache.org/Artwork/SN.png') no-repeat left;
+31 verbose stack }
+31 verbose stack
+31 verbose stack /* initial title */
+31 verbose stack #titles h1 {
+31 verbose stack 	color: #000000;
+31 verbose stack }
+31 verbose stack #titles h2 {
+31 verbose stack 	color: #000000;
+31 verbose stack }
+31 verbose stack
+31 verbose stack /* special event: FTP success page titles */
+31 verbose stack #titles ftpsuccess {
+31 verbose stack 	background-color:#00ff00;
+31 verbose stack 	width:100%;
+31 verbose stack }
+31 verbose stack
+31 verbose stack /* Page displayed body content area */
+31 verbose stack #content {
+31 verbose stack 	padding: 10px;
+31 verbose stack 	background: #ffffff;
+31 verbose stack }
+31 verbose stack
+31 verbose stack /* General text */
+31 verbose stack p {
+31 verbose stack }
+31 verbose stack
+31 verbose stack /* error brief description */
+31 verbose stack #error p {
+31 verbose stack }
+31 verbose stack
+31 verbose stack /* some data which may have caused the problem */
+31 verbose stack #data {
+31 verbose stack }
+31 verbose stack
+31 verbose stack /* the error message received from the system or other software */
+31 verbose stack #sysmsg {
+31 verbose stack }
+31 verbose stack
+31 verbose stack pre {
+31 verbose stack     font-family:sans-serif;
+31 verbose stack }
+31 verbose stack
+31 verbose stack /* special event: FTP / Gopher directory listing */
+31 verbose stack #dirmsg {
+31 verbose stack     font-family: courier;
+31 verbose stack     color: black;
+31 verbose stack     font-size: 10pt;
+31 verbose stack }
+31 verbose stack #dirlisting {
+31 verbose stack     margin-left: 2%;
+31 verbose stack     margin-right: 2%;
+31 verbose stack }
+31 verbose stack #dirlisting tr.entry td.icon,td.filename,td.size,td.date {
+31 verbose stack     border-bottom: groove;
+31 verbose stack }
+31 verbose stack #dirlisting td.size {
+31 verbose stack     width: 50px;
+31 verbose stack     text-align: right;
+31 verbose stack     padding-right: 5px;
+31 verbose stack }
+31 verbose stack
+31 verbose stack /* horizontal lines */
+31 verbose stack hr {
+31 verbose stack 	margin: 0;
+31 verbose stack }
+31 verbose stack
+31 verbose stack /* page displayed footer area */
+31 verbose stack #footer {
+31 verbose stack 	font-size: 9px;
+31 verbose stack 	padding-left: 10px;
+31 verbose stack }
+31 verbose stack
+31 verbose stack
+31 verbose stack body
+31 verbose stack :lang(fa) { direction: rtl; font-size: 100%; font-family: Tahoma, Roya, sans-serif; float: right; }
+31 verbose stack :lang(he) { direction: rtl; float: right; }
+31 verbose stack  --></style>
+31 verbose stack </head><body>
+31 verbose stack <div id="titles">
+31 verbose stack <h1>ERROR</h1>
+31 verbose stack <h2>The requested URL could not be retrieved</h2>
+31 verbose stack </div>
+31 verbose stack <hr>
+31 verbose stack
+31 verbose stack <div id="content">
+31 verbose stack <p>The following error was encountered while trying to retrieve the URL: <a href="http://registry.npmjs.org/msnodesql">http://registry.npmjs.org/msnodesql</a></p>
+31 verbose stack
+31 verbose stack <blockquote id="error">
+31 verbose stack <p><b>Access Denied.</b></p>
+31 verbose stack </blockquote>
+31 verbose stack
+31 verbose stack <p>Access control configuration prevents your request from being allowed at this time. Please contact your service provider if you feel this is incorrect.</p>
+31 verbose stack
+31 verbose stack <p>Your cache administrator is <a href="mailto:root?subject=CacheErrorInfo%20-%20ERR_ACCESS_DENIED&amp;body=CacheHost%3A%20deadend-sv.wellsfargo.com%0D%0AErrPage%3A%20ERR_ACCESS_DENIED%0D%0AErr%3A%20%5Bnone%5D%0D%0ATimeStamp%3A%20Mon,%2020%20Jul%202015%2017%3A50%3A24%20GMT%0D%0A%0D%0AClientIP%3A%2010.13.91.182%0D%0A%0D%0AHTTP%20Request%3A%0D%0AGET%20%2Fmsnodesql%20HTTP%2F1.1%0AAccept-Encoding%3A%20gzip%0D%0Aversion%3A%202.11.3%0D%0AAccept%3A%20application%2Fjson%0D%0AReferer%3A%20install%20msnodesql%0D%0Anpm-session%3A%201b6c3d6470bc1ceb%0D%0AUser-Agent%3A%20npm%2F2.11.3%20node%2Fv0.12.7%20win32%20x64%0D%0AHost%3A%20registry.npmjs.org%0D%0AConnection%3A%20keep-alive%0D%0A%0D%0A%0D%0A">root</a>.</p>
+31 verbose stack <br>
+31 verbose stack </div>
+31 verbose stack
+31 verbose stack <hr>
+31 verbose stack <div id="footer">
+31 verbose stack <p>Generated Mon, 20 Jul 2015 17:50:24 GMT by deadend-sv.wellsfargo.com (squid/3.1.10)</p>
+31 verbose stack <!-- ERR_ACCESS_DENIED -->
+31 verbose stack </div>
+31 verbose stack </body></html>
+31 verbose stack
+31 verbose stack     at Object.parse (native)
+31 verbose stack     at CachingRegistryClient.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:197:23)
+31 verbose stack     at Request._callback (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:170:14)
+31 verbose stack     at Request.self.callback (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:354:22)
+31 verbose stack     at Request.emit (events.js:110:17)
+31 verbose stack     at Request.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:1207:14)
+31 verbose stack     at Request.emit (events.js:129:20)
+31 verbose stack     at IncomingMessage.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:1153:12)
+31 verbose stack     at IncomingMessage.emit (events.js:129:20)
+31 verbose stack     at _stream_readable.js:908:16
+32 verbose cwd c:\Nasir\nodejs\myapp
+33 error Windows_NT 6.1.7601
+34 error argv "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "msnodesql"
+35 error node v0.12.7
+36 error npm  v2.11.3
+37 error Unexpected token <
+37 error <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+37 error <html><head>
+37 error <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+37 error <title>ERROR: The requested URL could not be retrieved</title>
+37 error <style type="text/css"><!--
+37 error  /*
+37 error  Stylesheet for Squid Error pages
+37 error  Adapted from design by Free CSS Templates
+37 error  http://www.freecsstemplates.org
+37 error  Released for free under a Creative Commons Attribution 2.5 License
+37 error */
+37 error
+37 error /* Page basics */
+37 error * {
+37 error 	font-family: verdana, sans-serif;
+37 error }
+37 error
+37 error html body {
+37 error 	margin: 0;
+37 error 	padding: 0;
+37 error 	background: #efefef;
+37 error 	font-size: 12px;
+37 error 	color: #1e1e1e;
+37 error }
+37 error
+37 error /* Page displayed title area */
+37 error #titles {
+37 error 	margin-left: 15px;
+37 error 	padding: 10px;
+37 error 	padding-left: 100px;
+37 error 	background: url('http://www.squid-cache.org/Artwork/SN.png') no-repeat left;
+37 error }
+37 error
+37 error /* initial title */
+37 error #titles h1 {
+37 error 	color: #000000;
+37 error }
+37 error #titles h2 {
+37 error 	color: #000000;
+37 error }
+37 error
+37 error /* special event: FTP success page titles */
+37 error #titles ftpsuccess {
+37 error 	background-color:#00ff00;
+37 error 	width:100%;
+37 error }
+37 error
+37 error /* Page displayed body content area */
+37 error #content {
+37 error 	padding: 10px;
+37 error 	background: #ffffff;
+37 error }
+37 error
+37 error /* General text */
+37 error p {
+37 error }
+37 error
+37 error /* error brief description */
+37 error #error p {
+37 error }
+37 error
+37 error /* some data which may have caused the problem */
+37 error #data {
+37 error }
+37 error
+37 error /* the error message received from the system or other software */
+37 error #sysmsg {
+37 error }
+37 error
+37 error pre {
+37 error     font-family:sans-serif;
+37 error }
+37 error
+37 error /* special event: FTP / Gopher directory listing */
+37 error #dirmsg {
+37 error     font-family: courier;
+37 error     color: black;
+37 error     font-size: 10pt;
+37 error }
+37 error #dirlisting {
+37 error     margin-left: 2%;
+37 error     margin-right: 2%;
+37 error }
+37 error #dirlisting tr.entry td.icon,td.filename,td.size,td.date {
+37 error     border-bottom: groove;
+37 error }
+37 error #dirlisting td.size {
+37 error     width: 50px;
+37 error     text-align: right;
+37 error     padding-right: 5px;
+37 error }
+37 error
+37 error /* horizontal lines */
+37 error hr {
+37 error 	margin: 0;
+37 error }
+37 error
+37 error /* page displayed footer area */
+37 error #footer {
+37 error 	font-size: 9px;
+37 error 	padding-left: 10px;
+37 error }
+37 error
+37 error
+37 error body
+37 error :lang(fa) { direction: rtl; font-size: 100%; font-family: Tahoma, Roya, sans-serif; float: right; }
+37 error :lang(he) { direction: rtl; float: right; }
+37 error  --></style>
+37 error </head><body>
+37 error <div id="titles">
+37 error <h1>ERROR</h1>
+37 error <h2>The requested URL could not be retrieved</h2>
+37 error </div>
+37 error <hr>
+37 error
+37 error <div id="content">
+37 error <p>The following error was encountered while trying to retrieve the URL: <a href="http://registry.npmjs.org/msnodesql">http://registry.npmjs.org/msnodesql</a></p>
+37 error
+37 error <blockquote id="error">
+37 error <p><b>Access Denied.</b></p>
+37 error </blockquote>
+37 error
+37 error <p>Access control configuration prevents your request from being allowed at this time. Please contact your service provider if you feel this is incorrect.</p>
+37 error
+37 error <p>Your cache administrator is <a href="mailto:root?subject=CacheErrorInfo%20-%20ERR_ACCESS_DENIED&amp;body=CacheHost%3A%20deadend-sv.wellsfargo.com%0D%0AErrPage%3A%20ERR_ACCESS_DENIED%0D%0AErr%3A%20%5Bnone%5D%0D%0ATimeStamp%3A%20Mon,%2020%20Jul%202015%2017%3A50%3A24%20GMT%0D%0A%0D%0AClientIP%3A%2010.13.91.182%0D%0A%0D%0AHTTP%20Request%3A%0D%0AGET%20%2Fmsnodesql%20HTTP%2F1.1%0AAccept-Encoding%3A%20gzip%0D%0Aversion%3A%202.11.3%0D%0AAccept%3A%20application%2Fjson%0D%0AReferer%3A%20install%20msnodesql%0D%0Anpm-session%3A%201b6c3d6470bc1ceb%0D%0AUser-Agent%3A%20npm%2F2.11.3%20node%2Fv0.12.7%20win32%20x64%0D%0AHost%3A%20registry.npmjs.org%0D%0AConnection%3A%20keep-alive%0D%0A%0D%0A%0D%0A">root</a>.</p>
+37 error <br>
+37 error </div>
+37 error
+37 error <hr>
+37 error <div id="footer">
+37 error <p>Generated Mon, 20 Jul 2015 17:50:24 GMT by deadend-sv.wellsfargo.com (squid/3.1.10)</p>
+37 error <!-- ERR_ACCESS_DENIED -->
+37 error </div>
+37 error </body></html>
+38 error If you need help, you may report this error at:
+38 error     <https://github.com/npm/npm/issues>
+39 verbose exit [ 1, true ]

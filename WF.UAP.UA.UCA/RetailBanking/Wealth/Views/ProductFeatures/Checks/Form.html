@@ -1,0 +1,70 @@
+﻿ <h3 ng-show="temp_chk == 'Y'" class="georgia underlined marginbottom10" style="text-align: left; margin-left: 40px; margin-right: 50px"><span>Checks</span></h3>
+<div class="containerZ"  ng-show="isChecksApplicable() == true">
+    <div class="leftz text-right">Would you like to add Checks?<span class="star">*</span></div>
+    <div class="rightz col-lg-12">
+        <select valid="select" class="select"  ng-model="Check.checksInd"
+                ng-options="type.key as type.value for type in common.SelectYesNo" style="width: 50px">
+        </select>
+    </div>
+</div>
+
+<div class="row"  ng-show="Check.checksInd == 'Y'">
+    <!-- TOP ROW  CONTENT STARTS -->
+     
+
+    <div class="containerz marginbottom10">
+        <div class="containerz margintop10">
+            <div class="leftz">
+                <div class="text-right">Delivery Address:<span class="star">*</span></div>
+            </div>
+            <div class="rightz col-lg-12">
+                <select valid="select" vminval="0" class="select" ng-model="Check.deliveryAddress" ng-options="type.key as type.value for type in common.ddCheckDeliveryAddress" style="width: 400px"></select>
+            </div>
+        </div>
+        <div>
+            <div ng-if="Check.deliveryAddress == 'C'" class="containerz">
+                <div class="leftz">
+                    <div class="text-right">Address Line 1:<span class="star">*</span></div>
+                </div>
+                <div class="rightz">
+                    <input  type="text" valid="text" ng-model="Check.addressLine1" name="text" maxlength="30">
+                </div>
+            </div>
+            <div ng-if="Check.deliveryAddress == 'C'" class="containerz">
+                <div class="leftz">
+                    <div class="text-right">Address Line 2:</div>
+                </div>
+                <div class="rightz">
+                    <input type="text"  ng-model="Check.addressLine2" name="text" maxlength="30">
+                </div>
+            </div>
+            <div ng-if="Check.deliveryAddress == 'C'"  class="containerz">
+                <div class="leftz">
+                    <div class="text-right">City:<span class="star">*</span></div>
+                </div>
+                <div class="rightz">
+                    <input type="text" valid="text"  ng-model="Check.city" name="text" maxlength="25">
+                </div>
+            </div>
+            <div ng-show="Check.deliveryAddress == 'C'" class="containerz">
+                <div class="leftz ">
+                    <div class="text-right">State:<span class="star">*</span></div>
+                </div>
+                <div class="rightz col-lg-12">
+                    <select  valid="select" vminval="0"  class="select" ng-model="Check.state" style="width: 250px; z-index: 10; opacity: 0; -webkit-appearance: none;">
+                        <option ng-selected="c.abbreviation == '{{Check.state}}'" ng-repeat="c in common.usStates" value="{{c.abbreviation}}">{{c.name}}</option>
+                    </select>
+                    <span class="select">Select</span>
+                </div>
+            </div>
+            <div ng-if="Check.deliveryAddress == 'C'"  class="containerz">
+                <div class="leftz">
+                    <div class="text-right">Zip:<span class="star">*</span></div>
+                </div>
+                <div class="rightz">
+                    <input valid="text"  type="text" ng-model="Check.zip" name="text" maxlength="9">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

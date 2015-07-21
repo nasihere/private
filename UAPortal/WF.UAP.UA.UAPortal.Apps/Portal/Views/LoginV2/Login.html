@@ -1,0 +1,69 @@
+﻿	
+		<section id="authenty_preview">
+			<section id="signin_main" class="authenty signin-main">
+				<div class="section-content">
+				  <div class="wrap">
+					  <div class="container">	  
+							<div class="form-wrap">
+                                <div class="row" ng-controller="LoginController">
+                                    <div class="title hidden-xs" data-animation="fadeInDown" data-animation-delay=".8s">
+                                        <h1>Universal App</h1>
+                                        <h5>You have accessed a private computer system. Unauthorized access, use, connection, or entry is not permitted and constitutes a crime punishable by law. </h5>
+                                        <h5>{{Verbiage}}</h5>
+                                    </div>
+                                    <div id="form_1" data-animation="bounceIn">
+                                        <div class="form-header">
+                                            <img src="Content/img/wf_login_back.png"></img>
+                                        </div>
+                                        <!--div class="toolbar center">
+                                            <div class="tabs">
+                                                <ul>
+                                                    <li class="tabitem active"><a href="javascript:void(0)" ng-click="credentials.IsAdEntId = true;Verbiage='Ad-Ent Login'">Ad-Ent<span></span></a></li>
+                                                    <li class="tabitem"><a href="javascript:void(0)" ng-click="credentials.IsAdEntId = false;Verbiage='Top Secret Login'">Top Secret<span></span></a></li>
+                                                </ul>
+                                            </div>
+
+                                        </!--div-->
+                                        <div  style="background-color: white;" ng-show="LoadingFlag">
+                                            <img src="Content/img/ajx-loading.gif" style="margin:0 0 0 59px" />
+                                        </div>
+                                        <div class="shd form-main" ng-hide="LoadingFlag">
+                                            <form name="loginForm"
+                                                  ng-submit="login(credentials)" method="post" novalidate form-autofill-fix>
+
+                                                <div class="form-group">
+                                                    <input type="text" id="un_1" class="form-control" ng-model="credentials.username" placeholder="Username" required="required">
+                                                    <input type="password" id="pw_1" class="form-control" ng-model="credentials.password" placeholder=" password" required="required">
+                                                    <select class="form-control loginitem" ng-model="credentials.IsAdEntId">
+                                                        <option value="true" selected>Ad-Ent {{" "}}</option>
+                                                        <option value="false">Top Secret</option>
+                                                    </select>
+  </div>
+                                                <button id="signIn_1" type="submit" class="btn btn-block signin">Sign In</button>
+                                            </form>
+                                        </div>
+                                        <div class="form-footer" ng-hide="LoadingFlag">
+                                            <div class="row">
+                                                <div class="col-xs-7">
+                                                    <i class="fa fa-unlock-alt"></i>
+                                                    <a href="https://password.wellsfargo.com"
+                                                       target="_BLANk" id="forgot_from_1">Forgot password?</a>
+                                                </div>
+
+                                                <div class="col-xs-5 ">
+                                                    <i class="fa fa-check"></i>
+                                                    <a ui-sref="Debug-User-Registration" id="signup_from_1">Sign Up</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+							</div>
+					  </div>
+				  </div>
+				</div>
+			</section>
+		
+	
+		</section>	
+	

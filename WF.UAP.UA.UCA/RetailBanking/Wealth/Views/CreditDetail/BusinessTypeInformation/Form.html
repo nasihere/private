@@ -1,0 +1,71 @@
+﻿<div class="row">
+    <div class="leftz">
+        <div class="formset clearfix col col-lg-12 col-md-8 col-sm-8 col-xs-12 margintop10 marginbottom0">
+
+           
+            <dl ng-show="isOthersInBusinessTypeApplicable()">
+                <dt>
+                    <span class="leftnormallabel">Business Tax ID:</span><span class="star">*</span>
+                </dt>
+                <dd>
+                    <input valid="text" vmax="10" vmsg="Business Tax ID required" data-ng-model="businessTypeInfo.businessTaxId" type="text" name="text" class="" maxlength="10">
+                </dd>
+                <dt>
+                    <span class="leftnormallabel">Business Name:</span><span class="star">*</span>
+                </dt>
+                <dd>
+                    <input valid="text" vmax="50" vmsg="Business Name required" data-ng-model="businessTypeInfo.businessName" type="text" name="text" class="" maxlength="50">
+                </dd>
+                <dt>
+                    <span class="leftnormallabel">Business Type:</span><span class="star">*</span>
+                </dt>
+                <dd>
+                    <select valid="select" vminval="0" vmsg="Business Type required" class="select" ng-model="businessTypeInfo.businessType" style="width: 220px"
+                        ng-options="type.key as type.value for type in common.ddBusinessType">
+                    </select>
+                </dd>
+            </dl>
+        </div>
+    </div>
+    <div class="rightz">
+         
+        <div class="formset clearfix col col-lg-12 col-md-8 col-sm-8 col-xs-12 margintop10 marginbottom0">
+            <dl ng-show="isOthersInBusinessTypeApplicable()">
+                <dt class="hide">
+                    <span class="leftnormallabel"># Members/Officers-All:</span>
+                </dt>
+                <dd class="hide">
+                    <select class="select" ng-model="businessTypeInfo.membersOrOfficersAll" style="width: 160px"
+                        ng-options="type.key as type.value for type in common.ddMembersOfficers">
+                    </select>
+                </dd>
+                <dt class="hide">
+                    <span class="leftnormallabel">Guarantor:</span>
+                </dt>
+                <dd class="hide">
+                    <select class="select" ng-model="businessTypeInfo.guarantor" style="width: 160px"
+                        ng-options="type.key as type.value for type in common.SelectYesNo">
+                    </select>
+                </dd>
+                <dt class="hide">
+                    <span class="leftnormallabel"># Members/Officers-Corp:</span>
+                </dt>
+                <dd class="hide">
+                    <select class="select" ng-model="businessTypeInfo.membersOrOfficersCorp" style="width: 160px"
+                        ng-options="type.key as type.value for type in common.ddMembersOfficers">
+                    </select>
+                </dd>
+                <dt>
+                    <span class="leftnormallabel">Secretary:</span>
+                </dt>
+                <dd>
+                    <input valid="^[a-zA-Z0-9\s]*$" vmsg="Secretary: Only alpha numeric allowed" data-ng-model="businessTypeInfo.secretary" type="text" name="text" class="" maxlength="50">
+                </dd>
+                <dt></dt>
+                <dd></dd>
+            </dl>
+        </div>
+    </div>
+</div>
+<br/>
+

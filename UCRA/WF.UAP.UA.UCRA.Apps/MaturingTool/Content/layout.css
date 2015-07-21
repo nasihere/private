@@ -1,0 +1,631 @@
+﻿body {
+    background-color: #EBEAE3;
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    height: 100%;
+    line-height: 1.2em;
+    margin: 0;
+    padding: 0;
+}
+
+.bold { font-weight: bold; }
+
+.italic { font-style: italic; }
+
+
+.wrapper {
+    background-color: transparent;
+    height: 100%;
+    height: auto;
+    margin: 0 auto 0 auto;
+    padding: 48px 0 0 0;
+    position: relative;
+    width: 980px;
+}
+
+.header {
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 980px;
+}
+
+.header .banner {
+    background-color: #d4e2f8;
+    float: left;
+    height: 39px;
+    margin: 0;
+    padding: 0;
+    width: 980px;
+}
+
+.header .banner .logo {
+    background-image: url('../../images/bg_logo.jpg');
+    background-position: top left;
+    background-repeat: no-repeat;
+    color: #333;
+    display: inline-block;
+    font-size: 1.1em;
+    font-weight: bold;
+    height: 39px;
+    line-height: 22px;
+    margin: 0;
+    min-width: 391px;
+    padding: 0 0 0 100px;
+    text-decoration: none;
+}
+
+.header .banner .title {
+    float: left;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 0;
+    padding: 10px 10px 0 10px;
+    width: auto;
+}
+
+/*
+div.header div.banner div.toolbox
+{
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    display: inline;
+    position : absolute;
+    top : 0;
+    left : 180px;
+    z-index : 5;
+}
+div.header div.banner div.toolbox ul
+{
+    list-style-image: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 2px 0 0;
+}
+div.header div.banner div.toolbox ul li
+{
+    border-right: 1px solid #CCCCCC;
+    color: #333333;
+    float: left;
+    font-size: 0.9em;
+    font-weight : bold;
+    margin: 0;
+    padding: 0 5px;
+}
+div.header div.banner div.toolbox ul li.last
+{
+    border-right: 0 solid #CCCCCC;
+}
+div.header div.banner .info
+{
+    float : left;
+    padding : 0;
+    left : auto !important;
+    right : 7px;   
+    font-weight : normal; 
+}
+.header .banner .toolboxContainer
+{
+    float: left;
+    width: 980px;
+    margin: 0;
+    padding: 0;
+    background-color: #ccc;
+}*/
+
+.header .messages, .messages {
+    color: Red;
+    float: left;
+    margin: 0;
+    padding: 10px;
+    width: 980px;
+    width: 960px;
+}
+
+.main-banner {
+    background: none;
+    background-color: #FFFFFF;
+    float: left;
+    font-size: 1.2em;
+    margin: 0;
+    padding: 5px 2px 5px 2px;
+    text-transform: none;
+    width: 980px;
+    width: 972px;
+}
+
+.main-banner .app-banner {
+    float: left;
+    font-size: .7em;
+    height: 160px;
+    height: auto;
+    text-align: left;
+    width: 972px;
+}
+
+.main-banner .buttons { padding: 2px 0 2px 0; }
+
+.main-banner .app-banner img { float: left; }
+
+.main-banner .app-banner span.bold { font-weight: bold; }
+
+.main-banner .app-banner table.tbl-banner {
+    color: #333;
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 976px;
+}
+
+.main-banner .app-banner table.tbl-banner tr td {
+    padding: 0;
+    text-align: left;
+    vertical-align: bottom;
+}
+
+.main-banner .app-banner table.tbl-banner tr td span, .main-banner .app-banner table.tbl-banner-details tr td span {
+    float: left;
+    line-height: 1.2em;
+    margin-top: 4px;
+}
+
+.main-banner .app-banner table.tbl-banner-details tr td span { margin-top: 0; }
+
+.main-banner .app-banner table.tbl-banner-details tr td span.bold {
+    float: left;
+    padding-bottom: 5px;
+}
+
+.main-banner .app-banner table.tbl-banner tr td span.textbox {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.0em;
+    margin-top: 0;
+    padding-right: 5px;
+    width: auto;
+}
+
+.main-banner .app-banner table.tbl-banner-details {
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 976px;
+}
+
+.main-banner .app-banner table.tbl-banner-details tr td { padding: 0; }
+
+.main-banner .exception-handling {
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 960px;
+}
+
+.main-banner .exception-handling ul {
+    background-color: #f7f7f7;
+    float: left;
+    list-style-type: disc;
+    margin: 10px 0 0 0;
+    padding: 10px;
+    width: 940px;
+}
+
+.main-banner .exception-handling ul li {
+    font-size: .8em;
+    margin: 0 0 0 10px;
+    padding: 0;
+}
+
+.container {
+    float: left;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    padding: 0;
+    width: 980px;
+}
+
+.top-nav {
+    margin: 0;
+    padding: 0;
+    width: 980px;
+}
+
+.container .content {
+    float: left;
+    float: none;
+    height: auto !important;
+    margin: 0;
+    overflow: hidden;
+    padding: 0px;
+    z-index: 1;
+}
+
+.container .uc_content {
+    background-color: #D3D3D3;
+    float: left;
+}
+
+/*
+.container .content .wide-container
+{
+    float: left;
+    margin: 0 0 10px 0;
+    padding: 0;
+    width: 100%;
+}
+.container .content .wide-container table.home-table
+{
+    float: left;
+    width: 100%;
+    background-image: url('/images/home-fade.gif');
+    background-repeat: repeat-x;
+    background-position: top left;
+    border: solid 1px #e5e4e4;
+}
+.container .content .wide-container table.home-table tr td.padding
+{
+    padding: 10px;
+}
+.container .content .wide-container .home-messages
+{
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 980px;
+    height: 460px;
+    text-align: center;
+}
+.container .content .wide-container .home-messages table.messages tbody tr td span
+{
+    width: 100%;
+}
+.container .content .wide-container .home-messages table.messages tbody tr td span, .container .content .wide-container .home-messages table.messages tbody tr td
+{
+    font-size: 1.1em;
+    line-height: 1.5em;
+    color: #5c9eef;
+    font-weight: bold;
+}
+*/
+
+.container .cch-update {
+    float: left;
+    font-size: .9em;
+    margin: 0;
+    padding: 10px;
+    padding: 0 10px 10px 10px;
+    width: 960px;
+}
+
+.container .cch-update .single-container {
+    margin: 2px 0 2px 0;
+    padding: 2px 0 2px 0;
+    width: 100%;
+}
+
+.container .loading {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+}
+
+.container .toolbar-buttons,
+.toolbar-buttons {
+    border-bottom: solid 1px #ccc;
+    border-top: solid 1px #ccc;
+    display: inline-block;
+    float: left;
+    margin: 0;
+    padding: 0px 0;
+    text-align: center;
+    width: 980px;
+}
+
+.container .toolbar-buttons input.button,
+.toolbar-buttons input.button {
+    margin: 0 0px 0 0px;
+    padding: 0;
+    width: auto;
+}
+
+.content .toolbar-buttons {
+    border: none;
+    float: left;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.content .toolbar-buttons input.button {
+    background-color: #6a98d3;
+    border: solid 1px #b9c1cf;
+    color: #fff;
+    float: none;
+    margin: 0 0px 0px 0px;
+    padding: 0px 0px;
+    width: auto;
+}
+
+.container .links {
+    background-color: #f2f1ec;
+    float: left;
+    font-size: .9em;
+    margin: 0;
+    padding: 10px;
+    padding: 0 10px 0 10px;
+    position: relative;
+    width: 170px;
+    width: 150px;
+    width: 958px;
+}
+
+.container .messages { color: Red; }
+
+.container .links ul, .container .messages ul {
+    border-bottom: solid 1px #eee;
+    float: left;
+    list-style-image: none;
+    list-style-type: none;
+    margin: 0 0 5px 0;
+    padding: 10px 0 10px 0;
+    width: 100%;
+}
+
+.container .links ul li, .container .messages ul li {
+    float: left;
+    list-style-image: none;
+    list-style-type: none;
+    list-style-type: disc;
+    margin: 0 0 2px 0;
+    padding: 0;
+    width: 150px;
+}
+
+.container .links ul li {
+    line-height: 1.2em;
+    margin-right: 0;
+    padding: 2px;
+    width: 234px;
+}
+
+.container .links ul li.heading, .container .messages ul li.heading {
+    float: left;
+    font-weight: bold;
+    list-style-image: none;
+    list-style-type: none;
+}
+
+.exception-handling {
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 960px;
+}
+
+.main-banner .exception-handling ul {
+    background-color: #f7f7f7;
+    float: left;
+    list-style-type: disc;
+    margin: 10px 0 0 0;
+    padding: 10px;
+    width: 940px;
+}
+
+.main-banner .exception-handling ul li {
+    font-size: .8em;
+    margin: 0 0 0 10px;
+    padding: 0;
+}
+
+.warning-message {
+    background-color: #e4e4e4;
+    color: #c00;
+    float: left;
+    font-size: .9em;
+    line-height: 1.2em;
+    margin: 0;
+    padding: 0;
+    width: 976px;
+}
+
+.warning-message p {
+    float: none;
+    padding: 10px;
+}
+
+.content .validation-message, .container .validation-message {
+    color: #333;
+    float: left;
+    font-size: 1.0em;
+    font-weight: bold;
+    line-height: 1.2em;
+    margin: 0;
+    padding: 10px;
+    width: 940px;
+}
+
+.container .validation-message ul {
+    float: left;
+    font-weight: normal;
+    list-style-position: outside;
+    list-style-type: disc;
+    margin: 0;
+    padding: 5px 0 0 10px;
+    width: 940px;
+}
+
+.container .validation-message ul li {
+    color: #c00;
+    float: left;
+    font-weight: normal;
+    list-style-position: outside;
+    list-style-type: disc;
+    margin: 0;
+    padding: 0 0 0 10px;
+    width: 100%;
+}
+
+.footer-container {
+    background-color: #fff;
+    border-bottom: solid 1px #ccc;
+    border-top: solid 1px #ccc;
+    display: inline-block;
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 980px;
+}
+
+.footer-container .buttons {
+    float: right;
+    margin: 0;
+    padding: 2px 2px 5px 2px;
+    text-align: right;
+    width: auto;
+}
+
+.footer-container .footer {
+    border-bottom: solid 5px #f28b13;
+    display: inline-block;
+    float: left;
+    font-size: .9em;
+    margin: 0;
+    padding: 2px 0 2px 0;
+    text-align: center;
+    width: 980px;
+}
+
+.footer-container .hidePageLoad {
+    display: none;
+    float: left;
+    width: auto;
+}
+
+.login {
+    float: left;
+    margin: 0;
+    padding: 20px 0 20px 0;
+    text-align: center;
+    width: 960px;
+}
+
+.login .login-message {
+    float: left;
+    margin: 0;
+    padding: 2px 5px 2px 5px;
+    width: 950px;
+}
+
+.login table { margin: 0 auto 0 auto; }
+
+.tbl-login tr td { padding: 5px; }
+
+.tbl-login .button { margin-right: 2px; }
+
+.clear { clear: both; }
+
+.overlay {
+    -moz-opacity: .70;
+    background-color: #fff;
+    filter: Alpha(Opacity=70);
+    height: 100%;
+    left: 0;
+    opacity: .70;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+}
+
+* html .overlay {
+    height: expression(document.body.scrollHeight>document.body.offsetHeight ? document.body.scrollHeight:document.body.offsetHeight+'px');
+    position: absolute;
+    width: expression(document.body.scrollWidth>document.body.offsetWidth ? document.body.scrollWidth:document.body.offsetWidth+'px');
+}
+
+.loader {
+    left: 50%;
+    margin-left: -60px;
+    position: fixed;
+    top: 50%;
+    width: 120px;
+    z-index: 100;
+}
+
+* html .loader {
+    margin-top: expression((document.body.scrollHeight / 4)+(0 - parseInt(this.offsetParent.clientHeight / 2)+(document.documentElement && document.documentElement.scrollTop || document.body.scrollTop))+'px');
+    position: absolute;
+}
+
+.HighLightedTab {
+    color: #FF0000 !important;
+    font-size: 10px;
+    font-weight: bold !important;
+}
+
+.filter { margin: 20px 0px 10px 0px; }
+
+.tableflags {
+    background-color: White;
+    border-color: #808080;
+}
+
+.hiddencol { display: none; }
+
+.viscol { display: block; }
+
+.RadFilter .rfText {
+    border-bottom: 1px solid;
+    border-left: 1px solid;
+    border-right: 1px solid;
+    border-top: 1px solid;
+    float: none;
+    padding-bottom: 3px;
+    padding-left: 1px;
+    padding-right: 1px;
+    padding-top: 2px;
+}
+
+.RadGrid_Default .rgRow td input {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.bgcolor { background-color: #ebeae3; }
+
+.container .tab-content { padding: 10px 0 !important; }
+
+.container-wrapper {
+    background-color: #ffffff;
+    border: solid 1px #cccccc;
+    display: inline-block;
+    margin: 0 0 5px 0;
+    margin: 0 auto;
+    padding: 0px;
+    position: relative;
+    width: 976px;    
+}
+
+.container-wrapper .header { padding: 0; }
+
+.container-wrapper .header table tbody,
+.container-wrapper .header table tbody tr,
+.container-wrapper .header table tbody tr th {
+    display: inline-block;
+    width: 100%;
+}
+
+.container-wrapper .header .table th {
+    background-color: #DBEAF9;
+    display: inline-block;
+    padding: 3px 2%;
+    width: 96%;
+}
+
+.container-wrapper .header .table th .label, div .heading h3 {
+    color: #777777;
+    text-transform: uppercase;
+}

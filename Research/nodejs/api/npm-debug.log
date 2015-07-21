@@ -1,0 +1,47 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files (x86)\\nodejs\\\\node.exe',
+1 verbose cli   'C:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'actionhero' ]
+2 info using npm@1.1.32
+3 info using node@v0.8.0
+4 verbose node symlink C:\Program Files (x86)\nodejs\\node.exe
+5 verbose config file C:\Users\U371860\.npmrc
+6 verbose config file C:\Program Files (x86)\nodejs\etc\npmrc
+7 verbose config file C:\Program Files (x86)\nodejs\node_modules\npm\npmrc
+8 verbose read json c:\Nasir\nodejs\api\package.json
+9 verbose read json c:\Nasir\nodejs\api\package.json
+10 verbose cache add [ 'actionhero', null ]
+11 silly cache add name=undefined spec="actionhero" args=["actionhero",null]
+12 verbose parsed url { pathname: 'actionhero',
+12 verbose parsed url   path: 'actionhero',
+12 verbose parsed url   href: 'actionhero' }
+13 verbose addNamed [ 'actionhero', '' ]
+14 verbose addNamed [ null, '' ]
+15 silly addNameRange { name: 'actionhero', range: '', hasData: false }
+16 verbose url raw actionhero
+17 verbose url resolving [ 'https://registry.npmjs.org/', './actionhero' ]
+18 verbose url resolved https://registry.npmjs.org/actionhero
+19 http GET https://registry.npmjs.org/actionhero
+20 error Error: 10644:error:140770FC:SSL routines:SSL23_GET_SERVER_HELLO:unknown protocol:openssl\ssl\s23_clnt.c:683:
+20 error
+20 error     at CleartextStream._puller (tls.js:519:24)
+20 error     at CleartextStream.CryptoStream._pull (tls.js:453:19)
+20 error     at SecurePair.cycle (tls.js:744:20)
+20 error     at EncryptedStream.CryptoStream.write (tls.js:131:13)
+20 error     at Socket.ondata (stream.js:38:26)
+20 error     at Socket.EventEmitter.emit (events.js:88:17)
+20 error     at TCP.onread (net.js:397:14)
+20 error  [Error: 10644:error:140770FC:SSL routines:SSL23_GET_SERVER_HELLO:unknown protocol:openssl\ssl\s23_clnt.c:683:
+20 error ]
+21 error You may report this log at:
+21 error     <http://github.com/isaacs/npm/issues>
+21 error or email it to:
+21 error     <npm-@googlegroups.com>
+22 error System Windows_NT 6.1.7601
+23 error command "C:\\Program Files (x86)\\nodejs\\\\node.exe" "C:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "actionhero"
+24 error cwd c:\Nasir\nodejs\api
+25 error node -v v0.8.0
+26 error npm -v 1.1.32
+27 error message 10644:error:140770FC:SSL routines:SSL23_GET_SERVER_HELLO:unknown protocol:openssl\ssl\s23_clnt.c:683:
+28 verbose exit [ 1, true ]

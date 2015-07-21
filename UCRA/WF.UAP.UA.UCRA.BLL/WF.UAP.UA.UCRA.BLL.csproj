@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D0FE52DC-D503-426A-BFE4-688B6D208DB8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WF.UAP.UA.UCRA.BLL</RootNamespace>
+    <AssemblyName>WF.UAP.UA.UCRA.BLL</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\WF.UAP.UA.UCRA.BLL.xml</DocumentationFile>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\WF.UAP.UA.UCRA.BLL.xml</DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Common.Logging, Version=2.0.0.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\UDB\DataLib\WF.UAP.UDB.DataLib.CDN\Lib\FOSS\Apache2.0\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging.Core, Version=3.0.0.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\UDB\DataLib\WF.UAP.UDB.DataLib.CDN\Lib\FOSS\Apache2.0\Common.Logging.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationBlocks.ConfigurationManagement, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\UDB\DataLib\WF.UAP.UDB.DataLib.CDN\Lib\FOSS\MSL\Microsoft.ApplicationBlocks.ConfigurationManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\UDB\DataLib\WF.UAP.UDB.DataLib.CDN\Lib\FOSS\MSL\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.Web.UI">
+      <HintPath>..\..\..\UDB\DataLib\WF.UAP.UDB.DataLib.CDN\Lib\LICENSED\Telerik\2012.3\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="WF.UAP.UDB.DataLib.Proxies">
+      <HintPath>..\..\..\UDB\DataLib\WF.UAP.UDB.DataLib.CDN\Lib\Internal\WF.UAP.UDB.DataLib.Proxies.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AltOffers\AltOffersBO.cs" />
+    <Compile Include="Builder\AltOffersServiceInvokerBuilder.cs" />
+    <Compile Include="Builder\IAltOffersServiceInvokerBuilder.cs" />
+    <Compile Include="cas\Interfaces\ICasWmgRateException.cs" />
+    <Compile Include="CUSP\BankLoanBookingBo.cs" />
+    <Compile Include="CUSP\BankLoanBookingFetchDetailsBo.cs" />
+    <Compile Include="CUSP\BusinessFactory.cs" />
+    <Compile Include="CUSP\CommonBo.cs" />
+    <Compile Include="CUSP\Helper.cs" />
+    <Compile Include="CUSP\Helpers\AcapsHelper.cs" />
+    <Compile Include="CUSP\Helpers\AppSessionEntity.cs" />
+    <Compile Include="CUSP\Helpers\DAUtilities.cs" />
+    <Compile Include="CUSP\Helpers\DisclosureHelper.cs" />
+    <Compile Include="CUSP\Helpers\InquiryFields.cs" />
+    <Compile Include="CUSP\Helpers\Utilities.cs" />
+    <Compile Include="CUSP\HistoryBo.cs" />
+    <Compile Include="CUSP\Interface\IUCRASearchBo.cs" />
+    <Compile Include="CUSP\Parsers\AcapsDataChangesParser.cs" />
+    <Compile Include="CUSP\Parsers\BaidResponseParser.cs" />
+    <Compile Include="CUSP\Parsers\InqResponse.cs" />
+    <Compile Include="CUSP\Parsers\RouteToStateParser.cs" />
+    <Compile Include="CUSP\Parsers\UserResponseParser.cs" />
+    <Compile Include="CUSP\PipelineViewerBO.cs" />
+    <Compile Include="CUSP\SearchBO.cs" />
+    <Compile Include="CUSP\UCRASearchBo.cs" />
+    <Compile Include="MaturingTools\Interfaces\IMaturingToolsBo.cs" />
+    <Compile Include="MaturingTools\MaturingToolsBo.cs" />
+    <Compile Include="cas\CasScript.cs" />
+    <Compile Include="cas\Services\CWS\ClosingConditionsHelper.cs" />
+    <Compile Include="CUSPSearch\ArchiveLookupBo.cs" />
+    <Compile Include="CUSPSearch\BankLoanBookingBo.cs" />
+    <Compile Include="CUSPSearch\ContractBookingBo.cs" />
+    <Compile Include="CUSPSearch\CreditAnalysisBo.cs" />
+    <Compile Include="CUSPSearch\CreditApplicationBo.cs" />
+    <Compile Include="CUSPSearch\Factories\ICuspSearchFactory.cs" />
+    <Compile Include="CUSPSearch\Factories\CuspSearchFactory.cs" />
+    <Compile Include="CUSPSearch\Factories\Retailer\IRetailerSearchFactory.cs" />
+    <Compile Include="CUSPSearch\Factories\Retailer\RetailerSearchFactory.cs" />
+    <Compile Include="CUSPSearch\GetNextBo.cs" />
+    <Compile Include="CUSPSearch\Helper\SearchHelper.cs" />
+    <Compile Include="CUSPSearch\LoginBo.cs" />
+    <Compile Include="CUSPSearch\Retailer\AppIdSearchBo.cs" />
+    <Compile Include="CUSPSearch\Retailer\ArchiveLookupsBo.cs" />
+    <Compile Include="CUSPSearch\Retailer\ArchiveLookupTabBo.cs" />
+    <Compile Include="CUSPSearch\Retailer\CreditAnalysisTabBo.cs" />
+    <Compile Include="CUSPSearch\Retailer\FDRAccountNoSearchBo.cs" />
+    <Compile Include="CUSPSearch\Retailer\GetNextBo.cs" />
+    <Compile Include="CUSPSearch\Retailer\NameSearchBo.cs" />
+    <Compile Include="CUSPSearch\Retailer\PhoneNoSearchBo.cs" />
+    <Compile Include="CUSPSearch\Retailer\ScanListSearchBo.cs" />
+    <Compile Include="CUSPSearch\Retailer\SSNSearchBo.cs" />
+    <Compile Include="CUSPSearch\Retailer\WorkListSearchBo.cs" />
+    <Compile Include="CUSPSearch\SearchBo.cs" />
+    <Compile Include="CUSPSearch\UtilitiesBo.cs" />
+    <Compile Include="cas\Search\CASSearchResultsBuilder.cs" />
+    <Compile Include="cas\CasIdentity.cs" />
+    <Compile Include="cas\DataAccessHelper.cs" />
+    <Compile Include="cas\Invokers\Invoker.cs" />
+    <Compile Include="cas\Print\DisclosureHelper.cs" />
+    <Compile Include="cas\Print\PrintRequestAndStatus.cs" />
+    <Compile Include="cas\Services\ACAPSErrorMessages.cs" />
+    <Compile Include="cas\Services\Account.cs" />
+    <Compile Include="cas\Services\AccountBalance.cs" />
+    <Compile Include="cas\Services\KOAC001.cs" />
+    <Compile Include="cas\Services\AccountDetailsHelper.cs" />
+    <Compile Include="cas\Services\AccountRequest.cs" />
+    <Compile Include="cas\Services\AccountTitle.cs" />
+    <Compile Include="cas\Services\AccountViewList.cs" />
+    <Compile Include="cas\Services\ACCTDETAIL01.cs" />
+    <Compile Include="cas\Services\ACCTDETAIL02.cs" />
+    <Compile Include="cas\Services\ACCTDETAIL03.cs" />
+    <Compile Include="cas\Services\ACCTDETAIL04.cs" />
+    <Compile Include="cas\Services\ACCTDETAIL05.cs" />
+    <Compile Include="cas\Services\ACCTDETAIL06.cs" />
+    <Compile Include="cas\Services\ACCTDETAIL07.cs" />
+    <Compile Include="cas\Services\ACCTDETAIL08.cs" />
+    <Compile Include="cas\Services\AJAXFactory.cs" />
+    <Compile Include="cas\Services\BankerNote.cs" />
+    <Compile Include="cas\Services\Body.cs" />
+    <Compile Include="cas\Services\BodyResponse.cs" />
+    <Compile Include="cas\Services\Collateral\CASCollateral.cs" />
+    <Compile Include="cas\Services\Collateral\CDCItem.cs" />
+    <Compile Include="cas\Services\Collateral\CDSavingsCollateralItem.cs" />
+    <Compile Include="cas\Services\Collateral\ICollateral.cs" />
+    <Compile Include="cas\Services\Collateral\PCMCollateral.cs" />
+    <Compile Include="cas\Services\Collateral\SBCItem.cs" />
+    <Compile Include="cas\Services\CreditDefenseDisclosureHelper.cs" />
+    <Compile Include="cas\Services\CustomerAccountList.cs" />
+    <Compile Include="cas\Services\CWS\BankNoteReadHelper.cs" />
+    <Compile Include="cas\Services\CWS\CWSCCHHelper.cs" />
+    <Compile Include="cas\Services\CWS\CWSCollateralINQHelper.cs" />
+    <Compile Include="cas\Services\CWS\CwsRDCls.cs" />
+    <Compile Include="cas\Services\CWS\CwsUpdateHelper.cs" />
+    <Compile Include="cas\Services\CWS\CwsUpdateHelperTypeConverter.cs" />
+    <Compile Include="cas\Services\CWS\Desc.cs" />
+    <Compile Include="cas\Services\CWS\MccCWSINQ.cs" />
+    <Compile Include="cas\Services\CWS\MySort.cs" />
+    <Compile Include="cas\Services\CWS\RelationshipDiscount.cs" />
+    <Compile Include="cas\Services\CWS\TaskClearHelper.cs" />
+    <Compile Include="cas\Services\CWS\UpdateHelperState.cs" />
+    <Compile Include="cas\Services\ECBSCustomerInfoHelper.cs" />
+    <Compile Include="cas\Services\Header.cs" />
+    <Compile Include="cas\Services\IAJAXHelper.cs" />
+    <Compile Include="cas\Services\KOAC002.cs" />
+    <Compile Include="cas\Services\LoanBalance.cs" />
+    <Compile Include="cas\Services\MaturityDate.cs" />
+    <Compile Include="cas\Utils.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="cas\Services\IAJAXHelper.resx">
+      <DependentUpon>IAJAXHelper.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="CMT\" />
+    <Folder Include="Properties\DataSources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\UASF\WF.UAP.UASF\WF.UAP.UASF.csproj">
+      <Project>{CD995605-07B6-4B0A-AC98-BA623014A5CF}</Project>
+      <Name>WF.UAP.UASF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\UDB\Repository\WF.UAP.UDB.Repository.Domain.Entities\WF.UAP.UDB.Repository.Domain.Entities.csproj">
+      <Project>{b933c18a-1ac7-4fe7-b0ef-5d1a482f1354}</Project>
+      <Name>WF.UAP.UDB.Repository.Domain.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Global\WF.UAP.UA.Global.BLL\WF.UAP.UA.Global.BLL.csproj">
+      <Project>{628c7363-0d35-4191-9ab3-59addb8ee743}</Project>
+      <Name>WF.UAP.UA.Global.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\UASF\WF.UAP.UASF.Utils\WF.UAP.UASF.Utils.csproj">
+      <Project>{A1C6F95B-DA7D-4E0D-B4B5-7BD1E0CD1200}</Project>
+      <Name>WF.UAP.UASF.Utils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\UDB\Repository\WF.UAP.UDB.Repository.Transform\WF.UAP.UDB.Repository.Transform.csproj">
+      <Project>{06ab3bc9-0e59-411f-831f-f88a18b68e92}</Project>
+      <Name>WF.UAP.UDB.Repository.Transform</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

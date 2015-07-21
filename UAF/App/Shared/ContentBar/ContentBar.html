@@ -1,0 +1,18 @@
+﻿
+<div class="wrapper wrapper-content animated fadeInRight" >
+    <div class="row">
+        <div jmultiform
+             template="{{parent.template}}" 
+             attr="parent.attr">
+                   
+        </div>
+         <div jform 
+                ng-repeat="option in jform" 
+                form="option" 
+                template="{{option.template}}" 
+                class="{{option.space}}" >
+        </div>
+    </div>
+</div>
+
+

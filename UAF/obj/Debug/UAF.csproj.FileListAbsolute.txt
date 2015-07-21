@@ -1,0 +1,6 @@
+C:\0_Next\UAP\UASF\UAF\obj\Debug\NangularJSFrameWork.dll
+C:\0_Next\UAP\UASF\UAF\obj\Debug\NangularJSFrameWork.pdb
+C:\0_Next\UAP\UASF\UAF\bin\NangularJSFrameWork.dll.config
+C:\0_Next\UAP\UASF\UAF\bin\NangularJSFrameWork.dll
+C:\0_Next\UAP\UASF\UAF\bin\NangularJSFrameWork.pdb
+C:\0_Next\UAP\UASF\UAF\obj\Debug\UAF.csprojResolveAssemblyReference.cache

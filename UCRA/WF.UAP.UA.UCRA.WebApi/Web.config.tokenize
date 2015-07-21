@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <configSections>
+    <section name="applicationConfigurationManagement" type="Microsoft.ApplicationBlocks.ConfigurationManagement.ConfigurationManagerSectionHandler,Microsoft.ApplicationBlocks.ConfigurationManagement, Version=1.0.0.0,Culture=neutral,PublicKeyToken=null"/>
+    <section name="Global" type="WF.UAP.UASF.CrossCutting.ConfigMgmt.config.EaiSectionHandler, WF.UAP.UASF, Version=1.0.0.0, Culture=neutral,PublicKeyToken=null"/>
+    <section name="cachingConfiguration" type="Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.CacheManagerSettings,Microsoft.Practices.EnterpriseLibrary.Caching"/>
+    <sectionGroup name="common">
+      <section name="logging" type="Common.Logging.ConfigurationSectionHandler, Common.Logging, Version=3.0.0.0, Culture=neutral, PublicKeyToken=af08829b84f0328e"/>
+    </sectionGroup>
+    <section name="nlog" type="NLog.Config.ConfigSectionHandler, NLog, Version=3.1.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c"/>
+  </configSections>
+  <applicationConfigurationManagement defaultSection="SystemConfig">
+    <configSection name="Global">
+      <configCache enabled="true" refresh="* * * * 6"/>
+      <configProvider assembly="Microsoft.ApplicationBlocks.ConfigurationManagement,Version=1.0.0.0,Culture=neutral,PublicKeyToken=null" type="Microsoft.ApplicationBlocks.ConfigurationManagement.Storage.XmlFileStorage" path="${Common.Root.Folder}\Config\EAI.Config.xml" refreshOnChange="true" signed="false" encrypted="false"/>
+    </configSection>
+  </applicationConfigurationManagement>
+  <common>
+    <logging>
+      <factoryAdapter type="Common.Logging.NLog.NLogLoggerFactoryAdapter,Common.Logging.NLog31, Version=3.0.0.0, Culture=neutral, PublicKeyToken=af08829b84f0328e">
+        <arg key="configType" value="FILE"/>
+        <arg key="configFile" value="${Common.Root.Folder.DoubleSlash}\\Config\\UA\\UCRA\\logging\\UCRAWebAPI.NLog.config"/>
+      </factoryAdapter>
+    </logging>
+  </common>
+  <connectionStrings/>
+  <system.web>
+    <compilation configSource="gac.config" />
+    <httpRuntime targetFramework="4.5.1"/>
+  </system.web>
+  <system.webServer>
+    <handlers>
+      <remove name="ExtensionlessUrlHandler-Integrated-4.0"/>
+      <remove name="OPTIONSVerbHandler"/>
+      <remove name="TRACEVerbHandler"/>
+      <add name="ExtensionlessUrlHandler-Integrated-4.0" path="*." verb="*" type="System.Web.Handlers.TransferRequestHandler" preCondition="integratedMode,runtimeVersionv4.0"/>
+    </handlers>
+  </system.webServer>
+  <runtime>
+    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+      <dependentAssembly>
+        <assemblyIdentity name="Microsoft.Practices.Unity" publicKeyToken="31BF3856AD364E35" culture="neutral"/>
+        <bindingRedirect oldVersion="0.0.0.0-3.0.0.0" newVersion="3.0.0.0"/>
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="System.Web.Http" publicKeyToken="31BF3856AD364E35" culture="neutral"/>
+        <bindingRedirect oldVersion="0.0.0.0-5.2.2.0" newVersion="5.2.2.0"/>
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="System.Net.Http.Formatting" publicKeyToken="31BF3856AD364E35" culture="neutral"/>
+        <bindingRedirect oldVersion="0.0.0.0-5.2.2.0" newVersion="5.2.2.0"/>
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="Newtonsoft.Json" culture="neutral" publicKeyToken="30ad4fe6b2a6aeed"/>
+        <bindingRedirect oldVersion="0.0.0.0-6.0.0.0" newVersion="6.0.0.0"/>
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="System.Web.Optimization" publicKeyToken="31bf3856ad364e35" />
+        <bindingRedirect oldVersion="1.0.0.0-1.1.0.0" newVersion="1.1.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="WebGrease" publicKeyToken="31bf3856ad364e35" />
+        <bindingRedirect oldVersion="0.0.0.0-1.5.2.14234" newVersion="1.5.2.14234" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="Antlr3.Runtime" publicKeyToken="eb42632606e9261f" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-3.5.0.2" newVersion="3.5.0.2" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="System.Web.Cors" publicKeyToken="31bf3856ad364e35" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-5.2.2.0" newVersion="5.2.2.0" />
+      </dependentAssembly>
+    </assemblyBinding>
+  </runtime>
+  <appSettings>
+    <add key="UCAWebServiceAsyncLogSwitch" value="${UCAWebServiceAsyncLogSwitch}"/>
+    <add key="EmailDeliveryServiceConfigFile" value="${Common.Root.Folder.DoubleSlash}\\Config\\processors\\EmailDeliveryServiceConfiguration.xml"/>
+  </appSettings>
+</configuration>

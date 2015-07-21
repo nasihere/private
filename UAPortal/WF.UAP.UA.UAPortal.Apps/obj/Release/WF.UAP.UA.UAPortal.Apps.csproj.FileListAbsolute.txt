@@ -1,0 +1,6 @@
+C:\0_Next\UAP\UA\UAPortal\WF.UAP.UA.UAPortal.Apps\bin\WF.UAP.UA.UAPortal.Apps.dll.config
+C:\0_Next\UAP\UA\UAPortal\WF.UAP.UA.UAPortal.Apps\bin\WF.UAP.UA.UAPortal.Apps.dll
+C:\0_Next\UAP\UA\UAPortal\WF.UAP.UA.UAPortal.Apps\bin\WF.UAP.UA.UAPortal.Apps.pdb
+C:\0_Next\UAP\UA\UAPortal\WF.UAP.UA.UAPortal.Apps\obj\Release\WF.UAP.UA.UAPortal.Apps.csprojResolveAssemblyReference.cache
+C:\0_Next\UAP\UA\UAPortal\WF.UAP.UA.UAPortal.Apps\obj\Release\WF.UAP.UA.UAPortal.Apps.dll
+C:\0_Next\UAP\UA\UAPortal\WF.UAP.UA.UAPortal.Apps\obj\Release\WF.UAP.UA.UAPortal.Apps.pdb

@@ -1,0 +1,37 @@
+﻿<div ng-if=""  class="tab-content ">
+    <div class="margintop20 ">
+        <table class="table table-striped ">
+            <thead>
+                <tr>
+                    <th>AutomaticPayment</th>
+                    <th>ACHPaymentType</th>
+                    <th>BankName</th>
+                    <th>Account Type</th>
+                    <th>AccountNo</th>
+                    <th>RTN</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr ><!--ng-repeat="sum in product.ach"!-->
+                    <td>{{ach.automaticPayment}}</td>
+                    <td>{{ach.ACHPaymentType}}</td>
+                    <td>{{ach.bankName}}</td>
+                    <td>{{ach.accountType}}</td>
+                    <td>{{ach.otherWFAccountNum}}</td>
+                    <td>{{ach.RTN}}</td>
+                    <td>
+                          <a class="pull-right  btn btn-primary" ng-click="ach.removeItem($index)" href="javascript:void(0)">
+                                        <img class="pen" />
+                                    </a>
+                        <a class="pull-right  btn btn-primary"  ng-attr-href="{{ '#ProductFeaturesACH-' + title }}">Edit</a>
+
+                    </td>
+                </tr>
+
+
+            </tbody>
+        </table>
+
+    </div>
+</div>

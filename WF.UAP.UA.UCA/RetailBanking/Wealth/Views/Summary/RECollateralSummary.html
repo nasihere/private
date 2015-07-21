@@ -1,0 +1,209 @@
+﻿<div id="" class="panel-collapse in" style="height: auto;">
+    <div class="panel-body">
+
+        <div class="marginbottom20">
+            <div class="containerZ">
+                <div class="leftz80">
+                    <h3 class="georgia underlined clearfix" style="text-align: left; margin-left: 20px;"><span>Collateral Property Address</span></h3>
+                </div>
+            </div>
+
+            <div class="containerz">
+                <div class="leftz alignright"><span class="leftlabel">Property Address:</span></div>
+                <div class="rightz">
+                    <label>{{reCollateral.HMDA.propertyImproved.unknown1}}</label>
+                </div>
+                <div class="leftz alignright"><span class="leftlabel">Street Address:</span></div>
+                <div class="rightz">
+                    <label>{{reCollateral.HMDA.propertyImproved.addrLineList.addrLine1}}</label>
+                </div>
+                <div class="leftz alignright"><span class="leftlabel">PO Box, RR#, or Address Line 2:</span></div>
+                <div class="rightz">
+                    <label>{{reCollateral.HMDA.propertyImproved.addrLineList.addrLine2}}</label>
+                </div>
+                <div class="leftz alignright"><span class="leftlabel">City:</span></div>
+                <div class="rightz">
+                    <label>{{reCollateral.HMDA.propertyImproved.city}}</label>
+                </div>
+                <div class="leftz alignright"><span class="leftlabel">State:</span></div>
+                <div class="rightz">
+                    <label>{{getDescription(common.usStates, reCollateral.HMDA.propertyImproved.state)}}</label>
+                </div>
+                <div class="leftz alignright"><span class="leftlabel">Zip:</span></div>
+                <div class="rightz">
+                    <label>{{reCollateral.HMDA.propertyImproved.zip}}</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="marginbottom30">
+            <div class="containerZ">
+                <div class="leftz80">
+                    <h3 class="georgia underlined clearfix" style="text-align: left; margin-left: 20px;"><span>Collateral Property Details</span></h3>
+                </div>
+            </div>
+
+            <div class="containerZ">
+                <div class="leftz alignright"><span class="leftlabel">Date Of purchase:</span></div>
+                <div class="rightz">
+                    <label>{{reCollateral.purchaseDate}}</label>
+                </div>
+                <div class="leftz alignright"><span class="leftlabel">Purchase Price:</span></div>
+                <div class="rightz">
+                    <label>{{reCollateral.purchasePrice}}</label>
+                </div>
+                <div class="leftz alignright"><span class="leftlabel">Estimated value:</span></div>
+                <div class="rightz">
+                    <label>{{reCollateral.estimatedValue}}</label>
+                </div>
+                <div class="leftz alignright"><span class="leftlabel">Occupancy Type:</span></div>
+                <div class="rightz">
+                    <label>{{getDescription(common.ddOccupancyType, reCollateral.occupancyType)}}</label>
+                </div>
+                <div class="leftz alignright"><span class="leftlabel">Does applicant occupy collateral property?:</span></div>
+                <div class="rightz">
+                    <label>{{getDescription(common.SelectYesNo, reCollateral.appCollateralFlag)}}</label>
+                </div>
+                <div class="leftz alignright"><span class="leftlabel">Property Type:</span></div>
+                <div class="rightz">
+                    <label>{{getDescription(common.ddPropertyType,reCollateral.propertyType)}}</label>
+                </div>
+                <div class="leftz alignright"><span class="leftlabel">Acres:</span></div>
+                <div class="rightz">
+                    <label>{{reCollateral.unknown7}}</label>
+                </div>
+                <div class="leftz alignright"><span class="leftlabel">Property under construction?:</span></div>
+                <div class="rightz">
+                    <label>{{getDescription(common.SelectYesNo, reCollateral.unknown8)}}</label>
+                </div>
+                <div class="leftz alignright"><span class="leftlabel">Property vested in trust:</span></div>
+                <div class="rightz">
+                    <label>{{getDescription(common.SelectYesNo, reCollateral.trustVestedFlag)}}</label>
+                </div>
+                <div class="leftz alignright alignright"><span class="leftlabel">Property owned free and clear of all liens:</span></div>
+                <div class="rightz">
+                    <label>{{getDescription(common.SelectYesNo, reCollateral.unknown9)}}</label>
+                </div>
+                <div class="leftz alignright"><span class="leftlabel">Property for sale:</span></div>
+                <div class="rightz">
+                    <label>{{getDescription(common.SelectYesNo, reCollateral.unknown10)}}</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="marginbottom30">
+            <div class="containerZ">
+                <div class="leftz80">
+                    <h3 class="georgia underlined clearfix" style="text-align: left; margin-left: 20px;"><span>First Mortgage</span></h3>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="leftz alignright"><span class="leftlabel">Lender:</span></div>
+                <div class="rightz">
+                    <label>{{reCollateral.mortgageInformation.MortagageList.Morgage.lender}}</label>
+                </div>
+                <div class="leftz alignright"><span class="leftlabel">Balance:</span></div>
+                <div class="rightz">
+                    <label>{{reCollateral.mortgageInformation.MortagageList.Morgage.balance}}</label>
+                </div>
+                <div class="leftz alignright"><span class="leftlabel">Account Number:</span></div>
+                <div class="rightz">
+                    <label>{{reCollateral.mortgageInformation.MortagageList.Morgage.account}}</label>
+                </div>
+                <div class="leftz alignright"><span class="leftlabel">Monthly Payment:</span></div>
+                <div class="rightz">
+                    <label>{{reCollateral.mortgageInformation.MortagageList.Morgage.monthlyPayment}}</label>
+                </div>
+                <div class="leftz alignright"><span class="leftlabel">Is there another Mortgage on this Property:</span></div>
+                <div class="rightz">
+                    <label>{{getDescription(common.SelectYesNo, reCollateral.mortgageInformation.MortagageList.Morgage.unknown1)}}</label>
+                </div>
+                <div class="leftz alignright"><span class="leftlabel">Refinanced within the last 12 months:</span></div>
+                <div class="rightz">
+                    <label>{{getDescription(common.SelectYesNo, reCollateral.mortgageInformation.MortagageList.Morgage.unknown2)}}</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="marginbottom30">
+            <div class="containerZ">
+                <div class="leftz80">
+                    <h3 class="georgia underlined clearfix" style="text-align: left; margin-left: 20px;"><span>Home Owners Insurance</span></h3>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="leftz alignright"><span class="leftlabel">Insurance Carrier:</span></div>
+                <div class="rightz">
+                    <label>{{reCollateral.hoiInformation.carrierName}}</label>
+                </div>
+                <div class="leftz alignright"><span class="leftlabel">Agent Name:</span></div>
+                <div class="rightz">
+                    <label>{{reCollateral.hoiInformation.agentInformation.firstName}}</label>
+                </div>
+                <div class="leftz alignright"><span class="leftlabel">Agent Phone Number:</span></div>
+                <div class="rightz">
+                    <label>{{reCollateral.hoiInformation.agentInformation.phoneNumber}}</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="marginbottom30">
+            <div class="containerZ">
+                <div class="leftz80">
+                    <h3 class="georgia underlined clearfix" style="text-align: left; margin-left: 20px;"><span>Housing Expenses</span></h3>
+                </div>
+            </div>
+            <div class="container">
+                <div class="leftz alignright">
+                    <label>Expense Type</label>
+                </div>
+                <div class="rightz">
+                    <label style="width: 150px">Amount</label>
+                    <label>Frequency</label>
+                </div>
+                <dd style="width: 150px"></dd>
+                <div class="leftz alignright"><span class="leftlabel">HOA Dues/Co-op Fees Payment:</span></div>
+                <div class="rightz">
+                    <label style="width: 150px">{{reCollateral.housingExpenses.unknown1}}</label>
+                    <label>Monthly</label>
+                </div>
+
+                <div class="leftz alignright"><span class="leftlabel">Property Taxes Payment:</span></div>
+                <div class="rightz">
+                    <label style="width: 150px">{{reCollateral.housingExpenses.unknown2}}</label>
+                    <label>Monthly</label>
+                </div>
+
+                <div class="leftz alignright"><span class="leftlabel">Does Monthly Mortgage Payment Include Taxes?:</span></div>
+                <div class="rightz">
+                    <label style="width: 150px"></label>
+                    <label>Monthly</label>
+                </div>
+                <div class="leftz alignright"><span class="leftlabel">Homeowners Insurance Payment:</span></div>
+                <div class="rightz">
+                    <label style="width: 150px">{{reCollateral.housingExpenses.unknown3}}</label>
+                    <label>Monthly</label>
+                </div>
+                <div class="leftz alignright"><span class="leftlabel">Does Monthly Mortgage Payment Include Insurance?:</span></div>
+                <div class="rightz">
+                    <label style="width: 150px">{{reCollateral.housingExpenses.unknown4}}</label>
+                    <label>Monthly</label>
+                </div>
+
+                <div class="leftz alignright"><span class="leftlabel">Other Insurance Payments (Total of Flood,Earthquake,Hurricane, etc):</span></div>
+                <div class="rightz" >
+                    <label style="width: 150px">{{reCollateral.housingExpenses.unknown5}}</label>
+                    <label>Monthly</label>
+                </div>
+                <div class="leftz alignright"><span class="leftlabel">Other Housing Obligations Payments (Total of Supplemental Taxes, Liens, Mortgage Insurance, Lease Payment/Ground Lease, etc. Payments):</span></div>
+                <div class="rightz">
+                    <label style="width: 150px">{{reCollateral.housingExpenses.unknown6}}</label>
+                    <label>Monthly</label>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

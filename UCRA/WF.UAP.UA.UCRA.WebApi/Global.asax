@@ -1,0 +1,1 @@
+﻿<%@ Application Codebehind="Global.asax.cs" Inherits="WF.UAP.UA.UCRA.WebApi.WebApiApplication" Language="C#" %>

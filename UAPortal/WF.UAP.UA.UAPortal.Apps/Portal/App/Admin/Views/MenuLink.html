@@ -1,0 +1,91 @@
+﻿<!-- NEW WIDGET START -->
+<article class="col-sm-12 col-md-12 col-lg-12">
+
+    <!-- Widget ID (each widget will need unique ID)-->
+    <div class="jarviswidget jarviswidget-color-greenDark" id="wid-id-2" data-widget-editbutton="false">
+      
+        <header>
+            <span class="widget-icon"> <i class="fa fa-table"></i> </span>
+            <h2>User Access URL {{myVar}} </h2>
+            
+        </header>
+
+        <div>
+
+            <div class="jarviswidget-editbox">
+       
+            </div>
+            <div class="widget-body no-padding">
+
+                <div class="alert alert-info no-margin fade in">
+                    <button class="close" data-dismiss="alert">
+                        ×
+                    </button>
+                    <i class="fa-fw fa fa-info"></i>
+                    User Access List <code>&lt;Menu&gt;</code> to add new <code>Menu</code> <a href="javascript:void(0)" ui-sref="Debug-Publish-App"> click here</a>
+                </div>
+                <div class="table-responsive">
+
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Menu Name</th>
+                                <th>URL</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="item in $storage.user.linkAccess">
+                                <td>{{item.ModuleName}}</td>
+                   
+                                <td ng-if="!item.submenu">{{item.ModuleUrl.substring(0,55)}}</td>
+                                <td ng-if="item.submenu">
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>Menu Name</th>
+                                                <th>URL</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr ng-repeat="subitem in item.submenu">
+                                                <td>{{subitem.ModuleName}}</td>
+                                                <td>{{subitem.ModuleUrl.substring(0,55)}}</td>
+                                                <td ng-if="subitem.submenu">
+                                                    <table class="table table-hover">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>App Name</th>
+                                                                <th>URL</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr ng-repeat="subsubitem in subitem.submenu">
+                                                                <td>{{subsubitem.ModuleName}}</td>
+                                                                <td>{{subsubitem.ModuleUrl.substring(0,55)}}</td>
+
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                              
+                            </tr>
+                          
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+            <!-- end widget content -->
+
+        </div>
+        <!-- end widget div -->
+
+    </div>
+    <!-- end widget -->
+
+</article>
+<!-- WIDGET END -->

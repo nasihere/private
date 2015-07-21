@@ -1,0 +1,202 @@
+﻿<article class="center-block col col-sm-12 col-md-12 col-lg-12 sortable-grid ui-sortable sortable-grid ui-sortable">
+    <div class="jarviswidget">
+
+
+        <div class="tab-content bg-color-white padding-10" role="content">
+            <img class="pull-right" src="Content/img/loading.gif" ng-if="Loading" />
+            <h1> Search <span class="semi-bold">Registered Users</span> <i>{{$storage.user.profile.displayname}}, {{$storage.user.role}}</i></h1>
+            <br>
+            <fieldset class="">
+                
+                <div class="smart-form ">
+                    <div class="row has-success">
+                        <section class="col col-lg-3 col-md-6 col-sm-12 ">
+                            <div class="btn-group pull-right" ng-hide="show.searchLastName && show.searchadent">
+                                <button class="btn dropdown-toggle btn-xs btn-success" data-toggle="dropdown" aria-expanded="false">
+                                    Add <i class="fa fa-caret-down"></i>
+                                </button>
+                                <ul class="dropdown-menu pull-left js-status-update">
+                                    <li>
+                                        <a href="javascript:void(0);" ng-click="show.searchLastName = true" ng-show="!show.searchLastName"><i class="fa fa-circle txt-color-orange"></i> Last Name</a>
+                                    </li>
+                                    <li class="divider" ng-show="!show.searchLastName"></li>
+                                    <li>
+                                        <a href="javascript:void(0);" ng-click="show.searchadent = true" ng-show="!show.searchadent"><i class="fa fa-circle txt-color-blue"></i> Ad-Ent Id</a>
+                                    </li>
+
+
+                                </ul>
+                            </div>
+                            <label class=" label">First Name: </label>
+                            <div>
+                                <div class="input-group">
+                                    <input ng-keyup="GetUserList(search)" class="form-control" ng-model="search.FirstName" type="text">
+                                    <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                                </div>
+                            </div>
+
+
+
+                        </section>
+                        <section class="col col-lg-3 col-md-6 col-sm-12" ng-show="show.searchLastName">
+                            <label class=" label">Last Name: </label>
+                            <div class="input-group  ">
+                                <input type="text" ng-keyup="GetUserList(search)" ng-model="search.LastName" class="form-control" value="">
+                                <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                            </div>
+                        </section>
+                        <section class="col col-lg-3 col-md-6 col-sm-12" ng-show="show.searchadent">
+                            <label class=" label">Is Ad-ENT ID? <input type="checkbox" ng-change="GetUserList(search)" ng-model="search.isAdEntId" value=""></label>
+                            
+
+                            <div class="input-group  ">
+                                <input type="text" ng-keyup="GetUserList(search)" ng-model="search.UserId" class="form-control" value="">
+                                
+                                <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                            </div>
+                        </section>
+                      
+
+                      
+                    </div>
+                </div>
+
+            </fieldset>
+            <h1 class="font-md"> Search Results for <span class="semi-bold">Users</span><small class="text-danger"> &nbsp;&nbsp;({{ngUserList.length}} results)</small></h1>
+            <div class="table-responsive">
+
+                <table id="resultTable" class="table table-striped table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th style="width:30px">Pic</th>
+                            <th>F.Name</th>
+                            <th>L.Name</th>
+                            <th>Ad-Ent</th>
+                            <th>Email / Username</th>
+                            <th>Role</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr ng-repeat="item in ngUserList">
+                            <td><img src="Content/img/avatars/male.png" alt="" width="20"></td>
+                            <td>{{item.FirstName}}</td>
+                            <td>{{item.LastName}}</td>
+                            <td>{{item.UserId}}</td>
+                            <td>{{item.UserEmail}} <a href="javascript:void(0);" class="pull-right"><i class="fa fa-key"></i></a></td>
+                            <td><a data-toggle="modal" ng-click="OpenPopup(item)" href="javascript:void(0)">
+                                    <span class="label label-success">Assign Role</span>
+                                </a></td>
+                        </tr>
+                    
+
+
+                    </tbody>
+                </table>
+
+            </div>
+            <!--fieldset>
+                <div class="smart-form">
+                    <footer>
+
+                        <button type="button" class="btn btn-primary" onclick="javascript:ReloadApp();">
+                            Save
+                        </button>
+                       
+                    </footer>
+                </div>
+            </!--fieldset-->
+            <legend></legend>
+        </div>
+    </div>
+</article>
+
+
+
+<div class="modal fade " role="dialog" tabindex="-1" id="myModal">
+    <div class="modal-backdrop fade in" id="myModalbackdrop" style="height: 509px;z-index: 9999;"></div>
+    <div class="modal-dialog" style="z-index: 99999;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3> User Activation</h3>
+
+            </div>
+            <div class="modal-body no-padding">
+
+
+
+              
+                  
+
+                        <div role="content" class="margin-bottom-10">
+
+
+                            <div class="smart-form">
+
+
+
+                              
+                                <fieldset class="">
+                                    <div>
+                                        <div class="row">
+                                            <section class="col col-lg-6">
+                                                <label class=" label">
+                                                    First Name:
+                                                    
+                                                    <a href="javascript:void(0)" class="editable editable-click">{{ngPopupItem.FirstName}}</a>
+                                                </label>
+
+                                            </section>
+                                            <section class="col col-lg-6">
+                                                <label class=" label">
+                                                    Last Name:
+                                                    <a href="javascript:void(0)" class="editable editable-click">
+                                                        {{ngPopupItem.LastName}}
+                                                    </a>
+                                                </label>
+
+
+
+                                            </section>
+                                        </div>
+                                        <div class="row ">
+
+
+
+                                            
+                                            <section ng-repeat="item in bindRegister.UserRoles">
+                                                <label class="checkbox">
+                                                    <input type="checkbox" ng-checked="item.value" ng-model="item.Value" />
+                                                    <i></i>{{item.Name}}
+                                                </label>
+                                            </section>
+                                            <img src="Content/img/loading.gif" ng-if="bindRegister.UserRoles.length==0" />
+
+
+
+                                        </div>
+                                    </div>
+
+                                </fieldset>
+                                <fieldset>
+                                    <div class="smart-form">
+                                        <footer>
+
+                                            <button type="button" class="btn btn-primary" ng-click="ApproverProfile();">
+                                                Save
+                                            </button>
+                                            <button type="button" class="btn btn-danger" ng-click="DeinedProfile();">
+                                                Close
+                                            </button>
+                                        </footer>
+                                    </div>
+                                </fieldset>
+                            </div>
+                        </div>
+
+
+
+            </div>
+        </div>
+    </div>
+</div>

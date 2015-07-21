@@ -1,0 +1,302 @@
+.wf-btn-jump .btn {
+    color : #ffffff;
+    font-size : 1.3em;
+}
+
+.wf-btn-ca1 {
+    background-color: #F57545;
+    border-color : #bf4f25;
+}
+
+.wf-btn-ca1:hover,
+.wf-btn-ca1:active,
+.wf-btn-ca1:focus,
+.wf-btn-ca1.active {
+    background-color: #bf4f25;
+    border-color : #333333;
+}
+
+.wf-btn-ca2 {
+    background-color: #faa21b;
+    border-color : #c78014;
+}
+
+.wf-btn-ca2:hover,
+.wf-btn-ca2:active,
+.wf-btn-ca2:focus,
+.wf-btn-ca2.active {
+    background-color: #c78014;
+    border-color : #333333;
+}
+
+.wf-btn-cb {
+    background-color: #6c207e;
+    border-color : #4a1457;
+}
+
+.wf-btn-cb:hover,
+.wf-btn-cb:active,
+.wf-btn-cb:focus,
+.wf-btn-cb.active {
+    background-color: #4a1457;
+    border-color : #333333;
+}
+
+.wf-btn-bl {
+    background-color: #afbc22;
+    border-color : #87911b;
+}
+
+.wf-btn-bl:hover,
+.wf-btn-bl:active,
+.wf-btn-bl:focus,
+.wf-btn-bl.active {
+    background-color: #87911b;
+    border-color : #333333;
+}
+
+.wf-btn-ut {
+    background-color: #6A98D3;
+    border-color : #608bc1;
+}
+
+.wf-btn-ut:hover,
+.wf-btn-ut:active,
+.wf-btn-ut:focus,
+.wf-btn-ut.active {
+    background-color: #608bc1;
+    border-color : #333333;
+}
+
+.wf-searchbox-panel .dropdown.dropdown-lg .dropdown-menu {
+    margin-top: -1px;
+    padding: 6px 20px;
+}
+
+.wf-searchbox-panel .input-group-btn .btn-group {
+    display: flex !important;
+}
+
+.wf-searchbox-panel .btn-group .btn {
+    border-radius: 0;
+    margin-left: -1px;
+}
+
+.wf-searchbox-panel .btn-group .btn:last-child {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.wf-searchbox-panel .btn-group .btn-block {
+  border-radius : 4px;
+}
+
+.wf-searchbox-panel .form-horizontal .form-group {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.wf-searchbox-panel .form-group .form-control:last-child {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.panel-group {
+    margin-bottom : 5px;
+}
+.panel-default {
+    opacity: 0.9;
+}
+
+/*moved to custom.css
+.panel-group .panel-default {
+    border-color : #F5A242;
+}
+
+.panel-group .panel-default > .panel-heading + .panel-collapse > .panel-body {
+    border-top-color : #F5A242;
+}*/
+.panel-group .panel-default .panel-heading {
+    /*background-color : #F5A242; moved to custom.css*/
+    padding : 5px 10px;
+}
+
+.panel-group .panel-default .panel-heading {
+    padding : 5px 10px;
+}
+
+.panel-group .panel .panel-heading .panel-title {
+    font-family: verdana,arial,helvetica,sans-serif;
+    font-size : 12px;
+}
+
+.panel-group .panel .panel-heading .panel-title a {
+    display:block;
+    width : 100%;
+    outline : none;
+    text-decoration :none;
+    color : #ffffff;
+    font-weight : bold;
+    text-transform : uppercase;
+    padding : 2px;
+}
+
+.panel-group .panel .panel-body {
+    padding : 5px;
+}
+
+.wf-main-tabs .tabbable-panel {
+    background-color: #ffffff;
+    border:1px solid #aaaaaa;
+    padding: 0;
+    border-radius : 4px;
+    margin-bottom : 5px;
+    -khtml-box-shadow : 0 1px 1px rgba(0, 0, 0, 0.05);
+    -webkit-box-shadow : 0 1px 1px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow : 0 1px 1px rgba(0, 0, 0, 0.05);
+    box-shadow : 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+.wf-main-tabs .tabbable-line > .nav-tabs {
+    border: none;
+    margin: 0;
+}
+.wf-main-tabs .tabbable-line > .nav-tabs > li {
+    margin-right: 2px;
+}
+.wf-main-tabs .tabbable-line > .nav-tabs > li > a {
+    border: 0;
+    margin-right: 0;
+    color: #ffffff;
+    font-size : 1.3em;
+    font-weight : bold;
+    text-transform : uppercase;
+    padding : 5px 15px;
+}
+.wf-main-tabs .tabbable-line > .nav-tabs > li > a > i {
+    color: #a6a6a6;
+}
+.wf-main-tabs .tabbable-line > .nav-tabs > li.open, .tabbable-line > .nav-tabs > li:hover {
+    border-bottom: 4px solid #44464A;
+}
+.wf-main-tabs .tabbable-line > .nav-tabs > li.open > a, .tabbable-line > .nav-tabs > li:hover > a {
+    border: 0;
+    background: none !important;
+    color: #ffffff;
+}
+.wf-main-tabs .tabbable-line > .nav-tabs > li.open > a > i, .tabbable-line > .nav-tabs > li:hover > a > i {
+    color: #8F8F8F;
+}
+.wf-main-tabs .tabbable-line > .nav-tabs > li.open .dropdown-menu, .tabbable-line > .nav-tabs > li:hover .dropdown-menu {
+    margin-top: 0;
+}
+.wf-main-tabs .tabbable-line > .nav-tabs > li.active {
+    border-bottom: 4px solid #BB0826;
+    position: relative;
+}
+.wf-main-tabs .tabbable-line > .nav-tabs > li.active > a {
+    border: 0;
+    color: #333333;
+}
+.wf-main-tabs .tabbable-line > .nav-tabs > li.active > a > i {
+    color: #404040;
+}
+.wf-main-tabs .tabbable-line > .tab-content {
+    margin-top: -3px;
+    border: 0;
+    border-top: 1px solid #aaaaaa;
+    padding: 10px 5px;
+}
+.wf-main-tabs .portlet .tabbable-line > .tab-content {
+    padding-bottom: 0;
+}
+
+.wf-section .wf-section-bg {
+    background-color : #ffffff;
+}
+
+.wf-section .wf-section-header {
+    color : #777;
+    text-transform : uppercase;
+}
+
+.wf-bg-unprotected-normal
+{
+}
+
+.wf-bg-protected {
+    background-color: #ebf4fa !important;
+    color: #333 !important;
+}
+
+.wf-bg-protected-bright {
+    background-color: #95b0dd !important;
+    color: #475368 !important;
+}
+
+.wf-bg-protected-red, 
+.wf-bg-unprotected-red
+{
+    color: red !important;
+    background-color: #f99 !important;
+    border-bottom-color: #f7f7f7 !important;
+    border-right-color: #f7f7f7 !important;
+    border-left-color: #ccc !important;
+    border-top-color: #ccc !important;
+}
+
+.wf-bg-protected_status
+{
+    color: red !important;
+    font-weight: bold;
+}
+
+@media screen and (min-width: 768px) {
+    .wf-searchbox-panel #adv-search {
+        width: 500px;
+        margin: 0 auto;
+    }
+    .wf-searchbox-panel .dropdown.dropdown-lg {
+        position: static !important;
+    }
+    .wf-searchbox-panel .dropdown.dropdown-lg .dropdown-menu {
+        min-width: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo {
+        margin: 5px 0 0 5px;
+    }
+    .navbar .navbar-header .navbar-brand {
+        margin-left : 0;
+        padding-left : 2px;
+    }
+    .wf-app-name {
+        font-size : 75%;
+    }
+    .wf-navbar {
+        width : 100%;
+    }
+    .wf-btn-jump .btn-responsive {
+        padding:4px 8px;
+        font-size:100%;
+        line-height: 1;
+        border-radius:3px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+    .navbar .navbar-header .navbar-brand {
+        margin-left : 0;
+        padding-left : 2px;
+    }
+    .wf-btn-jump .btn-responsive {
+        padding:4px 9px;
+        font-size:95%;
+        line-height: 1.2;
+    }
+    .wf-app-name {
+        font-size : 85%;
+    }
+}

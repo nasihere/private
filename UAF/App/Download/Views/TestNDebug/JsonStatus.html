@@ -1,0 +1,50 @@
+﻿<style>
+    .modal {
+        overflow: hidden;
+    }
+
+    .modal-dialog {
+        margin-right: 0;
+        margin-left: 0;
+    }
+</style>
+ <a href="javascript:void(0)" data-target="#myModal" data-backdrop="false" data-toggle="modal">!</a>
+  
+<div class="side-menu ng-hide"  id="sideMenu" >
+   
+    <form target="_blank" action="Views/TestNDebug/jasmine/SpecRunnerWMG.aspx" method="POST">
+        <input type="text" name="json" value="{{jsonPreview}}"/>
+        <input value="Test Case" type="submit"/>
+    </form>
+     <a href="javascript:void(0)" onclick="FillAutoModels()"> * </a>
+    
+    <a href="#" ng-click="moveForceNext()"> Move Next</a>
+    <a href="../../Wealth.html" >Refresh</a>
+          
+</div>
+<div id="myModal" class="modal fade "  >
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Json Data</h4>
+
+            </div>
+            
+            <div class="modal-body" style="overflow: auto;height: 550px;width: 500px">
+                <pre>SessionId: {{SessionIDPreview}}</pre>
+                <pre >{{jsonPreview | json}}</pre> 
+                <pre >{{failurePreview | json}}</pre> 
+                
+                <pre >{{routingStates | json}}</pre> 
+                
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+               
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>

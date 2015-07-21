@@ -1,0 +1,152 @@
+﻿<div class="containerZ">
+    <div class="leftz greyrightborder" ng-init="setDropDown()" ng-if="_showAppRaceEthnicity.status == true">
+
+        <div class="clearfix col col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <h3 class="georgia underlined marginbottom10"><span>&nbsp;Applicant Information</span></h3>
+        </div>
+        <div ng-show="applicationMethod == 'F' && appInPersonIndicator == 'Y'" class="row">
+            <dl class="formset clearfix col col-lg-12 col-md-8 col-sm-8 col-xs-12 margintop0 marginbottom0">
+                <dt style="font-weight: normal">Based upon visual observation:<span class="star">*</span></dt>
+                <dd style="width: 100px">
+                    <select valid="select" vminval="0" vmsg="Applicant Based upon visual observation required" class="select"
+                            ng-model="applicant.Observation"
+                            ng-options="type.key as type.value for type in common.SelectYesNo"></select>
+                </dd>
+            </dl>
+        </div>
+        <div class="row">
+            <dl class="formset clearfix col col-lg-12 col-md-8 col-sm-8 col-xs-12 margintop0 marginbottom0">
+                <dt style="font-weight: normal">
+                    Applicant Gender:<span class="star">*</span>
+                </dt>
+                <dd style="width: 200px">
+                    <select valid="select" vminval="0" vmsg="Applicant gender required" class="select"
+                            ng-model="applicant.gender"
+                            ng-options="type.key as type.value for type in applicantGender"></select>
+                </dd>
+            </dl>
+        </div>
+        <div class="row">
+            <dl class="formset clearfix col col-lg-12 col-md-8 col-sm-8 col-xs-12 margintop0 marginbottom0">
+                <dt style="font-weight: normal">
+                    Applicant Ethnicity:<span class="star">*</span>
+                </dt>
+                <dd style="width: 200px">
+                    <select valid="select" vminval="0" vmsg="Applicant ethnicity required" class="select"
+                            ng-model="applicant.ethnicity"
+                            ng-options="type.key as type.value for type in applicantEthnicity"></select>
+                </dd>
+            </dl>
+        </div>
+        <div class="row">
+
+            <dl class="formset clearfix col col-lg-12 col-md-8 col-sm-8 col-xs-12 margintop0 marginbottom0">
+                <dt style="font-weight: normal">
+                    Applicant Race:<span class="star">*</span>
+
+
+                </dt>
+
+                <dd style="width: 300px" class="panel-default-error">
+                    <input type="checkbox" ng-model="applicant.race1" ng-click="AppRaceList(applicantRaceList[0].value,applicant.race1);" ng-true-value="{{applicantRaceList[0].key}}" ng-false-value="" ng-disabled="applicantDisable" />
+                    <span style="font-weight: normal">{{applicantRaceList[0].value}}</span>
+                    <br />
+                    <input type="checkbox" ng-model="applicant.race2" ng-click="AppRaceList(applicantRaceList[1].value,applicant.race2);" ng-true-value="{{applicantRaceList[1].key}}" ng-false-value="" ng-disabled="applicantDisable" />
+                    <span style="font-weight: normal">{{applicantRaceList[1].value}}</span>
+                    <br />
+                    <input type="checkbox" ng-model="applicant.race3" ng-click="AppRaceList(applicantRaceList[2].value,applicant.race3);" ng-true-value="{{applicantRaceList[2].key}}" ng-false-value="" ng-disabled="applicantDisable" />
+                    <span style="font-weight: normal">{{applicantRaceList[2].value}}</span>
+                    <br />
+                    <input type="checkbox" ng-model="applicant.race4" ng-click="AppRaceList(applicantRaceList[3].value,applicant.race4);" ng-true-value="{{applicantRaceList[3].key}}" ng-false-value="" ng-disabled="applicantDisable" />
+                    <span style="font-weight: normal">{{applicantRaceList[3].value}}</span>
+                    <br />
+                    <input type="checkbox" ng-model="applicant.race5" ng-click="AppRaceList(applicantRaceList[4].value,applicant.race5);" ng-true-value="{{applicantRaceList[4].key}}" ng-false-value="" ng-disabled="applicantDisable" />
+                    <span style="font-weight: normal">{{applicantRaceList[4].value}}</span>
+                    <br />
+                    <div ng-show="applicationMethod != 'F'">
+                        <input type="checkbox" ng-model="applicant.race6" ng-click="AppRaceList(applicantRaceList[5].value,applicant.race6);" ng-true-value="{{applicantRaceList[5].key}}" ng-false-value="" ng-change="validateApplicantRace()" />
+                        <span style="font-weight: normal">{{applicantRaceList[5].value}}</span>
+                    </div>
+                    <br />
+                    <input type="text" style="opacity: 0;margin-left:-9999px" valid="fill" id="AppRaceValid" placeholder="X" value="" />
+
+                </dd>
+                <dd>
+                    <!--use this to enforce validation on Race -->
+                    <!-- <select multiple="multiple" ng-model="applicant.race"
+                            ng-options="type.key as type.value for type in common.Race">
+                    </select> -->
+
+                </dd>
+            </dl>
+
+
+        </div>
+    </div>
+    <div class="rightz" ng-if="_showCoAppRaceEthnicity.status == true">
+        <div class="clearfix col col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <h3 class="georgia underlined marginbottom10"><span>&nbsp;Co Applicant Information</span></h3>
+        </div>
+        <div ng-show="coApplicationMethod == 'F' && coAppInPersonIndicator == 'Y'" class="row">
+            <dl class="formset clearfix col col-lg-12 col-md-8 col-sm-8 col-xs-12 margintop0 marginbottom0">
+                <dt style="font-weight: normal">Based upon visual observation:<span class="star">*</span></dt>
+                <dd style="width: 200px">
+                    <select valid="select" vmsg="CoApplicant Based upon visual observation required" class="select" ng-model="coapplicant.Observation"
+                            ng-options="type.key as type.value for type in common.SelectYesNo"></select>
+                </dd>
+            </dl>
+        </div>
+        <div class="row">
+            <dl class="formset clearfix col col-lg-12 col-md-8 col-sm-8 col-xs-12 margintop0 marginbottom0">
+                <dt style="font-weight: normal">Co Applicant Gender:<span class="star">*</span></dt>
+
+                <dd style="width: 200px">
+                    <select valid="select" vmsg="CoApplicant gender required" class="select" ng-model="coapplicant.gender"
+                            ng-options="type.key as type.value for type in coApplicantGender"></select>
+                </dd>
+
+            </dl>
+        </div>
+        <div class="row">
+            <dl class="formset clearfix col col-lg-12 col-md-8 col-sm-8 col-xs-12 margintop0 marginbottom0">
+                <dt style="font-weight: normal">Co Applicant Ethnicity:<span class="star">*</span></dt>
+                <dd style="width: 200px">
+                    <select valid="select" vmsg="CoApplicant ethnicity required" class="select" ng-model="coapplicant.ethnicity"
+                            ng-options="type.key as type.value for type in coApplicantEthnicity"></select>
+                </dd>
+            </dl>
+        </div>
+        <div class="row">
+
+            <dl class="formset clearfix col col-lg-12 col-md-8 col-sm-8 col-xs-12 margintop0 marginbottom0">
+                <dt style="font-weight: normal">Co Applicant Race:</dt>
+                <dd style="width: 300px" class="panel-default-error">
+                    <input type="checkbox" ng-model="coapplicant.race1" ng-click="CoAppRaceList(coApplicantRaceList[0].value,coapplicant.race1);" ng-true-value="{{coApplicantRaceList[0].key}}" ng-false-value="" ng-disabled="coApplicantDisable" />
+                    <span style="font-weight: normal">{{coApplicantRaceList[0].value}}</span>
+                    <br />
+                    <input type="checkbox" ng-model="coapplicant.race2" ng-click="CoAppRaceList(coApplicantRaceList[1].value,coapplicant.race2);" ng-true-value="{{coApplicantRaceList[1].key}}" ng-false-value="" ng-disabled="coApplicantDisable" />
+                    <span style="font-weight: normal">{{coApplicantRaceList[1].value}}</span>
+                    <br />
+                    <input type="checkbox" ng-model="coapplicant.race3" ng-click="CoAppRaceList(coApplicantRaceList[2].value,coapplicant.race3);" ng-true-value="{{coApplicantRaceList[2].key}}" ng-false-value="" ng-disabled="coApplicantDisable" />
+                    <span style="font-weight: normal">{{coApplicantRaceList[2].value}}</span>
+                    <br />
+                    <input type="checkbox" ng-model="coapplicant.race4" ng-click="CoAppRaceList(coApplicantRaceList[3].value,coapplicant.race4);" ng-true-value="{{coApplicantRaceList[3].key}}" ng-false-value="" ng-disabled="coApplicantDisable" />
+                    <span style="font-weight: normal">{{coApplicantRaceList[3].value}}</span>
+                    <br />
+                    <input type="checkbox" ng-model="coapplicant.race5" ng-click="CoAppRaceList(coApplicantRaceList[4].value,coapplicant.race5);" ng-true-value="{{coApplicantRaceList[4].key}}" ng-false-value="" ng-disabled="coApplicantDisable" />
+                    <span style="font-weight: normal">{{coApplicantRaceList[4].value}}</span>
+                    <div ng-show="coApplicationMethod != 'F'">
+                        <input type="checkbox" ng-model="coapplicant.race6" ng-click="CoAppRaceList(coApplicantRaceList[5].value,coapplicant.race6);" ng-true-value="{{coApplicantRaceList[5].key}}" ng-false-value="" ng-change="validateCoApplicantRace()" />
+                        <span style="font-weight: normal">{{coApplicantRaceList[5].value}}</span>
+                    </div>
+
+                    <br />
+                    <input type="text" style="opacity: 0;margin-left:-9999px" valid="fill" id="CoAppRaceValid" placeholder="X" value="" />
+
+
+                </dd>
+            </dl>
+        </div>
+    </div>
+</div>
+

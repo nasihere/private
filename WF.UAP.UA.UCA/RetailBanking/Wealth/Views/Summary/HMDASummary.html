@@ -1,0 +1,98 @@
+﻿<div id="" class="panel-collapse in" style="height: auto;">
+    <div class="">
+        <div class="containerZ">
+            <div class="leftz80">
+                <h3 class="georgia underlined clearfix" style="text-align: left; margin-left: 20px;"><span>Improved Property Address</span></h3>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="leftz alignright"><span class="leftlabel">Address Line 1 (P.O Box not allowed):</span></div>
+            <div class="rightz">
+                <label>{{HmdaAddress.propertyImproved.addrLineList.addrLine}}</label>
+            </div>
+            <div class="leftz alignright"><span class="leftlabel">City:</span></div>
+            <div class="rightz">
+                <label>{{HmdaAddress.propertyImproved.city}}</label>
+            </div>
+            <div class="leftz alignright"><span class="leftlabel">State:</span></div>
+            <div class="rightz">
+                <label>{{getDescription(common.SelectYesNo, HmdaAddress.propertyImproved.state)}}</label>
+            </div>
+            <div class="leftz alignright"><span class="leftlabel">Zip:</span></div>
+            <div class="rightz">
+                <label>{{HmdaAddress.propertyImproved.zip}}</label>
+            </div>
+            <div class="leftz alignright"><span class="leftlabel">Property Type:</span></div>
+            <div class="rightz">
+                <label>{{getDescription(common.ddHmdaProperType, HmdaAddress.propertyType)}}</label>
+            </div>
+            <div class="leftz alignright"><span class="leftlabel">Occupancy of the Collateral Property:</span></div>
+            <div class="rightz">
+                <label>{{getDescription(common.ddCollateralPropertyOccupancy, HmdaAddress.occupancy)}}</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="">
+        <div class="containerZ">
+            <div class="leftz80">
+                <h3 class="georgia underlined clearfix" style="text-align: left; margin-left: 20px;"><span>Applicant Information</span></h3>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="leftz alignright"><span class="leftlabel">Based upon visual observation:</span></div>
+            <div class="rightz">
+                <label>{{getDescription(common.SelectYesNo, applicantHMDA.observation)}}</label>
+            </div>
+            <div class="leftz alignright"><span class="leftlabel">Applicant Gender:</span></div>
+            <div class="rightz">
+                <label>{{getDescription(common.ddGender, applicantHMDA.gender)}}</label>
+            </div>
+            <div class="leftz alignright"><span class="leftlabel">Applicant Ethnicity:</span></div>
+            <div class="rightz">
+                <label>{{getDescription(common.ddEthnicity, applicantHMDA.ethnicity)}}</label>
+            </div>
+            <div class="leftz alignright"><span class="leftlabel">Applicant Race:</span></div>
+            <div class="rightz">
+                <label>{{applicantHMDA.race1}}</label><br />
+                <label>{{applicantHMDA.race2}}</label><br />
+                <label>{{applicantHMDA.race3}}</label><br />
+                <label>{{applicantHMDA.race4}}</label><br />
+                <label>{{applicantHMDA.race5}}</label>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="">
+        <div class="containerZ">
+            <div class="leftz80">
+                <h3 class="georgia underlined clearfix" style="text-align: left; margin-left: 20px;"><span>Co-Applicant Information</span></h3>
+            </div>
+        </div>
+        <div class="container">
+            <div class="leftz alignright"><span class="leftlabel">Based upon visual observation:</span></div>
+            <div class="rightz">
+                <label>{{getDescription(common.SelectYesNo, coapplicantHMDA.observation)}}</label>
+            </div>
+            <div class="leftz alignright"><span class="leftlabel">Applicant Gender:</span></div>
+            <div class="rightz">
+                <label>{{getDescription(common.ddGender, coapplicantHMDA.gender)}}</label>
+            </div>
+            <div class="leftz alignright"><span class="leftlabel">Applicant Ethnicity:</span></div>
+            <div class="rightz">
+                <label>{{getDescription(common.ddEthnicity, coapplicantHMDA.ethnicity)}}</label>
+            </div>
+            <div class="leftz alignright"><span class="leftlabel">Applicant Race:</span></div>
+            <div class="rightz">
+                <label>{{coapplicantHMDA.race1}}</label><br />
+                <label>{{coapplicantHMDA.race2}}</label><br />
+                <label>{{coapplicantHMDA.race3}}</label><br />
+                <label>{{coapplicantHMDA.race4}}</label><br />
+                <label>{{coapplicantHMDA.race5}}</label>
+            </div>
+        </div>
+    </div>
+</div>

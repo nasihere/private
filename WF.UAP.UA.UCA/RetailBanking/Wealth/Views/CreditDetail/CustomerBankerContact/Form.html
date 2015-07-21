@@ -1,0 +1,119 @@
+﻿<div class="containerz" style="background-color: white">
+
+    <div class="leftz100">
+        <h4 class="georgia underlined clearfix">Customer/Banker Contacts</h4>
+    </div>
+    <div class="leftz greyrightborder">
+        <div class="containerz">
+
+            <div class="leftz  text-right">
+                <span class="leftnormallabel">Applicant Email Address:</span>
+            </div>
+            <div class="rightz">
+                <input valid="^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$"  vmsg="Applicant Email address should be valid" class="emailmask" data-ng-model="applicant.email" type="email" name="text" class="">
+            </div>
+        </div>
+
+
+        <div class="containerz" ng-if="applicationInfo.isCoAppAvailable == 'Y'">
+            <div class="leftz  text-right">
+                <span class="leftnormallabel">Co-Applicant Email Address:</span>
+            </div>
+            <div class="rightz">
+                <input valid="^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$"  vmsg="Co Applicant Email address should be valid" class="emailmask" data-ng-model="coapplicant.email" type="email" name="text" class="">
+            </div>
+        </div>
+        <div class="containerz">
+            <div class="leftz  text-right">
+                <span class="leftnormallabel">Preferred Time To Call:</span>
+            </div>
+            <div class="rightz col-lg-12">
+                <select class="select" ng-model="applicationInfo.preferredTimeToCall" style="width: 160px"
+                    ng-options="type.key as type.value for type in common.SelectPreferredTimeToCall">
+                </select>
+            </div>
+        </div>
+        <div class="containerz">
+            <div class="leftz  text-right">
+                <span class="leftnormallabel">Customer Contact Phone:</span>
+            </div>
+            <div class="rightz">
+                <input valid="^[0-9\s]*$" vmsg="" maxlength="10" data-ng-model="applicationInfo.applicantPhone" type="text" name="text" class="">
+            </div>
+        </div>
+    </div>
+
+    <div class="rightz greyrightborder">
+        <div class="containerz">
+            <div class="leftz  text-right" style="width: 300px">
+                <span class="leftnormallabel">Additional Banker/Associate Contact Name:</span>
+            </div>
+            <div class="rightz" style="width: 125px">
+                <input valid="^[a-zA-Z0-9\s]*$" vmsg="Additional Banker or Associate Contact: Name should be valid" maxlength="40" data-ng-model="additionalInfo.name" type="text" name="text" class="">
+            </div>
+        </div>
+
+        <div class="containerz">
+            <div class="leftz text-right" style="width: 300px">
+                <span class="leftnormallabel">Additional Banker/Associate Contact Phone:</span>
+            </div>
+            <div class="rightz" style="width: 125px">
+                <input valid="^[a-zA-Z0-9\s]*$" vmsg="Additional Banker or Associate Contact: Phone should be valid" class="phonemask" data-ng-model="additionalInfo.phone" type="text" name="text" maxlength="10" class="">
+            </div>
+        </div>
+
+        <div class="containerz">
+            <div class="leftz  text-right" style="width: 300px">
+                <span class="leftnormallabel">Additional Banker/Associate Contact Email Address:</span>
+            </div>
+            <div class="rightz" style="width: 125px">
+                <input valid="^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$" vmsg="Additional Banker or Associate Contact: Email address should be valid" class="emailmask" data-ng-model="additionalInfo.email" type="email" name="text" class="">
+            </div>
+        </div>
+        <!--     <div class="containerz">
+            <div class="leftz  text-right">
+                <span class="leftnormallabel">Banker Officer ID:</span>
+            </div>
+            <div class="rightz">
+                <input ng-disabled="true" valid="^[a-zA-Z0-9\s]*$" vmsg="" maxlength="30" data-ng-model="additionalInfo.bankerInfo.officerID" type="text" name="text" class="">
+            </div>
+        </div>-->
+
+    </div>
+    <!--<div class="leftz"></div>
+    <div class="rightz">
+        <div class="rightz100">
+            <h4 class="georgia underlined clearfix">Additional Contact</h4>
+        </div>
+
+
+    </div>-->
+
+    <!--
+                                    <div class="leftz greyrightborder">
+                                        <div class="containerz">
+                                            <div class="leftz100">
+                                                <h4 class="georgia underlined clearfix">Additional Contact</h4>
+                                            </div>
+                                            <div class="leftz  text-right">
+                                                <span class="leftnormallabel">Customer Contact Information:</span>
+                                            </div>
+                                            <div class="rightz">
+                                                <input class="emailmask" data-ng-model="applicant.EmailAddress" type="email" name="text" class="" maxlength="10">
+                                            </div>
+                                        </div>
+
+
+                                        <div class="containerz" ng-if="applicationInfo.isCoAppAvailable == 'Y'">
+                                            <div class="leftz  text-right">
+                                                <span class="leftnormallabel">Preferred time to call:</span>
+                                            </div>
+                                            <div class="rightz col-lg-12">
+                                                <select required ng-model="temp" class="select " style="width: 280px; z-index: 10; opacity: 0; -webkit-appearance: none;">
+                                                    <option ng-selected="c.key=={{temp}}" ng-repeat="c in common.ddPreferredTimeToCall" value="{{c.key}}">{{c.value}}</option>
+                                                </select>
+                                                <span class="select">Select</span>
+                                            </div>
+                                        </div>
+                                    </div> -->
+</div>

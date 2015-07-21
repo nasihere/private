@@ -1,0 +1,40 @@
+﻿<?xml version="1.0"?>
+
+<!--
+  For more information on how to configure your ASP.NET application, please visit
+  http://go.microsoft.com/fwlink/?LinkId=169433
+  -->
+
+<configuration>
+  <configSections>
+    <sectionGroup name="common">
+      <section name="logging" type="Common.Logging.ConfigurationSectionHandler, Common.Logging, Version=3.0.0.0, Culture=neutral, PublicKeyToken=af08829b84f0328e"/>
+    </sectionGroup>
+    <section name="nlog" type="NLog.Config.ConfigSectionHandler, NLog, Version=3.1.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c"/>
+  </configSections>
+  <system.web>
+    <compilation configSource="gac.config"/>
+    <httpRuntime targetFramework="4.5" />
+    <sessionState mode="SQLServer" cookieless="false" timeout="60" sqlConnectionString="${Common.Database.Connection.String.CUSPASPState}"  allowCustomSqlDatabase="true" />
+  </system.web>
+  <common>
+    <logging>
+      <factoryAdapter type="Common.Logging.NLog.NLogLoggerFactoryAdapter,Common.Logging.NLog31, Version=3.0.0.0, Culture=neutral, PublicKeyToken=af08829b84f0328e">
+        <arg key="configType" value="FILE" />
+        <arg key="configFile" value="${Common.Root.Folder.DoubleSlash}\\Config\\UA\\UCRA\\logging\\CUSPApps.NLog.config"/>
+      </factoryAdapter>
+    </logging>
+  </common>
+  <appSettings>
+    <add key="endDate" value="${Common.HEQ.HomeEquityLoan.DisableDate}"/>
+    <add key="MaturingToolWebApiUrl" value="${Common.MaturingToolWebAPI.Url}" />
+  </appSettings>
+  <runtime>
+    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+      <dependentAssembly>
+        <assemblyIdentity name="Newtonsoft.Json" publicKeyToken="30ad4fe6b2a6aeed" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-6.0.0.0" newVersion="6.0.0.0" />
+      </dependentAssembly>
+    </assemblyBinding>
+  </runtime>
+</configuration>

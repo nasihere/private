@@ -1,0 +1,131 @@
+﻿.overlay {
+    -moz-opacity: .70;
+    background-color: #fff;
+    filter: Alpha(Opacity=70);
+    height: 100%;
+    left: 0;
+    opacity: .70;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+}
+
+/** html .overlay{
+position:absolute;
+height:expression(document.body.scrollHeight>document.body.offsetHeight ? document.body.scrollHeight:document.body.offsetHeight+'px');
+width:expression(document.body.scrollWidth>document.body.offsetWidth ? document.body.scrollWidth:document.body.offsetWidth+'px')
+}*/
+
+.loader {
+    left: 50%;
+    margin-left: -60px;
+    position: fixed;
+    top: 50%;
+    width: 120px;
+    z-index: 100;
+}
+
+/** html .loader{
+position:absolute;
+margin-top:expression((document.body.scrollHeight / 4)+(0 - parseInt(this.offsetParent.clientHeight / 2)+(document.documentElement && document.documentElement.scrollTop || document.body.scrollTop))+'px')
+}*/
+
+/*Spinner*/
+
+@-webkit-keyframes spinner {
+    0% {
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@-moz-keyframes spinner {
+    0% {
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@-o-keyframes spinner {
+    0% {
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spinner {
+    0% {
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+/* :not(:required) hides this rule from IE9 and below */
+
+.spinner:not(:required) {
+    -moz-animation: spinner 1500ms infinite linear;
+    -moz-border-radius: 0.5em;
+    -moz-box-shadow: rgba(0, 0, 51, 0.3) 1.5em 0 0 0, rgba(0, 0, 51, 0.3) 1.1em 1.1em 0 0, rgba(0, 0, 51, 0.3) 0 1.5em 0 0, rgba(0, 0, 51, 0.3) -1.1em 1.1em 0 0, rgba(0, 0, 51, 0.3) -1.5em 0 0 0, rgba(0, 0, 51, 0.3) -1.1em -1.1em 0 0, rgba(0, 0, 51, 0.3) 0 -1.5em 0 0, rgba(0, 0, 51, 0.3) 1.1em -1.1em 0 0;
+    -ms-animation: spinner 1500ms infinite linear;
+    -ms-border-radius: 0.5em;
+    -o-animation: spinner 1500ms infinite linear;
+    -o-border-radius: 0.5em;
+    -webkit-animation: spinner 1500ms infinite linear;
+    -webkit-border-radius: 0.5em;
+    -webkit-box-shadow: rgba(0, 0, 51, 0.3) 1.5em 0 0 0, rgba(0, 0, 51, 0.3) 1.1em 1.1em 0 0, rgba(0, 0, 51, 0.3) 0 1.5em 0 0, rgba(0, 0, 51, 0.3) -1.1em 1.1em 0 0, rgba(0, 0, 51, 0.3) -1.5em 0 0 0, rgba(0, 0, 51, 0.3) -1.1em -1.1em 0 0, rgba(0, 0, 51, 0.3) 0 -1.5em 0 0, rgba(0, 0, 51, 0.3) 1.1em -1.1em 0 0;
+    animation: spinner 1500ms infinite linear;
+    border-radius: 0.5em;
+    box-shadow: rgba(0, 0, 51, 0.3) 1.5em 0 0 0, rgba(0, 0, 51, 0.3) 1.1em 1.1em 0 0, rgba(0, 0, 51, 0.3) 0 1.5em 0 0, rgba(0, 0, 51, 0.3) -1.1em 1.1em 0 0, rgba(0, 0, 51, 0.3) -1.5em 0 0 0, rgba(0, 0, 51, 0.3) -1.1em -1.1em 0 0, rgba(0, 0, 51, 0.3) 0 -1.5em 0 0, rgba(0, 0, 51, 0.3) 1.1em -1.1em 0 0;
+    display: inline-block;
+    font-size: 10px;
+    height: 1em;
+    margin: 1.5em;
+    overflow: hidden;
+    text-indent: 100%;
+    width: 1em;
+}

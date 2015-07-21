@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  For more information on how to configure your ASP.NET application, please visit
+  http://go.microsoft.com/fwlink/?LinkId=169433
+  -->
+
+<configuration>
+    <system.web>
+        <customErrors mode="Off"/>
+        <machineKey validationKey="B936212DFDC7B627C6C43F21E045579D77616BBE05F2142F5293552FE339FF9ED621D8E197D441657BC5A519852FD8DA5942947C3098F83B51D2D14FA2D0EF6C" decryptionKey="68AF0566C3CD848EEF42E11DA5FDB4FFB97AA6F7C306B82C" validation="SHA1" decryption="AES" />
+        <compilation configSource="gac.config"  />
+        <httpRuntime targetFramework="4.5" />
+    </system.web>
+    <appSettings>
+        <add key="TokenServiceHost" value="${Common.UCAWebAPI.Url}" />
+        <add key="TokenServiceApi" value="Token" />
+        <add key="TokenServiceKey" value="grant_type=password&amp;username=test&amp;password=EAICNCADEV100&amp;portal=UCA" />
+
+        <add key="DataServiceHost" value="${Common.UCAWebAPI.Url}" />
+        <add key="DataServiceApi" value="GetData" />
+        <add key="DataServiceApiSubmit" value="SetData" />
+    </appSettings>
+    <runtime>
+        <gcserver enabled="true"/>
+        <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+            <dependentAssembly>
+                <assemblyIdentity name="Newtonsoft.Json" publicKeyToken="30ad4fe6b2a6aeed" culture="neutral" />
+                <bindingRedirect oldVersion="0.0.0.0-6.0.0.0" newVersion="6.0.0.0" />
+            </dependentAssembly>
+        </assemblyBinding>
+    </runtime>
+    <location path="Global">
+        <system.webServer>
+            <modules runAllManagedModulesForAllRequests="true"/>
+            <staticContent>
+                <clientCache cacheControlMode="UseMaxAge" cacheControlMaxAge="${Common.StaticContent.CacheControlMaxAge}" />
+            </staticContent>
+        </system.webServer>
+    </location>
+</configuration>

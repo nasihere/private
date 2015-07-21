@@ -1,0 +1,41 @@
+﻿
+/* CSS corrections for all versions of IE - based on class on <html> tag = ie8|ie9|ie10
+===================================================================================
+*/
+
+
+
+/* rules for ALL ie's  */
+div.navbar,
+div.panel-heading { filter:none!important;}
+input[type=text] { line-height:12px!important; height:26px!important; padding-top:6px!important; padding-bottom:6px!important; }
+input[type=radio] { display:inline-block!important; vertical-align:bottom!important; margin-bottom:2px!important; }
+div.selectcontainer { margin-right:5px; vertical-align:bottom; margin-bottom:4px; }
+div.selectcontainer span.select { height:26px!important; }
+div.modalcontainer div.selectcontainer { margin-top:-1px; }
+div.modalcontainer div.selectcontainer select[title=Date] + span.select { width:5%!important; }
+body#dashboard #searchpanel div.selectcontainer { vertical-align:middle!important; }
+body#dashboard #searchpanel select.select { width:260%!important; }
+body#dashboard #searchpanel #acctNumber { width:67.5%!important; }
+
+
+table.checkboxtable td.col1 input { display:block!important; margin-left:0!important; }
+table.checkboxtable.topthree td.col1 input { margin-left:2px!important; margin-top:2px!important; }
+
+#product_selection dl.row dt.col.col-lg-1 { width:8.33%!important; clear:both!important; }
+#product_selection dl.row dd.col.col-lg-11 { width:91.66%!important; }
+#product_selection dl.dl-equal dt { width:40%!important; }
+#product_selection dl.dl-equal dd { padding-top:0!important; }
+#product_selection table.checkboxtable.productsandoffers td.col1 input[type=checkbox]  { margin-top:2px!important; margin-left:2px!important; }
+.text-truncate span.threedots_ellipsis { right:16px; }
+
+/* IE8 Rules */
+html.ie8 {  }
+
+
+/* IE9 Rules */
+html.ie9 {  }
+
+
+/* IE10 Rules */
+html.ie10 {  }

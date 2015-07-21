@@ -1,0 +1,165 @@
+﻿<div id="dvSchedule3Modal" style="display: none">
+    <div class="blackout"></div>
+    <div class="modalcontainer clearfix">
+         <p class="alignright marginbottom0 pull-right"><a ng-click="modalPopupCdSavingClose()" href="javascript:;"><strong>X</strong></a></p>
+        <div class="modal-internal">
+            <h2><span>Schedule 3: Real Estate Holdings (Mortgages Or Liens)</span></h2>
+            <div class="">
+                <div id="schedule3" style="width: 1150px">
+                    <style>
+                        label {
+                            font-weight: normal;
+                        }
+                    </style>
+                    <div class="row ">
+                        <div class="containerZ">
+                            <div class="leftz">
+                                <div class="containerZ">
+                                    <div class="leftz text-right">
+                                        <div class="text-right">Type:</div>
+                                    </div>
+                                    <div class="rightz col-lg-12">
+                                        <select class="select" ng-model="reoList.reo.reoType" ng-init="reoList.reo.reoType=''" style="width: 100px"
+                                            ng-options="type.key as type.value for type in common.ddSchedule3Types">
+                                        </select>
+                                    </div>
+                                    <div class="leftz text-right">
+                                        <div class="text-right">Address:</div>
+                                    </div>
+                                    <div class="rightz col-lg-12">
+                                        <input valid="^[a-zA-Z0-9\s]*$" vmsg="only alphanumeric allowed"  ng-model="reoList.reo.reoAddrStreet" type="text" name="text" placeholder="" maxlength="30">
+                                    </div>
+                                    <div class="leftz text-right">
+                                        <div class="text-right">% of Ownership</div>
+                                    </div>
+                                    <div class="rightz">
+                                        <input valid="^[0-9.]+$" vmsg="only numeric allowed"  ng-model="reoList.reo.reoPercentageOfOwnership" type="text" name="text" placeholder="" maxlength="5">
+                                    </div>
+                                    <div class="leftz text-right">
+                                        <div class="text-right">Free & Clear</div>
+                                    </div>
+                                    <div class="rightz col-lg-12">
+                                        <select class="select" ng-model="reoList.reo.reofreeClearInd" ng-init="reoList.reo.reofreeClearInd=''" style="width: 100px"
+                                            ng-options="type.key as type.value for type in common.SelectYesNo">
+                                        </select>
+                                    </div>
+                                    <div class="leftz text-right">
+                                        <div class="text-right">Lender:</div>
+                                    </div>
+                                    <div class="rightz">
+                                        <input valid="^[a-zA-Z0-9\s]*$" vmsg="only alphanumeric allowed" ng-model="reoList.reo.reoMTGLienHolder" type="text" name="text" placeholder="" maxlength="30">
+                                    </div>
+                                    <div class="leftz text-right">
+                                        <div class="text-right">Maturity Date (MM/DD/YYYY):</div>
+                                    </div>
+                                    <div class="rightz col-lg-12">
+                                        <input ng-model="reoList.reo.reoMaturityDate" wmg-datepicker type="text" name="text" placeholder="" maxlength="10">
+                                    </div>
+                                    <div class="leftz text-right">
+                                        <div class="text-right">Loan Balance:</div>
+                                    </div>
+                                    <div class="rightz">
+                                        <input valid="^[0-9.]+$" vmsg="only numeric allowed" type="text" ng-model="reoList.reo.reoLienAmount" name="text" value="" placeholder="" maxlength="12">
+                                    </div>
+                                    <div class="leftz text-right">
+                                        <div class="text-right">Monthly Payment:</div>
+                                    </div>
+                                    <div class="rightz">
+                                        <input valid="^[0-9.]+$" vmsg="only numeric allowed" ng-model="reoList.reo.reoMonthlyPayment" type="text" name="text" value="" placeholder="" maxlength="12">
+                                    </div>
+                                    <div class="leftz text-right">
+                                        <div class="text-right">Est. Market Value:</div>
+                                    </div>
+                                    <div class="rightz col-lg-12">
+                                        <input valid="^[0-9.]+$" vmsg="only numeric allowed" ng-model="reoList.reo.reoPresentMktValue" type="text" name="text" placeholder="" maxlength="12">
+                                    </div>
+                                    <div class="leftz text-right">
+                                    </div>
+                                    <div class="rightz">
+                                        <a ng-click="saveRealEstateHoldings(reo)" class="btn btn-primary" href="javascript:void(0)">Save</a>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <div class="rightz">
+                                <div class="containerZ">
+
+                                    <div class="leftz text-right">
+                                        <div class="text-right">Annual Rent Income:</div>
+                                    </div>
+                                    <div class="rightz">
+                                        <input valid="^[0-9.]+$" vmsg="only numeric allowed" ng-model="reoList.reo.reoGrossRentalIncome" type="text" name="text" placeholder="" maxlength="12">
+                                    </div>
+                                    <div class="leftz text-right">
+                                        <div class="text-right">Monthly HOI</div>
+                                    </div>
+                                    <div class="rightz">
+                                        <input valid="^[0-9.]+$" vmsg="only numeric allowed" ng-model="reoList.reo.reoHOInsurance" type="text" name="text" placeholder="" maxlength="9">
+                                    </div>
+                                    <div class="leftz text-right">
+                                        <div class="text-right">HOI in Payment</div>
+                                    </div>
+                                    <div class="rightz col-lg-12">
+                                        <select class="select" ng-model="reoList.reo.reoInsuranceEscrowInd" ng-init="reoList.reo.reoInsuranceEscrowInd=''" style="width: 100px"
+                                            ng-options="type.key as type.value for type in common.SelectYesNo">
+                                        </select>
+                                    </div>
+                                    <div class="leftz text-right">
+                                        <div class="text-right">Monthly Taxes:</div>
+                                    </div>
+                                    <div class="rightz">
+                                        <input valid="^[0-9.]+$" vmsg="only numeric allowed" ng-model="reoList.reo.reoMonthlyTaxes" type="text" name="text" placeholder="" maxlength="9">
+                                    </div>
+                                    <div class="leftz text-right">
+                                        <div class="text-right">Taxes in Payment:</div>
+                                    </div>
+                                    <div class="rightz col-lg-12">
+                                        <select class="select" ng-model="reoList.reo.reoTaxEscrowInd" ng-init="reoList.reo.reoTaxEscrowInd=''" style="width: 100px"
+                                            ng-options="type.key as type.value for type in common.SelectYesNo">
+                                        </select>
+                                    </div>
+                                    <div class="leftz text-right">
+                                        <div class="text-right">Monthly Flood Ins:</div>
+                                    </div>
+                                    <div class="rightz">
+                                        <input valid="^[0-9.]+$" vmsg="only numeric allowed" type="text" ng-model="reoList.reo.reoMonthlyFloodIns" name="text" value="" placeholder="" maxlength="12">
+                                    </div>
+                                    <div class="leftz text-right">
+                                        <div class="text-right">Flood Ins in Payment:</div>
+                                    </div>
+                                    <div class="rightz col-lg-12">
+                                        <select class="select" ng-model="reoList.reo.reoFloodInsPayment" ng-init="reoList.reo.reoFloodInsPayment=''" style="width: 100px"
+                                            ng-options="type.key as type.value for type in common.SelectYesNo">
+                                        </select>
+                                    </div>
+                                    <div class="leftz text-right">
+                                        <div class="text-right">Other Monthly Housing Obligations:</div>
+                                    </div>
+                                    <div class="rightz">
+                                        <input valid="^[0-9.]+$" vmsg="only numeric allowed" ng-model="reoList.reo.reoOtherHousingOblig" type="text" name="text" value="" placeholder="" maxlength="9">
+                                    </div>
+                                    <div class="leftz text-right">
+                                        <div class="text-right">HOA Dues/Co-op Fees:</div>
+                                    </div>
+                                    <div class="rightz">
+                                        <input valid="^[0-9.]+$" vmsg="only numeric allowed" ng-model="reoList.reo.reoHOADues" type="text" name="text" value="" placeholder="" maxlength="9">
+                                    </div>
+                                    <div class="leftz text-right">
+                                        <div class="text-right">Other Monthly Insurance:</div>
+                                    </div>
+                                    <div class="rightz">
+                                        <input valid="^[0-9.]+$" vmsg="only numeric allowed" ng-model="reoList.reo.reoOtherMonthlyInsurance" type="text" name="text" value="" placeholder="" maxlength="9">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="modalfootera"><a class="btn btn-primary pull-right" href="javascript:;" ng-click="modalPopupSchedule3Close()"><span>Close</span></a></p>
+
+    </div>
+
+</div>

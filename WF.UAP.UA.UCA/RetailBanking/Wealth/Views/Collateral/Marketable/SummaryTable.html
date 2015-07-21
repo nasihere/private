@@ -1,0 +1,37 @@
+﻿
+<div ng-show="PathMarketable.length != 0" class="tab-contentGrey ">
+    
+    <table class="table table-striped ">
+        <thead>
+            <tr>
+                <th>Security Type</th>
+                <th>Account</th>
+                <th>Intermediary </th>
+                <th>Manager</th>
+                <th>Bank Address </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="sum in PathMarketable" wmgautoheight>
+                <td class="leftlabel">{{sum.securityInformation.type}}</td>
+                <td class="leftlabel">{{sum.securityInformation.accNumber}}</td>
+                <td class="leftlabel">{{sum.securityInformation.intermediary}}</td>
+                <td class="leftlabel">{{sum.securityInformation.investmentManager}}</td>
+                <td class="leftlabel">{{sum.collAddress.line1}}  {{sum.collAddress.line2}}  {{sum.collAddress.city}}  {{sum.collAddress.state}} - {{sum.collAddress.zip}}</td>
+                <td>
+
+                 
+                    
+                    <a  class="graytext js-add pointer" ng-click="editCollateral($index,'Marketable','#CollateralsMarketable-','Marketable Collateral','false','Close')">Edit</a>
+                    
+
+                    <a class="graytext js-add editlink " style="border-left: none!important; border-right: none!important;">|</a>
+                    <a ng-click="removeCollateral($index,'Marketable')" class ="pointer" ng-attr-href="javascript:void(0)"  >Remove</a>
+
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>

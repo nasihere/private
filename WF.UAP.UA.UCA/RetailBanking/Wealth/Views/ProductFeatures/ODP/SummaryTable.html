@@ -1,0 +1,38 @@
+﻿<div ng-show="odp.length" class="tab-content">
+
+    <div class="margintop20 ">
+        <table class="table table-striped ">
+            <thead>
+                <tr>
+                    <th>ODP Acc?</th>
+                    <th>Check Acc</th>
+                    <th>Others</th>
+                    <th>Acc No</th>
+                    <th>RTN</th>
+                    <th>Home Equity</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="sum in odp">
+                    <td>{{sum.ODP_CheckingAccount}}</td>
+                    <td>{{sum.SelectCheckingAccount}}</td>
+                    <td>{{sum.OtherWellsFargoChecking}}</td>
+                    <td>{{sum.AccountNo}}</td>
+                    <td>{{sum.RTN}}</td>
+                    <td>{{sum.ODP_HomeEquity}}</td>
+                    <td>
+                        <a class="pull-right  btn btn-primary" ng-click="odp.removeItem($index)" href="javascript:void(0)">Remove</a>
+
+                        <a class="pull-right  btn btn-primary" ng-click="odp.editItem($index)" href="javascript:void(0)">Edit</a>
+
+                    </td>
+                </tr>
+
+
+            </tbody>
+        </table>
+
+    </div>
+
+
+</div>

@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C0949C8C-DBFD-4FFE-BB42-987B8083A159}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WF.UAP.UA.UAPortal.BLL</RootNamespace>
+    <AssemblyName>WF.UAP.UA.UAPortal.BLL</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\WF.UAP.UA.UAPortal.BLL.xml</DocumentationFile>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\WF.UAP.UA.UAPortal.BLL.xml</DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Common.Logging, Version=3.0.0.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\UDB\DataLib\WF.UAP.UDB.DataLib.CDN\Lib\FOSS\Apache2.0\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging.Core, Version=3.0.0.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\UDB\DataLib\WF.UAP.UDB.DataLib.CDN\Lib\FOSS\Apache2.0\Common.Logging.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging.NLog31">
+      <HintPath>..\..\..\UDB\DataLib\WF.UAP.UDB.DataLib.CDN\Lib\FOSS\Apache2.0\Common.Logging.NLog31.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\UDB\DataLib\WF.UAP.UDB.DataLib.CDN\Lib\FOSS\MSL\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices.Protocols" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Authentication\ActiveDirectoryAuth.cs" />
+    <Compile Include="Authentication\TopSecretAuth.cs" />
+    <Compile Include="BO\UAPortalAccountBO.cs" />
+    <Compile Include="Helpers\UAPortalDbHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\DataSources\WF.EAI.Entities.domain.c2c.TaskMgmt.TaskEntity.datasource" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Global\WF.UAP.UA.Global.BLL\WF.UAP.UA.Global.BLL.csproj">
+      <Project>{628C7363-0D35-4191-9AB3-59ADDB8EE743}</Project>
+      <Name>WF.UAP.UA.Global.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\UASF\WF.UAP.UASF.Utils\WF.UAP.UASF.Utils.csproj">
+      <Project>{a1c6f95b-da7d-4e0d-b4b5-7bd1e0cd1200}</Project>
+      <Name>WF.UAP.UASF.Utils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\UASF\WF.UAP.UASF\WF.UAP.UASF.csproj">
+      <Project>{cd995605-07b6-4b0a-ac98-ba623014a5cf}</Project>
+      <Name>WF.UAP.UASF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\UDB\Repository\WF.UAP.UDB.Repository.Domain.Entities\WF.UAP.UDB.Repository.Domain.Entities.csproj">
+      <Project>{b933c18a-1ac7-4fe7-b0ef-5d1a482f1354}</Project>
+      <Name>WF.UAP.UDB.Repository.Domain.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\UDB\Repository\WF.UAP.UDB.Repository.Transform\WF.UAP.UDB.Repository.Transform.csproj">
+      <Project>{06ab3bc9-0e59-411f-831f-f88a18b68e92}</Project>
+      <Name>WF.UAP.UDB.Repository.Transform</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

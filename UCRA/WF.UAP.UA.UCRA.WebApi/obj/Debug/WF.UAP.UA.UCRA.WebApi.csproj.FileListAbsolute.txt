@@ -1,0 +1,1 @@
+C:\0_Next\UAP\UA\UCRA\WF.UAP.UA.UCRA.WebApi\obj\Debug\WF.UAP.UA.UCRA.WebApi.csprojResolveAssemblyReference.cache

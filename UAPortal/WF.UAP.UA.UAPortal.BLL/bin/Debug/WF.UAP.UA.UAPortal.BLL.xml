@@ -1,0 +1,170 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WF.UAP.UA.UAPortal.BLL</name>
+    </assembly>
+    <members>
+        <member name="T:WF.UAP.UA.UAPortal.BLL.Authentication.ActiveDirectoryAuth">
+            <summary>
+            ActiveDirectoryAuth
+            </summary>
+        </member>
+        <member name="M:WF.UAP.UA.UAPortal.BLL.Authentication.ActiveDirectoryAuth.ValidateUser(System.String,System.String)">
+            <summary>
+            ValidateUser - Validate Active Directory Users
+            </summary>
+            <param name="userName">userName</param>
+            <param name="password">password</param>
+            <returns>True/False Boolean</returns>
+        </member>
+        <member name="T:WF.UAP.UA.UAPortal.BLL.Authentication.TopSecretAuth">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:WF.UAP.UA.UAPortal.BLL.BO.UAPortalAccountBO">
+            <summary>
+            UAPortalAccountBO
+            </summary>
+        </member>
+        <member name="M:WF.UAP.UA.UAPortal.BLL.BO.UAPortalAccountBO.GetAcccountModel(WF.UAP.UDB.Repository.Domain.Entities.UAPortal.AccountModel)">
+            <summary>
+            GetAcccountModel
+            </summary>
+            <param name="model"></param>
+            <returns>AccountModel</returns>
+        </member>
+        <member name="M:WF.UAP.UA.UAPortal.BLL.BO.UAPortalAccountBO.RegisterAccountModel(WF.UAP.UDB.Repository.Domain.Entities.UAPortal.AccountModel)">
+            <summary>
+             Registers a new user and sends an email notificatoin on success
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WF.UAP.UA.UAPortal.BLL.BO.UAPortalAccountBO.GetRoles">
+            <summary>
+            Fetches the Active Non-Admin Roles 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WF.UAP.UA.UAPortal.BLL.BO.UAPortalAccountBO.SaveAccountRoles(WF.UAP.UDB.Repository.Domain.Entities.UAPortal.AccountModel)">
+            <summary>
+            
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WF.UAP.UA.UAPortal.BLL.BO.UAPortalAccountBO.SaveAccount(WF.UAP.UDB.Repository.Domain.Entities.UAPortal.AccountModel)">
+            <summary>
+            
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WF.UAP.UA.UAPortal.BLL.BO.UAPortalAccountBO.ApproveAccountModel(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="guid"></param>
+            <param name="roleids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WF.UAP.UA.UAPortal.BLL.BO.UAPortalAccountBO.GetUsersList(WF.UAP.UDB.Repository.Domain.Entities.UAPortal.AccountModel)">
+            <summary>
+            
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WF.UAP.UA.UAPortal.BLL.Helpers.UaPortalDbHelper.GetUserAccountInformation(System.String,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="userId"></param>
+            <param name="isAdEntId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WF.UAP.UA.UAPortal.BLL.Helpers.UaPortalDbHelper.RegisterUserAccountInformation(System.String,System.Boolean,System.String,System.String,System.String)">
+            <summary>
+            Registers User Account Information
+            </summary>
+            <param name="userId"></param>
+            <param name="isAdEntId"></param>
+            <param name="roles"></param>
+            <param name="email"></param>
+            <param name="firstname"></param>
+            <param name="lastname"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WF.UAP.UA.UAPortal.BLL.Helpers.UaPortalDbHelper.GetRoles">
+            <summary>
+             Get Roles fetches - Active Non-Admin Roles
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WF.UAP.UA.UAPortal.BLL.Helpers.UaPortalDbHelper.SaveUserAccountRoles(System.String,System.Boolean,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="userId"></param>
+            <param name="isAdEntId"></param>
+            <param name="roles"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WF.UAP.UA.UAPortal.BLL.Helpers.UaPortalDbHelper.UpdateUserProfile(System.String,System.Boolean,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="userId"></param>
+            <param name="isAdEntId"></param>
+            <param name="roles"></param>
+            <param name="email"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WF.UAP.UA.UAPortal.BLL.Helpers.UaPortalDbHelper.GetUserGuid(System.String,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="userId"></param>
+            <param name="isAdEntId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WF.UAP.UA.UAPortal.BLL.Helpers.UaPortalDbHelper.EnableUserProfile(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="guid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WF.UAP.UA.UAPortal.BLL.Helpers.UaPortalDbHelper.GetAdminProfiles">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WF.UAP.UA.UAPortal.BLL.Helpers.UaPortalDbHelper.GetUserInfoByGuid(System.String)">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WF.UAP.UA.UAPortal.BLL.Helpers.UaPortalDbHelper.GetUserRoles(System.String,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="userId"></param>
+            <param name="isAdEntId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WF.UAP.UA.UAPortal.BLL.Helpers.UaPortalDbHelper.GetUsersList(System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="firstName"></param>
+            <param name="lastName"></param>
+            <param name="userId"></param>
+            <param name="isAdEntId"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

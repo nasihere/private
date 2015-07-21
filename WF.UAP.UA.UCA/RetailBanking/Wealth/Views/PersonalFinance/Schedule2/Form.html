@@ -1,0 +1,43 @@
+﻿<div class="containerZ">
+
+
+    <div class="containerZ marginleft20 marginbottom10">
+        <span class="georgia underlined "><span><b>Schedule 2:</b> Notes Receivable</span></span>
+        <div ng-show="!Errormsg==''" class="alert alert-danger" style="margin: 5px 5px 5px 5px">
+            <p>Error: {{Errormsg}}</p>
+        </div>
+    </div>
+    <div class="tab-contentGrey">
+        <table class="table table-striped ">
+            <tr>
+                <th class="linkHeader" style="width: 30%">
+                    <label>Name of Debtor</label></th>
+                <th class="linkHeader" style="width: 16%">
+                    <label>Collateral Type </label>
+                </th>
+                <th class="linkHeader" style="width: 16%">
+                    <label>Maturity Date (MM/DD/YYYY) </label>
+                </th>
+                <th class="linkHeader" style="width: 16%">
+                    <label>Annual P&I</label></th>
+                <th class="linkHeader" style="width: 16%">
+                    <label>Unpaid Balance</label></th>
+                <th></th>
+            </tr>
+        </table>
+        <div wmg-personal-finance-note-directive ng-repeat="input in inputNore2Receivable" wmgautoheight>
+        </div>
+        <table class="table table-striped ">
+            <tr>
+                <td style="width: 30%"></td>
+                <td style="width: 16%"></td>
+                <td style="width: 17%"></td>
+                <td style="width: 16%" class="bolded underlined ">{{TotalAnnual() | currency}}</td>
+                <td style="width: 16%" class="bolded underlined ">{{TotalUnPaidBalance() | currency}}</td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+
+</div>
+

@@ -1,0 +1,9 @@
+﻿
+<a class="btn btn-info " onclick="printOut()"> Print</a>
+
+<div id="summary" ng-controller="SummaryController">
+  
+    <div accordion_  ng-repeat ="item in Summary | orderBy: 'position'" wmgautoheight heading="{{item.name}}" panelid="dv{{$index}}365474112014" open="true">
+        <div ng-include src="'./Views/Summary/ApplicationSummary/Preview.html'"></div>
+    </div>
+</div>                             

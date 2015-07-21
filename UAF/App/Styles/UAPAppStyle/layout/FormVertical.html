@@ -1,0 +1,50 @@
+﻿					
+<article class="col-sm-12 col-md-12  {{form.size}} sortable-grid ui-sortable">
+				
+							<!-- Widget ID (each widget will need unique ID)-->
+							<div class="jarviswidget {{form.theme}} jarviswidget-sortable" id="wid-id-3" data-widget-colorbutton="false" data-widget-editbutton="false" data-widget-custombutton="false" role="widget">
+							
+									<header role="heading"><div class="jarviswidget-ctrls" role="menu">   <a href="javascript:void(0);" class="button-icon jarviswidget-toggle-btn" rel="tooltip" title="" data-placement="bottom" data-original-title="Collapse"><i class="fa fa-minus "></i></a> <a href="javascript:void(0);" class="button-icon jarviswidget-fullscreen-btn" rel="tooltip" title="" data-placement="bottom" data-original-title="Fullscreen"><i class="fa fa-expand "></i></a> <a href="javascript:void(0);" class="button-icon jarviswidget-delete-btn" rel="tooltip" title="" data-placement="bottom" data-original-title="Delete"><i class="fa fa-times"></i></a></div>
+									<span class="widget-icon"> <i class="fa {{form.formicon}}"></i> </span>
+                                        <h2 contenteditable="true">{{form.formcaption}} Window Title </h2>
+				
+								<span class="jarviswidget-loader"><i class="fa fa-refresh fa-spin"></i></span></header>
+				
+								<div role="content">
+				
+									<div class="jarviswidget-editbox">
+								
+									</div>
+									
+                                    <div class="form-horizontal">
+
+
+
+
+                                        <fieldset ng-repeat="row in form.fields" ng-if="row.length">
+                                            <legend contenteditable="true">Flexible Input fields with icons</legend>
+
+                                            <div class="form-group" ng-repeat="option in row">
+
+                                                <label contenteditable="true" ng-class="{'control-label':option.align}" class=" {{option.style}}  {{option.clslabel}} ">{{option.label}}</label>
+                                                <div class="{{option.cls}}">
+                                                    <div class="icon-addon addon-sm  ">
+                                                        <app-input option="option"></app-input>
+                                                        <label class="glyphicon  {{option.icon.replace('fa','glyphicon')}}"></label>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+
+
+                                        </fieldset>
+
+
+                                    </div>
+								
+								</div>
+							
+							</div>
+							
+						</article>

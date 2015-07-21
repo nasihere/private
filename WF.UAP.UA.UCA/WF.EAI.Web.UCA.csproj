@@ -1,0 +1,408 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{57DBD14B-ABD8-4FA7-910B-1B35348C109E}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WF.EAI.Web.UCA</RootNamespace>
+    <AssemblyName>WF.EAI.Web.UCA</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\..\CommonLib\WF.EAI.ThirdPartyDll.Common\Newtonsoft.Json.6.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json.Fakes">
+      <HintPath>FakesAssemblies\Newtonsoft.Json.Fakes.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Global\Content\Css\Bootstrap\bootstrap-theme.css" />
+    <Content Include="Global\Content\Css\Bootstrap\bootstrap-theme.min.css" />
+    <Content Include="Global\Content\Css\Bootstrap\bootstrap.css" />
+    <Content Include="Global\Content\Css\Bootstrap\bootstrap.min.css" />
+    <Content Include="Global\Content\Css\Bootstrap\datepicker3.css" />
+    <Content Include="Global\Content\Css\Bootstrap\global.css" />
+    <Content Include="Global\Content\Css\Bootstrap\ie.css" />
+    <Content Include="Global\Content\Css\Bootstrap\plugin.css" />
+    <Content Include="Global\Content\Css\Bootstrap\spinner.css" />
+    <Content Include="Global\Content\Css\jasmine-2.0.2\jasmine.css" />
+    <Content Include="Global\Content\img\activetabpointerbottom.png" />
+    <Content Include="Global\Content\img\activetabpointertop.png" />
+    <Content Include="Global\Content\img\ajax-loading.gif" />
+    <Content Include="Global\Content\img\arrowicon.png" />
+    <Content Include="Global\Content\img\arrowicongrey.png" />
+    <Content Include="Global\Content\img\back_disabled.png" />
+    <Content Include="Global\Content\img\back_enabled.png" />
+    <Content Include="Global\Content\img\back_enabled_hover.png" />
+    <Content Include="Global\Content\img\bg-clouds.jpg" />
+    <Content Include="Global\Content\img\bkg_arrows_leftright_sprite.png" />
+    <Content Include="Global\Content\img\bkg_distraction_lines.png" />
+    <Content Include="Global\Content\img\btn-close.png" />
+    <Content Include="Global\Content\img\btn_blueCircle_plusminus_sprite.png" />
+    <Content Include="Global\Content\img\btn_greenCircle_plusminus_sprite.png" />
+    <Content Include="Global\Content\img\button.png" />
+    <Content Include="Global\Content\img\buttonunselect.png" />
+    <Content Include="Global\Content\img\card_images_block.png" />
+    <Content Include="Global\Content\img\card_image_single.png" />
+    <Content Include="Global\Content\img\check-gray.png" />
+    <Content Include="Global\Content\img\check-green.png" />
+    <Content Include="Global\Content\img\check-old %281%29.png" />
+    <Content Include="Global\Content\img\check-old.png" />
+    <Content Include="Global\Content\img\check.png" />
+    <Content Include="Global\Content\img\checkmark.png" />
+    <Content Include="Global\Content\img\collapse_5x10.gif" />
+    <Content Include="Global\Content\img\custom_checks_and_radios.png" />
+    <Content Include="Global\Content\img\fade-blue.png" />
+    <Content Include="Global\Content\img\fade-eggplant.png" />
+    <Content Include="Global\Content\img\fade-gold.png" />
+    <Content Include="Global\Content\img\fade-green.png" />
+    <Content Include="Global\Content\img\fade-orange.png" />
+    <Content Include="Global\Content\img\favicon.ico" />
+    <Content Include="Global\Content\img\forward_disabled.png" />
+    <Content Include="Global\Content\img\forward_enabled.png" />
+    <Content Include="Global\Content\img\forward_enabled_hover.png" />
+    <Content Include="Global\Content\img\greencheckmark.png" />
+    <Content Include="Global\Content\img\icon-calendar.png" />
+    <Content Include="Global\Content\img\icon-info-red.png" />
+    <Content Include="Global\Content\img\icon-info.png" />
+    <Content Include="Global\Content\img\img_chevron_right_333333.png" />
+    <Content Include="Global\Content\img\info-sm-blue.png" />
+    <Content Include="Global\Content\img\info-sm-notran.png" />
+    <Content Include="Global\Content\img\info-sm-red.png" />
+    <Content Include="Global\Content\img\logo-wf.png" />
+    <Content Include="Global\Content\img\logo_together.png" />
+    <Content Include="Global\Content\img\lrg_fail.png" />
+    <Content Include="Global\Content\img\lrg_failx.png" />
+    <Content Include="Global\Content\img\lrg_session_fail.png" />
+    <Content Include="Global\Content\img\maginifying-glass-med-dark-teal - Copy.jpg" />
+    <Content Include="Global\Content\img\menubar.png" />
+    <Content Include="Global\Content\img\pencil-red.png" />
+    <Content Include="Global\Content\img\pencil.png" />
+    <Content Include="Global\Content\img\pencilNCR.png" />
+    <Content Include="Global\Content\img\pie1.png" />
+    <Content Include="Global\Content\img\pie2.png" />
+    <Content Include="Global\Content\img\pie3.png" />
+    <Content Include="Global\Content\img\pie4.png" />
+    <Content Include="Global\Content\img\please-wait.gif" />
+    <Content Include="Global\Content\img\plus-active.png" />
+    <Content Include="Global\Content\img\plus.png" />
+    <Content Include="Global\Content\img\plusminus_toggle_sprite.png" />
+    <Content Include="Global\Content\img\plusminus_toggle_sprite2.png" />
+    <Content Include="Global\Content\img\red_exclamation.png" />
+    <Content Include="Global\Content\img\red_exclamation_efede9.png" />
+    <Content Include="Global\Content\img\red_exclamation_small.png" />
+    <Content Include="Global\Content\img\red_star.png" />
+    <Content Include="Global\Content\img\red_validation_error_arrow.png" />
+    <Content Include="Global\Content\img\select-arrow-background-dim.png" />
+    <Content Include="Global\Content\img\select-arrow-background-up.png" />
+    <Content Include="Global\Content\img\select-arrow-background.png" />
+    <Content Include="Global\Content\img\select-arrow-background_GREEN.png" />
+    <Content Include="Global\Content\img\select-arrow-double.png" />
+    <Content Include="Global\Content\img\sml_check_gray.png" />
+    <Content Include="Global\Content\img\sml_fail.png" />
+    <Content Include="Global\Content\img\sml_fail_dim.png" />
+    <Content Include="Global\Content\img\sort_asc.png" />
+    <Content Include="Global\Content\img\sort_both.png" />
+    <Content Include="Global\Content\img\sort_desc.png" />
+    <Content Include="Global\Content\img\sort_desc_disabled.png" />
+    <Content Include="Global\Content\img\spice_logo.png" />
+    <Content Include="Global\Content\img\stagecoachsignature.gif" />
+    <Content Include="Global\Content\img\SVP_Footer.PNG" />
+    <Content Include="Global\Content\img\SVP_header.PNG" />
+    <Content Include="Global\Content\img\tab-bottom-back-pb.png" />
+    <Content Include="Global\Content\img\tab-bottom-back.png" />
+    <Content Include="Global\Content\img\tab-bottom-front-pb.png" />
+    <Content Include="Global\Content\img\tab-bottom-front.png" />
+    <Content Include="Global\Content\img\tab-bottom-new.png" />
+    <Content Include="Global\Content\img\tab-front-pb.png" />
+    <Content Include="Global\Content\img\tab-new.png" />
+    <Content Include="Global\Content\img\tab.png" />
+    <Content Include="Global\Content\img\tabs-top.png" />
+    <Content Include="Global\Scripts\Lib\angular-ui\ui-bootstrap-tpls.js" />
+    <Content Include="Global\Scripts\Lib\angular-ui\ui-bootstrap-tpls.min.js" />
+    <Content Include="Global\Scripts\Lib\angular-ui\ui-bootstrap.js" />
+    <Content Include="Global\Scripts\Lib\angular-ui\ui-bootstrap.min.js" />
+    <Content Include="Global\Scripts\Lib\angularjs 1.2.24\angular-animate.js" />
+    <Content Include="Global\Scripts\Lib\angularjs 1.2.24\angular-animate.min.js" />
+    <Content Include="Global\Scripts\Lib\angularjs 1.2.24\angular-cookies.js" />
+    <Content Include="Global\Scripts\Lib\angularjs 1.2.24\angular-cookies.min.js" />
+    <Content Include="Global\Scripts\Lib\angularjs 1.2.24\angular-csp.css" />
+    <Content Include="Global\Scripts\Lib\angularjs 1.2.24\angular-mocks.js" />
+    <Content Include="Global\Scripts\Lib\angularjs 1.2.24\angular-resource.js" />
+    <Content Include="Global\Scripts\Lib\angularjs 1.2.24\angular-resource.min.js" />
+    <Content Include="Global\Scripts\Lib\angularjs 1.2.24\angular-route.js" />
+    <Content Include="Global\Scripts\Lib\angularjs 1.2.24\angular-route.min.js" />
+    <Content Include="Global\Scripts\Lib\angularjs 1.2.24\angular-scenario.js" />
+    <Content Include="Global\Scripts\Lib\angularjs 1.2.24\angular-ui-router.js" />
+    <Content Include="Global\Scripts\Lib\angularjs 1.2.24\angular-ui-router.min.js" />
+    <Content Include="Global\Scripts\Lib\angularjs 1.2.24\angular.js" />
+    <Content Include="Global\Scripts\Lib\angularjs 1.2.24\angular.min.js" />
+    <Content Include="Global\Scripts\Lib\angularjs 1.2.24\bootstrap.js" />
+    <Content Include="Global\Scripts\Lib\angularjs 1.2.24\bootstrap.min.js" />
+    <None Include="Global\Scripts\Lib\jQuery\jquery-1.9.0.intellisense.js" />
+    <Content Include="Global\Scripts\Lib\jasmine-2.0.2\boot.js" />
+    <Content Include="Global\Scripts\Lib\jasmine-2.0.2\console.js" />
+    <Content Include="Global\Scripts\Lib\jasmine-2.0.2\jasmine-html.js" />
+    <Content Include="Global\Scripts\Lib\jasmine-2.0.2\jasmine.js" />
+    <Content Include="Global\Scripts\Lib\jQuery\jquery-1.9.0.js" />
+    <Content Include="Global\Scripts\Lib\jQuery\jquery-1.9.0.min.js" />
+    <Content Include="Global\Scripts\Lib\SVP\bootstrap-datepicker.js" />
+    <Content Include="Global\Scripts\Lib\SVP\bootstrap.min.js" />
+    <Content Include="Global\Scripts\Lib\SVP\css3-mediaqueries.js" />
+    <Content Include="Global\Scripts\Lib\SVP\es5-shim-min.js" />
+    <Content Include="Global\Scripts\Lib\SVP\global.js" />
+    <Content Include="Global\Scripts\Lib\SVP\html5shiv.js" />
+    <Content Include="Global\Scripts\Lib\SVP\masked.js" />
+    <Content Include="Global\Scripts\Lib\SVP\plugins.js" />
+    <Content Include="Global\Scripts\Lib\SVP\respond.min.js" />
+    <Content Include="Global\Scripts\Lib\SVP\svp_app.js" />
+    <Content Include="RetailBanking\Wealth\Scripts\Controllers\ApplicationError\ApplicationErrorController.js" />
+    <Content Include="RetailBanking\Wealth\Scripts\Controllers\SubmitApp\SubmitAppController.js" />
+    <Content Include="RetailBanking\Wealth\Scripts\Directives\Validation.js" />
+    <Content Include="RetailBanking\Wealth\Scripts\Services\AppInitService.js" />
+    <Content Include="RetailBanking\Wealth\Scripts\Services\DataService.js" />
+    <Content Include="RetailBanking\Wealth\Views\Summary\ApplicationSummary\Preview.html" />
+    <Content Include="RetailBanking\Wealth\WealthSubmit.aspx" />
+    <Content Include="RetailBanking\Wealth\Main.html" />
+    <Content Include="RetailBanking\Wealth\Scripts\Directives\Accordion.js" />
+    <Content Include="RetailBanking\Wealth\Scripts\Directives\Component.js" />
+    <Content Include="RetailBanking\Wealth\Scripts\Services\CommonService.js" />
+    <Content Include="RetailBanking\Wealth\Views\ApplicationError\Error.html" />
+    <Content Include="RetailBanking\Wealth\Views\CreditDetail\BusinessTypeInformation\Form.html" />
+    <Content Include="RetailBanking\Wealth\Views\CreditDetail\Comment\Form.html" />
+    <Content Include="RetailBanking\Wealth\Views\CreditDetail\Compliance\Form.html" />
+    <Content Include="RetailBanking\Wealth\Views\CreditDetail\CustomerBankerContact\Form.html" />
+    <Content Include="RetailBanking\Wealth\Views\CreditDetail\JointAuthority\Form.html" />
+    <Content Include="RetailBanking\Wealth\Views\CreditDetail\MembersOfOfficers\Form.html" />
+    <Content Include="RetailBanking\Wealth\Views\HMDA\ApplicantInformation\Form.html" />
+    <Content Include="RetailBanking\Wealth\Views\HMDA\DisclosureReadCust\Form.html" />
+    <Content Include="RetailBanking\Wealth\Views\HMDA\InformationBanker\Form.html" />
+    <Content Include="RetailBanking\Wealth\Views\HMDA\WealthHmdaInfo\Form.html" />
+    <Content Include="RetailBanking\Wealth\Views\KYC\KYCInformation\Form.html" />
+    <Content Include="RetailBanking\Wealth\Views\PersonalFinance\AssetLiabilities\Form.html" />
+    <Content Include="RetailBanking\Wealth\Views\PersonalFinance\BasicDetails\Form.html" />
+    <Content Include="RetailBanking\Wealth\Views\PersonalFinance\Schedule2\Form.html" />
+    <Content Include="RetailBanking\Wealth\Views\PersonalFinance\Schedule3\MainForm.html" />
+    <Content Include="RetailBanking\Wealth\Views\ProductDetail\Comment\Form.html" />
+    <Content Include="RetailBanking\Wealth\Views\RECollateral\CollateralProperty\Form.html" />
+    <Content Include="RetailBanking\Wealth\Views\RECollateral\Comment\Form.html" />
+    <Content Include="RetailBanking\Wealth\Views\RECollateral\ExistingMortgageCollateralProperty\Form.html" />
+    <Content Include="RetailBanking\Wealth\Views\RECollateral\ExistingMortgageCollateralProperty\MortgageForm.html" />
+    <Content Include="RetailBanking\Wealth\Views\RECollateral\HomeownerInsurance\Form.html" />
+    <Content Include="RetailBanking\Wealth\Views\RECollateral\HousingExpenses\Form.html" />
+    <Content Include="RetailBanking\Wealth\Views\SubmitApp\SubmitApp.html" />
+    <Content Include="RetailBanking\Wealth\Views\Summary\SummaryJson.html" />
+    <Content Include="RetailBanking\Wealth\Views\TestNDebug\jasmine\SpecRunnerWMG.aspx" />
+    <Content Include="RetailBanking\Wealth\Views\TestNDebug\jasmine\spec\wmgJSONTestService.js" />
+    <Content Include="RetailBanking\Wealth\Views\TestNDebug\jasmine\src\wmgJson.js" />
+    <Content Include="Global\Views\Submit\Submit.html" />
+    <Content Include="RetailBanking\Wealth\Content\Css\custom.css" />
+    <Content Include="RetailBanking\Wealth\Content\Images\pencil.png" />
+    <Content Include="RetailBanking\Wealth\Content\Images\SVP_Footer.PNG" />
+    <Content Include="RetailBanking\Wealth\Content\Images\SVP_header.PNG" />
+    <Content Include="RetailBanking\Wealth\Scripts\Controllers\BaseController\BaseController.js" />
+    <Content Include="RetailBanking\Wealth\Scripts\Controllers\BaseController\BaseXML.js" />
+    <Content Include="RetailBanking\Wealth\Scripts\Controllers\BaseController\myDirective.js" />
+    <Content Include="RetailBanking\Wealth\Scripts\Controllers\Compliance\ComplianceController.js" />
+    <Content Include="RetailBanking\Wealth\Scripts\Controllers\HMDA\HMDAController.js" />
+    <Content Include="RetailBanking\Wealth\Scripts\Controllers\KYC\KYCController.js" />
+    <Content Include="RetailBanking\Wealth\Scripts\Controllers\PersonalFinance\PersonalFinanceController.js" />
+    <Content Include="RetailBanking\Wealth\Scripts\Controllers\Product\ProductController.js" />
+    <Content Include="RetailBanking\Wealth\Scripts\Controllers\RECollateral\RECollateralController.js" />
+    <Content Include="RetailBanking\Wealth\Scripts\Controllers\Summary\SummaryController.js">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="RetailBanking\Wealth\Scripts\main.js" />
+    <Content Include="RetailBanking\Wealth\Scripts\Services\ApiService.js" />
+    <Content Include="RetailBanking\Wealth\Scripts\Services\Navigator.js" />
+    <Content Include="RetailBanking\Wealth\Scripts\Services\StateService.js" />
+    <Content Include="RetailBanking\Wealth\Scripts\Services\XmlDataService.js" />
+    <Content Include="RetailBanking\Wealth\Scripts\StaticData\StaticData.js" />
+    <Content Include="RetailBanking\Wealth\Views\BreadCrumb\BreadCrumb.html" />
+    <Content Include="RetailBanking\Wealth\Views\BusinessPartnership\BusinessPartnership.html" />
+    <Content Include="RetailBanking\Wealth\Views\BusinessPartnership\Form.html" />
+    <Content Include="RetailBanking\Wealth\Views\Collateral\CDSaving\Form.html" />
+    <Content Include="RetailBanking\Wealth\Views\Collateral\CDSaving\SummaryTable.html" />
+    <Content Include="RetailBanking\Wealth\Views\Collateral\Collateral.html" />
+    <Content Include="RetailBanking\Wealth\Views\Collateral\Marketable\Form.html" />
+    <Content Include="RetailBanking\Wealth\Views\Collateral\Marketable\SummaryTable.html" />
+    <Content Include="RetailBanking\Wealth\Views\CreditDetail\CreditDetails.html" />
+    <Content Include="RetailBanking\Wealth\Views\CreditDetail\Disclaimer\Modal.html" />
+    <Content Include="RetailBanking\Wealth\Views\HMDA\Hmda.html" />
+    <Content Include="RetailBanking\Wealth\Views\KYC\Kyc.html" />
+    <Content Include="RetailBanking\Wealth\Views\PersonalFinance\Schedule3\Form.html" />
+    <Content Include="RetailBanking\Wealth\Views\PersonalFinance\PersonalFinance.html" />
+    <Content Include="RetailBanking\Wealth\Views\PersonalFinance\Schedule3\SummaryTable.html" />
+    <Content Include="RetailBanking\Wealth\Views\ProductDetail\BasicInfo.html" />
+    <Content Include="RetailBanking\Wealth\Views\ProductDetail\Product.html" />
+    <Content Include="RetailBanking\Wealth\Views\ProductFeatures\ACH\Form.html" />
+    <Content Include="RetailBanking\Wealth\Views\ProductFeatures\ACH\SummaryTable.html" />
+    <Content Include="RetailBanking\Wealth\Views\ProductFeatures\Checks\Form.html" />
+    <Content Include="RetailBanking\Wealth\Views\ProductFeatures\ODP\Form.html" />
+    <Content Include="RetailBanking\Wealth\Views\ProductFeatures\ODP\SummaryTable.html" />
+    <Content Include="RetailBanking\Wealth\Views\ProductFeatures\ProductFeatures.html" />
+    <Content Include="RetailBanking\Wealth\Views\RECollateral\RECollateral.html" />
+    <Content Include="RetailBanking\Wealth\Views\TestNDebug\FinalPCS.html" />
+    <Content Include="RetailBanking\Wealth\Views\TestNDebug\JsonStatus.html" />
+    <Content Include="RetailBanking\Wealth\Views\TestNDebug\SCS.html" />
+    <Content Include="RetailBanking\Wealth\Views\TestNDebug\TempProduct.html" />
+    <Content Include="RetailBanking\Wealth\Wealth.aspx" />
+    <Content Include="UCARouter.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RetailBanking\Wealth\Util\JsonMapper.cs" />
+    <Compile Include="RetailBanking\Wealth\Views\TestNDebug\jasmine\SpecRunnerWMG.aspx.cs">
+      <DependentUpon>SpecRunnerWMG.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RetailBanking\Wealth\Views\TestNDebug\jasmine\SpecRunnerWMG.aspx.designer.cs">
+      <DependentUpon>SpecRunnerWMG.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RetailBanking\Wealth\Wealth.aspx.cs">
+      <DependentUpon>Wealth.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RetailBanking\Wealth\Wealth.aspx.designer.cs">
+      <DependentUpon>Wealth.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RetailBanking\Wealth\WealthSubmit.aspx.cs">
+      <DependentUpon>WealthSubmit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RetailBanking\Wealth\WealthSubmit.aspx.designer.cs">
+      <DependentUpon>WealthSubmit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UCARouter.aspx.cs">
+      <DependentUpon>UCARouter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UCARouter.aspx.designer.cs">
+      <DependentUpon>UCARouter.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Global\Content\Css\Bootstrap\bootstrap-theme.css.map" />
+    <Content Include="Global\Content\Css\Bootstrap\bootstrap.css.map" />
+    <Content Include="Global\Scripts\Lib\angularjs 1.2.24\angular-animate.min.js.map" />
+    <Content Include="Global\Scripts\Lib\angularjs 1.2.24\angular-cookies.min.js.map" />
+    <Content Include="Global\Scripts\Lib\angularjs 1.2.24\angular-resource.min.js.map" />
+    <Content Include="Global\Scripts\Lib\angularjs 1.2.24\angular-route.min.js.map" />
+    <Content Include="Global\Scripts\Lib\angularjs 1.2.24\angular.min.js.map" />
+    <Content Include="Global\Scripts\Lib\angularjs 1.2.24\errors.json" />
+    <Content Include="Global\Scripts\Lib\angularjs 1.2.24\version.json" />
+    <Content Include="Global\Scripts\Lib\jQuery\jquery-1.9.0.min.map" />
+    <None Include="Properties\PublishProfiles\UCA.pubxml" />
+    <Content Include="Web.config.tokenize">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Global\Scripts\Common\" />
+    <Folder Include="Global\Views\Summary\" />
+    <Folder Include="RetailBanking\Auto\" />
+    <Folder Include="RetailBanking\CreditCard\" />
+    <Folder Include="RetailBanking\HEQ\" />
+    <Folder Include="RetailBanking\PLL\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\CommonLib\WF.EAI.Model\WF.EAI.Model.csproj">
+      <Project>{5fe7312d-8fb2-4993-b428-d5af02681fd4}</Project>
+      <Name>WF.EAI.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>41238</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/UCA</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

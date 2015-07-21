@@ -1,0 +1,163 @@
+﻿
+
+ <div class="containerZ"> <!--Inner containerz !-->
+            <div class="leftz"><!--Inner Left !-->
+                <div class="underlined bolded">Business & Individual Credit(unsecured only):</div>
+            </div><!--Inner Left !-->
+            <div class="rightz col-lg-12"><!--Inner right !-->
+                <input type="radio"  id="r1" value="1" ng-model="BusIndCredUnsecApplication" name="group1"><label  for="r1">Yes</label> &nbsp;
+                 <input type="radio" id="r2" checked="checked" value="0" ng-model="BusIndCredUnsecApplication" name="group1"><label for="r2">No</label>
+            </div><!--Inner right !-->
+
+ </div><!--Inner containerz !-->
+
+<div ng-show="BusIndCredUnsecApplication == 1" class="containerZ">
+    <div class="leftz greyrightborder"><!-- Main Left   !-->
+
+        <div class="containerZ"> <!--Inner containerz !-->
+            <div class="leftz"><!--Inner Left !-->
+                <div>Business Type:</div>
+            </div><!--Inner Left !-->
+            <div class="rightz col-lg-12"><!--Inner right !-->
+                <select ng-model="BusinessPartnership.businesstype" required class="select ">
+                    <option selected="selected" value="">Please Select</option>
+                    <option value="General Partnership">General Partnership</option>
+                    <option value="Limited Partnership">Limited Partnership</option>
+                    <option value="Limited Liability Partnership">Limited Liability Partnership</option>
+                    <option value="Limited Liability Company">Limited Liability Company</option>
+                    <option value="Corporation">Corporation</option>
+                    <option value="Family Limited Partnership">Family Limited Partnership</option>
+
+                </select>
+                <span class="select">Select</span>
+            </div><!--Inner right !-->
+
+        </div><!--Inner containerz !-->
+       <div class="containerZ"> <!--Inner containerz !-->
+            <div class="leftz"><!--Inner Left !-->
+                <div>Business Name:</div>
+            </div><!--Inner Left !-->
+            <div class="rightz"><!--Inner right !-->
+                <input ng-model="BusinessPartnership.businessname"  type="text" required maxlength="50" >
+            </div><!--Inner right !-->
+
+        </div>
+        
+         <div class="containerZ"> <!--Inner containerz !-->
+            <div class="leftz"><!--Inner Left !-->
+                <div>#Members/Officers-ALL:</div>
+            </div><!--Inner Left !-->
+            <div class="rightz col-lg-12"><!--Inner right !-->
+                <select ng-model="BusinessPartnership.memberofficersid"  class="select ">
+                    <option selected="selected" value="">Please Select</option>
+                    <option value="One">One</option>
+                    <option value="Two">Two</option>
+                    <option value="Three">Three</option>
+                    <option value="Four">Four</option>
+                    <option value="Five">Five</option>
+                    <option value="Six">Six</option>
+
+                </select>
+                <span class="select">Select</span>
+            </div><!--Inner right !-->
+
+        </div>
+         <div class="containerZ"> <!--Inner containerz !-->
+            <div class="leftz"><!--Inner Left !-->
+                <div>#Members/Officers-Corp:</div>
+            </div><!--Inner Left !-->
+            <div class="rightz col-lg-12"><!--Inner right !-->
+                <select  ng-model="BusinessPartnership.memberofficerscorp" class="select ">
+                    <option selected="selected" value="">Please Select</option>
+                    <option value="One">One</option>
+                    <option value="Two">Two</option>
+                    <option value="Three">Three</option>
+                    <option value="Four">Four</option>
+                    <option value="Five">Five</option>
+                    <option value="Six">Six</option>
+
+                </select>
+                <span class="select">Select</span>
+            </div><!--Inner right !-->
+
+        </div>
+        
+
+    </div><!--Main Left !-->
+
+
+    <div class="rightz"><!-- Main right!-->
+        <div class="containerZ"> <!--Inner containerz !-->
+            <div class="leftz"><!--Inner Left !-->
+                <div>Tax ID:</div>
+            </div><!--Inner Left !-->
+            <div class="rightz col-lg-12"><!--Inner right !-->
+                <input   ng-model="BusinessPartnership.tax3" ng-class="{ error: (BusinessPartnership.tax3.length >= 1 && BusinessPartnership.tax3.length <= 2)}" type="text" maxlength="3" style="width:44px!important" > - 
+               <input ng-model="BusinessPartnership.tax7" ng-class="{ error: (BusinessPartnership.tax7.length >= 1 && BusinessPartnership.tax7.length <= 6)}" type="text" maxlength="7" style="width:85px!important"  >
+            </div><!--Inner right !-->
+
+        </div><!--Inner containerz !-->
+    
+      <div class="containerZ"> <!--Inner containerz !-->
+            <div class="leftz"><!--Inner Left !-->
+                <div>NAIC Code:</div>
+            </div><!--Inner Left !-->
+            <div class="rightz col-lg-12"><!--Inner right !-->
+               <input   ng-model="BusinessPartnership.naiccode" maxlength="50"  type="text" >
+            </div><!--Inner right !-->
+
+        </div><!--Inner containerz !-->
+  
+        
+          <div class="containerZ"> <!--Inner containerz !-->
+            <div class="leftz"><!--Inner Left !-->
+                <div>Guarantor:</div>
+            </div><!--Inner Left !-->
+            <div class="rightz col-lg-12"><!--Inner right !-->
+                <select ng-model="BusinessPartnership.guarantor"  class="select " style="width:150px">
+                    <option selected="selected" value="">Please Select</option>
+			        <option value="Y">Yes</option>
+			        <option value="N">No</option>
+
+                </select>
+                <span class="select">Select</span>
+            </div><!--Inner right !-->
+
+        </div><!--Inner containerz !-->
+  
+        
+        
+          <div class="containerZ"> <!--Inner containerz !-->
+            <div class="leftz"><!--Inner Left !-->
+                <div>Secretary:</div>
+            </div><!--Inner Left !-->
+            <div class="rightz col-lg-12"><!--Inner right !-->
+               <input ng-model="BusinessPartnership.secretary"   type="text" maxlength="50" >
+            </div><!--Inner right !-->
+
+        </div><!--Inner containerz !-->
+  
+    
+    </div><!--Main right !-->
+    
+<span ng-show="BusIndCredUnsecApplication == 1"  class="georgia underlined clearfix" style="text-align: left; margin-left: 20px;"><span>Members / Officers</span></span>
+</div>
+<div ng-show="BusIndCredUnsecApplication == 1"  class="containerZ" id="dvMemberOfficer" style="width:600px">
+    <div class="containerZ">
+        <div class="leftzc greyrightborder">
+            <div class="bolded">Role</div>
+        </div>
+    
+        <div class="centerzc greyrightborder">
+            <div class="bolded">Title/Position</div>
+        </div>
+    
+        <div class="rightzc">
+            <div class="bolded">Name</div>
+        </div>
+    </div>
+     <div  wmg-product-member-directive ng-repeat="input in inputBusinesPartner" wmgautoheight></div>
+    
+    
+
+</div>

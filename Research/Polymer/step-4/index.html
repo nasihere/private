@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+    <link rel="import" href="proto-element.html">
+	<link rel="import" href="bower_components/paper-drawer-panel/paper-drawer-panel.html">
+	<link rel="import" href="bower_components/paper-button/paper-button.html">
+	<link rel="import" href="bower_components/paper-tabs/paper-tabs.html">
+	<link rel="import" href="bower_components/paper-shadow/paper-shadow.html">
+  </head>
+  <body>
+  <style>
+  #my-button {
+    background: green;
+    color: yellow;
+	
+}
+  body.core-narrow {
+      padding: 8px;
+    }
+    
+    paper-tabs, core-toolbar {
+      background-color: #00bcd4;
+      color: #fff;
+      box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.2);
+    }
+    
+    core-toolbar paper-tabs {
+      box-shadow: none;
+    }
+    
+    paper-tabs[noink][nobar] paper-tab.core-selected {
+      color: #ffff8d;
+    }
+    
+    paper-tabs.transparent-teal {
+      background-color: transparent;
+      color: #00bcd4;
+      box-shadow: none;
+    }
+    
+    paper-tabs.transparent-teal::shadow #selectionBar {
+      background-color: #00bcd4;
+    }
+    
+    paper-tabs.transparent-teal paper-tab::shadow #ink {
+      color: #00bcd4;
+    }
+    
+    h3 {
+      font-size: 16px;
+      font-weight: 400;
+    }
+	 section {
+      padding: 20px 0;
+    }
+
+    section > div {
+      padding: 14px;
+      font-size: 16px;
+    }
+
+    .card {
+      display: inline-block;
+      background: white;
+      box-sizing: border-box;
+      width: 80%;
+      height: 100%;
+      margin: 16px;
+      padding: 16px;
+      border-radius: 2px;
+    }
+
+    .fab {
+      display: inline-block;
+      background: white;
+      box-sizing: border-box;
+      width: 56px;
+      height: 56px;
+      margin: 16px;
+      padding: 16px;
+      border-radius: 50%;
+      text-align: center;
+    }
+  </style>
+
+  
+ <paper-tabs selected="0" noink>
+  
+    <paper-tab>ITEM ONE</paper-tab>
+    <paper-tab>ITEM TWO</paper-tab>
+    <paper-tab>ITEM THREE</paper-tab>
+    
+  </paper-tabs>
+  
+  
+  
+<paper-drawer-panel>
+  <paper-header-panel drawer>
+    <paper-toolbar>
+	<paper-shadow class="card" z="2">
+      z = 2
+    </paper-shadow>
+
+      <div>Application</div>
+	  <paper-button>flat button</paper-button>
+<paper-button raised id="my-button">raised button</paper-button>
+
+    </paper-toolbar>
+  
+  </paper-header-panel>
+
+</paper-drawer-panel>
+	<!proto-element></proto-element>
+	
+  </body>
+</html>
