@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical"
+    android:padding="5dp" >
+
+    
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:id="@+id/relCustReport"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:descendantFocusability="blocksDescendants"
+            android:orientation="vertical"
+            android:padding="5dp" >
+
+            <ImageView
+                android:id="@+id/act_lst_mem_img"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:adjustViewBounds="false"
+                android:contentDescription="@string/emptystring"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_man" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/act_lst_mem_img"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/act_lst_mem_img"
+                android:gravity="center_vertical|fill_vertical"
+                android:padding="5dp"
+                android:text="Custom Report"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textView1"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/textView1"
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                android:text="We understand that every organization need custom reports. Some organization need data in xls, pdf or xml format to create a reports &amp; Our team is capable of handling those report protocols."
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/TextView01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textView3"
+                android:layout_alignRight="@+id/textView2"
+                android:layout_below="@+id/textView2"
+                android:gravity="center_vertical|fill_vertical"
+                android:padding="5dp"
+                android:text="Third Party Software"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textView2"
+                android:layout_below="@+id/TextView01"
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                android:text="We also offered SOAP API and REST API to get all your members data which you can import in your software application. Example: Suppose you have payroll or school management software, this API can be integrated easily to extend its funtionality."
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/TextView02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textView3"
+                android:layout_below="@+id/textView3"
+                android:gravity="center_vertical|fill_vertical"
+                android:padding="5dp"
+                android:text="Is there any catch?"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/tvWebTmp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/TextView02"
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                android:text="You might need to pay some minimum charges to create web account for your business to view reports. That small contribution will help us to pay server fees for maintaining your data. Contact: nasir.sayed.us@gmailcom for custom reports offers"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/act_lst_mem_img"
+                android:gravity="center_vertical|fill_vertical"
+                android:padding="5dp"
+                android:text="Dear User,"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            
+
+            <TextView
+                android:id="@+id/tvTmp2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/textView1"
+                android:layout_toRightOf="@+id/act_lst_mem_img"
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                android:text="We have an offer for you:"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <Button
+                android:id="@+id/btnWebMore"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvWebTmp"
+                android:layout_marginTop="17dp"
+                android:text="To know more?" />
+           
+        </RelativeLayout>
+		
+    </ScrollView>
+    
+</RelativeLayout><!-- From: file:/Users/Nasz/Documents/eagle%20development/Shifa%20Employee%20Logger/app/src/main/res/layout/custom_report.xml -->

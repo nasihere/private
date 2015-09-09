@@ -1,0 +1,266 @@
+﻿@{
+    ViewBag.Title = "Chat - Shifa - Homeopathy - Practitioner - Friends";
+    Layout = "~/Content/themes/BootStrapSkin1/_Layout.cshtml";
+}
+
+<div ng-app="shifa" class="widget-box " ng-controller="chatController">
+    <div class="widget-body" >
+        <div class="form-actions">
+            <div class="input-group">
+                <input ng-model="ChatMsg" focus-me="DataChats.length" id="message" tabindex="0" placeholder="@Session["session_name"]: Type your message here ..." type="text" class="form-control" name="message" />
+                <span class="input-group-btn">
+                    <button class="btn btn-sm btn-info no-radius" type="button" ng-click="SendChat()">
+                        <i class="icon-share-alt"></i>
+                        Send
+                    </button>
+                </span>
+            </div>
+        </div>
+        <div class="widget-main no-padding" id="chatbar" style="width:100%;overflow:auto;">
+
+            <div class="dialogs">
+
+                <img id="loading" src="~/Content/themes/BootStrapSkin1/assets/images/Time machine.gif" />
+                <div class="itemdiv dialogdiv" style="min-height:20px" ng-repeat="c in DataChats">
+                    <div class="user">
+                        
+                        <img src="{{getImgSrc(c[3],c[1])}}" />
+                    </div>
+
+                    <div class="body">
+                        <div class="time">
+                            <i class="icon-time"></i>
+                            <span class="green"></span>
+                        </div>
+
+                        <div class="text"><a href="#">{{c[3]}}</a>: {{c[2]}}</div>
+
+                        <div class="tools">
+                            <a href="#message" class="btn btn-minier btn-info">
+                                <i class="icon-only icon-share-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div><!-- /widget-main -->
+
+    </div><!-- /widget-body -->
+
+    
+</div><!-- /widget-box -->
+<script type="text/javascript" src="~/Content/themes/BootStrapSkin1/assets/js/angular.min (1).js"></script>
+
+<script type="text/javascript">
+    var shifa = angular.module('shifa', []);
+    shifa.directive('focusMe', function ($timeout) {
+        return {
+            scope: { trigger: '=focusMe' },
+            link: function (scope, element) {
+                scope.$watch('trigger', function (value) {
+                    if (value !== 0) {
+                        //console.log('trigger',value);
+                        $timeout(function() {
+                            element[0].focus();
+                            scope.trigger = value;
+            //                var windowHeight = $(window).height() - 250;
+              //              $('#chatbar').css('height', windowHeight);
+                //            $("#chatbar").animate({ scrollTop: $('#chatbar')[0].scrollHeight }, 1000);
+                        });
+                        
+                    }
+                });
+            }
+        };
+    });
+
+    shifa.controller('chatController', function ($scope, friendService, $http) {
+        $scope.ChatMsg = "";
+        $scope.DataChats = [];
+        $scope.getImgSrc = function (name, sessionid) {
+            
+            if (isNaN(sessionid) == false) {
+                return "https://graph.facebook.com/" + sessionid + "/picture?type=square";
+            }
+            else if (name != null && name.indexOf("Dr.") != -1) {
+                return "http://shifa.in/Content/themes/BootStrapSkin1/assets/avatars/ic_chat_doctor.png";
+            }
+            else {
+                
+                return "http://shifa.in/Content/themes/BootStrapSkin1/assets/avatars/ic_chat_student.png";
+            }
+        };
+        $scope.CacheData = "";
+        $("#loading").show('fast');
+        setInterval(function () {
+            friendService.getChats().then(
+                function (data) {
+                    if ($scope.CacheData != data) {
+                        $scope.CacheData = data;
+                        
+                        var obj = data.split(":");
+          //              obj = obj.reverse();
+                        $.each(obj, function (i, j) {
+                            var eachObj = j.split(",");
+                            if (isNaN(eachObj[1]) == true)
+                            {
+                                eachObj[7] = "https://graph.facebook.com/" + eachObj[1] + "/picture?type=square";
+                            }
+                            $scope.DataChats[i] = eachObj;
+                            
+                        })
+                        $("#loading").hide('slow');
+                        console.log($scope.DataChats)
+                        
+                    }
+                    //$scope.DataChats = obj;
+                }
+            );
+        }, 3000);
+
+        $scope.SendChat = function () {
+            $("#message").text("Sending...");
+            var request = $http({
+                method: "post",
+                url: "Chat/set",
+                params: {
+                    Chat: $scope.ChatMsg
+                },
+                data: {
+                    action: "post",
+                }
+            });
+
+            return (request.then($scope.ChatMsg="", friendService.handleError));
+        }
+    });
+    // I act a repository for the remote friend collection.
+    shifa.service(
+        "friendService",
+        function ($http, $q) {
+
+            // Return public API.
+            return ({
+                getChats: getChats,
+                getFriends: getFriends,
+                removeFriend: removeFriend
+            });
+
+
+            // ---
+            // PUBLIC METHODS.
+            // ---
+
+
+            // I add a friend with the given name to the remote collection.
+            function getChats(id) {
+
+                var request = $http({
+                    method: "post",
+                    url: "Chat/get",
+                    params: {
+                        _id: id
+                    },
+                    data: {
+                        action: "post"
+                    }
+                });
+
+                return (request.then(handleSuccess, handleError));
+
+            }
+
+            function setChats(chatmsg) {
+
+                var request = $http({
+                    method: "post",
+                    url: "Chat/set",
+                    params: {
+                        action: "post",
+                    },
+                    data: {
+                        Chat: chatmsg
+                    }
+                });
+
+                return (request.then(handleSuccess, handleError));
+
+            }
+            // I get all of the friends in the remote collection.
+            function getFriends() {
+
+                var request = $http({
+                    method: "get",
+                    url: "api/index.cfm",
+                    params: {
+                        action: "get"
+                    }
+                });
+
+                return (request.then(handleSuccess, handleError));
+
+            }
+
+
+            // I remove the friend with the given ID from the remote collection.
+            function removeFriend(id) {
+
+                var request = $http({
+                    method: "delete",
+                    url: "api/index.cfm",
+                    params: {
+                        action: "delete"
+                    },
+                    data: {
+                        id: id
+                    }
+                });
+
+                return (request.then(handleSuccess, handleError));
+
+            }
+
+
+            // ---
+            // PRIVATE METHODS.
+            // ---
+
+
+            // I transform the error response, unwrapping the application dta from
+            // the API response payload.
+            function handleError(response) {
+
+                // The API response from the server should be returned in a
+                // nomralized format. However, if the request was not handled by the
+                // server (or what not handles properly - ex. server error), then we
+                // may have to normalize it on our end, as best we can.
+                if (
+                    !angular.isObject(response.data) ||
+                    !response.data.message
+                    ) {
+
+                    return ($q.reject("An unknown error occurred."));
+
+                }
+
+                // Otherwise, use expected error message.
+                return ($q.reject(response.data.message));
+
+            }
+
+
+            // I transform the successful response, unwrapping the application data
+            // from the API response payload.
+            function handleSuccess(response) {
+               // console.log(response.data)
+                return (response.data);
+
+            }
+
+        }
+    );
+
+</script>

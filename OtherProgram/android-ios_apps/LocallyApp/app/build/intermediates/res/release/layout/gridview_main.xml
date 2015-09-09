@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/gridViewHomeMenu1"
+    android:numColumns="auto_fit"
+    android:gravity="center"
+    android:columnWidth="50dp"
+    android:stretchMode="columnWidth"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+</GridView><!-- From: file:/Users/Nasz/Documents/My%20Projects/Android/locally%204%202/app/src/main/res/layout/gridview_main.xml -->

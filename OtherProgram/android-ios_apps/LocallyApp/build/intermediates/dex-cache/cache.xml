@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/Nasz/Documents/My Projects/Android/locally 4 2/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="/Users/Nasz/Documents/My Projects/Android/locally 4 2/app/build/intermediates/pre-dexed/debug/classes-4f5d6361e26a50144a682b2c66b05f1e7419a946.jar" />
+    </item>
+    <item
+        jar="/Users/Nasz/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="/Users/Nasz/Documents/My Projects/Android/locally 4/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-06b17d1fff9fc849b1c0a97c83a541919422cfd9.jar" />
+    </item>
+    <item
+        jar="/Users/Nasz/Documents/My Projects/Android/locally 4 2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="dd9247ea0fabe8ee479638c4b4a23e93752be256">
+        <dex dex="/Users/Nasz/Documents/My Projects/Android/locally 4 2/app/build/intermediates/pre-dexed/debug/classes-63cc3447a58a0898198dd065cdd8f55496e052e1.jar" />
+    </item>
+    <item
+        jar="/Users/Nasz/Documents/My Projects/Android/locally 4/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/libs/internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="/Users/Nasz/Documents/My Projects/Android/locally 4/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-f6ca0d4fca712c43a675f2639999fb49b1592cae.jar" />
+    </item>
+    <item
+        jar="/Users/Nasz/Documents/My Projects/Android/locally 4/app/libs/gcm.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="f0e7f01db9f6cbc6e5bf47c10c7d74fd7a7052d0">
+        <dex dex="/Users/Nasz/Documents/My Projects/Android/locally 4/app/build/intermediates/pre-dexed/debug/gcm-768264e1e649c06483ce70ec7ae3c2c7c40b1b17.jar" />
+    </item>
+    <item
+        jar="/Users/Nasz/Documents/My Projects/Android/locally 4 2/app/libs/gcm.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="f0e7f01db9f6cbc6e5bf47c10c7d74fd7a7052d0">
+        <dex dex="/Users/Nasz/Documents/My Projects/Android/locally 4 2/app/build/intermediates/pre-dexed/debug/gcm-d0bcce2c8013badfd08b669fff5466079269256e.jar" />
+    </item>
+    <item
+        jar="/Users/Nasz/Documents/My Projects/Android/locally 4/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="/Users/Nasz/Documents/My Projects/Android/locally 4/app/build/intermediates/pre-dexed/debug/classes-ada4c005b67c282b01b6d3ca34a501e337ef0f3b.jar" />
+    </item>
+    <item
+        jar="/Users/Nasz/Documents/My Projects/Android/locally 4 2/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/libs/internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="/Users/Nasz/Documents/My Projects/Android/locally 4 2/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-9452061ed8b9eb98a5c2640a1da2af8df7c9c491.jar" />
+    </item>
+    <item
+        jar="/Users/Nasz/Documents/My Projects/Android/locally 4 2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="/Users/Nasz/Documents/My Projects/Android/locally 4 2/app/build/intermediates/pre-dexed/debug/classes-4922f57faabd31ce26f0cb120c2113d1c783231b.jar" />
+    </item>
+    <item
+        jar="/Users/Nasz/Documents/My Projects/Android/locally 4/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="dd9247ea0fabe8ee479638c4b4a23e93752be256">
+        <dex dex="/Users/Nasz/Documents/My Projects/Android/locally 4/app/build/intermediates/pre-dexed/debug/classes-74993e95afcc957139d385495224cac23dc39ed5.jar" />
+    </item>
+    <item
+        jar="/Users/Nasz/Documents/My Projects/Android/locally 4/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="/Users/Nasz/Documents/My Projects/Android/locally 4/app/build/intermediates/pre-dexed/debug/classes-2ce9ad36e9d33e3f3d0673aae9e82e036fbf735b.jar" />
+    </item>
+
+</items>

@@ -1,0 +1,290 @@
+﻿@model IEnumerable<ShifaWebEntities.Remedy>
+
+@{
+    if (ViewBag.Search == null)
+    {
+        ViewBag.Search = "";
+        ViewBag.Title = "Shifa - Kent - Boericke - Allen - Materia Medica";
+        Session["Title"] = ViewBag.Title;
+    }
+    else
+    {
+        ViewBag.Title = ViewBag.Search.Replace('_', ' ') + " - Shifa - Kent - Boericke - Allen - Materia Medica";
+        Session["Title"] = ViewBag.Title;
+    }
+
+    var i = Model.Count();
+    string abc = "";
+    
+
+    Layout = "~/Content/themes/BootStrapSkin1/_Layout.cshtml";
+}
+
+
+
+    @foreach (var item in Model)
+    {
+
+
+
+
+        <h4 class="lighter smaller">
+            <i class="icon-th-large  orange"></i>
+            Author: - <a href="~/Remedies/Materia_Medica?Remedies=@ViewBag.Remedies.Substring(0, 1).ToUpper()">@ViewBag.Remedies</a> - @ViewBag.Author 
+        </h4>
+
+        <div class="widget-toolbar no-border">
+            <ul class="nav nav-tabs" id="recent-tab">
+                @if (!string.IsNullOrEmpty(item.kent))
+                {
+                    <li class="@(ViewBag.Author == "Kent" ? "active" : "")">
+                        <a data-toggle="tab" href="?Remedies=@ViewBag.Remedies&Author=Kent">Kent</a>
+                    </li>
+                }
+                @if (!string.IsNullOrEmpty(item.data))
+                {
+
+                    <li class="@(ViewBag.Author == "Boericke" ? "active" : "")">
+                        <a data-toggle="tab" href="?Remedies=@ViewBag.Remedies&Author=Boericke">Boericke</a>
+                    </li>
+                }
+                @if (!string.IsNullOrEmpty(item.allen))
+                {
+
+                    <li class="@(ViewBag.Author == "Allen" ? "active" : "")">
+                        <a data-toggle="tab" href="?Remedies=@ViewBag.Remedies&Author=Allen">Allen</a>
+                    </li>
+                }
+                
+                <li class="icon-reply icon-only">
+                    @if (ViewBag.URL != "")
+                    {
+                        <a data-toggle="tab" href="@ViewBag.URL">Back</a>
+                    }
+                    else
+                    {
+                    <a data-toggle="tab" href="~/Remedies/Materia_Medica?Remedies=@ViewBag.Remedies.Substring(0, 1).ToUpper()">Back</a>
+                    }
+                </li>
+
+
+
+
+            </ul>
+        </div>
+
+    <div class="tabbable tabs-left">
+        <ul class="hidden-sm hidden-xs nav nav-tabs" style="margin:10px">
+            <li class="@(ViewBag.Language == "English" ? "active" : "")">
+                <a href="?Remedies=@ViewBag.Remedies&Author=@ViewBag.Author&Language=English" data-toggle="tab" href="#home3">
+                    <i class="icon-rocket"></i>
+                    English
+                </a>
+            </li>
+
+            <li class="@(ViewBag.Language == "Italian" ? "active" : "")">
+                <a href="?Remedies=@ViewBag.Remedies&Author=@ViewBag.Author&Language=Italian" data-toggle="tab" href="#profile3">
+                    <i class="icon-rocket"></i>
+                    Italian
+                </a>
+            </li>
+
+            <li class="@(ViewBag.Language == "Dutch" ? "active" : "")">
+                <a href="?Remedies=@ViewBag.Remedies&Author=@ViewBag.Author&Language=Dutch" data-toggle="tab" href="#dropdown13">
+                    <i class="icon-rocket"></i>
+                    Dutch
+                </a>
+            </li>
+            <li class="@(ViewBag.Language == "German" ? "active" : "")">
+                <a href="?Remedies=@ViewBag.Remedies&Author=@ViewBag.Author&Language=German" data-toggle="tab" href="#dropdown13">
+                    <i class="icon-rocket"></i>
+                    German
+                </a>
+            </li>
+            <li class="@(ViewBag.Language == "French" ? "active" : "")">
+                <a href="?Remedies=@ViewBag.Remedies&Author=@ViewBag.Author&Language=French" data-toggle="tab" href="#dropdown13">
+                    <i class="icon-rocket"></i>
+                    French
+                </a>
+            </li>
+            <li class="@(ViewBag.Language == "Spanish" ? "active" : "")">
+                <a href="?Remedies=@ViewBag.Remedies&Author=@ViewBag.Author&Language=Spanish" data-toggle="tab" href="#dropdown13">
+                    <i class="icon-rocket"></i>
+                    Spanish
+                </a>
+            </li>
+            <li class="@(ViewBag.Language == "Portuguese" ? "active" : "")">
+                <a href="?Remedies=@ViewBag.Remedies&Author=@ViewBag.Author&Language=Portuguese" data-toggle="tab" href="#dropdown13">
+                    <i class="icon-rocket"></i>
+                    Portuguese
+                </a>
+            </li>
+        </ul>
+        <ul class="visible-sm visible-xs nav nav-tabs" style="margin:10px">
+            <li class="@(ViewBag.Language == "English" ? "active" : "")">
+                <a href="?Remedies=@ViewBag.Remedies&Author=@ViewBag.Author&Language=English" data-toggle="tab" href="#home3">
+                    <i class="icon-rocket"></i>
+                    Eng
+                </a>
+            </li>
+
+            <li class="@(ViewBag.Language == "Italian" ? "active" : "")">
+                <a href="?Remedies=@ViewBag.Remedies&Author=@ViewBag.Author&Language=Italian" data-toggle="tab" href="#profile3">
+                    <i class="icon-rocket"></i>
+                    Ita
+                </a>
+            </li>
+
+            <li class="@(ViewBag.Language == "Dutch" ? "active" : "")">
+                <a href="?Remedies=@ViewBag.Remedies&Author=@ViewBag.Author&Language=Dutch" data-toggle="tab" href="#dropdown13">
+                    <i class="icon-rocket"></i>
+                    Dut
+                </a>
+            </li>
+            <li class="@(ViewBag.Language == "German" ? "active" : "")">
+                <a href="?Remedies=@ViewBag.Remedies&Author=@ViewBag.Author&Language=German" data-toggle="tab" href="#dropdown13">
+                    <i class="icon-rocket"></i>
+                    Ger
+                </a>
+            </li>
+            <li class="@(ViewBag.Language == "French" ? "active" : "")">
+                <a href="?Remedies=@ViewBag.Remedies&Author=@ViewBag.Author&Language=French" data-toggle="tab" href="#dropdown13">
+                    <i class="icon-rocket"></i>
+                    Fre
+                </a>
+            </li>
+            <li class="@(ViewBag.Language == "Spanish" ? "active" : "")">
+                <a href="?Remedies=@ViewBag.Remedies&Author=@ViewBag.Author&Language=Spanish" data-toggle="tab" href="#dropdown13">
+                    <i class="icon-rocket"></i>
+                    Spa
+                </a>
+            </li>
+            <li class="@(ViewBag.Language == "Portuguese" ? "active" : "")">
+                <a href="?Remedies=@ViewBag.Remedies&Author=@ViewBag.Author&Language=Portuguese" data-toggle="tab" href="#dropdown13">
+                    <i class="icon-rocket"></i>
+                    Port
+                </a>
+            </li>
+        </ul>
+        <div>
+            @if (ViewBag.Author.IndexOf("Kent") != -1)
+            {
+            <img class="hidden-sm hidden-xs"  src="~/Content/themes/BootStrapSkin1/assets/images/james_tyler_kent.gif" style="float:left" />
+            <img class="visible-sm visible-xs"  src="~/Content/themes/BootStrapSkin1/assets/images/james_tyler_kent-50.gif" style="float:left" />
+                if (ViewBag.Language == "English") { 
+                    @Html.Raw(item.kent)
+                }
+                else if (ViewBag.Language == "Dutch") { 
+                    @Html.Raw(item.kent_dutch)
+                }
+                else if (ViewBag.Language == "French")
+                { 
+                    @Html.Raw(item.kent_french)
+                }
+                else if (ViewBag.Language == "German")
+                { 
+                    @Html.Raw(item.kent_german)
+                }
+                else if (ViewBag.Language == "Italian")
+                { 
+                    @Html.Raw(item.kent_Italian)
+                }
+                else if (ViewBag.Language == "Portuguese")
+                { 
+                    @Html.Raw(item.kent_portuguese)
+                }
+                else if (ViewBag.Language == "Spanish")
+                { 
+                    @Html.Raw(item.kent_spanish)
+                }
+                else
+                {
+                    @Html.Raw(item.kent)
+                }
+                    
+
+            }
+            @if (ViewBag.Author.IndexOf("Boericke") != -1)
+            {
+                <img class="hidden-sm hidden-xs" src="~/Content/themes/BootStrapSkin1/assets/images/wboerk.jpg" style="float:left; padding:0 10px 10px 0" />
+                <img class="visible-sm visible-xs" src="~/Content/themes/BootStrapSkin1/assets/images/wboerk-50.jpg" style="float:left; padding:0 10px 10px 0" />
+                if (ViewBag.Language == "English")
+                {
+                    @Html.Raw(item.data)
+                }
+                else if (ViewBag.Language == "Dutch")
+                {
+                    @Html.Raw(item.data_dutch)
+                }
+                else if (ViewBag.Language == "French")
+                {
+                    @Html.Raw(item.data_french)
+                }
+                else if (ViewBag.Language == "German")
+                {
+                    @Html.Raw(item.data_german)
+                }
+                else if (ViewBag.Language == "Italian")
+                {
+                    @Html.Raw(item.data_Italian)
+                }
+                else if (ViewBag.Language == "Portuguese")
+                {
+                    @Html.Raw(item.data_portuguese)
+                }
+                else if (ViewBag.Language == "Spanish")
+                {
+                    @Html.Raw(item.data_spanish)
+                }
+                else
+                {
+                    @Html.Raw(item.data)
+                }
+            }
+            @if (ViewBag.Author.IndexOf("Allen") != -1)
+            {
+                <img class="hidden-sm hidden-xs" src="~/Content/themes/BootStrapSkin1/assets/images/allen.jpg" style="float:left;padding:0 10px 10px 0" />
+                <img class="visible-sm visible-xs" src="~/Content/themes/BootStrapSkin1/assets/images/allen-50.jpg" style="float:left;padding:0 10px 10px 0" />
+                if (ViewBag.Language == "English")
+                {
+                    @Html.Raw(item.allen)
+                }
+                else if (ViewBag.Language == "Dutch")
+                {
+                    @Html.Raw(item.allen_dutch)
+                }
+                else if (ViewBag.Language == "French")
+                {
+                    @Html.Raw(item.allen_french)
+                }
+                else if (ViewBag.Language == "German")
+                {
+                    @Html.Raw(item.allen_german)
+                }
+                else if (ViewBag.Language == "Italian")
+                {
+                    @Html.Raw(item.allen_Italian)
+                }
+                else if (ViewBag.Language == "Portuguese")
+                {
+                    @Html.Raw(item.allen_portuguese)
+                }
+                else if (ViewBag.Language == "Spanish")
+                {
+                    @Html.Raw(item.allen_spanish)
+                }
+                else
+                {
+                    @Html.Raw(item.allen)
+                }
+            }
+
+
+
+        </div>
+        
+    </div>
+        
+
+        break;
+    }

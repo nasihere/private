@@ -1,0 +1,83 @@
+@charset "utf-8";
+/* CSS Document */
+img { vertical-align:middle} 
+.navbar-nav {margin-top:55px;margin-left:40px;}
+.txt_justified {text-align:justify}
+.circul_100 {text-align:center;width:100px;padding:20px;border-radius: 100px 100px 100px 100px;-moz-border-radius: 100px 100px 100px 100px;-webkit-border-radius: 100px 100px 100px 100px;border: 0px solid #000000;margin-left:35%;margin-bottom:15px;}
+.row {margin-top:30px;margin-bottom:20px;}
+
+.gray_bg_1 {background:#ada192;border:#ada192 solid 1px;}
+.purple_bg_1{background:#9586be; border:#9586be solid 1px;}
+.row p, h3,h4 {color:#616161}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {color: #428bca;background-color: #fff;border:#428bca solid 1px;-webkit-border-radius: 10px;-moz-border-radius: 10px;border-radius: 10px;}
+
+.navbar-nav>li:last-child {border:red solid 0px; margin-left:165px;} 
+
+.btn {margin-bottom:20px;}
+
+h2{margin: 0;color: #666;/*padding-top: 90px;*/font-size: 52px;font-family: "trebuchet ms", sans-serif;}
+.item{background: #fff;text-align: center;height: 400px !important;}
+.carousel{margin-top: 20px;/* background: #333;*/}
+.bs-example{margin: 20px 0;/*	 background: #333;*/}
+
+.footer, .footer p ,.footer h3{color:#fff !important;}
+.carousel-control {font-size:47px;color: #fff; font-weight:normal;text-shadow:none}
+
+
+.carousel-control.left {background-image:none}
+.carousel-control.right {background-image:none}
+
+.glyphicon-chevron-left {/* background:url(img/arrow-left.png) no-repeat*/}
+.P_F_but { border:#5bc0de solid 1px;background:#5bc0de; font-size:20px;padding:10px 20px;border-radius:10px;}
+
+
+.list_items {margin:0; padding:0;}
+	.list_items li {margin:0; padding:0; display:block;border:red solid 0px;}
+	.topbar p {color:#616161;padding:0px 0px 0px 0px;border:red solid 0px; text-align:right; float:left;}
+	.topbar p.icon { width:24px; height:24px;}
+
+
+/**/
+.color_white {color:#fff}
+.gray_1 {color:#616161}
+
+.label_12 {font-size:12px;}
+.label_13 {font-size:13px;}
+.label_14 {font-size:14px;}
+.label_15 {font-size:15px;}
+.label_16 {font-size:16px;}
+.label_17 {font-size:17px;}
+.label_18 {font-size:18px;}
+.label_19 {font-size:19px;}
+.label_20 {font-size:20px;}
+.label_21 {font-size:21px;}
+.label_22 {font-size:22px;}
+.label_23 {font-size:23px;}
+.label_24 {font-size:24px;}
+.label_25 {font-size:25px;}
+.label_26 {font-size:26px;}
+/**/
+
+/* Large desktop */
+@media (min-width: 1200px) {
+	
+	.HideOnDesktop { display:none}
+	
+	 }
+ 
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+	
+	.HideOnTablate { display:none}
+	}
+ 
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) { 
+
+.HideOnTablate { display:none}
+}
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) { 
+.HideOnMobile { display:none}
+}

@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Locally</string>
+    <string name="hello_world">Mumbra</string>
+    <string name="Sample_Repertory_Heading">Sensation</string>
+    <string name="Sample_Repertory_Category">Mind, Pain, Heel</string>
+    <string name="Sample_Repertory_Repertory"></string>
+    <string name="Sample_Repertory_ReadMe">Share a little bit about this symptom</string>
+    <string name="action_settings">Settings</string>
+    <string name="select">Select</string>
+    <string name="emptystring"></string>
+    <string name="Number">999</string>
+    <string name="sHome">Testing Toolz</string>
+    <string name="emailid">Email Id</string>
+    <string name="forgotpassword">Forgot Password?</string>
+    <string name="password">Password</string>
+    <string name="login">Ok</string>
+    <string name="RemediesShowHide"></string>
+    <string name="ListPosition">0</string>
+    <string name="Register">I don\'t have account. Register Me!</string>
+    <string name="dummy_section_text">Section %1d is just a dummy section.</string>
+    <string name="demo_external_activity">Demo External Activity</string>
+    <string name="demo_collection">Demo Collection</string>
+
+    <color name="white">#FFFFFF</color>
+    <color name="textShadow">#F5F5F5</color>
+    <color name="textColor">#000000</color>
+    <color name="textGreenColor">#B4D7BF</color>
+    <color name="black">#000000</color>
+    <color name="Cream">#d9edf7</color>
+    <color name="CreamText">#3a87ad</color>
+    <color name="grayback">#F0F0F0</color>
+
+    <string name="s_home_kentrepertory">Kent Repertory</string>
+    <string name="s_home_reversedrepertory">Reversed Repertory</string>
+    <string name="s_home_chat">Chat</string>
+    <string name="s_home_abbreviation">Abbreviation</string>
+    <string name="s_home_mareriamedica">Materia Medica</string>
+    <string name="s_home_organon">Organon</string>
+    <string name="s_home_help">Help</string>
+    <string name="sChatOnline"></string>
+    <string name="slogout">LOGOUT</string>
+    <string name="action_search">Symtom...</string>
+    <string name="Dialog_SearchSetting">Search By</string>
+    <string name="SymptomReport">Symptom Report</string>
+    <string name="OTotalRemedies">"Order by Total Remedies "</string>
+    <string name="reg">Registration Page</string>
+    <string name="fname">First Name (Required)</string>
+    <string name="lname">Last Name</string>
+    <string name="email">Email Id  (Required)</string>
+    <string name="DOB">DOB (DD/MM/YYYY)</string>
+    <string name="Sex">Sex</string>
+    <string name="radio_male">Male</string>
+    <string name="radio_female">Female</string>
+    <string name="City">City</string>
+    <string name="Country">Country</string>
+    <string name="regBtn">Register</string>
+    <string name="occu">Occupation</string>
+    <string name="radio_occu_student">Student</string>
+    <string name="radio_occu_doctor">Doctor</string>
+    <string name="regpassword">Password  (Required)</string>
+    <string name="status_rem">\@status_rem</string>
+    <string name="buy">Buy this App</string>
+    <string name="postforum">Whats on your mind for discussion today</string>
+    <string name="sChatOnlineReply">Reply</string>
+    <string name="sChatOnlineDelete">Delete</string>
+    <string name="demo">Demo</string>
+    <string name="webreg">Do you want to register through Web?</string>
+    <string name="WebDemologgedin">Do you want to Log in as Guest</string>
+    <string name="d_p_c_reply">Reply</string>
+    <string name="d_p_c_Cancel">Cancel</string>
+    <string name="loadoldmsg">Load Earlier Messages</string>
+    <string name="loadNextResult">More...</string>
+
+
+    <!-- Restaurant Strings !-->
+
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+
+    <string name="menu">Menu</string>
+    <string name="start_order">START YOUR ORDER</string>
+    <string name="hungry">HUNGRY?</string>
+    <string name="enter_address">Enter your address</string>
+    <string name="order_now">ORDER NOW</string>
+    <string name="popular">Popular</string>
+    <string name="newest">Newest</string>
+    <string name="distance">Distance</string>
+    <string name="minimum">Minimum</string>
+    <string name="free_dis">Free Delivery</string>
+    <string name="full_menu">Full Menu</string>
+    <string name="coupon">Coupon</string>
+    <string name="most_pop">Most Popular</string>
+    <string name="about_text">Food is any substance[1] consumed to provide nutritional support for the body. It is usually of plant or animal origin, and contains essential nutrients, such as carbohydrates, fats, proteins, vitamins, or minerals. The substance is ingested by an organism and assimilated by the organism\'s cells in an effort to produce energy, maintain life, or stimulate growth.\n\nHistorically, people secured food through two methods: hunting and gathering, and agriculture. Today, most of the food energy consumed by the world population is supplied by the food industry.\n\nFood safety and food security are monitored by agencies like the International Association for Food Protection, World Resources Institute, World Food Programme, Food and Agriculture Organization, and International Food Information Council. They address issues such as sustainability, biological diversity, climate change, nutritional economics, population growth, water supply, and access to food.\n\nThe right to food is a human right derived from the International Covenant on Economic, Social and Cultural Rights (ICESCR), recognizing the "right to an adequate standard of living, including adequate food," as well as the "fundamental right to be free from hunger."</string>
+    <string name="add_to_cart">Add to Cart</string>
+    <string name="checkout">Checkout</string>
+
+
+
+    <!-- Database Download !-->
+    <string name="please_wait">Please wait... Database Downloading</string>
+    <string name="downloading_database">Download Database for offline use</string>
+    <string name="database_download_success">Download Finished</string>
+    <string name="database_download_fail">Download Failed</string>
+    <string name="downloadDatabase">Downloading Start</string>
+    <string name="wantToDownloadDatabaseNow">Do you want to download database now?</string>
+    <string name="download">Download Now</string>
+    <string name="cancel">Cancel</string>
+    <string name="sd_card_not_found">Do not find Phone SD Card to download database</string>
+
+    <!-- <string name="app_id">678520882245977</string> -->
+    <string name="app_id">665652313532328</string>
+
+    <string-array name="countries_array">
+        <item>Agriculture</item>
+        <item>Air Condition</item>
+        <item>Apparels</item>
+        <item>Application</item>
+        <item>Astrology</item>
+        <item>ATMs</item>
+        <item>Automobile</item>
+        <item>Baby School</item>
+        <item>Bag</item>
+        <item>Bungalow</item>
+        <item>Bank</item>
+        <item>Banner</item>
+        <item>Banquets</item>
+        <item>Beauty Spa</item>
+        <item>Beer</item>
+        <item>Blub</item>
+        <item>Blubs</item>
+        <item>Books</item>
+        <item>Burgha</item>
+        <item>Bus</item>
+        <item>Bus Ticketing</item>
+        <item>Cab</item>
+        <item>Cable</item>
+        <item>Cake</item>
+        <item>Calendar</item>
+        <item>Car</item>
+        <item>Car Hire</item>
+        <item>Chemists</item>
+        <item>Cinema</item>
+        <item>Clubs</item>
+        <item>Company</item>
+        <item>Computers</item>
+        <item>Consultants</item>
+        <item>Cookery</item>
+        <item>Courier</item>
+        <item>Currency</item>
+        <item>Dancing</item>
+        <item>Diet</item>
+        <item>School</item>
+        <item>Doctors</item>
+        <item>Classes</item>
+        <item>Dumper</item>
+        <item>Education</item>
+        <item>Theatre</item>
+        <item>Electronics</item>
+        <item>Emergency</item>
+        <item>Engineer</item>
+        <item>Entertainment</item>
+        <item>Essentials</item>
+        <item>Events</item>
+        <item>Exchange rate</item>
+        <item>Fitness</item>
+        <item>Flight</item>
+        <item>Flowers</item>
+        <item>Food</item>
+        <item>Furniture</item>
+        <item>Gas</item>
+        <item>Gems Jewellery</item>
+        <item>Gifts</item>
+        <item>Glasses</item>
+        <item>Gold</item>
+        <item>Government</item>
+        <item>Grocery</item>
+        <item>Gym</item>
+        <item>handyman</item>
+        <item>Hardware</item>
+        <item>Hardware shop</item>
+        <item>Hire</item>
+        <item>Hire cab</item>
+        <item>Hobby classes</item>
+        <item>Home</item>
+        <item>Hospitals</item>
+        <item>Hotels</item>
+        <item>Industries</item>
+        <item>institution</item>
+        <item>Internet</item>
+        <item>Internet Services</item>
+        <item>Jobs</item>
+        <item>Lab</item>
+        <item>Ladies Bag</item>
+        <item>Library</item>
+        <item>Lodge</item>
+        <item>Looking For Mate</item>
+        <item>Machines</item>
+        <item>Mall</item>
+        <item>Mechanic</item>
+        <item>Medicine</item>
+        <item>Mobile Battery</item>
+        <item>Mobile Phones</item>
+        <item>Mobile Repair</item>
+        <item>Mobile Shop</item>
+        <item>Motor</item>
+        <item>Motor Learning</item>
+        <item>Motor Repair</item>
+        <item>Movies</item>
+        <item>My Favorites</item>
+        <item>Nightlife</item>
+        <item>Office</item>
+        <item>Packer mover</item>
+        <item>Party</item>
+        <item>Passport</item>
+        <item>Personal Finance</item>
+        <item>Petrol Pumps</item>
+        <item>Pest</item>
+        <item>Pets</item>
+        <item>Pipe</item>
+        <item>Pizza</item>
+        <item>Quran</item>
+        <item>Rainy Season</item>
+        <item>Real Estate</item>
+        <item>Recharge</item>
+        <item>Repairs</item>
+        <item>Resorts</item>
+        <item>Rest area</item>
+        <item>Restaurants</item>
+        <item>Restroom</item>
+        <item>Road Repair</item>
+        <item>Room</item>
+        <item>Science Lab</item>
+        <item>Security</item>
+        <item>Shop Online</item>
+        <item>Sports</item>
+        <item>Sports bike</item>
+        <item>Station</item>
+        <item>Taxis</item>
+        <item>Telephone</item>
+        <item>Tiffin</item>
+        <item>Towing</item>
+        <item>Travel Bags</item>
+        <item>Tuition</item>
+        <item>Tv</item>
+        <item>Vacuum</item>
+        <item>Video Camera</item>
+        <item>Washing Machine</item>
+        <item>Water</item>
+        <item>Wedding</item>
+        <item>Western Union</item>
+        <item>Wine</item>
+        <item>Xerox</item>
+        <item>Yoga</item>
+        <item>Zomba</item>
+        <item>Shop</item>
+        <item>Buildings</item>
+        <item>Road</item>
+        <item>Tour</item>
+        <item>Temple</item>
+        <item>Masjid</item>
+        <item>College</item>
+        <item>Hardware</item>
+        <item>Worker</item>
+        <item>Engineer</item>
+        <item>Software</item>
+        <item>Railway</item>
+        <item>Auto Rikshaw</item>
+        <item>Software</item>
+        <item>News</item>
+        <item>Student</item>
+        <item>Menu</item>
+        <item>Bike</item>
+        <item>Vision</item>
+        <item>Shoe</item>
+        <item>Refrigerator</item>
+    </string-array>
+
+    <string name="title_activity_activity_google_map">Map</string>
+    <string name="title_activity_testmap">Map</string>
+    <string name="title_activity_maptest">Map</string>
+    <string name="title_activity_maptest2">Map</string>
+
+</resources>

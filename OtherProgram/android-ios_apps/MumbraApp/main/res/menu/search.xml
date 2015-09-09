@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+	<item
+        android:id="@+id/menu_search"
+        android:icon="@drawable/ic_search"
+        android:showAsAction="always"
+        android:title="Search"
+        />
+	<item
+        android:id="@+id/menu_cart"
+        android:icon="@drawable/ic_file"
+        android:showAsAction="always"
+        android:title="Cart"
+        android:visible="false"
+        />
+</menu>

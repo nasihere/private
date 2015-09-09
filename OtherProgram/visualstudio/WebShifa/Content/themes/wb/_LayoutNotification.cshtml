@@ -1,0 +1,101 @@
+﻿
+<div class="navbar navbar-default" id="navbar" style="background-color:#e7e7e7">
+
+    <div id="navbar-container">
+        
+        <div class="navbar-header pull-left">
+            <a href="~/Home/Index" class="navbar-brand">
+                <small>
+                    <img src="~/Content/themes/BootStrapSkin1/assets/img/rsz_ems-logo.png" />
+                </small>
+            </a><!-- /.brand -->
+
+        </div><!-- /.navbar-header -->
+        
+        <div id="TopMenu" class="col-sm-8 hidden-480 " style="margin-top:20px">
+
+            <ul class="nav nav-pills">
+                <li class="active">
+                    <a href="~/Home/Index">Home</a>
+                </li>
+                <li class="active">
+                    <a href="~/Student/Sections">Student</a>
+                </li>
+                <li class="active">
+                    <a href="~/EMS/Index">Fees</a>
+                </li>
+                <li class="active">
+                    <a href="~/Results/Index">Marksheet</a>
+                </li>
+                <li class="active">
+                    <a href="~/Transfer/Index">Transfer</a>
+                </li>
+                <li class="active">
+                    <a href="~/Attendance/Menu">Attendance</a>
+                </li>
+
+
+                <li class="active">
+                    <a href="~/Master/FromToYear">Fees Setup</a>
+                </li>
+
+
+                <li class="active">
+                    <a href="#" onclick="javascript:alert('Oh! You cannot view reports on free version. Please contact support and change your plan.');">Report</a>
+                </li>
+                <li class="active">
+                    <a href="#" onclick="javascript:alert('Call on +91 9870126900 or Email: nasihere@gmail.com');">Help</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="navbar-header pull-right hidden-480 " role="navigation">
+            <ul class="nav ace-nav">
+                <li class="light-blue">
+                    <a data-toggle="dropdown" href="#" class="dropdown-toggle">
+                        <img class="nav-user-photo" src="~/Content/themes/BootStrapSkin1/assets/avatars/user.jpg" alt="Jason's Photo">
+                        <span class="user-info">
+
+                            @if (Session["UserName"] != null)
+                            {
+                                <small>Welcome,</small>
+                                @Session["UserName"]
+                            }
+                            else
+                            {
+
+                                <a href="~/Signup/Login">
+                                    <i class="icon-on-right"></i>
+                                    Login
+                                </a>
+                            }
+                        </span>
+
+                        <i class="icon-caret-down"></i>
+                    </a>
+                    @if (Session["Role"] != null)
+                    {
+                        <ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+
+                            <li>
+                                <a href="~/Signup/TeamMember">
+                                    <i class="icon-cog"></i>
+                                    Team Member
+                                </a>
+                            </li>
+
+                            <li class="divider"></li>
+                            <li>
+                                <a href="~/Signup/LogOut">
+                                    <i class="icon-off"></i>
+                                    Logout
+                                </a>
+                            </li>
+                        </ul>
+                    }
+
+                </li>
+            </ul><!-- /.ace-nav -->
+        </div><!-- /.navbar-header -->
+    </div><!-- /.container -->
+</div>

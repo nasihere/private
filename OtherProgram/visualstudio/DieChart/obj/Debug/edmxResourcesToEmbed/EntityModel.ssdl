@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DB_9B1091_generalModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'DB_9B1091_general.dbo.Die' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Die">
+          <Property Name="Code" Type="nvarchar" MaxLength="115" />
+          <Property Name="Desc" Type="nvarchar(max)" />
+          <Property Name="Id1" Type="nvarchar" MaxLength="110" />
+          <Property Name="Id2" Type="nvarchar" MaxLength="110" />
+          <Property Name="Length" Type="nvarchar" MaxLength="110" />
+          <Property Name="Price_val" Type="int" />
+          <Property Name="Glass_Size" Type="nvarchar" MaxLength="125" />
+          <Property Name="ID1_ID2" Type="nvarchar" MaxLength="50" />
+        </EntityType>-->
+  <EntityContainer Name="DB_9B1091_generalModelStoreContainer" />
+</Schema>

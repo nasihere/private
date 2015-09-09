@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ems_databaseModelStoreContainer" CdmEntityContainer="emsEntities">
+    <EntitySetMapping Name="tbl_Admin">
+      <EntityTypeMapping TypeName="ems_databaseModel.tbl_Admin">
+        <MappingFragment StoreEntitySet="tbl_Admin">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_CastReligion">
+      <EntityTypeMapping TypeName="ems_databaseModel.tbl_CastReligion">
+        <MappingFragment StoreEntitySet="tbl_CastReligion">
+          <ScalarProperty Name="Id_CastReligion" ColumnName="Id_CastReligion" />
+          <ScalarProperty Name="Cast" ColumnName="Cast" />
+          <ScalarProperty Name="Religion" ColumnName="Religion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_ClassLevel">
+      <EntityTypeMapping TypeName="ems_databaseModel.tbl_ClassLevel">
+        <MappingFragment StoreEntitySet="tbl_ClassLevel">
+          <ScalarProperty Name="Id_ClassLevel" ColumnName="Id_ClassLevel" />
+          <ScalarProperty Name="Id_YearAcademy" ColumnName="Id_YearAcademy" />
+          <ScalarProperty Name="ClassLevel" ColumnName="ClassLevel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_ContactDetail">
+      <EntityTypeMapping TypeName="ems_databaseModel.tbl_ContactDetail">
+        <MappingFragment StoreEntitySet="tbl_ContactDetail">
+          <ScalarProperty Name="Id_ContactDetail" ColumnName="Id_ContactDetail" />
+          <ScalarProperty Name="c_flatNo" ColumnName="c_flatNo" />
+          <ScalarProperty Name="c_building" ColumnName="c_building" />
+          <ScalarProperty Name="c_area" ColumnName="c_area" />
+          <ScalarProperty Name="c_dist" ColumnName="c_dist" />
+          <ScalarProperty Name="c_zipcode" ColumnName="c_zipcode" />
+          <ScalarProperty Name="Id_Nationality" ColumnName="Id_Nationality" />
+          <ScalarProperty Name="c_phoneno" ColumnName="c_phoneno" />
+          <ScalarProperty Name="p_flatno" ColumnName="p_flatno" />
+          <ScalarProperty Name="p_building" ColumnName="p_building" />
+          <ScalarProperty Name="p_area" ColumnName="p_area" />
+          <ScalarProperty Name="p_dist" ColumnName="p_dist" />
+          <ScalarProperty Name="p_zipcode" ColumnName="p_zipcode" />
+          <ScalarProperty Name="p_Id_Nationality" ColumnName="p_Id_Nationality" />
+          <ScalarProperty Name="p_phoneno" ColumnName="p_phoneno" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Course">
+      <EntityTypeMapping TypeName="ems_databaseModel.tbl_Course">
+        <MappingFragment StoreEntitySet="tbl_Course">
+          <ScalarProperty Name="Id_Course" ColumnName="Id_Course" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Employee">
+      <EntityTypeMapping TypeName="ems_databaseModel.tbl_Employee">
+        <MappingFragment StoreEntitySet="tbl_Employee">
+          <ScalarProperty Name="Id_Employee" ColumnName="Id_Employee" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Id_EmploymentHistory" ColumnName="Id_EmploymentHistory" />
+          <ScalarProperty Name="Designation" ColumnName="Designation" />
+          <ScalarProperty Name="DateBirth" ColumnName="DateBirth" />
+          <ScalarProperty Name="AccessURL" ColumnName="AccessURL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_EmploymentHistory">
+      <EntityTypeMapping TypeName="ems_databaseModel.tbl_EmploymentHistory">
+        <MappingFragment StoreEntitySet="tbl_EmploymentHistory">
+          <ScalarProperty Name="Id_EmploymentHistory" ColumnName="Id_EmploymentHistory" />
+          <ScalarProperty Name="Id_Employee" ColumnName="Id_Employee" />
+          <ScalarProperty Name="InstitutionName" ColumnName="InstitutionName" />
+          <ScalarProperty Name="Id_Salary" ColumnName="Id_Salary" />
+          <ScalarProperty Name="DateJoining" ColumnName="DateJoining" />
+          <ScalarProperty Name="DateLeaving" ColumnName="DateLeaving" />
+          <ScalarProperty Name="HighestQualification" ColumnName="HighestQualification" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_language">
+      <EntityTypeMapping TypeName="ems_databaseModel.tbl_language">
+        <MappingFragment StoreEntitySet="tbl_language">
+          <ScalarProperty Name="Id_language" ColumnName="Id_language" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_MasterFee">
+      <EntityTypeMapping TypeName="ems_databaseModel.tbl_MasterFee">
+        <MappingFragment StoreEntitySet="tbl_MasterFee">
+          <ScalarProperty Name="Id_MasterFee" ColumnName="Id_MasterFee" />
+          <ScalarProperty Name="FeeType" ColumnName="FeeType" />
+          <ScalarProperty Name="Id_YearAcademy" ColumnName="Id_YearAcademy" />
+          <ScalarProperty Name="Fee" ColumnName="Fee" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Nationality">
+      <EntityTypeMapping TypeName="ems_databaseModel.tbl_Nationality">
+        <MappingFragment StoreEntitySet="tbl_Nationality">
+          <ScalarProperty Name="Id_Nationality" ColumnName="Id_Nationality" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_ParentDetail">
+      <EntityTypeMapping TypeName="ems_databaseModel.tbl_ParentDetail">
+        <MappingFragment StoreEntitySet="tbl_ParentDetail">
+          <ScalarProperty Name="Id_ParentDetail" ColumnName="Id_ParentDetail" />
+          <ScalarProperty Name="Id_Student" ColumnName="Id_Student" />
+          <ScalarProperty Name="Id_Employee" ColumnName="Id_Employee" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Salary">
+      <EntityTypeMapping TypeName="ems_databaseModel.tbl_Salary">
+        <MappingFragment StoreEntitySet="tbl_Salary">
+          <ScalarProperty Name="Id_Salary" ColumnName="Id_Salary" />
+          <ScalarProperty Name="BasicSalary" ColumnName="BasicSalary" />
+          <ScalarProperty Name="Compensation" ColumnName="Compensation" />
+          <ScalarProperty Name="Bonus" ColumnName="Bonus" />
+          <ScalarProperty Name="YearlyIncome" ColumnName="YearlyIncome" />
+          <ScalarProperty Name="Taxes1" ColumnName="Taxes1" />
+          <ScalarProperty Name="Taxes2" ColumnName="Taxes2" />
+          <ScalarProperty Name="Taxes3" ColumnName="Taxes3" />
+          <ScalarProperty Name="Taxes4" ColumnName="Taxes4" />
+          <ScalarProperty Name="Taxes5" ColumnName="Taxes5" />
+          <ScalarProperty Name="Medical" ColumnName="Medical" />
+          <ScalarProperty Name="OtherIncome" ColumnName="OtherIncome" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Student">
+      <EntityTypeMapping TypeName="ems_databaseModel.tbl_Student">
+        <MappingFragment StoreEntitySet="tbl_Student">
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="AboutMe" ColumnName="AboutMe" />
+          <ScalarProperty Name="PictureURL" ColumnName="PictureURL" />
+          <ScalarProperty Name="BloodGroup" ColumnName="BloodGroup" />
+          <ScalarProperty Name="MotherName" ColumnName="MotherName" />
+          <ScalarProperty Name="FatherName" ColumnName="FatherName" />
+          <ScalarProperty Name="Id_Student" ColumnName="Id_Student" />
+          <ScalarProperty Name="GRNO" ColumnName="GRNO" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="DateBirth" ColumnName="DateBirth" />
+          <ScalarProperty Name="MaleFemale" ColumnName="MaleFemale" />
+          <ScalarProperty Name="BirthPlace" ColumnName="BirthPlace" />
+          <ScalarProperty Name="Nationality" ColumnName="Nationality" />
+          <ScalarProperty Name="Id_Language" ColumnName="Id_Language" />
+          <ScalarProperty Name="Id_CastReligion" ColumnName="Id_CastReligion" />
+          <ScalarProperty Name="Id_ContactDetail" ColumnName="Id_ContactDetail" />
+          <ScalarProperty Name="Id_ParentDetail" ColumnName="Id_ParentDetail" />
+          <ScalarProperty Name="Id_Employee" ColumnName="Id_Employee" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_StudentResult">
+      <EntityTypeMapping TypeName="ems_databaseModel.tbl_StudentResult">
+        <MappingFragment StoreEntitySet="tbl_StudentResult">
+          <ScalarProperty Name="Id_StudentResult" ColumnName="Id_StudentResult" />
+          <ScalarProperty Name="Id_Student" ColumnName="Id_Student" />
+          <ScalarProperty Name="Id_Course" ColumnName="Id_Course" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Transport">
+      <EntityTypeMapping TypeName="ems_databaseModel.tbl_Transport">
+        <MappingFragment StoreEntitySet="tbl_Transport">
+          <ScalarProperty Name="Id_Transport" ColumnName="Id_Transport" />
+          <ScalarProperty Name="Id_YearAcademy" ColumnName="Id_YearAcademy" />
+          <ScalarProperty Name="Area" ColumnName="Area" />
+          <ScalarProperty Name="TransportFee" ColumnName="TransportFee" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_YearAcademy">
+      <EntityTypeMapping TypeName="ems_databaseModel.tbl_YearAcademy">
+        <MappingFragment StoreEntitySet="tbl_YearAcademy">
+          <ScalarProperty Name="Id_Transport" ColumnName="Id_Transport" />
+          <ScalarProperty Name="Id_ClassLevel" ColumnName="Id_ClassLevel" />
+          <ScalarProperty Name="Id_StudentResult" ColumnName="Id_StudentResult" />
+          <ScalarProperty Name="RollNo" ColumnName="RollNo" />
+          <ScalarProperty Name="Division" ColumnName="Division" />
+          <ScalarProperty Name="FromToYear" ColumnName="FromToYear" />
+          <ScalarProperty Name="Id_Student" ColumnName="Id_Student" />
+          <ScalarProperty Name="Id_YearAcademy" ColumnName="Id_YearAcademy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Account">
+      <EntityTypeMapping TypeName="ems_databaseModel.tbl_Account">
+        <MappingFragment StoreEntitySet="tbl_Account">
+          <ScalarProperty Name="Month" ColumnName="Month" />
+          <ScalarProperty Name="Id_YearAcademy" ColumnName="Id_YearAcademy" />
+          <ScalarProperty Name="Id_Employee" ColumnName="Id_Employee" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="AmountPaid" ColumnName="AmountPaid" />
+          <ScalarProperty Name="Id_Account" ColumnName="Id_Account" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

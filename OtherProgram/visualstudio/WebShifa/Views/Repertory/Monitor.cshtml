@@ -1,0 +1,62 @@
+﻿@model IEnumerable<ShifaWebEntities.Repertory>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Monitor</title>
+</head>
+<body>
+    <div>
+
+    <table class="table table-striped table-bordered table-hover">
+        <tr>
+            <td><b>Comment</b></td>
+            
+        </tr>
+        @foreach (var item in Model)
+            {
+            <tr>
+
+                <td>
+                    <hr />
+                    @{
+                        string[] spliter = item.readmepending.Split(new string[] { "-,-" }, StringSplitOptions.None);
+                        foreach (string line in spliter)
+                        {
+                            @line<br>
+                            <form action="/api/RepertoryService/ExtraSaveReadMeApprove" method="get">
+                                <input type="hidden" name="value" value="@item.Book~@item.title~@line" />
+                                <input type="submit" value="Note Approve" />
+                            </form>
+                        <hr/>
+                        }
+                        @item.imgpathpending
+                        
+                        string[] spliter1 = item.imgpathpending.Split(new string[] { "-,-" }, StringSplitOptions.None);
+                        foreach (string line2 in spliter1)
+                        {
+                            if (line2 != "") { 
+                            string[] spliter2 = line2.Split(new string[] { "-:-" }, StringSplitOptions.None);    
+                             <br />
+                            <img src="http://kent.nasz.us/app_php/shifaappsettings/@(spliter2[1]).jpg"/>
+                            <form action="/api/RepertoryService/ExtraSaveImgPathApprove" method="get">
+                                <input type="hidden" name="value" value="@item.Book~@item.title~@line2" />
+                                <input type="submit" value="Image Approve" />
+                            </form>
+                        <hr/>
+                        }
+                    }
+                }
+                    
+                </td>
+            </tr>
+          }
+        </table>
+    </div>
+</body>
+</html>

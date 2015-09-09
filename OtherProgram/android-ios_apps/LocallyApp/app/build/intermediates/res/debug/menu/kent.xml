@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:yourapp="http://schemas.android.com/apk/res-auto"
+    >
+    <item android:id="@+id/menu_refresh"
+          android:icon="@drawable/ic_action_search_white"
+          android:title="Search"
+          android:showAsAction="collapseActionView|ifRoom"
+          android:actionViewClass="android.widget.SearchView" />
+    <item android:id="@+id/menu_update"
+        android:icon="@drawable/ic_action_av_loop"
+        android:title="Refresh"
+        android:showAsAction="collapseActionView|ifRoom"
+        android:actionViewClass="android.widget.SearchView" />
+
+
+    <item android:id="@+id/menu_addNew"
+          android:icon="@drawable/ic_action_content_add"
+          android:title="Add New"
+          android:showAsAction="ifRoom"/>
+
+
+    <item android:id="@+id/menu_back"
+        android:icon="@drawable/ic_action_content_undo"
+        android:title="Go Back"
+        android:showAsAction="ifRoom"/>
+
+
+
+
+    <item android:id="@+id/menu_flush_cache"
+        android:icon="@drawable/ic_action_action_delete"
+        android:title="Flush Images"
+        android:showAsAction="ifRoom"/>
+
+</menu><!-- From: file:/Users/Nasz/Documents/My%20Projects/Android/locally%204%202/app/src/main/res/menu/kent.xml -->

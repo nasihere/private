@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+     >
+
+    <RelativeLayout
+        android:id="@+id/repertoryRelativeheader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/pad_20dp"
+
+        >
+
+        <ImageView
+            android:id="@+id/grid_item_image"
+            android:layout_width="wrap_content"
+            android:background="@drawable/layout_bg"
+
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_launcher"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true">
+        </ImageView>
+
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:background="@color/c_green"
+            android:textColor="@color/c_white"
+            android:gravity="center_horizontal"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="2"
+            android:id="@+id/grid_item_counter"
+            android:layout_alignTop="@+id/grid_item_image"
+            android:layout_toRightOf="@+id/grid_item_image"
+            android:layout_toEndOf="@+id/grid_item_image" />
+
+        <TextView
+            android:id="@+id/grid_item_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="nasir"
+            android:gravity="center"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_below="@+id/grid_item_image"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+        </TextView>
+    </RelativeLayout>
+
+</LinearLayout><!-- From: file:/Users/Nasz/Documents/My%20Projects/Android/locally%204%202/app/src/main/res/layout/gridview_repertory_details.xml -->

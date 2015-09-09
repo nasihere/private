@@ -1,0 +1,47 @@
+﻿@{
+    Layout = null;
+    ViewBag.Title = ViewBag.Search.Replace('_', ' ');
+}
+
+<div style="position:fixed;top:200px;left:200px;display:none;"  id="RepertoryResultTip" class="col-xs-12 col-sm-3 widget-container-span ui-sortable">
+    <div class="widget-box">
+        <div class="widget-header">
+            <h5 class="smaller">Totality Preview</h5>
+
+            <div class="widget-toolbar">
+                <span class="label label-success">
+                    55 
+                    <i class="icon-arrow-up"></i>
+                </span>
+            </div>
+        </div>
+
+        <div class="widget-body">
+            <div class="widget-main padding-6">
+                <div class="alert alert-info " id="TipRemedies"> Grading: coca | Intensity: acon | </div>
+                <a href="#ClearButton" class="btn btn-danger btn-sm" onclick="$('#RepertoryResultTip').hide()">Report</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="ClearButton">
+    <h4 class="header blue smaller">Totality</h4>
+    <div id="result">
+
+    </div>
+    <div>Totality - Sort By:</div>
+    <select name="sort"  id="sort" value="Sort by">
+        <option value="Name">Name</option>
+        <option value="Intensity">Intensity</option>
+        <option value="Grading">Grading</option>
+    </select>
+
+    <br />
+    <br />
+    <button class="btn btn-sm btn-info no-radius" onclick="javascript:clearSelection()">
+        <i class="icon-edit"></i>
+        Clear Selection
+    </button>
+
+</div>

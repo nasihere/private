@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_refresh"
+        android:actionViewClass="android.widget.SearchView"
+        android:icon="@drawable/ic_action_search_white"
+        android:showAsAction="collapseActionView|ifRoom"
+        android:title="Search" />
+
+    <!--item android:id="@+id/menu_feed"
+          android:icon="@drawable/ic_action_network_wifi"
+          android:title="Interactive"
+          android:showAsAction="ifRoom"/!-->
+
+    <item
+        android:id="@+id/menu_overview"
+        android:icon="@drawable/ic_action_add_to_queue"
+        android:showAsAction="ifRoom"
+        android:title="Show All" />
+
+    <item
+        android:id="@+id/menu_list"
+        android:icon="@drawable/ic_action_view_as_grid_white"
+        android:showAsAction="ifRoom"
+        android:title="Report" />
+
+
+</menu>

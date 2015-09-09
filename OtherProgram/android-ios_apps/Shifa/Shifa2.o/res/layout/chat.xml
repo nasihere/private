@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/MainChatView"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white_smoke"
+
+    android:descendantFocusability="beforeDescendants"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:id="@+id/ln_progressbar"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:background="@color/c_white"
+
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:weightSum="1">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/ic_bootstrap_loading" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lstViewChat"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:drawSelectorOnTop="false"
+
+        android:visibility="gone">
+
+    </ListView>
+
+    <ListView
+        android:id="@+id/listviewContact"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:drawSelectorOnTop="false"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/llout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/c_white"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:soundEffectsEnabled="true"
+        android:visibility="gone">
+
+        <ListView
+            android:id="@+id/listviewchatter"
+            android:layout_width="wrap_content"
+            android:layout_height="261dp"
+            android:layout_above="@+id/llout"
+            android:layout_alignParentTop="true"
+            android:layout_weight="0.74" />
+
+        <RelativeLayout
+            android:id="@+id/llout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <EditText
+                android:id="@+id/txtChatMsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/btnAttachment"
+                android:layout_toLeftOf="@+id/imgbtnmsgsend"
+                android:layout_toRightOf="@+id/btnAttachment"
+                android:text="@string/emptystring" />
+
+            <Button
+                android:id="@+id/imgbtnmsgsend"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/txtChatMsg"
+                android:background="@color/c_green"
+                android:text="Send"
+                android:textColor="@color/white_smoke" />
+
+            <Button
+                android:id="@+id/btnAttachment"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignTop="@+id/txtChatMsg"
+                android:background="@drawable/ic_editor_attach_file" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

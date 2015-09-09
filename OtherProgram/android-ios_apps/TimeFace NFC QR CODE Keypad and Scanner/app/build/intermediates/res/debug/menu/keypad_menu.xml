@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/mnuChangeTheme"
+        android:title="Change Theme"/>
+    <item
+        android:id="@+id/mnuAddMember"
+        android:title="Add a Member"/>
+    <item
+        android:id="@+id/mnuActivity"
+        android:title="Activity"/> 
+    <item
+        android:id="@+id/mnuLogout"
+        android:title="Logout"/>
+   
+</menu><!-- From: file:/Users/Nasz/Documents/eagle%20development/Shifa%20Employee%20Logger/app/src/main/res/menu/keypad_menu.xml -->

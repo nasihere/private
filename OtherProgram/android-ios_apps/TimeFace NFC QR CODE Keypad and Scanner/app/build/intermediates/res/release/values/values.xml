@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/Users/Nasz/Documents/eagle%20development/Shifa%20Employee%20Logger/app/src/main/res/values/array.xml -->
+    <eat-comment/>
+    <array name="DialogArraySearch">  
+    <item>first</item>  
+    <item>second</item>  
+    <item>third</item>  
+     </array>
+    <!-- From: file:/Users/Nasz/Documents/eagle%20development/Shifa%20Employee%20Logger/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <color name="Cream">#d9edf7</color>
+    <color name="CreamText">#3a87ad</color>
+    <color name="black">#000000</color>
+    <!-- From: file:/Users/Nasz/Documents/eagle%20development/Shifa%20Employee%20Logger/app/src/main/res/values/colors.xml -->
+    <eat-comment/>
+    <color name="c_blue">#3E80B4</color>
+    <color name="c_gray">#D3D3D3</color>
+    <color name="c_graydark">#989898</color>
+    <color name="c_orange">#880000 </color>
+    <color name="c_red">#FF0000</color>
+    <color name="c_white">#FFFFFF</color>
+    <color name="reportTableBG">#DCDDC0</color>
+    <!-- From: file:/Users/Nasz/Documents/eagle%20development/Shifa%20Employee%20Logger/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <color name="textColor">#000000</color>
+    <color name="textGreenColor">#B4D7BF</color>
+    <color name="textShadow">#F5F5F5</color>
+    <color name="white">#FFFFFF</color>
+    <!-- From: file:/Users/Nasz/Documents/eagle%20development/Shifa%20Employee%20Logger/app/src/main/res/values/dimens.xml -->
+    <eat-comment/>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <!-- From: file:/Users/Nasz/Documents/eagle%20development/Shifa%20Employee%20Logger/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="City">City</string>
+    <string name="Country">Country</string>
+    <string name="DOB">DOB (DD/MM/YYYY)</string>
+    <string name="Dialog_SearchSetting">Search By</string>
+    <string name="EnterID">Enter Your ID</string>
+    <string name="ListPosition">0</string>
+    <string name="Number">999</string>
+    <string name="OTotalRemedies">"Order by Total Remedies "</string>
+    <string name="Register">Create a new account. Register Me!</string>
+    <string name="RemediesShowHide"/>
+    <string name="Sex">Sex</string>
+    <string name="SymptomReport">Symptom Report</string>
+    <string name="TimeAttendance">Time Attendance</string>
+    <string name="WebDemologgedin">Do you want to Log in as Guest</string>
+    <string name="action_search">Symtom...</string>
+    <string name="action_settings">Settings</string>
+    <string name="app_name">TimeFace</string>
+    <string name="buy">Buy this App</string>
+    <string name="d_p_c_Cancel">Cancel</string>
+    <string name="d_p_c_reply">Reply</string>
+    <string name="demo">Demo</string>
+    <string name="email">Email Id  (Required)</string>
+    <string name="emailid">Email Id</string>
+    <string name="emptystring"/>
+    <string name="fname">First Name (Required)</string>
+    <string name="forgotpassword">Forgot Password?</string>
+    <string name="hello_world">Shifa</string>
+    <string name="lname">Last Name</string>
+    <string name="loadNextResult">More...</string>
+    <string name="loadoldmsg">Load Earlier Messages</string>
+    <string name="login">Login</string>
+    <string name="occu">Occupation</string>
+    <string name="password">Password</string>
+    <string name="postforum">Whats on your mind for discussion today</string>
+    <string name="radio_female">Female</string>
+    <string name="radio_male">Male</string>
+    <string name="radio_occu_doctor">Doctor</string>
+    <string name="radio_occu_student">Student</string>
+    <string name="reg">Registration Page</string>
+    <string name="regBtn">Register</string>
+    <string name="regpassword">Password  (Required)</string>
+    <string name="sChatOnline"/>
+    <string name="sChatOnlineDelete">Delete</string>
+    <string name="sChatOnlineReply">Reply</string>
+    <string name="sHome">Testing Toolz</string>
+    <string name="s_home_abbreviation">Abbreviation</string>
+    <string name="s_home_chat">Chat</string>
+    <string name="s_home_help">Help</string>
+    <string name="s_home_kentrepertory">Kent Repertory</string>
+    <string name="s_home_mareriamedica">Materia Medica</string>
+    <string name="s_home_organon">Organon</string>
+    <string name="s_home_reversedrepertory">Reversed Repertory</string>
+    <string name="select">Select</string>
+    <string name="slogout">LOGOUT</string>
+    <string name="status_rem">\@status_rem</string>
+    <string name="webreg">Do you want to register through Web?</string>
+    <!-- From: file:/Users/Nasz/Documents/eagle%20development/Shifa%20Employee%20Logger/app/src/main/res/values/styles.xml -->
+    <eat-comment/>
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+    <style name="ButtonDialPad">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#9e9e9e</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_margin">1dp</item>
+        <item name="android:background">#ffffff</item>
+
+        <item name="android:textSize">10dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:shadowColor">#000000</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">2</item>
+    </style>
+    <style name="ButtonDialPadText">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#00bcd4</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_margin">1dp</item>
+        <item name="android:background">#ffffff</item>
+
+        <item name="android:textSize">10dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:shadowColor">#000000</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">2</item>
+    </style>
+    <style name="ButtonDialPadTextNegative">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#f44336</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_margin">1dp</item>
+        <item name="android:background">#ffffff</item>
+
+        <item name="android:textSize">10dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:shadowColor">#000000</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">2</item>
+    </style>
+    <style name="ButtonText">
+	    <item name="android:layout_width">fill_parent</item>
+	    <item name="android:layout_height">wrap_content</item>
+	    <item name="android:textColor">#ffffff</item>
+	    <item name="android:gravity">center</item>
+	    <item name="android:layout_margin">3dp</item>
+	    <item name="android:textSize">20dp</item>
+	    <item name="android:textStyle">bold</item>
+	    <item name="android:shadowColor">#000000</item>
+	    <item name="android:shadowDx">1</item>
+	    <item name="android:shadowDy">1</item>
+	    <item name="android:shadowRadius">2</item>
+	</style>
+    <style name="LabelBlueText">
+	    <item name="android:layout_width">fill_parent</item>
+	    <item name="android:layout_height">wrap_content</item>
+	    <item name="android:textColor">#3E80B4</item>
+	    <item name="android:layout_margin">3dp</item>
+	    <item name="android:textSize">30dp</item>
+	    <item name="android:textStyle">bold</item>
+	    <item name="android:shadowColor">#000000</item>
+	    <item name="android:shadowDx">1</item>
+	    <item name="android:shadowDy">1</item>
+	    <item name="android:shadowRadius">2</item>
+	</style>
+</resources>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.shifa.employee.logger"
+    android:versionCode="3"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="7"
+        android:targetSdkVersion="15" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="false" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppBaseTheme" >
+        <activity
+            android:name="com.shifa.employee.logger.home_menu"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.shifa.employee.logger.CameraTestActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.shifa.employee.logger.activity_qr"
+            android:label="@string/app_name" >
+        </activity>
+        <!-- For InApp Billing -->
+        <activity android:name="com.shifa.employee.logger.login" />
+        <activity android:name="com.shifa.employee.logger.activity_events" />
+        <activity android:name="com.shifa.employee.logger.registration" />
+        <activity android:name="com.shifa.employee.logger.member" />
+        <activity android:name="com.shifa.employee.logger.activity_member" />
+        <activity android:name="com.shifa.employee.logger.custom_report" />
+        <activity android:name="com.shifa.employee.logger.activity_member_listactivity" />
+    </application>
+
+</manifest>

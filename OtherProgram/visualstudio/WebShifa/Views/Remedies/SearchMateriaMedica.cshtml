@@ -1,0 +1,56 @@
+﻿@model IEnumerable<ShifaWebEntities.Remedy>
+
+@{
+    if (ViewBag.Search == null)
+    {
+        ViewBag.Search = "";
+        ViewBag.Title = "Shifa - Kent - Boericke - Allen - Materia Medica";
+        Session["Title"] = ViewBag.Title;
+    }
+    else
+    {
+        ViewBag.Title = ViewBag.Search.Replace('_', ' ') + " - Shifa - Kent - Boericke - Allen - Materia Medica";
+        Session["Title"] = ViewBag.Title;
+    }
+
+
+    var i = Model.Count();
+
+
+    Layout = "~/Content/themes/BootStrapSkin1/_Layout.cshtml";
+}
+<ul class="nav nav-pills">
+    <li class="">
+        <a href="~/">Home</a>
+    </li>
+
+
+    <li class="active">
+        <a href="~/Remedies/Materia_Medica?Remedies=A">Materia Medica</a>
+    </li>
+</ul>
+
+<form action="Materia_Medica" method="get">
+    <div class="form-actions">
+        <div class="input-group">
+            <input tabindex="1" placeholder="Type your search here ..." type="text" class="form-control" value="@ViewBag.Remedies.Replace('_',' ')" name="Search">
+            <span class="input-group-btn">
+                <button class="btn btn-sm btn-info no-radius" type="submit">
+                    <i class="icon-search"></i>
+                    Search
+                </button>
+            </span>
+        </div>
+    </div>
+</form>
+
+<table class="table">
+    
+    @foreach (var item in Model)
+    {
+        if (item.status != "") { 
+            
+                @Html.Raw(item.status)
+            <hr />
+        }
+    }

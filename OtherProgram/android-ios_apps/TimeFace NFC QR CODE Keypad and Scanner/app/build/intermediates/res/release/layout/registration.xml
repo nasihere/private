@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:scrollbars="vertical"
+    android:layout_height="fill_parent"
+     >
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:id="@+id/reg_lay_step1"
+       android:layout_height="fill_parent"
+       android:background="@color/black"
+       android:orientation="vertical"
+       android:visibility="visible">
+
+       <TextView
+           style="@style/LabelBlueText"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginLeft="5dp"
+           android:text="Your Personalize Info"
+           android:textColor="@color/c_blue" />
+       
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="18dp"
+           android:background="@drawable/shape_black_line"/>
+
+       <TextView
+           android:textColor="@color/c_gray"
+           android:padding="10dp"
+           android:layout_width="match_parent"
+           android:textAppearance="?android:attr/textAppearanceMedium"
+           android:layout_height="wrap_content"
+           android:text="Your name is used to personalize your Logger and Shifa Services"
+            />
+       
+        <EditText
+           android:id="@+id/reg_tv_first"
+           android:textColor="@color/c_gray"
+           android:maxLength="119"
+           android:padding="10dp"
+           android:layout_width="match_parent"
+           android:textAppearance="?android:attr/textAppearanceMedium"
+           android:layout_height="wrap_content"
+           android:hint="Institution or Company Name"
+       		   
+           />
+       	
+        
+        <EditText
+           android:id="@+id/reg_tv_last"
+           android:textColor="@color/c_gray"
+           android:padding="10dp"
+           android:layout_width="match_parent"
+           android:textAppearance="?android:attr/textAppearanceMedium"
+           android:layout_height="wrap_content"
+           android:hint="Admin Name"
+           />
+
+        <Button
+            android:id="@+id/reg_btn_step1"
+            android:layout_width="match_parent"
+            android:enabled="false"
+            android:textColor="@color/c_white"
+            android:layout_height="wrap_content"
+            android:text="Next" />
+        
+   </LinearLayout>
+	<LinearLayout
+       android:layout_width="match_parent"
+       android:id="@+id/reg_lay_step2"
+       android:visibility="gone"
+       android:layout_height="fill_parent"
+       android:background="@color/black"
+       android:orientation="vertical" >
+
+	   <TextView
+           style="@style/LabelBlueText"
+           android:layout_marginLeft="5dp"
+           android:textColor="@color/c_blue"
+           android:layout_width="match_parent"
+           android:inputType="textNoSuggestions" 
+           android:layout_height="wrap_content"
+           android:text="Enter your email"
+	    />
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="18dp"
+           android:background="@drawable/shape_black_line"/>
+       
+        <EditText
+           android:id="@+id/reg_tv_emailid"
+           android:inputType="textEmailAddress"
+           android:textColor="@color/c_gray"
+           android:padding="10dp"
+           android:maxLength="50"
+           android:layout_width="match_parent"
+           android:textAppearance="?android:attr/textAppearanceMedium"
+           android:layout_height="wrap_content"
+           android:hint="Email"
+           />
+        
+
+       
+       <TextView
+           android:textColor="@color/c_gray"
+           android:padding="10dp"
+           android:layout_width="match_parent"
+           android:textAppearance="?android:attr/textAppearanceMedium"
+           android:layout_height="wrap_content"
+           android:text="You may get notification at your email address. Your email address also help you to do login or forgot password request."
+            />
+
+       <Button
+           android:id="@+id/reg_btn_step2"
+           style="?android:attr/buttonStyleSmall"
+           android:enabled="false"
+           android:layout_width="match_parent"
+           android:textColor="@color/c_white"
+           android:layout_height="wrap_content"
+           android:text="Next" />
+        
+   </LinearLayout>
+	
+	<LinearLayout
+       android:layout_width="match_parent"
+       android:id="@+id/reg_lay_step3"
+       android:layout_height="fill_parent"
+       android:visibility="gone"
+       android:background="@color/black"
+       android:orientation="vertical" >
+
+	   <TextView
+           style="@style/LabelBlueText"
+           android:layout_marginLeft="5dp"
+           android:textColor="@color/c_blue"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="Create password"
+	    />
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="18dp"
+           android:background="@drawable/shape_black_line"/>
+       
+        <EditText
+           android:id="@+id/reg_tv_password"
+           android:textColor="@color/c_gray"
+           android:padding="10dp"
+           android:maxLength="20"
+           android:inputType="textPassword"
+           android:layout_width="match_parent"
+           android:textAppearance="?android:attr/textAppearanceMedium"
+           android:layout_height="wrap_content"
+           android:hint="Password"
+           />
+		
+       <TextView
+           android:textColor="@color/c_gray"
+           android:padding="10dp"
+           android:layout_width="match_parent"
+           android:textAppearance="?android:attr/textAppearanceMedium"
+           android:layout_height="wrap_content"
+           android:text="Password can help you to do login to view reports. If you ever forget your password. you'll want a way to recover it."
+            />
+
+       <Button
+           android:id="@+id/reg_btn_step3"
+           style="?android:attr/buttonStyleSmall"
+           android:enabled="false"
+           android:layout_width="match_parent"
+           android:textColor="@color/c_white"
+           android:layout_height="wrap_content"
+           android:text="Next" />
+        
+   </LinearLayout>
+
+		<LinearLayout
+       android:layout_width="match_parent"
+       android:id="@+id/reg_lay_step4"
+       android:layout_height="fill_parent"
+       android:background="@color/black"
+       android:visibility="gone"
+       android:orientation="vertical" >
+
+	   <TextView
+           style="@style/LabelBlueText"
+           android:layout_marginLeft="5dp"
+           android:textColor="@color/c_blue"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="Congratulation!! "
+	    />
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="18dp"
+           android:background="@drawable/shape_black_line"/>
+       
+		
+       <TextView
+           android:textColor="@color/c_gray"
+           android:padding="10dp"
+           android:layout_width="match_parent"
+           android:textAppearance="?android:attr/textAppearanceMedium"
+           android:layout_height="wrap_content"
+           android:text="Your account has been created. Please click on finish button"
+            />
+
+       <Button
+           android:id="@+id/reg_btn_step4"
+           style="?android:attr/buttonStyleSmall"
+           android:layout_width="match_parent"
+           
+           android:textColor="@color/c_white"
+           android:layout_height="wrap_content"
+           android:text="Finish" />
+        
+   </LinearLayout>	
+</LinearLayout>
+	 <!-- From: file:/Users/Nasz/Documents/eagle%20development/Shifa%20Employee%20Logger/app/src/main/res/layout/registration.xml -->

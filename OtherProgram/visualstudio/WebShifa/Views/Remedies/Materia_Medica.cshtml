@@ -1,0 +1,108 @@
+﻿@model IEnumerable<ShifaWebEntities.Remedy>
+
+@{
+    if (ViewBag.Search == null)
+    {
+        ViewBag.Search = "";
+        ViewBag.Title = "Shifa - Kent - Boericke - Allen - Materia Medica";
+        Session["Title"] = ViewBag.Title;
+    }
+    else
+    {
+        ViewBag.Title = ViewBag.Search.Replace('_', ' ') + " - Shifa - Kent - Boericke - Allen - Materia Medica";
+        Session["Title"] = ViewBag.Title;
+    }
+
+
+    var i = Model.Count();
+
+
+    Layout = "~/Content/themes/BootStrapSkin1/_Layout.cshtml";
+}
+<ul class="nav nav-pills">
+    <li class="">
+        <a href="~/">Home</a>
+    </li>
+
+
+    <li class="active">
+        <a href="~/Remedies/Materia_Medica?Remedies=A">Materia Medica</a>
+    </li>
+</ul>
+
+<form action="Materia_Medica" method="get">
+    <div class="form-actions">
+        <div class="input-group">
+            <input tabindex="1" placeholder="Type your search here ..." type="text" class="form-control" value="@ViewBag.Remedies.Replace('_',' ')" name="Search">
+            <span class="input-group-btn">
+                <button class="btn btn-sm btn-info no-radius" type="submit">
+                    <i class="icon-search"></i>
+                    Search
+                </button>
+            </span>
+        </div>
+    </div>
+</form>
+
+<h4 class="lighter">
+    
+        
+            <a class="btn btn-xs btn-yellow" style="margin:3px;width:30px"   href="?Remedies=A">A</a> <a class="btn btn-xs btn-yellow" style="margin:3px;width:30px"  href="?Remedies=B">B</a> <a class="btn btn-xs btn-yellow" style="margin:3px;width:30px"  href="?Remedies=C">C</a> <a class="btn btn-xs btn-yellow" style="margin:3px;width:30px"  href="?Remedies=D">D</a> <a class="btn btn-xs btn-yellow" style="margin:3px;width:30px"  href="?Remedies=E">E</a>
+            <a class="btn btn-xs btn-yellow" style="margin:3px;width:30px"  href="?Remedies=E">E</a> <a class="btn btn-xs btn-yellow" style="margin:3px;width:30px"  href="?Remedies=F">F</a> <a class="btn btn-xs btn-yellow" style="margin:3px;width:30px"  href="?Remedies=G">G</a> <a class="btn btn-xs btn-yellow" style="margin:3px;width:30px"  href="?Remedies=H">H</a> <a class="btn btn-xs btn-yellow" style="margin:3px;width:30px"  href="?Remedies=I">I</a>
+            <a class="btn btn-xs btn-yellow" style="margin:3px;width:30px"  href="?Remedies=J">J</a> <a class="btn btn-xs btn-yellow" style="margin:3px;width:30px"  href="?Remedies=K">K</a> <a class="btn btn-xs btn-yellow" style="margin:3px;width:30px"  href="?Remedies=L">L</a> <a class="btn btn-xs btn-yellow" style="margin:3px;width:30px"  href="?Remedies=M">M</a> <a class="btn btn-xs btn-yellow" style="margin:3px;width:30px"  href="?Remedies=N">N</a>
+            <a class="btn btn-xs btn-yellow" style="margin:3px;width:30px"  href="?Remedies=O">O</a> <a class="btn btn-xs btn-yellow" style="margin:3px;width:30px"  href="?Remedies=P">P</a> <a class="btn btn-xs btn-yellow" style="margin:3px;width:30px"  href="?Remedies=R">R</a> <a class="btn btn-xs btn-yellow" style="margin:3px;width:30px"  href="?Remedies=S">S</a>
+            <a class="btn btn-xs btn-yellow" style="margin:3px;width:30px"  href="?Remedies=T">T</a> <a class="btn btn-xs btn-yellow" style="margin:3px;width:30px"  href="?Remedies=U">U</a> <a class="btn btn-xs btn-yellow" style="margin:3px;width:30px"  href="?Remedies=V">V</a> <a class="btn btn-xs btn-yellow" style="margin:3px;width:30px"  href="?Remedies=W">W</a> <a class="btn btn-xs btn-yellow" style="margin:3px;width:30px"  href="?Remedies=X">X</a>
+            <a class="btn btn-xs btn-yellow" style="margin:3px;width:30px"  href="?Remedies=Y">Y</a> <a class="btn btn-xs btn-yellow" style="margin:3px;width:30px"  href="?Remedies=Z">Z</a>
+        
+    
+</h4>
+<table class="table table-striped table-bordered table-hover">
+    <tr>
+        <th>Remedies - @ViewBag.Remedies</th>
+        
+    </tr>
+    @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <h4 class="smaller  blue">@item.rem - @item.RemediesName</h4>
+
+                    <div class="hidden-sm hidden-xs">
+                        
+                            <a class="btn btn-xs btn-purple padding-10 " href="~/Repertory/Reversed?Remedies=@item.rem">Reversed Repertory</a><span>&nbsp;</span>
+                        
+                            @if (!string.IsNullOrEmpty(item.kent))
+                            {
+                                <a class="btn btn-xs btn-primary padding-10" href="~/Remedies/Details?Remedies=@item.rem&Author=Kent">J.T Kent</a><span>&nbsp;</span>
+                            }
+                            @if (!string.IsNullOrEmpty(item.data))
+                            {
+                                <a class="btn btn-xs btn-inverse padding-10" href="~/Remedies/Details?Remedies=@item.rem&Author=Boericke">Boericke</a><span>&nbsp;</span>
+                            }
+                            @if (!string.IsNullOrEmpty(item.allen))
+                            {
+                                <a class="btn btn-xs btn-danger padding-10" href="~/Remedies/Details?Remedies=@item.rem&Author=Allen">Allen</a><span>&nbsp;</span>
+                            }
+                        
+                    </div>
+                    <div class="visible-sm visible-xs">
+                            <a class="btn btn-xs btn-purple padding-10" href="~/Repertory/Reversed?Remedies=@item.rem">RR</a><span>&nbsp;</span>
+                            @if (!string.IsNullOrEmpty(item.kent))
+                            {
+                                <a class="btn btn-xs btn-primary padding-10" href="~/Remedies/Details?Remedies=@item.rem&Author=Kent">K</a><span>&nbsp;</span>
+                            }
+                            @if (!string.IsNullOrEmpty(item.data))
+                            {
+                                <a class="btn btn-xs btn-inverse padding-10" href="~/Remedies/Details?Remedies=@item.rem&Author=Boericke">B</a><span>&nbsp;</span>
+                            }
+                            @if (!string.IsNullOrEmpty(item.allen))
+                            {
+                                <a class="btn btn-xs btn-danger padding-10" href="~/Remedies/Details?Remedies=@item.rem&Author=Allen">A</a><span>&nbsp;</span>
+                            }
+                        
+                        
+                        
+                    </div>
+                </td>
+            </tr>
+        }

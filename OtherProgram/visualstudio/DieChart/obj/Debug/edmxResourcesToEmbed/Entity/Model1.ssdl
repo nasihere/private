@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DB_9B1091_generalModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'DB_9B1091_general.dbo.Die' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Die">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" MaxLength="115" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="Id1" Type="nvarchar" MaxLength="110" />
+    <Property Name="Id2" Type="nvarchar" MaxLength="110" />
+    <Property Name="Length" Type="nvarchar" MaxLength="110" />
+    <Property Name="Price_val" Type="int" />
+    <Property Name="Glass_Size" Type="nvarchar" MaxLength="125" />
+    <Property Name="ID1_ID2" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="DB_9B1091_generalModelStoreContainer">
+    <EntitySet Name="Die" EntityType="Self.Die" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Die].[id] AS [id], 
+    [Die].[Code] AS [Code], 
+    [Die].[Description] AS [Description], 
+    [Die].[Id1] AS [Id1], 
+    [Die].[Id2] AS [Id2], 
+    [Die].[Length] AS [Length], 
+    [Die].[Price_val] AS [Price_val], 
+    [Die].[Glass_Size] AS [Glass_Size], 
+    [Die].[ID1_ID2] AS [ID1_ID2]
+    FROM [dbo].[Die] AS [Die]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

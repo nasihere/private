@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="nasihere-001-site5" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\Nasz\\Documents\\Visual\ Studio\ 2013\\Projects\\WebsiteShifa\\WebsiteShifa\\DieChart\\DieChart\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\Nasz\\Documents\\Visual\ Studio\ 2013\\Projects\\WebsiteShifa\\WebsiteShifa\\DieChart\\DieChart\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="DB_9B1091_generalConnectionString-Web.config Connection String" description="" value="Data Source=SQL5012.Smarterasp.net;Initial Catalog=DB_9B1091_general;Persist Security Info=True;User ID=DB_9B1091_general_admin;Password=Nasir@1234;MultipleActiveResultSets=True;Application Name=EntityFramework" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Nasz\\Documents\\Visual\ Studio\ 2013\\Projects\\WebsiteShifa\\WebsiteShifa\\DieChart\\DieChart\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DB_9B1091_generalConnectionString']/@connectionString" />
+  </parameter>
+  <parameter name="DB_9B1091_generalEntities-Web.config Connection String" description="" value="Data Source=SQL5012.Smarterasp.net;Initial Catalog=DB_9B1091_general;User Id=DB_9B1091_general_admin;Password=Nasir@1234" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Nasz\\Documents\\Visual\ Studio\ 2013\\Projects\\WebsiteShifa\\WebsiteShifa\\DieChart\\DieChart\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DB_9B1091_generalEntities']/@connectionString" />
+  </parameter>
+  <parameter name="DB_9B1091_generalEntities1-Web.config Connection String" description="" value="metadata=res://*/Entity.Model1.csdl|res://*/Entity.Model1.ssdl|res://*/Entity.Model1.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=SQL5012.Smarterasp.net;initial catalog=DB_9B1091_general;persist security info=True;user id=DB_9B1091_general_admin;multipleactiveresultsets=True;application name=EntityFramework&quot;" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Nasz\\Documents\\Visual\ Studio\ 2013\\Projects\\WebsiteShifa\\WebsiteShifa\\DieChart\\DieChart\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DB_9B1091_generalEntities1']/@connectionString" />
+  </parameter>
+  <parameter name="DB_9B1091_generalEntities2-Web.config Connection String" description="" value="metadata=res://*/Entity.Model1.csdl|res://*/Entity.Model1.ssdl|res://*/Entity.Model1.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=SQL5012.Smarterasp.net;initial catalog=DB_9B1091_general;persist security info=True;user id=DB_9B1091_general_admin;multipleactiveresultsets=True;application name=EntityFramework&quot;" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Nasz\\Documents\\Visual\ Studio\ 2013\\Projects\\WebsiteShifa\\WebsiteShifa\\DieChart\\DieChart\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DB_9B1091_generalEntities2']/@connectionString" />
+  </parameter>
+  <parameter name="DefaultConnection-Web.config Connection String" description="" value="Data Source=(LocalDb)\v11.0;AttachDbFilename=|DataDirectory|\aspnet-DieChart-20140823112841.mdf;Initial Catalog=aspnet-DieChart-20140823112841;Integrated Security=True" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Nasz\\Documents\\Visual\ Studio\ 2013\\Projects\\WebsiteShifa\\WebsiteShifa\\DieChart\\DieChart\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+</parameters>

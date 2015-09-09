@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost android:layout_width="fill_parent"
+    android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost">
+
+    
+
+    <LinearLayout android:id="@+id/LinearLayout01"
+        android:orientation="vertical" android:layout_height="fill_parent"
+        android:layout_width="fill_parent">
+
+        <LinearLayout
+            android:id="@+id/lin_mm_data_Notification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:orientation="horizontal" >
+
+        </LinearLayout>
+
+        <TabWidget android:id="@android:id/tabs"
+            android:layout_height="wrap_content" android:layout_width="fill_parent"></TabWidget>
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+		    
+		</FrameLayout>
+
+		    
+      </LinearLayout>
+    
+</TabHost><!-- From: file:/Users/Nasz/Documents/My%20Projects/Android/locally%204%202/app/src/main/res/layout/tab_materia_medica.xml -->

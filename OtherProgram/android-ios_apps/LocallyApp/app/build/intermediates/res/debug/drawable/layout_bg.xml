@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/c_white"/>
+    <stroke android:width="1dip" android:color="@color/c_ltegray" />
+    <corners  android:topLeftRadius="@dimen/pad_3dp"  android:topRightRadius="@dimen/pad_3dp"/>
+
+</shape><!-- From: file:/Users/Nasz/Documents/My%20Projects/Android/locally%204%202/app/src/main/res/drawable/layout_bg.xml -->

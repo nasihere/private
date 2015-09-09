@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C7BCFEEA-6053-48AE-9278-A7E908117B2D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EMS_V4</RootNamespace>
+    <AssemblyName>EMS_V4</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.DynamicData.Design" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="EMSModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EMSModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EMSModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EMSModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EMSModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="tbl_Account.cs">
+      <DependentUpon>EMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_Admin.cs">
+      <DependentUpon>EMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_CastReligion.cs">
+      <DependentUpon>EMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_ClassLevel.cs">
+      <DependentUpon>EMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_ContactDetail.cs">
+      <DependentUpon>EMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_Course.cs">
+      <DependentUpon>EMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_Employee.cs">
+      <DependentUpon>EMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_EmploymentHistory.cs">
+      <DependentUpon>EMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_language.cs">
+      <DependentUpon>EMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_MasterFee.cs">
+      <DependentUpon>EMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_Nationality.cs">
+      <DependentUpon>EMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_ParentDetail.cs">
+      <DependentUpon>EMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_Salary.cs">
+      <DependentUpon>EMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_Student.cs">
+      <DependentUpon>EMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_StudentResult.cs">
+      <DependentUpon>EMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_Transport.cs">
+      <DependentUpon>EMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_YearAcademy.cs">
+      <DependentUpon>EMSModel.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <EntityDeploy Include="EMSModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>EMSModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="EMSModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EMSModel.edmx</DependentUpon>
+      <LastGenOutput>EMSModel.Context.cs</LastGenOutput>
+    </None>
+    <None Include="EMSModel.edmx.diagram">
+      <DependentUpon>EMSModel.edmx</DependentUpon>
+    </None>
+    <None Include="EMSModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EMSModel.edmx</DependentUpon>
+      <LastGenOutput>EMSModel.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

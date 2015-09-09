@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:scrollbars="vertical"
+    android:layout_height="fill_parent"
+     >
+
+    <ScrollView
+        android:id="@+id/emp_src_step1"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:id="@+id/emp_lay_step1"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/black"
+            android:orientation="vertical" >
+
+            <TextView
+                style="@style/LabelBlueText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="Your member name"
+                android:textColor="@color/c_blue" />
+
+            <EditText
+                android:id="@+id/emp_tv_first"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="First"
+                android:maxLength="19"
+                android:padding="10dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/c_gray" >
+
+                <requestFocus />
+            </EditText>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Your name is used to personalize your login &amp; Logout Messages"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/c_gray" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="18dp"
+                android:background="@drawable/shape_black_line" />
+
+            <EditText
+                android:id="@+id/emp_tv_emailid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:padding="10dp" 
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/c_gray" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Your member email help him to track his own login report through his phone."
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/c_gray" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="18dp"
+                android:background="@drawable/shape_black_line" />
+
+            <EditText
+                android:id="@+id/emp_tv_emp_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLength="48"
+                android:hint="Personal Id Example: Mobile Number, Driving Lic, Payroll id, Office Id, School Id, Passport Id"
+                android:padding="10dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/c_gray" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="(Optional) You may assigned code to match with your payroll"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/c_gray" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="18dp"
+                android:background="@drawable/shape_black_line" />
+
+            <EditText
+                android:id="@+id/emp_tv_perhour"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Per hour rate"
+                android:inputType="number"
+                android:maxLength="8"
+                android:padding="10dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/c_gray" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="(Optional) Per hour rate help you in report for calculating salary"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/c_gray" />
+
+            <Button
+                android:id="@+id/emp_btn_step1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:text="Next"
+                android:textColor="@color/c_white" />
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/emp_lay_step5"
+        android:visibility="gone"
+        android:layout_height="fill_parent"
+        android:background="@color/black"
+        android:orientation="vertical" >
+
+        <TextView
+            style="@style/LabelBlueText"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/c_blue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Actual and Planned Time"
+            android:id="@+id/tvActualandPlannedTime" />
+
+        <EditText
+            android:id="@+id/edtLetInPlanned"
+            android:textColor="@color/c_gray"
+            android:padding="10dp"
+            android:maxLength="20"
+            android:layout_width="match_parent"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:inputType="time"
+            android:layout_height="wrap_content"
+            android:hint="Let In ex: 18:30" />
+
+        <EditText
+            android:id="@+id/edtLetOutPlanned"
+            android:textColor="@color/c_gray"
+            android:padding="10dp"
+            android:maxLength="20"
+            android:layout_width="match_parent"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:inputType="time"
+            android:layout_height="wrap_content"
+            android:hint="Let Out ex: 09:00" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="18dp"
+            android:background="@drawable/shape_black_line" />
+
+        <TextView
+            android:textColor="@color/c_gray"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_height="wrap_content"
+            android:text="This will help to create planned report and also calculate the overtime report"
+            android:id="@+id/tvThiswillhelptocreateplan" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:id="@+id/emp_btn_step5"
+            android:enabled="true"
+            android:layout_width="match_parent"
+            android:textColor="@color/c_white"
+            android:layout_height="wrap_content"
+            android:text="Next" />
+    </LinearLayout>
+
+    <LinearLayout
+       android:layout_width="match_parent"
+       android:id="@+id/emp_lay_step2"
+       android:visibility="gone"
+       android:layout_height="fill_parent"
+       android:background="@color/black"
+       android:orientation="vertical" >
+
+	   <TextView
+           style="@style/LabelBlueText"
+           android:layout_marginLeft="5dp"
+           android:textColor="@color/c_blue"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="Choose your code"
+           
+	    />
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="18dp"
+           android:background="@drawable/shape_black_line"/>
+       
+        <EditText
+           android:id="@+id/emp_tv_code"
+           android:textColor="@color/c_gray"
+           android:padding="10dp"
+           android:maxLength="20"
+           android:layout_width="match_parent"
+           android:textAppearance="?android:attr/textAppearanceMedium"
+           android:inputType="number"
+           android:layout_height="wrap_content"
+           android:hint="Enter your code for attendance"
+           />
+        
+
+       
+       <TextView
+           android:textColor="@color/c_gray"
+           android:padding="10dp"
+           android:layout_width="match_parent"
+           android:textAppearance="?android:attr/textAppearanceMedium"
+           android:layout_height="wrap_content"
+           android:text="Assign code to member for daily login and logout record"
+            />
+
+       <Button
+           android:id="@+id/emp_btn_step2"
+           style="?android:attr/buttonStyleSmall"
+           android:enabled="false"
+           android:layout_width="match_parent"
+           android:textColor="@color/c_white"
+           android:layout_height="wrap_content"
+           android:text="Next" />
+        
+   </LinearLayout>
+	
+	<LinearLayout
+       android:layout_width="match_parent"
+       android:id="@+id/emp_lay_step3"
+       android:layout_height="fill_parent"
+       android:visibility="gone"
+       android:background="@color/black"
+       android:orientation="vertical" >
+
+	   <TextView
+           style="@style/LabelBlueText"
+           android:layout_marginLeft="5dp"
+           android:textColor="@color/c_blue"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="NFC Card or Beam?"
+	    />
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="18dp"
+           android:background="@drawable/shape_black_line"/>
+       
+		
+       <TextView
+           android:textColor="@color/c_gray"
+           android:padding="10dp"
+           android:layout_width="match_parent"
+           android:textAppearance="?android:attr/textAppearanceMedium"
+           android:layout_height="wrap_content"
+           android:text="Do you want to set NFC or Beam Touch Login?"
+            />
+
+       <Button
+           android:id="@+id/emp_btn_step3"
+           style="?android:attr/buttonStyleSmall"
+           android:enabled="false"
+           android:layout_width="match_parent"
+           android:textColor="@color/c_white"
+           android:layout_height="wrap_content"
+           android:text="Next" />
+        
+   </LinearLayout>
+
+		<LinearLayout
+       android:layout_width="match_parent"
+       android:id="@+id/emp_lay_step4"
+       android:layout_height="fill_parent"
+       android:background="@color/black"
+       android:visibility="gone"
+       android:orientation="vertical" >
+
+	   <TextView
+           style="@style/LabelBlueText"
+           android:layout_marginLeft="5dp"
+           android:textColor="@color/c_blue"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="Admin Verification!!"
+	    />
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="18dp"
+           android:background="@drawable/shape_black_line"/>
+       
+		
+       <TextView
+           android:textColor="@color/c_gray"
+           android:padding="10dp"
+           android:layout_width="match_parent"
+           android:textAppearance="?android:attr/textAppearanceMedium"
+           android:layout_height="wrap_content"
+           android:text="Sign in to verify that you are Admin and App will register your member."
+            />
+
+       <EditText
+                android:id="@+id/emp_tv_admin_emailid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Admin Email"
+                android:inputType="textEmailAddress"
+                android:padding="10dp" 
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/c_gray" />
+       
+     
+        <EditText
+           android:id="@+id/reg_tv_admin_password"
+           android:textColor="@color/c_gray"
+           android:padding="10dp"
+           android:inputType="textPassword"
+           android:layout_width="match_parent"
+           android:textAppearance="?android:attr/textAppearanceMedium"
+           android:layout_height="wrap_content"
+           android:hint="Password"
+           />
+		  
+       <Button
+           android:id="@+id/emp_btn_step4"
+           style="?android:attr/buttonStyleSmall"
+           android:layout_width="match_parent"
+           
+           android:textColor="@color/c_white"
+           android:layout_height="wrap_content"
+           android:text="Finish" />
+        
+   </LinearLayout>
+	
+</LinearLayout>
+	 <!-- From: file:/Users/Nasz/Documents/eagle%20development/Shifa%20Employee%20Logger/app/src/main/res/layout/member.xml -->

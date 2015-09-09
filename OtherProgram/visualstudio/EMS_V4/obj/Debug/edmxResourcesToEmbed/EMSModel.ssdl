@@ -1,0 +1,484 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ems_databaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tbl_Account">
+    <Key>
+      <PropertyRef Name="Id_Account" />
+    </Key>
+    <Property Name="Id_Account" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AmountPaid" Type="money" />
+    <Property Name="Remark" Type="varchar" MaxLength="50" />
+    <Property Name="Id_Employee" Type="int" />
+    <Property Name="Id_YearAcademy" Type="int" />
+    <Property Name="Month" Type="date" />
+  </EntityType>
+  <EntityType Name="tbl_Admin">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="nchar" MaxLength="10" />
+    <Property Name="Password" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="tbl_CastReligion">
+    <Key>
+      <PropertyRef Name="Id_CastReligion" />
+    </Key>
+    <Property Name="Id_CastReligion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Cast" Type="nchar" MaxLength="25" />
+    <Property Name="Religion" Type="nchar" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="tbl_ClassLevel">
+    <Key>
+      <PropertyRef Name="Id_ClassLevel" />
+    </Key>
+    <Property Name="Id_ClassLevel" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Id_YearAcademy" Type="int" />
+    <Property Name="ClassLevel" Type="nchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="tbl_ContactDetail">
+    <Key>
+      <PropertyRef Name="Id_ContactDetail" />
+    </Key>
+    <Property Name="Id_ContactDetail" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="c_flatNo" Type="nchar" MaxLength="10" />
+    <Property Name="c_building" Type="nchar" MaxLength="25" />
+    <Property Name="c_area" Type="nchar" MaxLength="25" />
+    <Property Name="c_dist" Type="nchar" MaxLength="25" />
+    <Property Name="c_zipcode" Type="nchar" MaxLength="10" />
+    <Property Name="Id_Nationality" Type="int" />
+    <Property Name="c_phoneno" Type="nchar" MaxLength="25" />
+    <Property Name="p_flatno" Type="nchar" MaxLength="10" />
+    <Property Name="p_building" Type="nchar" MaxLength="25" />
+    <Property Name="p_area" Type="nchar" MaxLength="25" />
+    <Property Name="p_dist" Type="nchar" MaxLength="25" />
+    <Property Name="p_zipcode" Type="nchar" MaxLength="25" />
+    <Property Name="p_Id_Nationality" Type="int" />
+    <Property Name="p_phoneno" Type="nchar" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="tbl_Course">
+    <Key>
+      <PropertyRef Name="Id_Course" />
+    </Key>
+    <Property Name="Id_Course" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_Employee">
+    <Key>
+      <PropertyRef Name="Id_Employee" />
+    </Key>
+    <Property Name="Id_Employee" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="nchar" MaxLength="25" />
+    <Property Name="LastName" Type="nchar" MaxLength="25" />
+    <Property Name="Email" Type="nchar" MaxLength="50" />
+    <Property Name="Password" Type="nchar" MaxLength="10" />
+    <Property Name="Id_EmploymentHistory" Type="int" />
+    <Property Name="Designation" Type="nchar" MaxLength="25" />
+    <Property Name="DateBirth" Type="date" />
+    <Property Name="AccessURL" Type="nchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="tbl_EmploymentHistory">
+    <Key>
+      <PropertyRef Name="Id_EmploymentHistory" />
+    </Key>
+    <Property Name="Id_EmploymentHistory" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Id_Employee" Type="int" />
+    <Property Name="InstitutionName" Type="nchar" MaxLength="20" />
+    <Property Name="Id_Salary" Type="int" />
+    <Property Name="DateJoining" Type="date" />
+    <Property Name="DateLeaving" Type="date" />
+    <Property Name="HighestQualification" Type="nchar" MaxLength="60" />
+    <Property Name="EmployeeID" Type="nchar" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="tbl_language">
+    <Key>
+      <PropertyRef Name="Id_language" />
+    </Key>
+    <Property Name="Id_language" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nchar" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="tbl_MasterFee">
+    <Key>
+      <PropertyRef Name="Id_MasterFee" />
+    </Key>
+    <Property Name="Id_MasterFee" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FeeType" Type="nchar" MaxLength="20" />
+    <Property Name="Id_YearAcademy" Type="int" />
+    <Property Name="Fee" Type="money" />
+  </EntityType>
+  <EntityType Name="tbl_Nationality">
+    <Key>
+      <PropertyRef Name="Id_Nationality" />
+    </Key>
+    <Property Name="Id_Nationality" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CountryName" Type="nchar" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="tbl_ParentDetail">
+    <Key>
+      <PropertyRef Name="Id_ParentDetail" />
+    </Key>
+    <Property Name="Id_ParentDetail" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Id_Student" Type="int" />
+    <Property Name="Id_Employee" Type="int" />
+  </EntityType>
+  <EntityType Name="tbl_Salary">
+    <Key>
+      <PropertyRef Name="Id_Salary" />
+    </Key>
+    <Property Name="Id_Salary" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BasicSalary" Type="money" />
+    <Property Name="Compensation" Type="money" />
+    <Property Name="Bonus" Type="money" />
+    <Property Name="YearlyIncome" Type="money" />
+    <Property Name="Taxes1" Type="money" />
+    <Property Name="Taxes2" Type="money" />
+    <Property Name="Taxes3" Type="money" />
+    <Property Name="Taxes4" Type="money" />
+    <Property Name="Taxes5" Type="money" />
+    <Property Name="Medical" Type="money" />
+    <Property Name="OtherIncome" Type="money" />
+  </EntityType>
+  <EntityType Name="tbl_Student">
+    <Key>
+      <PropertyRef Name="Id_Student" />
+    </Key>
+    <Property Name="Id_Student" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GRNO" Type="nchar" MaxLength="10" />
+    <Property Name="FirstName" Type="nchar" MaxLength="20" />
+    <Property Name="LastName" Type="nchar" MaxLength="20" />
+    <Property Name="FatherName" Type="nchar" MaxLength="20" />
+    <Property Name="MotherName" Type="nchar" MaxLength="20" />
+    <Property Name="DateBirth" Type="date" />
+    <Property Name="MaleFemale" Type="int" />
+    <Property Name="BirthPlace" Type="nchar" MaxLength="20" />
+    <Property Name="Nationality" Type="int" />
+    <Property Name="Id_Language" Type="int" />
+    <Property Name="Id_CastReligion" Type="int" />
+    <Property Name="Id_ContactDetail" Type="int" />
+    <Property Name="Id_ParentDetail" Type="int" />
+    <Property Name="Id_Employee" Type="int" />
+    <Property Name="BloodGroup" Type="nchar" MaxLength="10" />
+    <Property Name="PictureURL" Type="varchar" MaxLength="100" />
+    <Property Name="AboutMe" Type="varbinary" MaxLength="250" />
+    <Property Name="TimeStamp" Type="date" />
+  </EntityType>
+  <EntityType Name="tbl_StudentResult">
+    <Key>
+      <PropertyRef Name="Id_StudentResult" />
+    </Key>
+    <Property Name="Id_StudentResult" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Id_Student" Type="int" />
+    <Property Name="Id_Course" Type="int" />
+  </EntityType>
+  <EntityType Name="tbl_Transport">
+    <Key>
+      <PropertyRef Name="Id_Transport" />
+    </Key>
+    <Property Name="Id_Transport" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Id_YearAcademy" Type="int" />
+    <Property Name="Area" Type="nchar" MaxLength="80" />
+    <Property Name="TransportFee" Type="money" />
+  </EntityType>
+  <EntityType Name="tbl_YearAcademy">
+    <Key>
+      <PropertyRef Name="Id_YearAcademy" />
+    </Key>
+    <Property Name="Id_YearAcademy" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Id_Student" Type="int" />
+    <Property Name="FromToYear" Type="nchar" MaxLength="10" />
+    <Property Name="Division" Type="nchar" MaxLength="10" />
+    <Property Name="RollNo" Type="int" />
+    <Property Name="Id_StudentResult" Type="int" />
+    <Property Name="Id_ClassLevel" Type="int" />
+    <Property Name="Id_Transport" Type="int" />
+  </EntityType>
+  <Association Name="FK_tbl_Account_Employee">
+    <End Role="tbl_Employee" Type="Self.tbl_Employee" Multiplicity="0..1" />
+    <End Role="tbl_Account" Type="Self.tbl_Account" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Employee">
+        <PropertyRef Name="Id_Employee" />
+      </Principal>
+      <Dependent Role="tbl_Account">
+        <PropertyRef Name="Id_Employee" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Account_MasterFee">
+    <End Role="tbl_YearAcademy" Type="Self.tbl_YearAcademy" Multiplicity="0..1" />
+    <End Role="tbl_Account" Type="Self.tbl_Account" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_YearAcademy">
+        <PropertyRef Name="Id_YearAcademy" />
+      </Principal>
+      <Dependent Role="tbl_Account">
+        <PropertyRef Name="Id_YearAcademy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_ClassLevel_YearAcademy">
+    <End Role="tbl_YearAcademy" Type="Self.tbl_YearAcademy" Multiplicity="0..1" />
+    <End Role="tbl_ClassLevel" Type="Self.tbl_ClassLevel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_YearAcademy">
+        <PropertyRef Name="Id_YearAcademy" />
+      </Principal>
+      <Dependent Role="tbl_ClassLevel">
+        <PropertyRef Name="Id_YearAcademy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_ContactDetail_Nationality">
+    <End Role="tbl_Nationality" Type="Self.tbl_Nationality" Multiplicity="0..1" />
+    <End Role="tbl_ContactDetail" Type="Self.tbl_ContactDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Nationality">
+        <PropertyRef Name="Id_Nationality" />
+      </Principal>
+      <Dependent Role="tbl_ContactDetail">
+        <PropertyRef Name="Id_Nationality" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_ContactDetail_P_Nationality">
+    <End Role="tbl_Nationality" Type="Self.tbl_Nationality" Multiplicity="0..1" />
+    <End Role="tbl_ContactDetail" Type="Self.tbl_ContactDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Nationality">
+        <PropertyRef Name="Id_Nationality" />
+      </Principal>
+      <Dependent Role="tbl_ContactDetail">
+        <PropertyRef Name="p_Id_Nationality" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Employee_Emp_History">
+    <End Role="tbl_EmploymentHistory" Type="Self.tbl_EmploymentHistory" Multiplicity="0..1" />
+    <End Role="tbl_Employee" Type="Self.tbl_Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_EmploymentHistory">
+        <PropertyRef Name="Id_EmploymentHistory" />
+      </Principal>
+      <Dependent Role="tbl_Employee">
+        <PropertyRef Name="Id_EmploymentHistory" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_EmploymentHistory_Employee">
+    <End Role="tbl_Employee" Type="Self.tbl_Employee" Multiplicity="0..1" />
+    <End Role="tbl_EmploymentHistory" Type="Self.tbl_EmploymentHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Employee">
+        <PropertyRef Name="Id_Employee" />
+      </Principal>
+      <Dependent Role="tbl_EmploymentHistory">
+        <PropertyRef Name="Id_Employee" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_EmploymentHistory_Salary">
+    <End Role="tbl_Salary" Type="Self.tbl_Salary" Multiplicity="0..1" />
+    <End Role="tbl_EmploymentHistory" Type="Self.tbl_EmploymentHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Salary">
+        <PropertyRef Name="Id_Salary" />
+      </Principal>
+      <Dependent Role="tbl_EmploymentHistory">
+        <PropertyRef Name="Id_Salary" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_MasterFee_YearAcademy">
+    <End Role="tbl_YearAcademy" Type="Self.tbl_YearAcademy" Multiplicity="0..1" />
+    <End Role="tbl_MasterFee" Type="Self.tbl_MasterFee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_YearAcademy">
+        <PropertyRef Name="Id_YearAcademy" />
+      </Principal>
+      <Dependent Role="tbl_MasterFee">
+        <PropertyRef Name="Id_YearAcademy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Student_CastReligion">
+    <End Role="tbl_CastReligion" Type="Self.tbl_CastReligion" Multiplicity="0..1" />
+    <End Role="tbl_Student" Type="Self.tbl_Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_CastReligion">
+        <PropertyRef Name="Id_CastReligion" />
+      </Principal>
+      <Dependent Role="tbl_Student">
+        <PropertyRef Name="Id_CastReligion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Student_ContactDetail">
+    <End Role="tbl_ContactDetail" Type="Self.tbl_ContactDetail" Multiplicity="0..1" />
+    <End Role="tbl_Student" Type="Self.tbl_Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_ContactDetail">
+        <PropertyRef Name="Id_ContactDetail" />
+      </Principal>
+      <Dependent Role="tbl_Student">
+        <PropertyRef Name="Id_ContactDetail" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Student_Employee">
+    <End Role="tbl_Employee" Type="Self.tbl_Employee" Multiplicity="0..1" />
+    <End Role="tbl_Student" Type="Self.tbl_Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Employee">
+        <PropertyRef Name="Id_Employee" />
+      </Principal>
+      <Dependent Role="tbl_Student">
+        <PropertyRef Name="Id_Employee" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Student_language">
+    <End Role="tbl_language" Type="Self.tbl_language" Multiplicity="0..1" />
+    <End Role="tbl_Student" Type="Self.tbl_Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_language">
+        <PropertyRef Name="Id_language" />
+      </Principal>
+      <Dependent Role="tbl_Student">
+        <PropertyRef Name="Id_Language" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Student_ParentDetail">
+    <End Role="tbl_ParentDetail" Type="Self.tbl_ParentDetail" Multiplicity="0..1" />
+    <End Role="tbl_Student" Type="Self.tbl_Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_ParentDetail">
+        <PropertyRef Name="Id_ParentDetail" />
+      </Principal>
+      <Dependent Role="tbl_Student">
+        <PropertyRef Name="Id_ParentDetail" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_YearAcademy_ClassLevel">
+    <End Role="tbl_ClassLevel" Type="Self.tbl_ClassLevel" Multiplicity="0..1" />
+    <End Role="tbl_YearAcademy" Type="Self.tbl_YearAcademy" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_ClassLevel">
+        <PropertyRef Name="Id_ClassLevel" />
+      </Principal>
+      <Dependent Role="tbl_YearAcademy">
+        <PropertyRef Name="Id_ClassLevel" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_YearAcademy_StudentResult">
+    <End Role="tbl_StudentResult" Type="Self.tbl_StudentResult" Multiplicity="0..1" />
+    <End Role="tbl_YearAcademy" Type="Self.tbl_YearAcademy" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_StudentResult">
+        <PropertyRef Name="Id_StudentResult" />
+      </Principal>
+      <Dependent Role="tbl_YearAcademy">
+        <PropertyRef Name="Id_StudentResult" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_YearAcademy_Transport">
+    <End Role="tbl_Transport" Type="Self.tbl_Transport" Multiplicity="0..1" />
+    <End Role="tbl_YearAcademy" Type="Self.tbl_YearAcademy" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Transport">
+        <PropertyRef Name="Id_Transport" />
+      </Principal>
+      <Dependent Role="tbl_YearAcademy">
+        <PropertyRef Name="Id_Transport" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ems_databaseModelStoreContainer">
+    <EntitySet Name="tbl_Account" EntityType="Self.tbl_Account" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Admin" EntityType="Self.tbl_Admin" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_CastReligion" EntityType="Self.tbl_CastReligion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_ClassLevel" EntityType="Self.tbl_ClassLevel" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_ContactDetail" EntityType="Self.tbl_ContactDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Course" EntityType="Self.tbl_Course" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Employee" EntityType="Self.tbl_Employee" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_EmploymentHistory" EntityType="Self.tbl_EmploymentHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_language" EntityType="Self.tbl_language" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_MasterFee" EntityType="Self.tbl_MasterFee" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Nationality" EntityType="Self.tbl_Nationality" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_ParentDetail" EntityType="Self.tbl_ParentDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Salary" EntityType="Self.tbl_Salary" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Student" EntityType="Self.tbl_Student" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_StudentResult" EntityType="Self.tbl_StudentResult" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Transport" EntityType="Self.tbl_Transport" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_YearAcademy" EntityType="Self.tbl_YearAcademy" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_tbl_Account_Employee" Association="Self.FK_tbl_Account_Employee">
+      <End Role="tbl_Employee" EntitySet="tbl_Employee" />
+      <End Role="tbl_Account" EntitySet="tbl_Account" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Account_MasterFee" Association="Self.FK_tbl_Account_MasterFee">
+      <End Role="tbl_YearAcademy" EntitySet="tbl_YearAcademy" />
+      <End Role="tbl_Account" EntitySet="tbl_Account" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_ClassLevel_YearAcademy" Association="Self.FK_tbl_ClassLevel_YearAcademy">
+      <End Role="tbl_YearAcademy" EntitySet="tbl_YearAcademy" />
+      <End Role="tbl_ClassLevel" EntitySet="tbl_ClassLevel" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_ContactDetail_Nationality" Association="Self.FK_tbl_ContactDetail_Nationality">
+      <End Role="tbl_Nationality" EntitySet="tbl_Nationality" />
+      <End Role="tbl_ContactDetail" EntitySet="tbl_ContactDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_ContactDetail_P_Nationality" Association="Self.FK_tbl_ContactDetail_P_Nationality">
+      <End Role="tbl_Nationality" EntitySet="tbl_Nationality" />
+      <End Role="tbl_ContactDetail" EntitySet="tbl_ContactDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Employee_Emp_History" Association="Self.FK_tbl_Employee_Emp_History">
+      <End Role="tbl_EmploymentHistory" EntitySet="tbl_EmploymentHistory" />
+      <End Role="tbl_Employee" EntitySet="tbl_Employee" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_EmploymentHistory_Employee" Association="Self.FK_tbl_EmploymentHistory_Employee">
+      <End Role="tbl_Employee" EntitySet="tbl_Employee" />
+      <End Role="tbl_EmploymentHistory" EntitySet="tbl_EmploymentHistory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_EmploymentHistory_Salary" Association="Self.FK_tbl_EmploymentHistory_Salary">
+      <End Role="tbl_Salary" EntitySet="tbl_Salary" />
+      <End Role="tbl_EmploymentHistory" EntitySet="tbl_EmploymentHistory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_MasterFee_YearAcademy" Association="Self.FK_tbl_MasterFee_YearAcademy">
+      <End Role="tbl_YearAcademy" EntitySet="tbl_YearAcademy" />
+      <End Role="tbl_MasterFee" EntitySet="tbl_MasterFee" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Student_CastReligion" Association="Self.FK_tbl_Student_CastReligion">
+      <End Role="tbl_CastReligion" EntitySet="tbl_CastReligion" />
+      <End Role="tbl_Student" EntitySet="tbl_Student" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Student_ContactDetail" Association="Self.FK_tbl_Student_ContactDetail">
+      <End Role="tbl_ContactDetail" EntitySet="tbl_ContactDetail" />
+      <End Role="tbl_Student" EntitySet="tbl_Student" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Student_Employee" Association="Self.FK_tbl_Student_Employee">
+      <End Role="tbl_Employee" EntitySet="tbl_Employee" />
+      <End Role="tbl_Student" EntitySet="tbl_Student" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Student_language" Association="Self.FK_tbl_Student_language">
+      <End Role="tbl_language" EntitySet="tbl_language" />
+      <End Role="tbl_Student" EntitySet="tbl_Student" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Student_ParentDetail" Association="Self.FK_tbl_Student_ParentDetail">
+      <End Role="tbl_ParentDetail" EntitySet="tbl_ParentDetail" />
+      <End Role="tbl_Student" EntitySet="tbl_Student" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_YearAcademy_ClassLevel" Association="Self.FK_tbl_YearAcademy_ClassLevel">
+      <End Role="tbl_ClassLevel" EntitySet="tbl_ClassLevel" />
+      <End Role="tbl_YearAcademy" EntitySet="tbl_YearAcademy" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_YearAcademy_StudentResult" Association="Self.FK_tbl_YearAcademy_StudentResult">
+      <End Role="tbl_StudentResult" EntitySet="tbl_StudentResult" />
+      <End Role="tbl_YearAcademy" EntitySet="tbl_YearAcademy" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_YearAcademy_Transport" Association="Self.FK_tbl_YearAcademy_Transport">
+      <End Role="tbl_Transport" EntitySet="tbl_Transport" />
+      <End Role="tbl_YearAcademy" EntitySet="tbl_YearAcademy" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

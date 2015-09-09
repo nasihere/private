@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="shifa.nasz.locally"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="13"
+        android:targetSdkVersion="21" />
+
+    <uses-permission android:name="com.android.vending.BILLING" />
+    <uses-permission android:name="android.permission.WRITE_OWNER_DATA" />
+    <uses-permission android:name="android.permission.READ_OWNER_DATA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <permission
+        android:name="shifa.nasz.locally.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="shifa.nasz.locally.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <permission
+        android:name="shifa.nasz.locally.permission.MA"
+        android:protectionLevel="signature" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="shifa.nasz.locally.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="shifa.nasz.locally.activity_kent"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity android:name="shifa.nasz.locally.activity_Kent_post_idea" >
+        </activity>
+        <activity android:name="shifa.nasz.locally.ImageGallery" >
+        </activity>
+        <activity android:name="shifa.nasz.locally.activity_addnew" >
+        </activity>
+        <activity android:name="shifa.nasz.locally.activity_addnew_area" >
+        </activity>
+        <activity android:name="shifa.nasz.locally.activity_settings" >
+        </activity>
+        <activity android:name="shifa.nasz.locally.activity_addnew_category" >
+        </activity>
+        <activity android:name="shifa.nasz.locally.activity_event" >
+        </activity>
+        <activity android:name="shifa.nasz.locally.activity_record" >
+        </activity>
+        <activity android:name="shifa.nasz.locally.activity_tabviewer" >
+        </activity>
+        <activity android:name="shifa.nasz.locally.login" >
+        </activity>
+        <activity android:name="shifa.nasz.locally.ImageViewFullScreen" >
+        </activity>
+
+        <service
+            android:name="shifa.nasz.locally.ServiceActivity"
+            android:enabled="true" />
+        <service android:name="shifa.nasz.locally.GCMIntentService" />
+
+        <receiver
+            android:name="com.google.android.gcm.GCMBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="shifa.nasz.locally" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyAAZwbA3T2ooBj-NQhmmSO7Jb00svlqjk4" />
+
+        <activity
+            android:name="shifa.nasz.locally.activity_googleMap"
+            android:label="@string/title_activity_activity_google_map" >
+        </activity>
+    </application>
+
+</manifest>

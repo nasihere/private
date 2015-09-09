@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--item android:id="@+id/menu_feed"
+          android:icon="@drawable/ic_action_network_wifi"
+          android:title="Interactive"
+          android:showAsAction="ifRoom"/!-->
+
+
+    <!--item android:id="@+id/searchbar"
+        android:icon="@drawable/ic_action_action_search"
+        android:title="Homeopathy Expert"
+        android:showAsAction="collapseActionView|ifRoom"
+        android:actionViewClass="android.widget.SearchView"/!-->
+
+
+    <!--item android:id="@+id/menu_pvt_chat"
+          android:icon="@drawable/ic_action_action_question_answer"
+          android:title="Inbox"
+          android:showAsAction="ifRoom"/>
+
+    <item android:id="@+id/menu_public_chat"
+        android:icon="@drawable/ic_action_social_group"
+        android:title="Group Chat"
+        android:showAsAction="ifRoom"/>
+
+    <item android:id="@+id/menu_Create_discussion"
+        android:icon="@drawable/ic_action_action_assignment_turned_in"
+        android:title="New Case Discussion"
+        android:showAsAction="ifRoom"/>
+
+    <item android:id="@+id/menu_my_discussion"
+        android:icon="@drawable/ic_my_posted_discussion"
+        android:title="My Discussion"
+        android:showAsAction="ifRoom"/>
+
+    <item android:id="@+id/menu_discussion"
+        android:icon="@drawable/ic_action_communication_message"
+        android:title="Discussion"
+        android:showAsAction="ifRoom"/!-->
+
+
+
+    <item
+        android:id="@+id/menu_user_NewPost"
+        android:icon="@drawable/ic_action_action_assignment_turned_in"
+        android:showAsAction="ifRoom"
+        android:title="New Case" />
+    <item
+        android:id="@+id/menu_user_friends"
+        android:icon="@drawable/ic_action_image_timer_auto"
+        android:showAsAction="ifRoom"
+        android:title="Friends" />
+</menu>

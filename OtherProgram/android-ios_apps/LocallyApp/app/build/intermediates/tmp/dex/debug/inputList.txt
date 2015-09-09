@@ -1,0 +1,7 @@
+/Users/Nasz/Documents/My Projects/Android/locally 4 2/app/build/intermediates/classes/debug
+/Users/Nasz/Documents/My Projects/Android/locally 4 2/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-06b17d1fff9fc849b1c0a97c83a541919422cfd9.jar
+/Users/Nasz/Documents/My Projects/Android/locally 4 2/app/build/intermediates/pre-dexed/debug/gcm-d0bcce2c8013badfd08b669fff5466079269256e.jar
+/Users/Nasz/Documents/My Projects/Android/locally 4 2/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-9452061ed8b9eb98a5c2640a1da2af8df7c9c491.jar
+/Users/Nasz/Documents/My Projects/Android/locally 4 2/app/build/intermediates/pre-dexed/debug/classes-4922f57faabd31ce26f0cb120c2113d1c783231b.jar
+/Users/Nasz/Documents/My Projects/Android/locally 4 2/app/build/intermediates/pre-dexed/debug/classes-4f5d6361e26a50144a682b2c66b05f1e7419a946.jar
+/Users/Nasz/Documents/My Projects/Android/locally 4 2/app/build/intermediates/pre-dexed/debug/classes-63cc3447a58a0898198dd065cdd8f55496e052e1.jar

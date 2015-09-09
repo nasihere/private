@@ -1,0 +1,206 @@
+﻿@model IEnumerable<ShifaWebEntities.Repertory>
+
+@{
+    if (ViewBag.Search == null)
+    {
+        ViewBag.Search = "";
+        ViewBag.Title = "Shifa - Materia Medica";
+        Session["Title"] = ViewBag.Title;
+    }
+    else
+    {
+        ViewBag.Title = ViewBag.Search.Replace('_', ' ') + " - Shifa - Materia Medica - Remedies";
+        Session["Title"] = ViewBag.Title;
+    }
+
+
+    var i = Model.Count();
+
+
+    Layout = "~/Content/themes/BootStrapSkin1/_Layout.cshtml";
+}
+
+<form action="Repertory" method="get">
+    <div class="form-actions">
+        <div class="input-group">
+            <input tabindex="1" placeholder="Type your search here ..." type="text" class="form-control" value="@ViewBag.Search.Replace('_',' ')" name="Search">
+            <span class="input-group-btn">
+                <button class="btn btn-sm btn-info no-radius" type="submit">
+                    <i class="icon-search"></i>
+                    Search
+                </button>
+            </span>
+        </div>
+    </div>
+</form>
+
+
+    <table class="table table-striped table-bordered table-hover">
+
+        @foreach (var item in Model)
+        {
+            <tr>
+
+                <td>
+
+
+                    @{
+
+
+            string[] Category = item.categoy.Split('|');
+            string RepeatRubric = "";
+            if (item.level == "")
+            {
+                <a href="http://shifa.in/Repertory/Kent">
+                    <span class="blue">Kent, </span> <!--Rubric-->
+                </a>
+            }
+            foreach (string anchor in Category)
+            {
+
+                string hrefAnchor = anchor.Replace('|', '_').Replace(", ", "|");
+                if (hrefAnchor != "")
+                {
+
+                    <a href="Rubric?Search=@RepeatRubric@hrefAnchor">
+                        <span class="blue">@hrefAnchor, </span> <!--Rubric-->
+                    </a>
+                }
+                RepeatRubric = RepeatRubric + hrefAnchor + "_";
+
+            }
+                    }
+                    @{
+            string SelfAnchor = item.categoy + "_";
+            SelfAnchor = ((SelfAnchor == "_") ? item.Name + "_" : item.categoy + "_" + item.Name + "_");
+
+            SelfAnchor = SelfAnchor.Replace('|', '_').Replace(", ", "|");
+
+                    }
+
+
+                    <a href="Rubric?Search=@SelfAnchor">
+                        <span class="bolder">@Html.DisplayFor(modelItem => item.Name)</span> <!--Sub Rubric-->
+                    </a>
+
+                    <span class="block"></span>
+                    @if (item.sublevel == "0" && item.Intensity != 0)
+                    {
+                        <input type="checkbox" value="1" data-forid="@item.C_id" data-remedies="@item.selected^@item.title" class="rubriccheck">
+
+
+                    }
+                    @if (item.Intensity != 0)
+                    {
+                        <span data-forid="@item.C_id" class="ShowMore small bolder ">@item.Intensity - </span>
+
+                    }
+
+                    @{
+
+            if (item.sublevel == "0" && item.Intensity != 0)
+            {
+                <a href="javascript:void(0)" data-forid="@item.C_id" class="ShowMore btn-small  brown">Symptom</a> <!--Symtom-->
+
+            }
+
+                    }
+
+                    <span style="display:none" id="@item.C_id">@Html.Raw(item.remedies)</span> <!--Show//hide Remedies-->
+                    <a style="display:none" href="#ClearButton" id="check@(@item.C_id)" class="pink">Check Totality</a> <!--Symtom-->
+
+
+                </td>
+            </tr>
+        }
+
+    </table>
+    if (ViewBag.PGCurrent != null && Model.Count() == 50)
+    {
+        <a class="btn btn-small btn-danger" href="Rubric?Search=@ViewBag.Search&PG=@ViewBag.PGCurrent">Show More</a>
+    }
+    @RenderPage("RepertoryResult.cshtml", null);
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".ShowMore").click(function () {
+                var getid = $(this).attr("data-forid");
+                $(this).hide();
+                $("#" + getid).toggle();
+            })
+            $("#sort").change(function () {
+                show(toArray(sessionStorage.Report));
+            })
+            if (sessionStorage.Report != "") {
+                try {
+                    var SearchTerm = "";//$(j).attr('data-remedies') + "$$";
+                    $.each($(".rubriccheck"), function (i, j) {
+
+                        SearchTerm = $(j).attr('data-remedies');
+                        if (sessionStorage.Report.search(SearchTerm + "$$") != -1 || sessionStorage.Report.search("$$" + SearchTerm) != -1) {
+                            console.log(SearchTerm);
+                            $(j).attr("checked", "checked");
+                        }
+
+                    });
+                } catch (e) { }
+            }
+
+            $(".rubriccheck").click(function () {
+                if (sessionStorage.Report == "undefined" || sessionStorage.Report == undefined){
+                    sessionStorage.Report = "";
+                    $("#ClearButton").hide();
+                }
+                if ($(this).is(":checked") == true) {
+                    sessionStorage.Report = sessionStorage.Report + $(this).attr('data-remedies') + "$$";
+
+                    $("#check" + $(this).attr("data-forid")).show();
+                }
+                else {
+                    sessionStorage.Report = sessionStorage.Report.replace($(this).attr('data-remedies') + "$$", "");
+                    $("#check" + $(this).attr("data-forid")).hide();
+                }
+                if (sessionStorage.Report == "" || sessionStorage.Report == null) {
+                    $("#ClearButton").hide();
+                    $("#RepertoryResultTip").hide();
+                    }
+                else
+                    {
+                $("#ClearButton").show();
+                console.log(sessionStorage.Report);
+                show(toArray(sessionStorage.Report));
+                $("#TipRemedies").html("Top Remedies: " + HitRemedies);
+
+                }
+
+            })
+
+            if (sessionStorage.Report == "" || sessionStorage.Report == null) {
+                $("#ClearButton").hide();
+                $("#RepertoryResultTip").hide();
+            }
+            else {
+                $("#ClearButton").show();
+                show(toArray(sessionStorage.Report));
+            }
+
+
+        })
+        function deleteitem(obj)
+        {
+            var str = $(obj).attr('data-remedies');
+            str = str.replace(", ", "|");
+            sessionStorage.Report = sessionStorage.Report.replace(str + "$$", "");
+            show(toArray(sessionStorage.Report));
+
+        }
+        function clearSelection() {
+            if (confirm("Are you sure want to clear all symptom marks?") == false) return false;
+            $("#ClearButton").hide();
+            $("#result").html("");
+            $("#RepertoryResultTip").hide();
+            $(".rubriccheck").removeAttr("checked")
+            sessionStorage.Report = "";
+        }
+    </script>
+
+}

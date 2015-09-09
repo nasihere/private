@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="line">
+    
+    <stroke 
+        android:width="2dp" 
+        android:color="#efefef" 
+        android:dashWidth="3dp"
+        android:dashGap="4dp"
+        />
+    
+    <size android:height="20dp" />
+    
+</shape><!-- From: file:/Users/Nasz/Documents/eagle%20development/Shifa%20Employee%20Logger/app/src/main/res/drawable/shape_black_line.xml -->

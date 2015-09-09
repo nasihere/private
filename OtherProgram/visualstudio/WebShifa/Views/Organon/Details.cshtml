@@ -1,0 +1,22 @@
+﻿@model IEnumerable<ShifaWebEntities.Organon>
+@{
+    ViewBag.Title = "Shifa - Organon - Homeopathy";
+    Layout = "~/Content/themes/BootStrapSkin1/_Layout.cshtml";
+}
+<ul class="nav nav-tabs" >
+    <li class="active">
+        <a data-toggle="tab" href="~/Organon">Organon of Medicine </a>
+    </li>
+
+
+    <li class="">
+        <a data-toggle="tab" href="~/Organon">Index</a>
+    </li>
+
+    </ul>
+
+    @foreach (var item in Model)
+    {
+                    @Html.Raw(item.description)
+                    <br /><a href="~/Organon">Go Back</a>
+    }

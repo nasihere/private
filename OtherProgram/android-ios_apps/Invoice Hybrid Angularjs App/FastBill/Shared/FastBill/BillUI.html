@@ -1,0 +1,135 @@
+
+<div class="row ">
+	<div class="col-sm-12">
+		<div class="col-sm-6 pull-left">
+			<button  ng-click="Save()" data-toggle="modal" data-target="#myModalPrint" class="btn btn-info btn-outline dim btn-small-dim " type="button">
+				<i class="fa fa-save"></i>
+			</button><button data-toggle="modal" data-target="#myModalPrint" class="btn btn-success btn-outline dim btn-small-dim" type="button">
+				<i class="fa fa-print"></i>
+			</button>
+		</div>
+		<div class="col-sm-6 pull-right">
+			<button ng-click="New()" class="btn btn-outline btn-success dim btn-small-dim"><i class="fa fa-plus"></i> </button>
+			<button ng-click="Delete()"  class="btn  btn-outline btn-danger dim btn-small-dim"><i class="fa fa-trash"></i> </button>
+	    	<button  data-toggle="modal" data-target="#myModelBillNo"  class="btn  btn-outline btn-info dim btn-small-dim"><i class="fa fa-search"></i> </button>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-lg-8">
+		<div class="ibox  margins-3 ">
+			<div class="ibox-title padding-3">
+
+				<div class="pull-left">
+					<h5>Bill <small></small>&nbsp;&nbsp;</h5>
+					<small ng-class="{'todo-completed':model.deleted == 1}"  data-toggle="modal" data-target="#myModelBillNo" class="  m-r-s"><i class="fa fa-clock-o"></i>  No: {{model.Bill_No}}</small>
+					<small ng-class="{'todo-completed':model.deleted == 1}"  data-toggle="modal" data-target="#myModelBillNo" class="  m-r-s"><i class="fa fa-calendar-o"></i> Date: {{model.Date}}</small>
+				</div>
+				
+			<div class="ibox-tools">
+			<button class="btn btn-outline btn-danger no-margins-bottom dim" ng-class="{'btn-outline':!btnCCOn}"  ng-click="btnCCOn = !btnCCOn; OpenAllPanel = true;" type="button"><i class="fa fa-cc-visa"></i></button>
+			<button class="btn  btn-outline btn-primary no-margins-bottom dim " ng-class="{'btn-outline':!btnCustOn}"  ng-click="btnCustOn = !btnCustOn; OpenAllPanel = true;" type="button"><i class="fa fa-users"></i></button>
+			<button class="btn  btn-outline btn-info no-margins-bottom dim " ng-class="{'btn-outline':!btnFOCOn}"   ng-click="btnFOCOn = !btnFOCOn; OpenAllPanel = true;takehim('FOCCoupon');" type="button"><i class="fa fa-foursquare "></i></button>
+			<button class="btn  btn-outline btn-warning no-margins-bottom dim " ng-class="{'btn-outline':!btnDisOn}" ng-click="btnDisOn = !btnDisOn; OpenAllPanel = true;takehim('DisCoupon');" type="button"><i class="fa fa-sort-numeric-desc"></i></button>
+			</div>   
+			</div>
+			
+			<div class="ibox-content">
+				<div class="row ">
+					<div class="col-md-12">
+						<div class="col-sm-6">
+							<div class="input-group m-b">
+								<span class="input-group-addon"><li class="fa fa-barcode"></li></span> 
+								<input type="text" ng-keyup="SearchBarcode(Barcode_No)" ng-model="Barcode_No" placeholder="Barcode / Item Name" class="text-success form-control" style="height:100px;font-size:24px">
+							</div>
+							<div class="panel panel-success">
+								<div class="panel-heading">
+									<li class="fa fa-shopping-cart"> Item <small>Information</small></li>
+								</div>
+								<div class="input-group m-b no-margins col-xs-12" >
+									<span class="input-group-addon width-50"><li class="fa fa-sort"></li> Qty: </span>
+									<input type="text" ng-model="tempModel.Qty_val"  placeholder="Quantity"  class="form-control text-success " >
+			
+		
+								</div>
+								
+								<div class="input-group m-b no-margins col-xs-12" >
+									<span class="input-group-addon width-50"><li class="fa fa-rupee"></li> Price: </span>
+									<input type="text" ng-model="tempModel.MRP_val" placeholder="Price"  class="form-control text-success " >
+			
+		
+								</div>
+								<div class="input-group m-b no-margins col-xs-12" >
+									<span class="input-group-addon width-50"><li class="fa fa-certificate"></li> Type: </span>
+									<input type="text" ng-model="tempModel.Product_Type"   placeholder="Suiting"  class="form-control text-success " >
+			
+		
+								</div>
+								<div class="input-group m-b no-margins col-xs-12" >
+									<span class="input-group-addon width-50"><li class="fa fa-certificate"></li> Category: </span>
+									<input type="text" ng-model="tempModel.category"   placeholder="Fresh"  class="form-control text-success " >
+			
+		
+								</div>
+								<div class="input-group m-b no-margins col-xs-12" >
+									<span class="input-group-addon width-50"><li class="fa fa-deviantart"></li> Pcs/Met: </span>
+									<input type="text"   ng-model="tempModel.UOM" placeholder="Pcs"  class="form-control text-success " >
+			
+		
+								</div>
+								<div class="input-group m-b no-margins col-xs-12" >
+									<span class="input-group-addon width-50"><li class="fa fa-male"></li> Cashier: </span>
+									<input type="text"  ng-model="tempModel.SalesManCode"  placeholder="Cashier"  class="form-control text-success " >
+			
+		
+								</div>
+								<div class="input-group m-b no-margins col-xs-12" >
+									<span class="input-group-addon width-50"><li class="fa fa-plus"></li> Tax: </span>
+									<input type="text"  ng-model="tempModel.Tax_per_val"  placeholder="Tax %"  class="form-control text-success " >
+			
+		
+								</div>
+								<div  class="input-group m-b no-margins col-xs-12 text-center ">
+									<button ng-click="addItem()"  class="btn btn-success dim btn-small-dim"><i class="fa fa-plus"></i> Add </button>					
+								</div>
+								
+							</div>
+						</div>
+						<div class="col-sm-6">
+		
+							<div class="col-md-12">
+								
+								
+							</div>
+						</div>
+						<div ng-include src="'Shared/FastBill/Bill/BillPayment.html'"></div>
+						
+					</div>
+					
+					</div>
+					
+				</div>
+			
+			</div>
+	
+		</div>
+		<div class="col-lg-4 ">
+        
+			<div ng-include src="'Shared/FastBill/Bill/BillTable.html'"></div>
+		
+		</div>
+
+	</div>
+	
+
+	<div ng-show="isDeveloperMode">
+		<pre>{{model | json}}</pre>
+		<pre>{{tempModel | json}}</pre>
+		<pre>{{BarcodeList | json}}</pre>
+	</div>
+
+	<div ng-include src="'Shared/FastBill/Bill/BillNoSearch.html'"></div>
+
+
+	<div ng-include src="'Shared/FastBill/Bill/BillPrint.html'"></div>
+

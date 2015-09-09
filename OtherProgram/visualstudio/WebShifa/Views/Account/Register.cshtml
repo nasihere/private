@@ -1,0 +1,78 @@
+﻿@{
+    ViewBag.Title = "Registration - Shifa - Homeopathy";
+    Layout = "~/Content/themes/BootStrapSkin1/_Layout.cshtml";
+}
+<div class="login-container">
+    <div class="position-relative">
+
+        <div id="signup-box" class=" signup-box widget-box no-border">
+            <div class="widget-body">
+                <div class="widget-main">
+                    <h4 class="header green lighter bigger">
+                        <i class="icon-group blue"></i>
+                        New User Registration
+                    </h4>
+                    <h4 class="header red lighter bigger"><i class="icon-user blue"></i>@TempData["Message"] @TempData["Error"]</h4>
+                    <div class="space-6"></div>
+
+                    <p> Enter your details to begin: </p>
+                    
+                    <form action="~/Account/Register" method="post">
+                        <fieldset>
+                            <label class="block clearfix">
+                                <span class="block input-icon input-icon-right">
+                                    <input name="email"  type="email" class="form-control" placeholder="Email">
+                                    <i class="icon-envelope"></i>
+                                </span>
+                            </label>
+
+                            <label class="block clearfix">
+                                <span class="block input-icon input-icon-right">
+                                    <input type="text" name="fname" class="form-control" placeholder="Name">
+                                    <i class="icon-user"></i>
+                                </span>
+                            </label>
+
+                            <label class="block clearfix" >
+                                <span class="block input-icon input-icon-right">
+                                    <select name="occupation">
+                                        <option value="Doctor" selected>Doctor</option>
+                                        <option value="Student">Student</option>
+                                    </select>
+                                    <i class="icon-adjust"></i>
+                                </span>
+                            </label>
+
+
+                            <label class="block clearfix">
+                                <span class="block input-icon input-icon-right">
+                                    <input type="password" name="password" class="form-control" placeholder="Password">
+                                    <i class="icon-lock"></i>
+                                </span>
+                            </label>
+
+
+                            
+                            <div class="space-24"></div>
+
+                            <div class="clearfix">
+                            
+                                <button type="submit" class="width-65 pull-right btn btn-sm btn-success">
+                                    Register
+                                    <i class="icon-arrow-right icon-on-right"></i>
+                                </button>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+
+                <div class="toolbar center">
+                    <a href="~/Account/Login"  class="back-to-login-link">
+                        <i class="icon-arrow-left"></i>
+                        Back to login
+                    </a>
+                </div>
+            </div><!-- /widget-body -->
+        </div><!-- /signup-box -->
+    </div>
+</div>

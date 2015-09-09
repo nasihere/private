@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DB_9B1091_generalModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="DB_9B1091_generalEntities2" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Dies" EntityType="DB_9B1091_generalModel.Die" />
+  </EntityContainer>
+  <EntityType Name="Die">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Code" Type="String" MaxLength="115" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Id1" Type="String" MaxLength="110" FixedLength="false" Unicode="true" />
+    <Property Name="Id2" Type="String" MaxLength="110" FixedLength="false" Unicode="true" />
+    <Property Name="Length" Type="String" MaxLength="110" FixedLength="false" Unicode="true" />
+    <Property Name="Price_val" Type="Int32" />
+    <Property Name="Glass_Size" Type="String" MaxLength="125" FixedLength="false" Unicode="true" />
+    <Property Name="ID1_ID2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical" >
+
+
+    
+    <ImageView
+        android:id="@+id/act_lst_mem_img"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        
+         android:scaleType="fitXY"
+		android:adjustViewBounds="false"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/ic_man"
+        android:contentDescription="@string/emptystring"
+       />
+
+    <TextView
+        android:id="@+id/act_lst_mem_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/act_lst_mem_status_img"
+        android:layout_toRightOf="@+id/act_lst_mem_img"
+        android:gravity="center_vertical|fill_vertical"
+        android:padding="5dp"
+        android:text="Sikandar Ahmed"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <ImageView
+        android:id="@+id/act_lst_mem_status_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:contentDescription="@string/emptystring"
+        android:src="@drawable/ic_home_icon_online" />
+
+    <TextView
+        android:id="@+id/act_lst_mem_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/act_lst_mem_img"
+        android:layout_alignLeft="@+id/act_lst_mem_name"
+        android:layout_toLeftOf="@+id/act_lst_mem_status_img"
+        android:gravity="center_vertical"
+        android:padding="5dp"
+        android:text="has signed in"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+</RelativeLayout>
+<!-- From: file:/Users/Nasz/Documents/eagle%20development/Shifa%20Employee%20Logger/app/src/main/res/layout/activity_lst_members.xml -->

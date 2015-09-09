@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    tools:context=".home_menu" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:textColor="@color/c_white"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="TimeFace"
+        android:textStyle="bold"
+        android:id="@+id/tvTimeFace"
+
+        android:layout_gravity="center_horizontal"
+        android:layout_alignParentRight="true"
+        android:layout_alignBottom="@+id/tvCodeEntered"
+        android:layout_alignParentLeft="true"
+        android:gravity="center_horizontal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="5"
+        android:id="@+id/linCameraScanner"
+
+        android:background="@drawable/background_blue"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:background="@color/black"
+            android:gravity="center_horizontal"
+            android:layout_height="fill_parent">
+
+            <EditText
+                android:id="@+id/tvCodeEntered"
+                style="@style/ButtonText"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:visibility="gone"
+                android:gravity="center_horizontal"
+                android:hint="Enter Your PIN"
+                android:inputType="textPassword"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/black"
+                android:textStyle="bold" >
+
+                <requestFocus />
+            </EditText>
+
+            <FrameLayout
+                android:id="@+id/cameraPreview"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                 >
+
+
+            </FrameLayout>
+
+            <ImageView
+                android:id="@+id/imgViewCaptureImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@android:drawable/alert_light_frame"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:id="@+id/linKeyPad"
+        android:layout_weight="5"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/Cream"
+            android:id="@+id/linRow1"
+            android:layout_weight="1" >
+
+            <Button
+                android:id="@+id/btn1"
+                android:drawableLeft="@drawable/ic_1"
+                style="@style/ButtonDialPad"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/button_blue"
+                android:text="" />
+
+            <Button
+                android:id="@+id/btn2"
+                android:drawableLeft="@drawable/ic_2"
+                android:background="@drawable/button_blue"
+                style="@style/ButtonDialPad"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="ABC" />
+
+            <Button
+                android:id="@+id/btn3"
+                android:drawableLeft="@drawable/ic_3"
+                style="@style/ButtonDialPad"
+                android:layout_width="fill_parent"
+                android:background="@drawable/button_blue"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="DEF" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/Cream"
+            android:id="@+id/linRow2"
+            android:layout_weight="1" >
+
+            <Button
+                android:id="@+id/btn4"
+                android:background="@drawable/button_blue"
+                android:drawableLeft="@drawable/ic_4"
+                style="@style/ButtonDialPad"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="GHI" />
+
+            <Button
+                android:id="@+id/btn5"
+                android:drawableLeft="@drawable/ic_5"
+                android:background="@drawable/button_blue"
+                style="@style/ButtonDialPad"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="IJK" />
+
+            <Button
+                android:id="@+id/btn6"
+                android:drawableLeft="@drawable/ic_6"
+                style="@style/ButtonDialPad"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/button_blue"
+                android:text="LMN" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/Cream"
+            android:id="@+id/linRow3"
+            android:layout_weight="1" >
+
+            <Button
+                android:id="@+id/btn7"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/button_blue"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/ic_7"
+                style="@style/ButtonDialPad"
+                android:text="OPQ" />
+
+            <Button
+                android:id="@+id/btn8"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/button_blue"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/ic_8"
+                style="@style/ButtonDialPad"
+                android:text="RST" />
+
+            <Button
+                android:id="@+id/btn9"
+                android:background="@drawable/button_blue"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/ic_9"
+                style="@style/ButtonDialPad"
+                android:text="UVW" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:background="@color/Cream"
+            android:layout_height="wrap_content"
+            android:id="@+id/linRow4"
+            android:layout_weight="1" >
+
+            <Button
+                android:id="@+id/btnIn"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/button_blue"
+                android:layout_weight="1"
+                android:textSize="20dp"
+                style="@style/ButtonDialPadText"
+                android:text="In"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btn0"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/button_blue"
+
+                android:drawableLeft="@drawable/ic_0"
+                style="@style/ButtonDialPad"
+                android:text="XYZ" />
+
+            <Button
+                android:id="@+id/btnReset"
+                style="@style/ButtonDialPadTextNegative"
+                android:text="Reset"
+                android:textSize="20dp"
+                android:background="@drawable/button_blue"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/Cream"
+        android:id="@+id/linMenu">
+
+        <Button
+            android:id="@+id/btnscanner"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:textSize="20dp"
+            android:background="@drawable/button_green"
+            android:text="Card Scanner" />
+
+    </LinearLayout>
+
+</LinearLayout><!-- From: file:/Users/Nasz/Documents/eagle%20development/Shifa%20Employee%20Logger/app/src/main/res/layout/home_menu.xml -->

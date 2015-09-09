@@ -1,0 +1,284 @@
+﻿@{
+    ViewBag.Title = "Forum - Discussion - Shifa - Homeopathy - Practitioner - Friends";
+    Layout = "~/Content/themes/BootStrapSkin1/_Layout.cshtml";
+}
+<style>
+    .post {
+    background-color: #ffffff;
+
+    border-radius: 2px;
+    box-shadow: 0 1px 2px #c9cccd;
+    margin-bottom: 20px;
+}
+
+.post .wrap-ut {
+    width: 85%;
+}
+
+.post .userinfo {
+    width: 15%;
+    
+}
+
+.post .posttext {
+    width: 85%;
+    padding-right: 30px;
+    
+    padding-bottom: 15px;
+
+    color: #989c9e;
+    font-size: 14px;
+    font-family: 'Open Sans Light', sans-serif;   
+    line-height: 25px;
+}
+
+.post .postinfo {
+    width: 15%;
+    border-left: solid 1px #f1f1f1;
+
+
+}
+
+.post .avatar {
+    width: 37px;
+    height:60px;
+    margin-left: 5px;
+}
+.post .avatar img {
+    width: 43px;
+    height:43px;
+    margin-top: 10px;
+}
+.post .icons {
+    width: 48px;
+    border-top: solid 1px #f1f1f1;
+    margin-top: 12px;
+    padding-top: 7px;
+}
+
+.post h2 {
+    color: #363838;
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;   
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.post .comments {
+    border-bottom: solid 1px #f1f1f1;
+    padding: 18px 0 25px 0;
+    text-align: center;
+}
+
+
+.post .comments .commentbg {
+    background-color: #bdc3c7;
+    border-radius: 2px;
+    display: inline-block;
+    padding: 12px 17px;
+    color: #ffffff;
+    font-size: 14px;
+    font-family: 'Open Sans Bold', sans-serif; 
+    position: relative;
+}
+
+.post .comments .commentbg .mark {
+    width: 11px;
+    height: 11px;
+    background-color: #bdc3c7;
+    position: absolute;
+    bottom: 0;
+    left: 43%;
+    margin-bottom: -5px;
+    transform:rotate(45deg);
+    -ms-transform:rotate(45deg); /* IE 9 */
+    -webkit-transform:rotate(45deg); /* Opera, Chrome, and Safari */
+}
+
+.post .views {
+    border-bottom: solid 1px #f1f1f1;
+    color:#9da6aa;
+    font-size: 12px;
+    font-family: 'Open Sans Regular', sans-serif; 
+    text-align: center;
+    line-height: 29px;
+}
+
+.post .views i {
+    font-size: 14px;
+}
+
+.post .time {
+    color:#9da6aa;
+    font-size: 12px;
+    font-family: 'Open Sans Regular', sans-serif; 
+    text-align: center;
+    line-height: 29px;
+
+}
+
+.post .time i {
+    font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+</style>
+<a class="btn btn-sm btn-info" href="~/Discussion/Create">Create New Post</a>
+<form action="~/Discussion/Forum_Homeopathy_Shifa" method="get">
+    <div class="form-actions">
+        <div class="input-group">
+            <input tabindex="1" placeholder="Type your search here ..." type="text" class="form-control" value="@ViewBag.Search.Replace('_',' ')" name="Search">
+            <span class="input-group-btn">
+                <button class="btn btn-sm btn-info no-radius" type="submit">
+                    <i class="icon-search"></i>
+                    Search
+                </button>
+            </span>
+        </div>
+    </div>
+</form>
+@if (ViewBag.MainData == null) { 
+    <h1>Your search - @ViewBag.Search - did not match any documents.</h1>    
+}
+else
+{ 
+<div ng-app="shifa" class="widget-box " ng-controller="chatController">
+
+    <div class="page-content">
+        <div class="page-header">
+            <h1>
+                Discussion
+                <small>
+                    <i class="icon-double-angle-right"></i>
+                    Open discussion on homeopathy subject
+                </small>
+            </h1>
+
+
+            <!--div class="form-actions">
+                <div class="input-group">
+
+                    <input ng-model="ChatMsg" focus-me="DataChats.length" id="message" tabindex="0" placeholder="search here ..." type="text" class="form-control" name="message" />
+                    <span class="input-group-btn">
+                        <button class="btn btn-sm btn-info no-radius" type="button" ng-click="SendChat()">
+                            <i class="icon-share-alt"></i>
+                            Search
+                        </button>
+                    </span>
+                </div>
+            </!--div-->
+        </div><!-- /.page-header -->
+
+        <div class="row">
+            <div class="">
+                <!-- PAGE CONTENT BEGINS -->
+
+
+
+                <div id="timeline-1" class="">
+                    <div class="row">
+                    @if (ViewBag.Search != "")
+                    { 
+                        if (ViewBag.MainData.Length == 12 || ViewBag.MainData.Length == 30)
+                        { 
+                            <span class="pull-right"><a href="~/Discussion/Forum_Homeopathy_Shifa?Page=@TempData["Page"]&Search=@ViewBag.Search" class="btn btn-sm  btn-primary">Next Page</a></span>
+                          
+                            
+                        
+                        }
+                          if (Convert.ToUInt32(TempData["Page"]) - 2 != 0) 
+                            { 
+                                <span class="pull-right"><a href="~/Discussion/Forum_Homeopathy_Shifa?Page=@(Convert.ToUInt32(TempData["Page"]) - 2)&Search=@ViewBag.Search" class="btn btn-sm  btn-primary">Previous Page</a></span>
+                            }
+                    }
+                    else
+                    { 
+                        <span class="pull-right"><a href="~/Discussion/Forum_Homeopathy_Shifa?Page=@TempData["Page"]" class="btn btn-sm  btn-primary">Next Page</a></span>
+                        if (Convert.ToUInt32(TempData["Page"]) - 2 != 0) 
+                        { 
+                            <span class="pull-right"><a href="~/Discussion/Forum_Homeopathy_Shifa?Page=@(Convert.ToUInt32(TempData["Page"]) - 2)" class="btn btn-sm  btn-primary">Previous Page</a></span>
+                        }
+                        
+                        
+                    }
+                                <div class="col-xs-12 col-sm-10 col-sm-offset-1" style="margin-left:0px;background-color:#efefef;padding-top:10px">
+
+
+                                    @foreach (string[] c in ViewBag.MainData)
+                                        {
+                                            if (c == null) { break; }
+                                            if (c[4] != "0")
+                                            {
+                                                c[0] = c[4];
+                                            }
+                                        <div class="post">
+                                            <div class="wrap-ut pull-left">
+                                                <a href="~/Discussion/Forum_Discussion_Shifa?forumId=@c[0]">
+                                                    <div class="userinfo pull-left">
+                                                        
+                                                            @if (c[7].IndexOf("http") != -1) { 
+                                                                
+                                                                
+                                            <img class="hidden-sm hidden-xs margin-10 padding-20" src="https://graph.facebook.com/@(c[1])/picture?type=normal" alt="">
+    <img class="visible-sm visible-xs margin-10 padding-20" src="https://graph.facebook.com/@(c[1])/picture?type=square" alt="">
+                                                            }
+                                                            else
+                                                            {
+                                                                <div class="avatar">
+                                                                        <img src="~/Content/themes/BootStrapSkin1/assets/avatars/@c[7]" alt="">
+                                                                        <div class="status green">&nbsp;</div>
+                                                                </div>
+                                                            }
+                                                            
+
+                                                        <!--div class="icons">
+                                <span class="badge badge-success">2</span>
+                                <i class="icon-flag"></i>
+                            </!--div-->
+                                                    </div>
+                                                    <div class="posttext pull-left">
+                                                        <h2><b>@c[3]</b></h2>
+                                                        <p>@c[2]</p>
+                                                    </div>
+                                                    <div class="clearfix"></div>
+                                                </a>
+                                            </div>
+                                            <div class="postinfo pull-left">
+                                                <div class="comments">
+                                                    <a href="~/Discussion/Forum_Discussion_Shifa?forumId=@c[0]">
+                                                        <div class="commentbg">
+                                                            @c[6]
+                                                            <div class="mark"></div>
+                                                        </div>
+                                                    </a>
+
+                                                </div>
+                                                <!--div class="views"><i class="fa icon-eye-open"></i> 1,568</!--div-->
+                                                <div class="time"><i class="fa icon-time"></i> @c[5]</div>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div>
+}
+
+                                </div>
+                                </div><!-- /.timeline-container -->
+
+
+
+                            </div>
+                    </div>
+                </div>
+
+
+
+                <!-- PAGE CONTENT ENDS -->
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+}

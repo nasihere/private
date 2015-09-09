@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/textShadow" >
+
+    <TextView
+        android:id="@+id/view_home_kent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/quickContactBadge1"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/quickContactBadge1"
+        android:text="@string/app_name"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <QuickContactBadge
+        android:id="@+id/quickContactBadge1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/ic_launcher" />
+
+    <EditText
+        android:id="@+id/edtLoginpassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/edtLoginEmailId"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/view_home_abbreviation"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:hint="Admin Password" >
+
+    </EditText>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/quickContactBadge1"
+        android:layout_marginTop="22dp"
+        android:text="@string/emailid"
+       
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/edtLoginEmailId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textView2"
+         android:ems="10"
+        android:inputType="textEmailAddress"
+        android:hint="Admin Email Address" 
+        
+        />
+	
+    <TextView
+        android:id="@+id/view_home_abbreviation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/edtLoginEmailId"
+        android:text="@string/password"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Button
+        android:id="@+id/btnSignin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/edtLoginpassword"
+        android:text="@string/login" />
+
+    <TextView
+        android:id="@+id/view_home_chat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnSignin"
+        android:layout_alignBottom="@+id/btnSignin"
+        android:layout_alignParentRight="true"
+        android:background="@color/c_gray"
+        android:layout_toRightOf="@+id/btnSignin"
+        android:gravity="center"
+        android:text="@string/Register" />
+
+    <TextView
+        android:id="@+id/tvLoginForgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/view_home_chat"
+        android:layout_toRightOf="@+id/btnSignin"
+        android:background="@color/c_gray"
+        android:gravity="center_horizontal"
+        android:text="@string/forgotpassword"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+</RelativeLayout>
+<!-- From: file:/Users/Nasz/Documents/eagle%20development/Shifa%20Employee%20Logger/app/src/main/res/layout/login.xml -->

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9aa8cc4d367845059006aef616b8f781" Name="Diagram1">
+        <EntityTypeShape EntityType="ems_databaseModel.tbl_Admin" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ems_databaseModel.tbl_CastReligion" Width="1.5" PointX="8.25" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="ems_databaseModel.tbl_ClassLevel" Width="1.5" PointX="15" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="ems_databaseModel.tbl_ContactDetail" Width="1.5" PointX="8.25" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ems_databaseModel.tbl_Course" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ems_databaseModel.tbl_Employee" Width="1.5" PointX="5.25" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ems_databaseModel.tbl_EmploymentHistory" Width="1.5" PointX="3" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ems_databaseModel.tbl_language" Width="1.5" PointX="8.25" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ems_databaseModel.tbl_MasterFee" Width="1.5" PointX="15" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ems_databaseModel.tbl_Nationality" Width="1.5" PointX="6" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ems_databaseModel.tbl_ParentDetail" Width="1.5" PointX="8.25" PointY="19.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ems_databaseModel.tbl_Salary" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ems_databaseModel.tbl_Student" Width="1.5" PointX="10" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ems_databaseModel.tbl_StudentResult" Width="1.5" PointX="10.5" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ems_databaseModel.tbl_Transport" Width="1.5" PointX="10.5" PointY="9.75" IsExpanded="true" />
+        <AssociationConnector Association="ems_databaseModel.FK_tbl_Student_CastReligion" ManuallyRouted="false" />
+        <AssociationConnector Association="ems_databaseModel.FK_tbl_ContactDetail_Nationality" ManuallyRouted="false" />
+        <AssociationConnector Association="ems_databaseModel.FK_tbl_ContactDetail_P_Nationality" ManuallyRouted="false" />
+        <AssociationConnector Association="ems_databaseModel.FK_tbl_Student_ContactDetail" ManuallyRouted="false" />
+        <AssociationConnector Association="ems_databaseModel.FK_tbl_Employee_Emp_History" ManuallyRouted="false" />
+        <AssociationConnector Association="ems_databaseModel.FK_tbl_EmploymentHistory_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="ems_databaseModel.FK_tbl_Student_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="ems_databaseModel.FK_tbl_EmploymentHistory_Salary" ManuallyRouted="false" />
+        <AssociationConnector Association="ems_databaseModel.FK_tbl_Student_language" ManuallyRouted="false" />
+        <AssociationConnector Association="ems_databaseModel.FK_tbl_Student_ParentDetail" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="ems_databaseModel.tbl_YearAcademy" Width="1.5" PointX="17.25" PointY="4.625" />
+        <AssociationConnector Association="ems_databaseModel.FK_tbl_ClassLevel_YearAcademy" />
+        <AssociationConnector Association="ems_databaseModel.FK_tbl_YearAcademy_ClassLevel" />
+        <AssociationConnector Association="ems_databaseModel.FK_tbl_MasterFee_YearAcademy" />
+        <AssociationConnector Association="ems_databaseModel.FK_tbl_YearAcademy_StudentResult" />
+        <AssociationConnector Association="ems_databaseModel.FK_tbl_YearAcademy_Transport" />
+        <EntityTypeShape EntityType="ems_databaseModel.tbl_Account" Width="1.5" PointX="19.5" PointY="5.25" />
+        <AssociationConnector Association="ems_databaseModel.FK_tbl_Account_Employee" />
+        <AssociationConnector Association="ems_databaseModel.FK_tbl_Account_MasterFee" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

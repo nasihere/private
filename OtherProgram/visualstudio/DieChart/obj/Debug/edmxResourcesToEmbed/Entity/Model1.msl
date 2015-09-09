@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DB_9B1091_generalModelStoreContainer" CdmEntityContainer="DB_9B1091_generalEntities2">
+    <EntitySetMapping Name="Dies">
+      <EntityTypeMapping TypeName="DB_9B1091_generalModel.Die">
+        <MappingFragment StoreEntitySet="Die">
+          <ScalarProperty Name="ID1_ID2" ColumnName="ID1_ID2" />
+          <ScalarProperty Name="Glass_Size" ColumnName="Glass_Size" />
+          <ScalarProperty Name="Price_val" ColumnName="Price_val" />
+          <ScalarProperty Name="Length" ColumnName="Length" />
+          <ScalarProperty Name="Id2" ColumnName="Id2" />
+          <ScalarProperty Name="Id1" ColumnName="Id1" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

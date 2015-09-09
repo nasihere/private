@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+    <ScrollView
+        android:layout_height="fill_parent"
+        android:layout_width="wrap_content"
+        >
+        <LinearLayout
+            android:layout_height="fill_parent"
+            android:layout_width="fill_parent"
+            android:orientation="vertical">
+            >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="@color/white_smoke"
+
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tvExeADSave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:padding="10dp"
+                android:textColor="@color/c_blue"
+
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:gravity="center_vertical"
+                android:layout_alignParentTop="true"
+                android:text="Save"
+                android:layout_alignBottom="@+id/tvExeANCancel" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_centerHorizontal="true"
+                android:padding="10dp"
+                android:text="New Entry"
+                android:gravity="center_vertical"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:id="@+id/tvlblANNewEntry"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentTop="true" />
+
+            <TextView
+                android:id="@+id/tvExeANCancel"
+                android:layout_width="wrap_content"
+                android:padding="10dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:gravity="center_vertical"
+                android:text="Cancel"
+                android:textColor="@color/c_blue"
+
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_alignParentBottom="true" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textColor="@color/c_blue"
+            android:text="For Security Reason: We will review your entry before published into the app. Please post more and help other with your entries."
+            android:textAppearance="?android:attr/textAppearanceSmall"
+             />
+
+            <TextView
+                android:id="@+id/tvCategoryPreview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:gravity="center_horizontal"
+                android:text="Mumbra > Masjid > ______"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_gravity="center_vertical"
+                android:orientation="vertical"
+    android:padding="10dp"
+                android:id="@+id/detailslinear"
+    android:layout_height="wrap_content" >
+
+</LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:id="@+id/relAddNewName">
+
+        <AutoCompleteTextView
+            android:id="@+id/edExeANName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:layout_toRightOf="@+id/tvANCategory"
+            android:layout_toEndOf="@+id/tvANCategory" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_shop11"
+            android:id="@+id/imageView2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Name:"
+            android:id="@+id/tvANCategory"
+            android:gravity="center_vertical"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/imageView2"
+            android:layout_toEndOf="@+id/imageView2"
+            android:layout_alignBottom="@+id/edExeANName" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relAddNewAddress"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/edExeAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:layout_toRightOf="@+id/textView5"
+            android:layout_toEndOf="@+id/textView5" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_distance1"
+            android:id="@+id/imageView5" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Address:"
+            android:id="@+id/textView5"
+            android:gravity="center_vertical"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/imageView5"
+            android:layout_toEndOf="@+id/imageView5"
+            android:layout_alignBottom="@+id/edExeAddress" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relAddNewPhone"
+        android:visibility="gone">
+
+        <AutoCompleteTextView
+            android:id="@+id/edExePhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:layout_toRightOf="@+id/textView"
+
+            android:layout_toEndOf="@+id/textView" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_phone16"
+            android:id="@+id/imageView3" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Phone:"
+            android:id="@+id/textView"
+            android:gravity="center_vertical"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/imageView3"
+            android:layout_toEndOf="@+id/imageView3"
+            android:layout_alignBottom="@+id/edExePhone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relAddNewWebsite"
+        android:visibility="gone">
+
+        <AutoCompleteTextView
+            android:id="@+id/edExeWebsite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:layout_toRightOf="@+id/textView4"
+            android:layout_toEndOf="@+id/textView4" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_domain1"
+            android:id="@+id/imageView4" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Website/Email:"
+            android:id="@+id/textView4"
+            android:gravity="center_vertical"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/imageView4"
+            android:layout_toEndOf="@+id/imageView4"
+            android:layout_alignBottom="@+id/edExeWebsite" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relAddNewDetails"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/edExeDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:layout_toRightOf="@+id/textView43"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_profile8"
+            android:id="@+id/imageView42" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Details:"
+            android:id="@+id/textView43"
+            android:gravity="center_vertical"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/imageView42"
+            android:layout_toEndOf="@+id/imageView42"
+            android:layout_alignBottom="@+id/edExeDetails" />
+    </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/relAddNewHours"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/edExeHours"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:layout_toRightOf="@+id/textView71"
+                    android:layout_toEndOf="@+id/textView71" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_clock96"
+                    android:id="@+id/imgClockPreview" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Hours:"
+                    android:id="@+id/textView71"
+                    android:gravity="center_vertical"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/imgClockPreview"
+                    android:layout_toEndOf="@+id/imgClockPreview"
+                    android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/relAddNewPriceRange"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/edExePriceRange"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+
+                    android:layout_toRightOf="@+id/textView7"
+                    android:layout_toEndOf="@+id/textView7" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:src="@drawable/ic_commercial17"
+                    android:id="@+id/imgPriceTag" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Price Range:"
+                    android:id="@+id/textView7"
+                    android:gravity="center_vertical"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/imgPriceTag"
+                    android:layout_toEndOf="@+id/imgPriceTag" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+                android:id="@+id/relAddNewPicture"
+                android:visibility="gone">
+
+        <TextView
+            android:id="@+id/edExePicture"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="tap here to upload pic."
+            android:gravity="center_vertical|center"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentTop="true" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_small35"
+            android:id="@+id/imgPreviewPhotoAddNew"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Picture:"
+            android:id="@+id/textView74"
+            android:gravity="center_vertical"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/imgPreviewPhotoAddNew"
+            android:layout_toEndOf="@+id/imgPreviewPhotoAddNew"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/relAddNewAudio"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_voice29"
+                    android:id="@+id/imageView6"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true" />
+
+                <TextView
+                    android:id="@+id/tvAddNewAudioRecording"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:layout_toRightOf="@+id/textView13"
+                    android:hint="tap here start audio recording."
+                    android:gravity="center_vertical|center"
+                    android:layout_toEndOf="@+id/textView13"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentTop="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Audio Record"
+                    android:id="@+id/textView13"
+                    android:gravity="center_vertical"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/imageView6"
+                    android:layout_toEndOf="@+id/imageView6"
+                    android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+
+            <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save &amp; Publish"
+            android:id="@+id/btnExeSavePublish"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add Field"
+                    android:id="@+id/btnAddField"
+                    android:visibility="gone"
+                    android:layout_alignParentTop="true"
+                    android:layout_toLeftOf="@+id/btnExeSavePublish" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

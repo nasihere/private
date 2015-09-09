@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DB_9B1091_general" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=SQL5012.Smarterasp.net;Initial Catalog=DB_9B1091_general;Persist Security Info=True;User ID=DB_9B1091_general_admin;MultipleActiveResultSets=True;Application Name=EntityFramework" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="DB_9B1091_generalConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Die" Member="Dies">
+    <Type Name="Die">
+      <Column Name="Code" Type="System.String" DbType="NVarChar(115)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Id1" Type="System.String" DbType="NVarChar(110)" CanBeNull="true" />
+      <Column Name="Id2" Type="System.String" DbType="NVarChar(110)" CanBeNull="true" />
+      <Column Name="Length" Type="System.String" DbType="NVarChar(110)" CanBeNull="true" />
+      <Column Name="Price_val" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Glass_Size" Type="System.String" DbType="NVarChar(125)" CanBeNull="true" />
+      <Column Name="ID1_ID2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

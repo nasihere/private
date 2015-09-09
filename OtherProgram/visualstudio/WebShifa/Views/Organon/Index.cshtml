@@ -1,0 +1,25 @@
+﻿@model IEnumerable<ShifaWebEntities.Organon>
+@{
+    ViewBag.Title = "Shifa - Organon - Homeopathy";
+    Layout = "~/Content/themes/BootStrapSkin1/_Layout.cshtml";
+}
+
+
+@foreach (var item in Model)
+{
+    Random random = new Random();
+    int iRandom1 = Convert.ToInt32(random.NextDouble() * ((item.description.Length - 201) - 0) + 0);
+    int iRandom2 = Convert.ToInt32(random.NextDouble() * ((item.description.Length - 801) - 0) + 0);
+    
+    <table class="table table-striped table-bordered table-hover">
+        <tr>
+            <td>
+                <b><font color="red">§ </font>@item.indexNo</b><br />
+                <a href="~/Organon/Details/@item.C_id">Overview: </a>
+                <span class="visible-sm visible-xs">@Html.Raw(item.description.Substring(iRandom1, 200).Trim())</span>
+                <span class="hidden-sm hidden-xs">@Html.Raw(item.description.Substring(iRandom2, 800).Trim())</span>
+                 <br /><a href="~/Organon/Details/@item.C_id">Continue Reading</a>
+            </td>
+        </tr>
+    </table>
+}

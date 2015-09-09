@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/camera"
+        android:title="Camera"/>
+    <item
+        android:id="@+id/gallery"
+        android:title="Gallery"/>
+
+</menu><!-- From: file:/Users/Nasz/Documents/My%20Projects/Android/locally%204%202/app/src/main/res/menu/activity_image_gallery.xml -->

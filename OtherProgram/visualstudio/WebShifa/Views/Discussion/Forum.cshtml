@@ -1,0 +1,535 @@
+﻿@{
+    ViewBag.Title = "Forum - Discussion - Shifa - Homeopathy - Practitioner - Friends";
+    Layout = "~/Content/themes/BootStrapSkin1/_Layout.cshtml";
+}
+<style>
+    .post {
+        background-color: #ffffff;
+        border-radius: 2px;
+        box-shadow: 0 1px 2px #c9cccd;
+        margin-bottom: 20px;
+    }
+
+        .post .wrap-ut {
+            width: 85%;
+        }
+
+        .post .userinfo {
+            width: 15%;
+        }
+
+        .post .posttext {
+            width: 85%;
+            padding-right: 30px;
+            padding-bottom: 15px;
+            color: #989c9e;
+            font-size: 14px;
+            font-family: 'Open Sans Light', sans-serif;
+            line-height: 25px;
+        }
+
+        .post .postinfo {
+            width: 15%;
+            border-left: solid 1px #f1f1f1;
+        }
+
+        .post .avatar {
+            width: 37px;
+            height: 60px;
+            margin-left: 5px;
+        }
+
+            .post .avatar img {
+                width: 43px;
+                height: 43px;
+                margin-top: 10px;
+            }
+
+        .post .icons {
+            width: 48px;
+            border-top: solid 1px #f1f1f1;
+            margin-top: 12px;
+            padding-top: 7px;
+        }
+
+        .post h2 {
+            color: #363838;
+            font-size: 18px;
+            font-family: 'Open Sans', sans-serif;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .post .comments {
+            border-bottom: solid 1px #f1f1f1;
+            padding: 18px 0 25px 0;
+            text-align: center;
+        }
+
+
+            .post .comments .commentbg {
+                background-color: #bdc3c7;
+                border-radius: 2px;
+                display: inline-block;
+                padding: 12px 17px;
+                color: #ffffff;
+                font-size: 14px;
+                font-family: 'Open Sans Bold', sans-serif;
+                position: relative;
+            }
+
+                .post .comments .commentbg .mark {
+                    width: 11px;
+                    height: 11px;
+                    background-color: #bdc3c7;
+                    position: absolute;
+                    bottom: 0;
+                    left: 43%;
+                    margin-bottom: -5px;
+                    transform: rotate(45deg);
+                    -ms-transform: rotate(45deg); /* IE 9 */
+                    -webkit-transform: rotate(45deg); /* Opera, Chrome, and Safari */
+                }
+
+        .post .views {
+            border-bottom: solid 1px #f1f1f1;
+            color: #9da6aa;
+            font-size: 12px;
+            font-family: 'Open Sans Regular', sans-serif;
+            text-align: center;
+            line-height: 29px;
+        }
+
+            .post .views i {
+                font-size: 14px;
+            }
+
+        .post .time {
+            color: #9da6aa;
+            font-size: 12px;
+            font-family: 'Open Sans Regular', sans-serif;
+            text-align: center;
+            line-height: 29px;
+        }
+
+            .post .time i {
+                font-size: 14px;
+            }
+</style>
+
+<div ng-app="shifa" class="widget-box " ng-controller="chatController">
+
+    <div class="page-content">
+        <div class="page-header">
+            <h1>
+                Discussion
+                <small>
+                    <i class="icon-double-angle-right"></i>
+                    Open discussion on homeopathy subject
+                </small>
+            </h1>
+
+
+            <!--div class="form-actions">
+                <div class="input-group">
+
+                    <input ng-model="ChatMsg" focus-me="DataChats.length" id="message" tabindex="0" placeholder="search here ..." type="text" class="form-control" name="message" />
+                    <span class="input-group-btn">
+                        <button class="btn btn-sm btn-info no-radius" type="button" ng-click="SendChat()">
+                            <i class="icon-share-alt"></i>
+                            Search
+                        </button>
+                    </span>
+                </div>
+            </!--div-->
+        </div><!-- /.page-header -->
+
+        <div class="row">
+            <div class="col-xs-12">
+                <!-- PAGE CONTENT BEGINS -->
+
+
+
+                <div id="timeline-1" class="">
+                    <div class="row">
+                        @if (Session["Page"] != "")
+                        {
+                            
+                            <a href="~/Discussion/Index?Page=@Session["Page"]" class="pull-right btn btn-sm  btn-primary">Back</a>
+                        }
+                        else
+                        {
+                            <a href="~/Discussion/Index?Page=0" class="pull-right btn btn-sm  btn-primary">Back</a>
+                        }
+                        
+                        <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+                            <div ng-init="Group = 0" class="timeline-container">
+
+                                <div class="timeline-items">
+
+
+                                    <div class="timeline-item clearfix" style="margin-bottom:1px">
+                                        <div class="timeline-info">
+                                            <i class="timeline-indicator icon-beer btn btn-inverse no-hover"></i>
+                                        </div>
+
+                                        <div class="hide widget-box transparent">
+                                            <div class="widget-header widget-header-small">
+                                                <h5 class="smaller">Haloween party</h5>
+
+                                                <span class="widget-toolbar">
+                                                    <i class="icon-time bigger-110"></i>
+                                                    1 hour ago
+                                                </span>
+                                            </div>
+
+                                            <div class="widget-body">
+                                                <div class="widget-main">
+                                                    <div class="clearfix">
+                                                        <div class="pull-left">
+                                                            Lots of fun at Haloween party.
+                                                            <br>
+                                                            Take a look at some pics:
+                                                        </div>
+
+                                                        <div class="pull-right">
+                                                            <i class="icon-chevron-left blue bigger-110"></i>
+                                                                <i class="icon-chevron-right blue bigger-110"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <img id="loading" src="~/Content/themes/BootStrapSkin1/assets/images/Time machine.gif" />
+                                    <div class="timeline-item clearfix" ng-repeat="c in DataChats" style="margin-bottom:1px">
+                                    
+                                        
+                                        <div ng-show="{{c[4] == '0'}}" class="timeline-item clearfix" style="margin-bottom:1px">
+                                            <hr />
+
+                                            <div class="timeline-info">
+                                                <img src="~/Content/themes/BootStrapSkin1/assets/avatars/{{getImgSrc(c[3])}}">
+                                                <span class="label label-info label-sm"></span>
+                                            </div>
+
+                                            <div class="widget-box transparent">
+
+
+                                                <div class="widget-body">
+                                                    <div class="widget-main">
+                                                        <a href="~/Discussion/Forum/{{c[0]}}"><b>{{c[3]}}</b> <br />{{c[2]}}</a>
+
+                                                    </div>
+                                                    <div class="widget-main">
+
+                                                        <i class="icon-time bigger-110"> {{c[5]}}</i>
+                                                        <div class="pull-right action-buttons">
+                                                            <div class="space-4"></div>
+                                                            <div>
+                                                               
+                                                                <a href="#">
+                                                                    <i class="icon-reply light-green bigger-130">{{c[6]}} </i>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+
+                                            <div ng-hide="{{c[4] == '0'}}" class="timeline-item clearfix " style="margin-left:50px;margin-bottom:1px">
+                                                <div class="timeline-info">
+                                                    <img alt="nasir" src="~/Content/themes/BootStrapSkin1/assets/avatars/{{getImgSrc(c[3])}}">
+
+                                                </div>
+
+                                                <div class="widget-box transparent">
+
+
+                                                    <div class="widget-body">
+                                                        <div class="widget-main">
+                                                            <b>{{c[3]}}:</b> {{c[2]}}
+                                                            <div class="pull-right">
+                                                                <i class="icon-time bigger-110">{{c[5]}}</i>
+
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    
+
+                                        <div ng-show="{{$index == (DataChats.length - 1) }}" class="timeline-item clearfix " style="margin-left:50px;margin-bottom:1px">
+                                            
+                                                <div class="timeline-info">
+                                                    <img src="~/Content/themes/BootStrapSkin1/assets/avatars/{{getImgSrc(c[3])}}">
+                                                    <b>@Session["session_name"]</b>
+                                                </div>
+
+                                                <div class=" widget-box transparent">
+
+                                                    <div class="widget-body">
+                                                        <div class="widget-main">
+
+                                                            <form method="post" id="frm{{$index}}" action="~/Discussion/Post">
+                                                                <input style="height:25px;font-size:13px" dataid="frm{{$index}}" onkeydown="submitForm(event, this)" name="message" placeholder="@Session["session_name"]: type your reply here ..." type="text" class="form-control" />
+                                                                <input value="{{c[4]}}" name="_to" type="hidden" />
+                                                                <span style="display:none;" class="input-group-btn">
+                                                                    <button class="btn btn-sm btn-info no-radius" type="submit">
+                                                                        <i class="icon-share-alt"></i>
+                                                                        Send
+                                                                    </button>
+                                                                </span>
+
+                                                            </form>
+
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            
+                                        </div>
+
+                                    
+
+                                    </div><!-- /.timeline-items -->
+                                </div>
+                            </div><!-- /.timeline-container -->
+
+
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- PAGE CONTENT ENDS -->
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+    </div>
+
+</div><!-- /widget-box -->
+<script type="text/javascript" src="~/Content/themes/BootStrapSkin1/assets/js/angular.min (1).js"></script>
+
+<script type="text/javascript">
+    function submitForm(event, dataid) {
+        if (event.keyCode == 13)
+        {
+            var id = $(this).attr("dataid");
+            $("#"+id).submit();
+        }
+    }
+    var shifa = angular.module('shifa', []);
+
+
+    shifa.controller('chatController', function ($scope, friendService, $http) {
+
+        $scope.ChatMsg = "";
+        $scope.GroupId = [];
+        $scope.DataChats = [];localStorage.CacheData;
+        $scope.getImgSrc = function (name) {
+
+            if (name != null && name.indexOf("Dr.") != -1) {
+                return "ic_chat_doctor.png";
+            }
+            else {
+
+                return "ic_chat_student.png";
+            }
+        };
+
+        $scope.CacheData = "";
+        $("#loading").show('fast');
+        
+            friendService.getChats().then(
+                function (data) {
+                    if ($scope.CacheData != data) {
+                        $scope.CacheData = data.trim();
+                        localStorage.CacheData = data;
+                        var obj = data.split("-:-");
+                        var index = obj.indexOf("");
+                        if (index > -1) {
+                            obj.splice(index, 1);
+                        }
+                        console.log(obj);
+          //              obj = obj.reverse();
+                        $.each(obj, function (i, j) {
+                            var eachObj = j.split("-,-");
+                            $scope.DataChats[i] = eachObj;
+
+                        })
+
+                        $("#loading").hide('slow');
+
+
+                    }
+                    //$scope.DataChats = obj;
+                }
+            );
+        
+        $scope.ReplyNo = function (id) {
+            var ParentId = 0;
+            for (var i = 0; i < $scope.DataChats.length; i++)
+            {
+                if ($scope.DataChats[i][6].trim() == id) {
+                    ParentId++;
+                }
+
+            }
+            ParentId--;
+            if (ParentId == 0) return "";
+            return ParentId;
+        };
+        $scope.SendChat = function () {
+            $("#message").text("Sending...");
+            var request = $http({
+                method: "post",
+                url: "Discussion/set",
+                params: {
+                    Chat: $scope.ChatMsg
+                },
+                data: {
+                    action: "post",
+                }
+            });
+
+            return (request.then($scope.ChatMsg = "", friendService.handleError));
+            $scope.DataChats = localStorage.CacheData;
+        }
+    });
+    // I act a repository for the remote friend collection.
+    shifa.service(
+        "friendService",
+        function ($http, $q) {
+
+            // Return public API.
+            return ({
+                getChats: getChats,
+                getFriends: getFriends,
+                removeFriend: removeFriend
+            });
+
+
+            // ---
+            // PUBLIC METHODS.
+            // ---
+
+
+            // I add a friend with the given name to the remote collection.
+            function getChats(id) {
+
+                var request = $http({
+                    method: "post",
+                    url: "../get",
+                    params: {
+                        _id: id,
+                        forumId : '@TempData["ForumId"]',
+                        Page:0
+                    },
+                    data: {
+                        action: "post"
+                    }
+                });
+
+                return (request.then(handleSuccess, handleError));
+
+            }
+
+            function setChats(chatmsg) {
+
+                var request = $http({
+                    method: "post",
+                    url: "Chat/set",
+                    params: {
+                        action: "post",
+                    },
+                    data: {
+                        Chat: chatmsg
+                    }
+                });
+
+                return (request.then(handleSuccess, handleError));
+
+            }
+            // I get all of the friends in the remote collection.
+            function getFriends() {
+
+                var request = $http({
+                    method: "get",
+                    url: "api/index.cfm",
+                    params: {
+                        action: "get"
+                    }
+                });
+
+                return (request.then(handleSuccess, handleError));
+
+            }
+
+
+            // I remove the friend with the given ID from the remote collection.
+            function removeFriend(id) {
+
+                var request = $http({
+                    method: "delete",
+                    url: "api/index.cfm",
+                    params: {
+                        action: "delete"
+                    },
+                    data: {
+                        id: id
+                    }
+                });
+
+                return (request.then(handleSuccess, handleError));
+
+            }
+
+
+            // ---
+            // PRIVATE METHODS.
+            // ---
+
+
+            // I transform the error response, unwrapping the application dta from
+            // the API response payload.
+            function handleError(response) {
+
+                // The API response from the server should be returned in a
+                // nomralized format. However, if the request was not handled by the
+                // server (or what not handles properly - ex. server error), then we
+                // may have to normalize it on our end, as best we can.
+                if (
+                    !angular.isObject(response.data) ||
+                    !response.data.message
+                    ) {
+
+                    return ($q.reject("An unknown error occurred."));
+
+                }
+
+                // Otherwise, use expected error message.
+                return ($q.reject(response.data.message));
+
+            }
+
+
+            // I transform the successful response, unwrapping the application data
+            // from the API response payload.
+            function handleSuccess(response) {
+               // console.log(response.data)
+                return (response.data);
+
+            }
+
+        }
+    );
+
+</script>

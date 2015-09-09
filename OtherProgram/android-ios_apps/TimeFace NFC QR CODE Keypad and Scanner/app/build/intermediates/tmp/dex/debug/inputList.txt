@@ -1,0 +1,2 @@
+/Users/Nasz/Documents/eagle development/Shifa Employee Logger/app/build/intermediates/classes/debug
+/Users/Nasz/Documents/eagle development/Shifa Employee Logger/app/build/intermediates/pre-dexed/debug/zbar-8570c4616ecb48476d66b084be508a7a1bba090c.jar

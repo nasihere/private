@@ -1,0 +1,11 @@
+﻿@{
+    ViewBag.Title = "Forum - Discussion - Shifa - Homeopathy - Practitioner - Friends";
+    Layout = "~/Content/themes/BootStrapSkin1/_Layout.cshtml";
+}
+<form method="post" action="~/Discussion/Post" id="frm">
+    <h3>Post your topic to discuss with other member</h3>
+    <textarea cols="10" rows="5" name="message" placeholder="What's on your mind to discuss?" class="form-control" >@Session["Msg"]</textarea>
+    <input value="0" name="_to" type="hidden" />
+    <br />
+    <input class="btn btn-sm btn-info no-radius" type="submit" value="Post"/>
+</form>
