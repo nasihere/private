@@ -1,0 +1,262 @@
+﻿
+<article class="col-sm-12 col-md-12  col-lg-12 animated slideInRight fast " ng-show="DATA_REQUEST_APPLICATION != null">
+   
+    <div class="jarviswidget  jarviswidget-sortable" id="wid-id-3" data-widget-colorbutton="false" data-widget-editbutton="false" data-widget-custombutton="false" role="widget">
+
+        <header role="heading" class="hidden-xs">
+            <span class="widget-icon"> <i class="fa fa-bank"></i> </span>
+            <h2 class="ng-binding"> WRT Wealth Rate Approver</h2>
+
+            <span class="jarviswidget-loader"><i class="fa fa-refresh fa-spin"></i></span>
+        </header>
+
+        <div role="content" class="margin-bottom-10">
+
+
+            <div class="smart-form">
+
+
+
+                <legend>Approver's Screen In Compas</legend>
+
+                <fieldset class="">
+                    <div>
+                        <div class="row">
+                            <section class="col col-lg-3">
+                                <label class=" label">
+                                    Application:
+                                    <a href="javascript:void(0)" class="editable editable-click">{{DATA_REQUEST_APPLICATION.ApplicationNumber}}</a>
+                                </label>
+
+                            </section>
+                        </div>
+                        <div class="row ">
+
+
+
+                            <section class="col col-lg-6">
+                                <label class=" label">
+                                    Client:
+                                    <a href="javascript:void(0)" class="editable editable-click">{{DATA_REQUEST_APPLICATION.CustomerName}}</a>
+                                </label>
+
+
+
+                            </section><section class="col col-lg-3">
+                                <label class=" label">Banker: <a href="javascript:void(0)" class="editable editable-click">{{DATA_REQUEST_APPLICATION.Banker}}</a></label>
+
+                            </section><section class="col col-lg-6">
+                                <label class=" label">Product :  <a href="javascript:void(0)" class="editable editable-click">{{DATA_REQUEST_APPLICATION.ProductType}}</a></label>
+
+
+                            </section><section class="col col-lg-3">
+                                <label class=" label">Phone: <a href="javascript:void(0)" class="editable editable-click">{{DATA_REQUEST_APPLICATION.Phone}}</a></label>
+
+                            </section><section class="col col-lg-6">
+                                <label class=" label">
+                                    Commitment:
+                                    <a href="javascript:void(0)"
+                                       class="editable editable-click">{{DATA_REQUEST_APPLICATION.Commitment}}</a>
+                                </label>
+
+                            </section><section class="col col-lg-3">
+                                <label class=" label">
+                                    TPB Flag: <a href="javascript:void(0)"
+                                                 class="editable editable-click">{{DATA_REQUEST_APPLICATION.TPBFlag}}</a>
+                                </label>
+
+                            </section><section class="col col-lg-6">
+                                <label class=" label">
+                                    AUM Amount: <a href="javascript:void(0)"
+                                                   class="editable editable-click">{{DATA_REQUEST_APPLICATION.AUMAmount}}</a>
+                                </label>
+
+                            </section><section class="col col-lg-3">
+                                <label class=" label">
+                                    FICO: <a href="javascript:void(0)"
+                                             class="editable editable-click">{{DATA_REQUEST_APPLICATION.FICO}}</a>
+                                </label>
+
+                            </section><section class="col col-lg-6">
+                                <label class=" label">
+                                    AUM Verfied: <a href="javascript:void(0)"
+                                                    class="editable editable-click">{{DATA_REQUEST_APPLICATION.AUMVerfied}}</a>
+                                </label>
+
+                            </section><section class="col col-lg-3">
+                                <label class=" label">
+                                    Term: <a href="javascript:void(0)"
+                                             class="editable editable-click">{{DATA_REQUEST_APPLICATION.Term}}</a>
+                                </label>
+
+                            </section>
+                        </div>
+                    </div>
+
+                </fieldset>
+            </div>
+        </div>
+        <div role="content" class="margin-bottom-10">
+
+
+            <div class="smart-form ">
+
+                <legend>Exception Reason: {{DATA_REQUEST_APPLICATION.ExceptionReasonCode}} - {{DATA_REQUEST_APPLICATION.ExceptionReasonDesc}}</legend>
+
+                <fieldset class="">
+                    <div class="row ">
+
+                        <section class="col col-lg-12">
+                            <label class=" label">
+                                Competitor's Name: <a href="javascript:void(0)"
+                                                      class="editable editable-click">{{DATA_REQUEST_APPLICATION.ExceptionReasonValue}}</a>
+                            </label>
+
+                        </section>
+                        <section class="col col-lg-12">
+                            <label class=" label">
+                                Submitter Comments: <a href="javascript:void(0)"
+                                                       class="editable editable-click">{{DATA_REQUEST_APPLICATION.SubmitterComment}}</a>
+                            </label>
+
+                        </section>
+                    </div>
+
+
+                </fieldset>
+            </div>
+        </div>
+        <div role="content" class="margin-bottom-10 hidden-xs animated fast slideInRight" >
+
+
+            <div class="smart-form">
+
+                <legend class="hidden-xs">Banking Relationship</legend>
+
+                <fieldset>
+                    <div class="form-group">
+
+                        <div class="col col-lg-12">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            Product Type
+                                        </th>
+                                        <th>
+                                            Account Number
+                                        </th>
+                                        <th>
+                                            Account Details
+                                        </th>
+                                        <th>
+                                            Cust. Acct. Relationship
+                                        </th>
+                                        <th>
+                                            Current Acct. Bal.
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="item in DATA_REQUEST_APPLICATION.BankingRelation">
+                                        <td>{{item.ProductType}}</td>
+                                        <td>{{item.AccountNumber}}</td>
+                                        <td>{{item.AccountDetails}}</td>
+                                        <td>{{item.AccountRelation}}</td>
+                                        <td>{{item.AccountBal | currency}}</td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+                </fieldset>
+
+            </div>
+        </div>
+
+        <div role="content" class="margin-bottom-10">
+
+
+            <div class="smart-form">
+
+                <fieldset>
+                    <div class="row ">
+
+                        <section class="col col-lg-3">
+                            <label class=" label">
+                                Current Application Rate: <a href="javascript:void(0)"
+                                                             class="editable editable-click">{{DATA_REQUEST_APPLICATION.CurrentAppRate}}</a>
+                            </label>
+
+                        </section><section class="col col-lg-3">
+                            <label class=" label">
+                                New Rate Requested: <a href="javascript:void(0)"
+                                                       class="editable editable-click">{{DATA_REQUEST_APPLICATION.NewRateRequest}}</a>
+                            </label>
+
+
+                        </section><section class="col col-lg-3">
+                            <label class=" label">
+                                Rate Exception (Discount): <a href="javascript:void(0)"
+                                                              class="editable editable-click">{{DATA_REQUEST_APPLICATION.RateExceptionDisc}}</a>
+                            </label>
+
+
+                        </section>
+                    </div>
+
+
+                </fieldset>
+
+            </div>
+        </div>
+
+
+        <div role="content" class="margin-bottom-10">
+
+
+            <div class="smart-form">
+
+                <fieldset>
+                    <div>
+                        <div class="row ">
+
+                            <section class="col col-lg-12 col-md-12 col-sm-12">
+                                <label class=" label">Approver Comments: </label>
+                                <label class="input  ">
+                                    <i class="icon-append fa  fa-code"></i>
+                                    <textarea type="text" valid="" class="form-control input-sm" style="min-height: 75px" />
+                                </label>
+
+                            </section>
+                            </div>
+                            <div class="row ">
+                                <section class="col col-lg-9">
+
+                                    <label class="input  ">
+                                        <a ng-click="ApproverRequestCancel()" class="btn btn-sm btn-success"><strong class="ng-binding">Approve</strong></a>
+                                        <a ng-click="ApproverRequestCancel()" class="btn btn-sm btn-danger"><strong class="ng-binding">Decline</strong></a>
+                                        <a ng-click="ApproverRequestCancel()" class="btn btn-sm btn-primary"><strong class="ng-binding">Cancel</strong></a>
+                                    </label>
+
+                                </section>
+
+                            </div>
+                    </div>
+
+                </fieldset>
+
+
+
+
+            </div>
+        </div>
+
+
+
+    </div>
+
+</article>

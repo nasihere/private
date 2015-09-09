@@ -1,0 +1,25 @@
+<h1>{{dataReport.report.company_name}}</h1>
+<p>Employee name:{{ dataReport.report.employee_name }}</p>
+		<table  class="table section-to-print" >
+			<thead>
+				<tr>
+					<th>Day</th>
+					<th>Date</th>
+					<th>In</th>
+					<th>Out</th>
+					<th>No Hour</th>
+					<th>TimeFace</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat = "item in dataReport">
+					<td><a>{{item.report.day}}</td>
+					<td>{{item.report.date}}</td>
+					<td>{{item.report.inTime}}</td>
+					<td>{{item.report.outTime}}</td>
+					<td>{{item.report.noOfhours}}</td>
+					<td><img src="{{item.report.pic}}" style="height:50px; width:50px;" /></td>
+					
+				</tr>
+			</tbody>
+		</table>

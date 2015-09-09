@@ -1,0 +1,23 @@
+		<table  class="table section-to-print" >
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>email</th>
+					<th>Planned In</th>
+					<th>Planned Out</th>
+					<th>Last Login</th>
+					<th>In/Out</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat = "item in dataReport">
+					<td><a>{{item.report.employee.employee_name}}</td>
+					<td>{{item.report.employee.employee_email}}</td>
+					<td>{{item.report.employee.pannedin}}</td>
+					<td>{{item.report.employee.plannedout}}</td>
+				<td>{{item.report.elog.timestamp}}</td>
+				<td>{{(item.report.elog.action == "1") ? "In" : "Out" }}</td>
+					
+				</tr>
+			</tbody>
+		</table>

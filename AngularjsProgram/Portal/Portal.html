@@ -1,0 +1,207 @@
+﻿<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+
+		<title> Universal App </title>
+			
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        
+         <!-- Login Styles -->
+		<link rel="stylesheet" type="text/css" media="screen" href="Content/css/animation.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="Content/css/authenty.css">
+
+
+        <!-- Basic Styles -->
+		<link rel="stylesheet" type="text/css" media="screen" href="Content/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="Content/css/font-awesome.min.css">
+
+		<!-- Universal AppStyles : Caution! DO NOT change the order -->
+		<link rel="stylesheet" type="text/css" media="screen" href="Content/css/smartadmin-production-plugins.min.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="Content/css/smartadmin-production.min.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="Content/css/smartadmin-skins.min.css">
+
+		<!-- Universal AppRTL Support  -->
+		<link rel="stylesheet" type="text/css" media="screen" href="Content/css/smartadmin-rtl.min.css">
+
+        <!-- Universal AppRTL Support  -->
+        <link rel="stylesheet" type="text/css" media="screen" href="Content/css/your_style.css">
+		<!-- FAVICONS -->
+		<link rel="shortcut icon" href="Content/img/favicon/wf_logo_50px.png" type="image/x-icon">
+		<link rel="icon" href="Content/img/favicon/wf_logo_50px.png" type="image/x-icon">
+
+		<!-- GOOGLE FONT -->
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700">
+
+		<!-- Specifying a Webpage Icon for Web Clip 
+			 Ref: https://developer.apple.com/library/ios/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html -->
+		<link rel="apple-touch-icon" href="Content/img/splash/sptouch-icon-iphone.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="Content/img/splash/touch-icon-ipad.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="Content/img/splash/touch-icon-iphone-retina.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="Content/img/splash/touch-icon-ipad-retina.png">
+		
+		<!-- iOS web-app metas : hides Safari UI Components and Changes Status Bar Appearance -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		
+		<!-- Startup image for web apps -->
+		<link rel="apple-touch-startup-image" href="Content/img/splash/ipad-landscape.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)">
+		<link rel="apple-touch-startup-image" href="Content/img/splash/ipad-portrait.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)">
+		<link rel="apple-touch-startup-image" href="Content/img/splash/iphone.png" media="screen and (max-device-width: 320px)">
+
+	</head>
+	
+	
+<body data-ng-app="app" class="menu-on-top pace-done container" data-ng-controller="BaseCtrl as base">
+
+
+    <!-- HEADER -->
+    <header id="header" ng-show="webstate.menu" ng-include="'Views/Console/Header.html'">
+        
+
+    </header>
+    <div ng-include src="'Views/Console/Menu.html'"></div>
+    <!-- END NAVIGATION -->
+    <!-- MAIN PANEL -->
+    <div id="main" role="main">
+        
+        
+        <!-- END RIBBON -->
+        <!-- MAIN CONTENT -->
+        <div id="content">
+            <div login-dialog ></div>
+            <div data-ui-view="" ng-if="webstate.LoginScreen == false">
+
+            </div>
+            
+        </div>
+        <!-- END MAIN CONTENT -->
+
+    </div>
+    <!-- END MAIN PANEL -->
+    <!-- PAGE FOOTER -->
+    <div class="page-footer">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6">
+                <span class="txt-color-white">Universal App 0.1 </span>
+            </div>
+
+           
+        </div>
+    </div>
+    
+    <script src="../Global/Scripts/jQuery/jquery.min2.0.1.js"></script>
+    <script>
+        if (!window.jQuery) {
+            document.write('<script src="Content/js/libs/jquery-2.1.1.min.js"><\/script>');
+        }
+    </script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <script>
+        if (!window.jQuery.ui) {
+            document.write('<script src="Content/js/libs/jquery-ui-1.10.3.min.js"><\/script>');
+        }
+    </script>
+
+    <!-- Angularjs WIDGETS -->
+    <script src="../Global/Scripts/angularjs1.3.14/angular.min.js"></script>
+    <script src="../Global/Scripts/angularjs 1.2.24/angular-ui-router.js"></script>
+    <script src="../Global/Scripts/angularjs 1.2.24/ngStorage.js"></script>
+
+    <!-- IMPORTANT: OC Lazy Load -->
+    <script src="Content/js/ocLazyLoad/ocLazyLoad.min.js"></script>
+
+
+    <!-- IMPORTANT: APP CONFIG -->
+    <script src="Content/js/app.config.js"></script>
+   
+
+    <script src="Scripts/Modules/Login.js"></script>
+    <script src="Scripts/Modules/API.js"></script>
+    <script src="Scripts/main.js"></script>
+    <script src="Scripts/app.inject.js"></script>
+    <script src="App/Admin/main.js"></script>
+    
+    
+
+    <script src="App/ReApprove/main.js"></script>
+
+
+    <!-- Angular Js Routing Lib-->
+    <script src="Scripts/Services/UserSvc.js"></script>
+    <script src="Scripts/Controllers/Base/UserCtrl.js"></script>
+
+
+    <script src="Scripts/Controllers/Base/BaseCtrl.js"></script>
+    <script src="Scripts/Controllers/Dashboard/DashboardCtrl.js"></script>
+    <script src="Scripts/Controllers/Profile/ProfileCtrl.js"></script>
+
+
+    <script src="Scripts/Debug/ResponseLogin.js"></script>
+    <script src="Scripts/Directives/CompDir.js"></script>
+    <script src="Scripts/Directives/Validation.js"></script>
+
+    <!-- Angular Js Routing Lib-->
+    <script src="Scripts/Route/Route.js"></script>
+
+    <!-- JS TOUCH : include this plugin for mobile drag / drop touch events-->
+    <script src="Content/js/plugin/jquery-touch/jquery.ui.touch-punch.min.js"></script>
+
+    <!-- BOOTSTRAP JS -->
+    <script src="Content/js/bootstrap/bootstrap.min.js"></script>
+
+    <!-- CUSTOM NOTIFICATION -->
+    <script src="Content/js/notification/SmartNotification.min.js"></script>
+
+    <!-- Login Authenty -->
+    <script src="Content/js/plugin/authenty-login/waypoints.min.js"></script>
+    <script src="Content/js/plugin/authenty-login/scrollTo.min.js"></script>
+
+
+    <!-- JARVIS WIDGETS -->
+    <script src="Content/js/smartwidgets/jarvis.widget.min.js"></script>
+
+    <!-- EASY PIE CHARTS -->
+    <script src="Content/js/plugin/easy-pie-chart/jquery.easy-pie-chart.min.js"></script>
+
+    <!-- SPARKLINES -->
+    <script src="Content/js/plugin/sparkline/jquery.sparkline.min.js"></script>
+
+    <!-- JQUERY VALIDATE -->
+    <script src="Content/js/plugin/jquery-validate/jquery.validate.min.js"></script>
+
+    <!-- JQUERY MASKED INPUT -->
+    <script src="Content/js/plugin/masked-input/jquery.maskedinput.min.js"></script>
+
+    <!-- JQUERY SELECT2 INPUT -->
+    <script src="Content/js/plugin/select2/select2.min.js"></script>
+
+    <!-- JQUERY Table INPUT -->
+    
+    
+
+
+    <!-- browser msie issue fix -->
+    <script src="Content/js/plugin/msie-fix/jquery.mb.browser.min.js"></script>
+
+
+    <!--[if IE 8]>
+
+        <h1>Your browser is out of date, please update your browser by going to www.microsoft.com/download</h1>
+
+    <![endif]-->
+    <!-- MAIN APP JS FILE -->
+    <script src="Content/js/app.min.js"></script>
+
+
+
+
+
+    <script src="Scripts/DOM/domready.js"></script>
+
+</body>
+
+
+
+</html>
