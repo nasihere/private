@@ -1,0 +1,206 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Static Data Script</title>
+       
+   <!--script type="text/javascript" src="../../../../RetailBanking/Wealth/Scripts/StaticData/StaticData-wmg.js"></!script!-->
+     <script type="text/javascript" src="../../../../RetailBanking/Wealth/Scripts/StaticData/StaticData.js"></script>
+    <script type="text/javascript" src="../../../../Global/Scripts/Lib/jQuery/jquery-1.9.0.min.js"></script>
+    <script type="text/javascript" src="../../../../Global/Scripts/Lib/angularjs 1.2.24/angular.js"></script>
+
+</head>
+    <body ng-app="StaticApp">
+        <div ng-controller="StaticCtrl">
+            <pre>{{PreviewJson}}</pre>
+            <pre id="error">{{ComparedJson}}</pre>
+
+            <b>Old:</b><br/>
+            <textarea ng-model="oldStatic" style="width: 100%" rows="15"></textarea>
+            <br/><b>New:</b><br/>
+            
+            <textarea ng-model="newStatic"  style="width: 100%"  rows="15"></textarea>
+            <br/>
+            <input type="button" ng-click="DoAction()" value="Compare"/>
+        </div>
+    </body>
+    <script>
+        var StaticApp = angular.module("StaticApp", []);
+    
+        StaticApp.controller('StaticCtrl', ['$scope',function ($scope) {
+
+            if (Common != undefined) $scope.oldStatic = JSON.stringify(Common);
+            if (Common != undefined) $scope.newStatic = JSON.stringify(Common);
+            $scope.ComparedJson = "";
+            $scope.verbiage = "Should";
+            $scope.PreviewJson = "";
+            $scope.DoCompare = function(od,nw) {
+             
+                for (var i in od) {
+                    //$scope.PreviewJson += i;
+                    //if ()
+
+                    if (typeof (od[i]) == "string") {
+                       // console.log(od[i]);
+                        //if (nw[i] != od[i]) {
+                            //     $scope.ComparedJson += "<font color='red'> string: " + od[i] + "</font> it " + $scope.verbiage + " be <b>" + i + ": " + od[i] + "</b> <br />";
+                            
+                        /*Create Query form json to insert db                   $scope.ComparedJson += "insert into [EAI_Static].[dbo].[PCSStaticDataValues] (StaticDataKey,StaticDataValue,SequenceNum,StaticDataID) value ('WIDisclosure','" + od[i] + "',0,'" + i + "'); <br />";*/
+
+                       // }
+                    }
+                    else if (nw[i] == undefined) {
+                      //  $scope.ComparedJson += "<font color='red'>" + i + "</font> is not found in new json <br />";
+                        /*Create Query form json to insert db$scope.ComparedJson += "---------------------undefinedundefinedundefined-------------------------- <br />";*/
+                    } else {
+                        if (typeof (od[i]) == "object") {
+
+
+                            var CounterSeq = 0;
+                            for (ik = 0; ik <= od[i].length - 1 ; ik++) {
+                                console.log(od[i]);
+                                /*Create Query form json to insert db
+                                
+                                $scope.ComparedJson += "insert into [EAI_Static].[dbo].[PCSStaticDataValues] (StaticDataKey,StaticDataValue,SequenceNum,StaticDataID) value ('" + getKey(od[i][ik]) + "','" + getValue(od[i][ik]) + "'," + CounterSeq++ + ",'" + i + "'); <br />";
+                               */
+                                /*var key = getKey(od[i][ik]);
+                                var val = getValue(od[i][ik]);
+
+                                
+                                var cKey = getCKey(nw[i], key);
+                                var cVal = getCValue(nw[i],val);
+
+
+                                if (cVal == "-404-") {
+                                     $scope.ComparedJson += "<font color='red'> val: " + key + "</font> it " + $scope.verbiage + " be <b>" + i + ": {key: " + key + ", value: " + val + "}</b> <br />";
+                                    // $scope.ComparedJson += "<font color='green'><b>" + i + ": {key: " + key + ", value: " + val + "}</b></font> <br />";
+                                    //       $scope.ComparedJson += i + "<br/>";
+                                 //   $scope.ComparedJson += "{key: " + key + ", value: " + val + "}</b><br />";
+                                }
+                                else if (cVal == false) {
+                                    $scope.ComparedJson += "<font color='red'> val: " + key + "</font> it " + $scope.verbiage + " be <b>" + i + ": {key: " + key + ", value: " + val + "}</b> <br />";
+                                    //   $scope.ComparedJson += "<font color='red'><b>" + i + ": {key: " + key + ", value: " + val + "}</b></font> <br />";
+                                    //    $scope.ComparedJson += i + "<br/>";;
+                                   // $scope.ComparedJson += "{key: " + key + ", value: " + val + "}</b><br />";
+                                }
+                                else if (cKey == "-404-") {
+                                   $scope.ComparedJson += "<font color='red'> 404: " + key + "</font> it " + $scope.verbiage + " be <b>" + i + ": {key: " + key + ", value: " + val + "}</b> <br />";
+                                  //  $scope.ComparedJson += "<font color='green'><b>" + i + ": {key: " + key + ", value: " + val + "}</b></font> <br />";
+                                    //      $scope.ComparedJson += i + "<br/>";;
+                                    $scope.ComparedJson += "{key: " + key + ", value: " + val + "}</b><br />";
+                                }
+                                else if (cKey == false) {
+                                      $scope.ComparedJson += "<font color='red'> Key: " + key + "</font> it " + $scope.verbiage + " be <b>" + i + ": {key: " + key + ", value: " + val + "}</b> <br />";
+                                    //  $scope.ComparedJson += "<font color='red'><b>" + i + ": {key: " + key + ", value: " + val + "}</b></font><br />";
+                                    //    $scope.ComparedJson += i + "<br/>";;
+                                 //    $scope.ComparedJson += "{key: " + key + ", value: " + val + "}</b><br />";
+                                }
+                             //   $scope.PreviewJson += i + " {" + key + " = " + val + "}\n";
+                                */
+                            }
+
+                          
+                            
+                            
+                        }
+                    }
+                    
+                }
+                $("#error").html($scope.ComparedJson);
+            };
+            
+            var getKey = function(obj) {
+
+                var item = "";
+                if (obj == undefined) return "-404-";
+                if (obj.key != undefined) {
+                    item = obj.key;
+                }
+                else if (obj.acctVal != undefined) {
+                    item = obj.acctVal;
+                }
+                else if (obj.abbreviation != undefined) {
+                    item = obj.abbreviation;
+                    
+                }
+                return item;
+            }
+            var getValue = function (obj) {
+                if (obj == undefined) return "-404-";
+                var item = obj.value;
+                if (item == undefined) {
+                    item = obj.acctNum;
+                    if (item == undefined) {
+                        item = obj.name;
+                    }
+                }
+                return item;
+            }
+            var getCValue = function (newobj, findVal) {
+                if (newobj == undefined) return "-404-";
+                var flag = false;
+                for (i = 0; i <= newobj.length - 1; i++) {
+                    var obj = newobj[i];
+               
+                    var item = obj.value;
+                    if (item == undefined) {
+                        item = obj.acctNum;
+                        if (item == undefined) {
+                            item = obj.name;
+                        }
+                    }
+                    if (item == findVal) {
+                        flag = true;
+                    } 
+                }
+                if (flag == true) {
+                    return true;
+                }
+              
+                return false;
+            }
+            var getCKey = function (newobj, findkey) {
+                if (newobj == undefined) return "-404-";
+           //     console.log(findkey);
+                var flag = false;
+                for (i = 0; i <= newobj.length - 1 ; i++) {
+                    //console.log(newobj[i])
+                    var obj = newobj[i];
+
+                    var item = obj.key;
+                    if (item == undefined) {
+                        item = obj.acctVal;
+                        if (item == undefined) {
+                            item = obj.abbreviation;
+                        }
+                    }
+                    if (item == findkey) {
+                        flag = true;
+                    }
+                }
+                if (flag == true) {
+                    return true;
+                }
+                return false;
+            }
+            $scope.DoAction = function () {
+                try{
+                $scope.ComparedJson = "";
+                $scope.verbiage = "Should";
+                var od = JSON.parse($scope.oldStatic);
+                var nw = JSON.parse($scope.newStatic);
+                $scope.ComparedJson += "<font color='green'>Compare</font><br />";
+                $scope.DoCompare(od, nw);
+                $scope.verbiage = "Shouldn't";
+                $scope.ComparedJson += "<font color='green'>Reverse Compare</font><br />";
+                //$scope.DoCompare(nw, od);
+                }
+                catch(ex)
+                {
+                    $scope.ComparedJson += "<font color='Red'><b>Error:</b></font>"+ex+"<br />";
+
+                }
+            }
+        }]);
+       
+    </script>
+</html>

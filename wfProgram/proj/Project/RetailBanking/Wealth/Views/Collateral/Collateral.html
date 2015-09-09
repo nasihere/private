@@ -1,0 +1,51 @@
+﻿
+<div ng-show="{{product.isNonRECollateralApplicable == 'Y'}}"  accordion heading="Collateral" panelid="dv35234112014">
+  
+  
+  <!--div ng-show="checkCollateralGiven() == false" >
+        <div class="alert alert-information ng-scope" style="max-width: 100%; margin-right: 8px;">
+            <p>Atleast one deposit or marketable collateral must be entered</p>
+        </div>
+        <br />
+    </!--div!-->
+    
+    <span class="georgia pull-right"> {{(PathCdSaving.length + PathMarketable.length)}} of 10 </span>
+    <h3 class="georgia underlined clearfix"><span>CD & Savings Collateral</span></h3>
+    <div ui-view="CDSavingsSummary@Collaterals"></div>
+    <br />
+    <div ng-hide="(PathCdSaving.length + PathMarketable.length) >= 10">
+        <a  href="javascript:void(0)" class="btn-link pull-left" style="line-height: 1.0em;" ng-click="modalPopupCdSaving();autoFillCDSavingForm(CDSaving.Form)">Add CD & Savings Collateral</a>
+    </div>
+    <br />
+        
+    <div class="row margintop10 marginright10 marginleft0" style="background-color: white;">
+        <h3 class="georgia underlined clearfix marginleft10"><span>Comments</span></h3>
+        <div class="containerz" >
+            <div class="rightz20 " style="text-align: right;">
+                <span class="leftnormallabel">Comments To Loan Center:</span>
+            </div>
+            <div class="leftz80">
+                <textarea data-ng-model="product.commentsCDSavings " cols="200" rows="10" type="text" name="" value="" class="" maxlength="536"></textarea>
+            </div>
+        </div>
+    </div>
+    <h3 class="georgia underlined clearfix"><span>Marketable Collateral</span></h3>
+    <div ui-view="MarketableSummary@Collaterals"></div>
+    <br />
+    <div ng-hide="(PathCdSaving.length + PathMarketable.length) >= 10">
+        <a  href="javascript:void(0)"  class="btn-link pull-left" style="line-height: 1.0em;"  ng-click="modalPopupMarketable()">Add Marketable Collateral</a>
+    </div>
+    <br />
+        
+    <div class="row  margintop10 marginright10  marginleft0" style="background-color: white;">
+        <h3 class="georgia underlined clearfix  marginleft10"><span>Comments</span></h3>
+        <div class="containerz"  >
+            <div class="rightz20 " style="text-align: right;">
+                <span class="leftnormallabel">Comments To Loan Center:</span>
+            </div>
+            <div class="leftz80">
+                <textarea data-ng-model="product.commentsMC" cols="200" rows="10" type="text" name="" value="" class="" maxlength="536"></textarea>
+            </div>
+        </div>
+    </div>
+</div>

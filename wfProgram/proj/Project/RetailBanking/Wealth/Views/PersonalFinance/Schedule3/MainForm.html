@@ -1,0 +1,27 @@
+﻿<div ng-controller="PersonalFinanceController" class="container">
+    <div class="containerZ">
+        <div class="leftz">
+            <div class="text-right">Do you own property? </div>
+        </div>
+        <div class="rightz col-lg-12" style="width: 75px">
+            <select class="select"  ng-model="assetInfo.ownPropertyInd" style="width: 100px"
+                ng-options="type.key as type.value for type in common.SelectYesNo">
+            </select>
+        </div>
+        <div class="rightz" style="width: 100%">
+            <div class="alert alert-info-level1" style="width: 45%">
+                <p>Includes property used as collateral for the new application request</p>
+            </div>
+        </div>
+    </div>
+    <br />
+    <div class="containerZ" ng-show="assetInfo.ownPropertyInd == 'Y'">
+        <div ui-view="Schedule3Summary"></div>
+        <div ui-view="Schedule3Form"></div>
+        <div ng-hide="realEstateHoldings.length == 10">
+
+            <a ng-hide="realEstateHoldings.length >= 10" href="javascript:void(0)" class="btn-link pull-left" ng-click="modalPopup();">Add Real Estate Holdings</a>
+        </div>
+        <br />
+    </div>
+</div>

@@ -1,0 +1,104 @@
+﻿
+<div class="col-sm-6  no-padding">
+    <div class="ibox float-e-margins">
+        <div class="ibox-title">
+            <h5>Code</h5>
+            <div class="ibox-tools">
+                <a class="collapse-link">
+                    <i class="fa fa-chevron-up"></i>
+                </a>
+           
+            </div>
+        </div>
+        <div class="ibox-content inspinia-timeline">
+            <div class="ibox-content" ng-controller="DownloadController">
+                
+                    <div id="nestable-menu">
+                        <button type="button" data-action="expand-all" class="btn btn-white btn-sm">Expand All</button>
+                        <button type="button" data-action="collapse-all" class="btn btn-white btn-sm">Collapse All</button>
+                    </div>
+                    
+                
+                <p style="float: right">
+                    <a href="./Download/SampleProject.zip">Download Sample Project</a>
+                </p>
+
+                <p class="m-b-lg">
+                    Code for angularJs Site. <a href="http://angularjs.org/">http://angularjs.org/</a>
+                </p>
+                            
+                <div class="dd" id="nestable2" ng-init="counter = 0">
+                    <ol class="dd-list " ng-repeat="(key,folderName) in FileTable">
+                        <li class="dd-item dd-collapsed "  ng-repeat="item in folderName">
+                                        
+                            <div class="dd-handle">
+                                <span class="ddfoler label label-info"><i class="fa fa-users"></i></span>{{key}}/{{item.name}}</div>
+                            <ol class="dd-list">
+                                <li class="dd-item" ng-repeat="subitem in item.files">
+                                    <div class="dd-handle">
+                                        <span class="pull-right"><a target="_blank" href="./Download/{{key}}/{{item.name}}/{{subitem}}">Download</a></span>
+                                        <span class="label label-info"><i class="fa fa-cog"></i></span> {{subitem}}
+                                    </div>
+                                </li>
+                                           
+                            </ol>
+                        </li>
+                                   
+                    </ol>
+                </div>
+                         
+
+            </div>
+          
+        </div>
+    </div>
+</div>
+
+<div class="col-sm-6 no-padding">
+    <div class="ibox float-e-margins">
+        <div class="ibox-title">
+            <h5>ReadMe Instruction</h5>
+            <div class="ibox-tools">
+                <a class="collapse-link">
+                    <i class="fa fa-chevron-up"></i>
+                </a>
+           
+            </div>
+        </div>
+        <div class="ibox-content inspinia-timeline">
+
+            <div class="timeline-item">
+                <div class="row">
+                    <div class="col-xs-3 date">
+                        <i class="fa fa-briefcase"></i>
+                        6:00 am
+                        <br>
+                        <small class="text-navy">2 hour ago</small>
+                    </div>
+                    <div class="col-xs-7 content no-top-border">
+                        <p class="m-b-xs"><strong>Native, lightweight directives</strong></p>
+
+                        <p>We are aiming at providing a set of AngularJS directives based on Bootstrap's markup and CSS. The goal is to provide native AngularJS directives without any dependency on jQuery or Bootstrap's JavaScript. It is often better to rewrite an existing JavaScript code and create a new, pure AngularJS directive. Most of the time the resulting directive is smaller as compared to the original JavaScript code size and better integrated into the AngularJS ecosystem.</p>
+
+                        <p><span data-diameter="40" class="updating-chart" style="display: none;">9,6,5,9,4,7,3,2,9,8,7,4,5,1,2,9,5,4,7,2,7,7,3,5,2,8,6,2,5,8,3,4,7,7,8,8,4</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="row">
+                    <div class="col-xs-3 date">
+                        <i class="fa fa-file-text"></i>
+                        7:00 am
+                        <br>
+                        <small class="text-navy">3 hour ago</small>
+                    </div>
+                    <div class="col-xs-7 content">
+                        <p class="m-b-xs"><strong>Customizability</strong></p>
+                        <p>All the directives in this repository should have their markup externalized as templates (loaded via templateUrl). In practice it means that you can customize directive's markup at will. One could even imagine providing a non-Bootstrap version of the templates!</p>
+                    </div>
+                </div>
+            </div>
+      
+        </div>
+    </div>
+</div>

@@ -1,0 +1,355 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    
+		<meta charset="utf-8">
+		<title> Universal Editor</title>
+		<meta name="description" content="">
+		<meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<!-- #CSS Links -->
+		<!-- Basic Styles -->
+		<link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="css/font-awesome.min.css">
+
+		<!-- SmartAdmin Styles : Caution! DO NOT change the order -->
+		<link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-production-plugins.min.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-production.min.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-skins.min.css">
+
+		<!-- SmartAdmin AngularJS Fixes -->
+		<link rel="stylesheet" type="text/css" media="screen" href="css/fixes.css">
+
+		<!-- SmartAdmin RTL Support (Not using RTL? Disable the CSS below to save bandwidth) -->
+		<link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-rtl.min.css">
+
+		<!-- We recommend you use "your_style.css" to override SmartAdmin
+		specific styles this will also ensure you retrain your customization with each SmartAdmin update.
+		<link rel="stylesheet" type="text/css" media="screen" href="css/your_style.css"> -->
+
+		<!-- Demo purpose only: goes with demo.js, you can delete this css when designing your own WebApp -->
+		<link rel="stylesheet" type="text/css" media="screen" href="css/demo.min.css">
+    
+        <script src="js/tempjson.js"></script>
+        <!-- #GOOGLE FONT -->
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700">
+
+
+</head>
+
+<body ng-app="app" class="wrapper" data-ng-controller="JFormController">
+    <div class="row">
+        <h3 class="fc-header-title">UAF - UAP Form Designer</h3>
+
+        <div class="col-lg-12">
+
+            <select ng-model="jPreviewForm.jFormPreview.theme" ng-init="jPreviewForm.jFormPreview.theme = ''">
+                <option ng-repeat="opt in classes.jTheme" value="{{opt.value}}">{{opt.label}}</option>
+            </select>
+            <select ng-model="jPreviewForm.jFormPreview.size" ng-init="jPreviewForm.jFormPreview.size = 'col-lg-12'">
+                <option ng-repeat="opt in classes.FormSize" value="{{opt.value}}">{{opt.label}}</option>
+            </select>
+            <select ng-model="jPreviewForm.jFormPreview.formicon">
+                <option ng-repeat="opt in classes.jIcons" value="{{opt.value}}">{{opt.label}}</option>
+            </select>
+            <select ng-model="jPreviewForm.jFormPreview.template" ng-init="jPreviewForm.jFormPreview.template = 'Form'">
+                <option ng-repeat="opt in ['Form','FormVertical']" value="{{opt}}">{{opt}}</option>
+            </select>
+
+            <a class="btn btn-info " ng-click="ClearForm()">Clear Form</a>
+            <a class="btn btn-info" ng-click="SaveFormAsFile()">Save Form</a>
+            <a class="btn btn-info" ng-click="OpenMyJsonDialog()">Load Form</a>
+            <a class="btn btn-info " ng-click="exportData('Form')">Export</a>
+
+
+
+        </div>
+
+
+
+
+
+
+    </div>
+
+    <div class="wrapper ">
+
+        <div class="col-lg-3 col-md-4  col-sm-4 col-xs-4 jarviswidget  ">
+            <div ng-repeat="row in jform.data " class="margin-top-10" ng-show="row.length">
+
+
+
+                <div ng-repeat="item in row" class="smart-form ">
+                    <div class="row">
+
+                        <div class="col-lg-9 col-md-9 col-sm-9  col-xs-9">
+
+                            <input ng-keyup="keyPress($event.keyCode,row)" type="text" name="lblmodel{{lblcounter}}" class="gray-bg no-borders col-lg-10 no-border padding-5" ng-model="item.label" placeholder="{{item.type}}" />
+
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-3  col-xs-3 margin-top-5 border-left-right ">
+                            <a href="#" ng-click="removefields(row, $index)" class="btn btn-danger padding-5 pull-right">X</a>
+                            <a ng-click="openDialog(item.$$hashKey)" class="btn btn-success btn-rounded padding-5 pull-right">Edit - {{countfields}}</a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <dialog class="col-lg-12" id="openEdit{{item.$$hashKey}}">
+
+                            <div class="jarviswidget">
+                                <a href="javascript:void(0)" class="pull-right" ng-click="hideDialog(item.$$hashKey)"><i class="fa fa-close"></i></a>
+                                <fieldset>
+                                    <legend>{{item.label}}</legend>
+                                    <div class="form-group">
+                                        <div class="form-horizontal">
+                                            <label class=" col-md-3  ">Type: </label>
+                                            <div class="col-md-9 ">
+
+                                                <div class="icon-addon addon-sm  ">
+                                                    <select ng-model="item.type">
+                                                        <option value="label">empty</option>
+                                                        <option value="text">Text Box</option>
+                                                        <option value="dropdown">Drop Down</option>
+                                                        <option value="calendar">Calendar</option>
+                                                        <option value="chk">Check Box</option>
+                                                        <option value="rdo">Radio Button</option>
+                                                        <option value="button">Button</option>
+                                                    </select>
+                                                    <input type="text" ng-model="item.complabel" ng-show="item.type == 'button' || item.type == 'rdo' || item.type == 'chk'" />
+                                                    <label class="glyphicon  glyphicon-alert"></label>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </fieldset>
+                                <fieldset>
+                                    <div class="form-group">
+                                        <div class="form-horizontal">
+                                            <label class=" col-md-3  ">Model: </label>
+                                            <div class="col-md-9 ">
+
+                                                <div class="icon-addon addon-sm  ">
+                                                    <input type="text" class="gray-bg no-borders " ng-model="item.model" />
+
+                                                    <label class="glyphicon  glyphicon-alert"></label>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </fieldset>
+
+
+                                <fieldset>
+                                    <div class="form-group">
+                                        <div class="form-horizontal">
+                                            <label class=" col-md-3  ">Validation: </label>
+                                            <div class="col-md-9 ">
+
+                                                <div class="icon-addon addon-sm  ">
+                                                    <select ng-change="change(item,valid)" ng-model="valid.type" ng-init="valid.type = ''">
+                                                        <option value="">No Validation</option>
+                                                        <option value="text">Alpha/Numeric</option>
+                                                        <option value="email">Email</option>
+                                                        <option value="date">Date</option>
+                                                        <option value="number">Number</option>
+                                                        <option value="phone">Phone</option>
+                                                        <option value="select">Select Any One</option>
+                                                    </select>
+                                                    <input ng-show="valid.type != ''" placeholder="Custom Message ex: Required" class="gray-bg col-sm-5 no-borders  " ng-change="change(item,valid)" type="text" ng-model="valid.vmsg">
+
+                                                    <label class="glyphicon  glyphicon-alert"></label>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </fieldset>
+
+
+
+                                <fieldset ng-if="jPreviewForm.jFormPreview.template == 'Form'">
+                                    <div class="form-group">
+                                        <div class="form-horizontal">
+                                            <label class=" col-md-3  ">State: </label>
+                                            <div class="col-md-9 ">
+
+                                                <div class="icon-addon addon-sm  ">
+                                                    <select ng-model="item.state">
+                                                        <option value="">No State</option>
+                                                        <option value="state-success">Green</option>
+                                                        <option value="state-warning">Yellow</option>
+                                                        <option value="state-error">Red</option>
+
+                                                    </select>
+
+                                                    <label class="glyphicon  glyphicon-alert"></label>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </fieldset>
+
+
+                                <fieldset>
+                                    <div class="form-group">
+                                        <div class="form-horizontal">
+                                            <label class=" col-md-3  ">Style: </label>
+                                            <div class="col-md-9 ">
+
+                                                <div class="icon-addon addon-sm  ">
+                                                    <select ng-model="item.style">
+                                                        <option value="">No Style</option>
+
+                                                        <option value="">Left Align</option>
+                                                        <option value="">Right Align</option>
+                                                        <option value="input-xs">Extra Small</option>
+                                                        <option value="input-sm">Small</option>
+                                                        <option value="input-lg">Large</option>
+
+                                                    </select>
+                                                    <form class="smart-form">
+                                                        <label class="checkbox state-success"><input type="checkbox" ng-model="item.align"><i></i>Right</label>
+                                                    </form>
+
+                                                    <label class="glyphicon  glyphicon-alert"></label>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </fieldset>
+
+
+                                <fieldset>
+                                    <div class="form-group">
+                                        <div class="form-horizontal">
+                                            <label class=" col-md-3  ">Label Size: </label>
+                                            <div class="col-md-9 ">
+
+                                                <div class="icon-addon addon-sm  ">
+                                                    <select ng-model="item.clslabel" ng-init="item.clslabel = 'col-lg-3 col-md-3 col-sm-3 col-xs-3'">
+                                                        <option ng-repeat="opt in classes.FormSize" value="{{opt.value}}">{{opt.label}}</option>
+                                                    </select>
+
+                                                    <label class="glyphicon  glyphicon-alert"></label>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </fieldset>
+
+
+                                <fieldset>
+                                    <div class="form-group">
+                                        <div class="form-horizontal">
+                                            <label class=" col-md-3  ">Input Size: </label>
+                                            <div class="col-md-9 ">
+
+                                                <div class="icon-addon addon-sm  ">
+                                                    <select ng-model="item.cls" ng-init="item.cls = 'col-lg-9 col-md-9 col-sm-9 col-xs-9'">
+                                                        <option ng-repeat=" opt in classes.FormSize" value="{{opt.value}}">
+                                                            {{opt.label}}
+                                                        </option>
+                                                    </select>
+
+                                                    <label class="glyphicon  glyphicon-alert"></label>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </fieldset>
+
+
+                                <fieldset>
+                                    <div class="form-group">
+                                        <div class="form-horizontal">
+                                            <label class=" col-md-3  ">Icon: </label>
+                                            <div class="col-md-9 ">
+
+                                                <div class="icon-addon addon-sm  ">
+                                                    <select ng-model="item.icon">
+                                                        <option ng-repeat="opt in classes.jIcons" value="{{opt.value}}">{{opt.label}}</option>
+                                                    </select>
+
+                                                    <label class="glyphicon  glyphicon-alert"></label>
+                                                </div>
+                                            </div>
+
+                                            iv
+
+                                        </div>
+                                    </div>
+
+                                </fieldset>
+
+
+
+                            </div>
+                        </dialog>
+                    </div>
+
+                </div>
+                <header class=" margin-top-10 margin-bottom-10">
+
+
+                    <a href="#" ng-click="addfields(row)" class="btn btn-warning btn-xs btn-rounded ">Add Fields</a>
+                    <a href="#" ng-click="addRow();" class="btn btn-info btn-xs btn-rounded">Add Row</a>
+
+
+                </header>
+            </div>
+        </div>
+
+
+        <div class="col-lg-9 col-md-8 col-sm-8 col-xs-8 ">
+            <div jform id="ExportPreviewHtml"
+                 ng-repeat="option in jPreviewForm"
+                 form="option"
+                 template="{{option.template}}"
+                 class="{{option.space}}">
+            </div>
+        </div>
+
+
+
+    </div>
+  
+
+
+    <dialog id="myJsonDialog">
+
+        <label contenteditable="true" id="MyJson" style="height: 300px;width: 400px;">{{tempjson}}</label>
+        <a class="btn btn-info" ng-click="UpdateMyJson()">Update Form</a>
+
+
+    </dialog>
+    <!--pre>{{jPreviewForm | json}}</!--pre-->
+
+    <!-- ANGULARJS -->
+    <script src="https://rawgithub.com/eligrey/FileSaver.js/master/FileSaver.js" type="text/javascript"></script>
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.11/angular.min.js"></script>
+    <!-- Mainly scripts -->
+    <script src="/App/Scripts/StaticData/StaticData.js"></script>
+    <script src="/App/app.js"></script>
+    <script src="UAPController.js"></script>
+    <script src="/App/Scripts/Framework/AppDirectvies.js"></script>
+    <script src="/App/Scripts/Framework/Validation.js"></script>
+
+
+
+</body>
+</html>

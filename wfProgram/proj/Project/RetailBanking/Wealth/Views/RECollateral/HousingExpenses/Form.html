@@ -1,0 +1,101 @@
+﻿<form>
+    <div class="row">
+        <div class="row formset clearfix col col-lg-12 col-md-8 col-sm-8 col-xs-12 margintop0 marginbottom30">
+            <dl>
+                <dt style="width: 600px; font-weight: normal">
+                    <span class="blacktext font15">Expense Type
+                    </span>
+                </dt>
+                <dd style="width: 150px; font-weight: normal">
+                    <span class="blacktext font15">Amount</span>
+                </dd>
+                <dd style="width: 150px; font-weight: normal">
+                    <span class="blacktext font15">Frequency</span>
+                </dd>
+
+                <dt style="width: 600px; font-weight: normal">HOA Dues/Co-op Fees Payment:
+                                            
+                </dt>
+                <dd style="width: 150px">
+                    <input valid="number" vif="rec.housingExpenses.hoaFeesFreq != ''" maxlength="5" type="text" ng-model="rec.housingExpenses.hoaFees" value="" class="" placeholder="$0.00">
+                </dd>
+                <dd style="width: 150px">
+                    <!--This model was not there in the BaseXML.js -->
+                    <select class="select" valid="select" vif="rec.housingExpenses.hoaFees > 0"
+                        ng-model="rec.housingExpenses.hoaFeesFreq"  style="width: 100px"
+                        ng-options="type.key as type.value for type in common.ddPaymentFrequency">
+                    </select>
+                </dd>
+
+                <dt style="width: 600px; font-weight: normal">Property Taxes Payment:<span class="star">*</span>
+                </dt>
+                <dd style="width: 150px">
+                    <input valid="number" vminval="1" vmsg="value greater than 0"  maxlength="5" type="text" ng-model="rec.housingExpenses.propertyTaxesPayment" value="" class="" placeholder="$0.00">
+                </dd>
+                <dd style="width: 150px">
+                    <select class="select" valid="select"  vif="rec.housingExpenses.propertyTaxesPayment > 0"
+                        ng-model="rec.housingExpenses.propertyTaxesPaymentFreq"  style="width: 100px"
+                        ng-options="type.key as type.value for type in common.ddPaymentFrequency">
+                    </select>
+                </dd>
+                <dt style="width: 600px; font-weight: normal">Does Monthly Mortgage Payment Include Taxes:<span class="star">*</span>
+                </dt>
+                <dd style="width: 150px"></dd>
+                <dd style="width: 150px">
+                    <select valid="select" vmsg="Does Monthly Mortgage Payment Include Taxes required" vminval="0" class="select"
+                        ng-model="rec.housingExpenses.monthlyMortgageHasTax" style="width: 100px"
+                        ng-options="type.key as type.value for type in common.SelectYesNo">
+                    </select>
+                </dd>
+                <dt style="width: 600px; font-weight: normal">Homeowners Insurance Payment:<span class="star">*</span></dt>
+                <dd style="width: 150px">
+                    <input valid="number" vminval="1" vmsg="value greater than 0"  maxlength="5" type="text" ng-model="rec.housingExpenses.hoiPayment" value="" class="" placeholder="$0.00">
+                </dd>
+                <dd style="width: 150px">
+                    <select class="select" valid="select"  vif="rec.housingExpenses.hoiPayment > 0"
+                        ng-model="rec.housingExpenses.hoiPaymentFreq" style="width: 100px"
+                        ng-options="type.key as type.value for type in common.ddPaymentFrequency">
+                    </select>
+                </dd>
+
+                <dt style="width: 600px; font-weight: normal">Does Monthly Mortgage Payment Include Insurance:<span class="star">*</span>
+                </dt>
+                <dd style="width: 150px"></dd>
+                <dd style="width: 150px">
+                    <select class="select" valid="select"  vmsg="Does Monthly Mortgage Payment Include Insurance required" vminval="0" 
+                        ng-model="rec.housingExpenses.monthlyMortgagePayment" style="width: 100px"
+                        ng-options="type.key as type.value for type in common.SelectYesNo">
+                    </select>
+                </dd>
+
+                <dt style="width: 600px; font-weight: normal">Other Insurance Payments (Total of Flood,Earthquake,Hurricane, etc):
+                </dt>
+                <dd style="width: 150px">
+                    <input valid="number"   vif="rec.housingExpenses.otherInsurancePaymentFreq != ''" maxlength="5" type="text" ng-model="rec.housingExpenses.otherInsurancePayment" value="" class="" placeholder="$0.00">
+                </dd>
+                <dd style="width: 150px">
+                    <!--This model was not there in the BaseXML.js -->
+                    <select class="select"  valid="select"  vif="rec.housingExpenses.otherInsurancePayment > 0"
+                        ng-model="rec.housingExpenses.otherInsurancePaymentFreq"  style="width: 100px"
+                        ng-options="type.key as type.value for type in common.ddPaymentFrequency">
+                    </select>
+                </dd>
+
+                <dt style="width: 600px; font-weight: normal">Other Housing Obligations Payments (Total of Supplemental Taxes, Liens, Mortgage Insurance, Lease Payment/Ground Lease, etc. Payments):
+                    
+                </dt>
+                <dd style="width: 150px">
+                    <input valid="number"  vif="rec.housingExpenses.otherHoPaymentFreq != ''" maxlength="5" type="text" ng-model="rec.housingExpenses.otherHoPayment" value="" class="" placeholder="$0.00">
+                </dd>
+                <dd style="width: 150px">
+                    <!--This model was not there in the BaseXML.js -->
+                    <select class="select" valid="select"  vif="rec.housingExpenses.otherHoPayment > 0"
+                        ng-model="rec.housingExpenses.otherHoPaymentFreq"  style="width: 100px"
+                        ng-options="type.key as type.value for type in common.ddPaymentFrequency">
+                    </select>
+                </dd>
+
+            </dl>
+        </div>
+    </div>
+</form>

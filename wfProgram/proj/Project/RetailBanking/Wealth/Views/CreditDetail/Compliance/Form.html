@@ -1,0 +1,248 @@
+﻿
+
+<div class="containerz">
+    <div class="containerz margintop20">
+        <div class="leftz80 ">
+            <span class=" leftnormallabel ">Banker - Select from the language choices in which this credit request is being discussed:</span><span class="star">*</span>
+        </div>
+        <div class="rightz20 col-lg-12">
+            <select valid="select" vminval="0" vmsg="Language choices requried" class="select" ng-model="applicationInfo.languagePref" style="width: 160px"
+                ng-options="type.key as type.value for type in common.Languages">
+            </select>
+
+        </div>
+    </div>
+    <div class="containerz" ng-show="applicationInfo.isCoAppAvailable == 'Y'">
+        <div class="leftz80 ">
+            <span class="leftnormallabel ">Do you have the authority to apply for joint credit on behalf of all co-applicants, or if more than one applicant present, is it your intent to apply jointly:</span><span class="star">*</span>
+        </div>
+        <div class="rightz20 col-lg-12">
+            <select valid="select" vminval="0" vmsg="Do you have the authority to apply for joint credit on behalf of all co-applicants, or if more than one applicant present, is it your intent to apply jointly required" class="select" ng-model="applicationInfo.jointApplicationApprovalInd" style="width: 160px"
+                ng-options="type.key as type.value for type in common.SelectYesNo">
+            </select>
+        </div>
+    </div>
+
+
+    <div class="containerz">
+        <div class="leftz80">
+            <span class="leftnormallabel">AUM:</span><span class="star">*</span>
+
+        </div>
+        <div class="rightz20 ">
+            <input class="" valid="number" ng-blur="showAumNotification()" vmsg="Whole number only" ng-model="applicationInfo.AUM" maxlength="9" type="text">
+        </div>
+
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br/>
+    <div class="container" ng-show="aumWarning == true">
+        <div class="alert alert-information" style="width: 80%">
+
+            <p>
+                <strong>IMPORTANT: </strong>
+                <label>Secured Primeline Plus is only available for: Clients who have AUM => than $1,000,000 or have a TPB Flag</label>
+            </p>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container">
+    <div ng-repeat="backQues in applicantInfoList">
+        <div class="containerz">
+            <div class="leftz80">
+                <h3 ng-if="backQues.applicantType == 'P'" class="georgia underlined clearfix" style="text-align: left; margin-left: 20px;"><span>Applicant</span></h3>
+                <h3 ng-if="backQues.applicantType == 'S'" class="georgia underlined clearfix" style="text-align: left; margin-left: 20px;"><span>Co Applicant</span></h3>
+            </div>
+        </div>
+        <div ng-repeat="item in common.SelectBackgroundList">
+            <div class="containerz">
+                <div class="leftz80 ">
+                    <span class="leftnormallabel  ">{{item.value}} </span><span class="star">*</span>
+                </div>
+                <div class="rightz20 col-lg-12">
+                    <select valid="select" vminval="0" vmsg="{{item.value}} required" class="select" ng-model="backQues.backgroundInfoQuesList.backgroundInfoQues[item.key]" style="width: 100px"
+                        ng-options="type.key as type.value for type in common.SelectYesNoNotProvided">
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div ng-show="isMaritalStatusApplicable()">
+            <div class="containerz" ng-show="backQues.applicantType == 'P'">
+                <div class="leftz80 ">
+                    <span class="leftnormallabel  ">Applicant Marital Status:</span><span class="star">*</span>
+                </div>
+                <div class="rightz20 col-lg-12">
+                    <select valid="select" vminval="0" vmsg="Applicant Marital Status requried" class="select" ng-model="applicant.maritalStatus" style="width: 100px"
+                        ng-options="type.key as type.value for type in common.ddMaritalStatus">
+                    </select>
+                </div>
+                <div class="leftz80" ng-show="applicant.maritalStatus=='U'">
+                    <span class="leftnormallabel">Are you a registered member of a Domestic Partnership or a Civil Union:</span><span class="star">*</span>
+                </div>
+                <div ng-show="applicant.maritalStatus=='U'">
+                    <div class="rightz20 col-lg-12">
+                        <select valid="select" vminval="0" vmsg="Domestic Partnership required" class="select" ng-model="applicant.domesticPartnerIndicator" style="width: 100px"
+                            ng-options="type.key as type.value for type in common.SelectYesNo">
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="containerz" ng-show="backQues.applicantType == 'S'">
+                <div class="leftz80 ">
+                    <span class="leftnormallabel  ">Co Applicant Marital Status:</span><span class="star">*</span>
+                </div>
+                <div class="rightz20 col-lg-12">
+                    <select valid="select" vminval="0" class="select" ng-model="coapplicant.maritalStatus" style="width: 100px"
+                        ng-options="type.key as type.value for type in common.ddMaritalStatus">
+                    </select>
+                </div>
+                <div class="leftz80" ng-show="coapplicant.maritalStatus=='U'">
+                    <span class="leftnormallabel ">Are you a registered member of a Domestic Partnership or a Civil Union:</span><span class="star">*</span>
+                </div>
+                <div class="rightz20 col-lg-12" ng-show="coapplicant.maritalStatus=='U'">
+                    <select valid="select" vminval="0" class="select" ng-model="coapplicant.domesticPartnerIndicator" style="width: 100px"
+                        ng-options="type.key as type.value for type in common.SelectYesNo">
+                    </select>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="container" ng-show="isTrustInBusinessTypeApplicable()">
+    <div class="leftz80 ">
+        <span class="leftnormallabel ">Trust & Individual Credit:</span><span class="star">*</span>
+    </div>
+    <div class="rightz20 col-lg-12">
+        <select valid="select" vminval="0" class="select" ng-model="businessTypeInfo.trustIndividualCredit" style="width: 160px"
+            ng-options="type.key as type.value for type in common.SelectYesNo">
+        </select>
+    </div>
+</div>
+<div ng-show="isSecurityWarningApplicable() == true" class="container clearfix margintop10">
+    <div class="alert alert-information" style="max-width: 80%;">
+        <p>
+            <strong>IMPORTANT: </strong>
+            <span><u>If the answer is ‘Yes’ or ‘Information not provided by Applicant in person, mail, internet or 
+                telephone application’</u>, the application may be subject to a background check 
+                (Level 2 credit investigation), a Detailed Background Report is required. 
+                The SLA for this report is 10 days.
+            </span>
+        </p>
+    </div>
+</div>
+
+<div id="wisconsin" style="display: none">
+    <div class="blackout"></div>
+    <div class="modalcontainer clearfix" style="width: 750px">
+        <p class="alignright marginbottom0 pull-right"><a ng-click="wisconsinWarningPopupClose()" href="javascript:;"><strong>X</strong></a></p>
+        <div class="modal-internal">
+            <h2><span>Wisconsin Marital Property Disclosure</span></h2>
+            <div class="">
+                <div class="margintop10">
+                    <div class="col alert alert-information" style="max-width: 100%; margin-right: 8px;">
+                        <p><strong>IMPORTANT: </strong><span style="font-family: sans-serif; font-weight: bold; font-size: 13px">Read to customer</span></p>
+                    </div>
+                </div>
+                <div class="marginbottom10  margintop20"></div>
+                <div style="width: 100%" class="margintop20">
+                    <span>{{common.TextWIDisclosureContent}}
+                    </span>
+                </div>
+                <div class="marginbottom10 margintop20"></div>
+                <div class="alignright">
+                    <button class="btn btn-primary" style="height: 35px" ng-click="setWIDisclousure()">Confirm Read to Customer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="aumWarningPopup" style="display: none">
+    <div class="blackout"></div>
+    <div class="modalcontainer clearfix">
+        <p class="alignright marginbottom0 pull-right"><a ng-click="aumWarningPopupClose()" href="javascript:;"><strong>X</strong></a></p>
+        <div class="modal-internal">
+            <h2><span>Product: Secured Prime Line Plus</span></h2>
+            <div class="">
+                <div style="width: 100%" class="margintop20">
+                    <span>Secured Primeline Plus is only available for: Clients who have AUM => than $1,000,000 or have a TPB Flag</span>
+                </div>
+                <div class="marginbottom10 margintop20"></div>
+                <div class="alignright">
+                    <button class="btn btn-primary" style="height: 35px" ng-click="applyAumLogic()">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--<div class="container">
+    <div class="hide">
+        <div id="Div1" style="width: 750px">
+            <div class="marginleft20 margintop10">
+                <div class="margintop10">
+                    <div class="col alert alert-information" style="max-width: 100%; margin-right: 8px;">
+                        <p><strong>IMPORTANT: </strong><span style="font-family: sans-serif; font-weight: bold; font-size: 13px">Read to customer</span></p>
+                    </div>
+                </div>
+                <div class="marginbottom10  margintop20"></div>
+                <div style="width: 100%" class="margintop20">
+                    <span>{{common.TextWIDisclosureContent}}
+                    </span>
+                </div>
+                <div class="marginbottom10  margintop10"></div>
+                <div class="margintop10">
+                    <div class="col alert alert-info-level1" style="max-width: 100%; margin-right: 8px;">
+                        <p><strong>REMINDER: </strong>If the customer is present, please print the Wisconsin Marital Property Disclosure from Forms OnLine and provide to the customer</p>
+                    </div>
+                </div>
+                <div class="marginbottom10 margintop20"></div>
+                <div class="alignleft">
+                    <button class="btn btn-primary" style="height: 35px" ng-click="setWIDisclousure()">Confirm Read to Customer</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+    <div ng-hide="true">
+        <a data-target="#disclaimer" id="A1" class="editlink" style="line-height: 1.0em;" data-cancelbtn="false" data-title="Wisconsin Marital Property Disclosure">Show Disclaimer</a>
+        <!--<a data-target="#CreditDetailDisclaimerModalPopup" id="wisconsin" class="hide editlink" data-buttontext="Close" data-cancelbtn="false" data-title="Wisconsin Marital Property Disclosure">Hidden</a>
+    </div>
+</div>-->
+
+<!--<div class="container">
+    <div class="hide">
+        <div id="aumWarningPopup" style="width: 750px">
+            <div class="marginleft20 margintop10">
+                <div class="margintop10">
+                    <div class="col alert alert-information" style="max-width: 100%; margin-right: 8px;">
+                        <p><span style="font-family: sans-serif; font-weight: bold; font-size: 16px">Product: Secured Prime Line Plus</span></p>
+                    </div>
+                </div>
+                <div class="marginbottom10  margintop20"></div>
+                <div style="width: 100%" class="margintop20">
+                    <label>Secured Primeline Plus is only available for: Clients who have AUM => than $1,000,000 or have a TPB Flag</label>
+                </div>
+                <div class="marginbottom10 margintop20"></div>
+                <div class="alignleft">
+                    <button class="btn btn-primary" style="height: 35px" ng-click="applyAumLogic()">Ok</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div ng-hide="true">
+        <a data-target="#aumWarningPopup" id="aumWarning" class="editlink" style="line-height: 1.0em;" data-cancelbtn="false" data-title="">AumWarning</a>
+    </div>
+</div>-->
+
+

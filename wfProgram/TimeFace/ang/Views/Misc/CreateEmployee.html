@@ -1,0 +1,53 @@
+<section style="padding: 2% 25%;" ng-controller="EmployeeCtrl">
+	<h2>Create New Employee</h2></br>
+	<input type="hidden" ng-model="user.type" ng-init="user.type = 'CreateEmployee'" />
+	<div class="form-group">
+		<label for="exampleInputEmail1">Name:</label>
+		<input type="text"  ng-model="user.employeename"  class="form-control" id="exampleInputEmail1" placeholder="Enter Name">
+	</div>
+	
+	<div class="form-group">
+		<label>Employee ID:</label>
+		<input  ng-model="user.employeeid"  type="text" class="form-control" placeholder="Enter Employee ID">
+	</div>
+	<div class="form-group">
+		<label>Title:</label>
+		<input  ng-model="user.title" type="text" class="form-control" placeholder="Enter Title">
+	</div>
+	<div class="form-group">
+		<label>Hourly Rate:</label>
+		<input ng-model="user.hourly"  type="number" class="form-control" placeholder="Enter Hourly Rate">
+	</div>
+	<div>
+		<label for="sel1">Planned In (time):</label>
+		<input  ng-model="user.PlannedIn"  type="text" class="form-control" placeholder="09:00">
+	</div>
+	<div>
+		<label for="sel1">Planned Out (time):</label>
+		<input  ng-model="user.PlannedOut"  type="text" class="form-control" placeholder="18:00 ">
+	</div>
+	<div class="form-group">
+		<label for="exampleInputPassword1">Digit PIN:</label>
+		<input  ng-model="user.PIN" type="number" class="form-control" placeholder="Enter PIN">
+	</div>
+	<div class="form-group">
+		<label>eMail:</label>
+        <input  ng-model="user.email" type="email" class="form-control" id="txtEmail" placeholder="Enter Email Address">
+	</div>
+		<div class="form-group">
+		<label>Mobile Number:</label>
+        <input  ng-model="user.mobileNumber" type="text" class="form-control" id="txtsms" placeholder="+919773XXXXXX">
+	</div>
+	<div class="form-group">
+		<label>Notifications:&nbsp;&nbsp;</label>
+		<input ng-init="user.notificationEmail=0" ng-model="user.notificationEmail" type="checkbox">&nbsp;&nbsp;Send eMail notification when employee checks-in or out <br/>
+		<input ng-init="user.notificationSms=0" ng-model="user.notificationSms" type="checkbox">&nbsp;&nbsp;Send SMS notification when employee checks-in or out <br/>
+	</div>
+	<div class="form-group">
+		<label>Permissions:</label></br>
+		<label style="font-weight:100;"><input  ng-model="user.activeOnApp" type="checkbox">&nbsp;&nbsp;<b>Login to the TimeStation App</b></br>(Employee can login with their eMail and Passowrd to the TimeStation App)</label></br>
+		<label style="font-weight:100;"><input ng-model="user.activeOnSite" type="checkbox">&nbsp;&nbsp;<b>Login to the TimeStation Site</b></br>(Employee can login with their eMail and Passowrd to the TimeStation Site)</label>
+	</div>
+		<button type="submit" ng-click="BtnSubmit(user)" class="btn btn-info">Create New Employee</button>
+	<span id="helpBlock" class="help-block">For batch employee import,&nbsp;<a id="download-link" href="https://play.google.com/store/apps/details?id=com.shifa.employee.logger" target="_blank">Download</a>&nbsp;and fill out the employee import template</span>
+</section>

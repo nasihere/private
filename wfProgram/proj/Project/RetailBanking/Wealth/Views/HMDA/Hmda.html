@@ -1,0 +1,16 @@
+﻿<div accordion-sections-link heading="HMDA/GMI Reporting" status="1"></div>
+
+<div class="tab-content" ng-controller="HMDAController" svpappinit>
+    <div accordion heading="Wealth - HMDA Information" panelid="dv21020112014" open="true">
+
+        <div ui-view="WealthHmdaInfo"></div>
+
+        <br />
+        <div ui-view="DisclosureReadCust"></div>
+        <div ui-view="InformationBanker"></div>
+        <div ui-view="ApplicantInformation"></div>
+    </div>
+    <!-- <div accordion heading="Applicant Information" panelid="dv21060112014" open="true">
+        <div ui-view="ApplicantInformation"></div>
+    </div>-->
+</div>

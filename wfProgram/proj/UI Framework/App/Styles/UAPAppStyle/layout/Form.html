@@ -1,0 +1,52 @@
+﻿					
+<article class="col-sm-12 col-md-12  {{form.size}} sortable-grid ui-sortable">
+				
+							<!-- Widget ID (each widget will need unique ID)-->
+							<div class="jarviswidget {{form.theme}} jarviswidget-sortable" id="wid-id-3" data-widget-colorbutton="false" data-widget-editbutton="false" data-widget-custombutton="false" role="widget">
+							
+									<header role="heading"><div class="jarviswidget-ctrls" role="menu">   <a href="javascript:void(0);" class="button-icon jarviswidget-toggle-btn" rel="tooltip" title="" data-placement="bottom" data-original-title="Collapse"><i class="fa fa-minus "></i></a> <a href="javascript:void(0);" class="button-icon jarviswidget-fullscreen-btn" rel="tooltip" title="" data-placement="bottom" data-original-title="Fullscreen"><i class="fa fa-expand "></i></a> <a href="javascript:void(0);" class="button-icon jarviswidget-delete-btn" rel="tooltip" title="" data-placement="bottom" data-original-title="Delete"><i class="fa fa-times"></i></a></div>
+									<span class="widget-icon"> <i class="fa {{form.formicon}}"></i> </span>
+                                        <h2 contenteditable="true">{{form.formcaption}} Window Title </h2>
+				
+								<span class="jarviswidget-loader"><i class="fa fa-refresh fa-spin"></i></span></header>
+				
+								<div role="content">
+				
+									<div class="jarviswidget-editbox">
+								
+									</div>
+									
+                                    <div class="widget-body no-padding" >
+
+                                        <form class="smart-form">
+                                            <header contenteditable="true">
+                                                {{form.heading}}
+                                            </header>
+
+                                            <fieldset >
+                                                <div >
+                                                    <div class="row" ng-repeat="row in form.fields" ng-if="row.length" >
+                                                        
+                                                        <section class="col {{option.cls}}  " ng-repeat="option in row">
+                                                            <label contenteditable="true" ng-if="option.label != ''"
+                                                                   class="{{form.classlabel}} label">{{option.label}}</label>
+                                                            <label class="input  {{option.state}} ">
+                                                                <i ng-if="option.icon != ''" class="icon-append fa  {{option.icon}}"></i>
+                                                                <app-input option="option"></app-input>
+                                                            </label>
+
+                                                        </section>
+                                                    </div>
+                                                </div>
+
+                                            </fieldset>
+
+                                        </form>
+
+                                    </div>
+								
+								</div>
+							
+							</div>
+							
+						</article>

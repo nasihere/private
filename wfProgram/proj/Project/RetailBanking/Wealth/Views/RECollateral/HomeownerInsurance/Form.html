@@ -1,0 +1,28 @@
+﻿<form>
+    <div class="row">
+        <div class="formset clearfix col col-lg-12 col-md-8 col-sm-8 col-xs-12 margintop0 marginbottom0">
+            <dl>
+                <dt style="font-weight: normal">
+                        Insurance Carrier:<span class="star">*</span>
+                </dt>
+                <dd style="width: 200px">
+                    <input valid="text" vmsg="Insurance Carrier required" ng-model="rec.hoiInformation.carrierName" type="text" value="" class="" placeholder="" maxlength="30">
+                </dd>
+                <dt style="font-weight: normal">
+                        Agent Name:
+                </dt>
+                <dd style="width: 200px">
+                    <input  ng-model="rec.hoiInformation.agentInformation.firstName" type="text" value="" class="" placeholder="" maxlength="20">
+                </dd>
+                <dt style="font-weight: normal">
+                        Agent Phone Number:
+                </dt>
+                <dd style="width: 200px">
+                    <input ng-model="rec.hoiInformation.agentInformation.phoneNumber" type="text" value="" class="" placeholder="" maxlength="10">
+                </dd>
+            </dl>
+
+        </div>
+
+    </div>
+</form>

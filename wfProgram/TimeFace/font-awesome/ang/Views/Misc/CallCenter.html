@@ -1,0 +1,109 @@
+<section  ng-controller="CallCenterCtrl">
+	<h2>Invoice Report</h2></br>
+	
+	<div class="form-group">
+		<div  class="col-sm-6">
+		<label for="exampleInputEmail1">Search:</label>
+		<input ng-model="search.$" type="text" class="form-control" placeholder="Enter Name">
+		Search by Name, Code, Amount, Comment..
+		
+		
+		
+	</div>
+
+	<div class="col-sm-6"  >
+		<div  ng-repeat="item in filtered = (data | filter:search:strict) " style="display:none">
+			
+		</div>
+		<b>Total Row:</b> {{filtered.length}}
+		<br />
+		<b>Total $:</b> {{SumTotal(filtered)}}  (Approx)
+		<br />
+		<b>TAX %17:</b> {{SumTotal(filtered) * 17 / 100}} (Approx)
+	
+		<br />
+		<b>Imran Refund $:</b> {{16804 - SumTotal(filtered)}}   ($16804 = INVOICE 13/04/2015-22/04/2015 + $1000 Hold amount) 
+		<br />
+		<b>New Bal $:</b> 1100 - (INVOICE 27/05/2015)
+
+	
+
+	</div>
+
+</div>
+	<div class="form-group">
+		<div class="col-sm-6">
+		
+		<input ng-model="search.returned" type="radio" value="1" name="ret"> CB
+		<input ng-model="search.returned" type="radio" value="0" name="ret"> Non CB 
+		<input ng-model="search.returned" type="radio" value="" name="ret"> Both 
+		<br/>
+		Search by Charge Back, Good Transaction, or both
+		
+		</div>
+	</div>
+
+	<div class="bs-example employee-table">
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Amount</th>
+					<th>Card</th>
+					<th>Date</th>
+					<th>Returned</th>
+					<th>Nasir</th>
+					<th>Imran</th>
+					<th>Ashish</th>
+				<th>Note</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="item in data | filter:search:strict | orderBy: ['timestamp'] ">
+					<td><a ng-init="SumTotalCal(item.name, $index);" id="download-link">{{item.amount}}<a></td>
+					<td>{{item.name}}</td>
+					<td>{{item.card}}</td>
+					<td>{{item.timestamp}}</td>
+					
+					<td>
+						<button ng-click="DoRet(item._id,1,item)" ng-if="item.returned == 0">Returned</button>
+						<button ng-click="DoRet(item._id,0,item)" ng-if="item.returned == 1">Not Returned</button>
+					</td>
+					<td>{{item.nasir}} -
+						</br>
+						<input type="text" ng-model="user.val_nasir" ng-if="item.returned == 1">
+					
+						<button ng-click="SaveComment(item._id,'nasir', user.val_nasir, item.nasir)" ng-if="item.returned == 1">Save Note</button>
+						
+						
+					</td>
+					
+					<td>{{item.imran}} -
+						</br>
+						<input type="text" ng-model="user.val_imran" ng-if="item.returned == 1">
+						<button ng-click="SaveComment(item._id,'imran', user.val_imran, item.imran)" ng-if="item.returned == 1">Save Note</button>
+						
+						
+					</td>
+					
+					<td>{{item.ashish}} - 
+						</br>
+						<input type="text" ng-model="user.val_ashish" ng-if="item.returned == 1">
+						<button ng-click="SaveComment(item._id,'ashish', user.val_ashish, item.ashish)" ng-if="item.returned == 1">Save Note</button>
+					</td>
+					
+					<td>{{item.note}} - 
+					
+					</td>
+					
+					
+					
+				</tr>
+				
+			</tbody>
+		</table>
+		
+	
+	</div>
+	
+</section>
