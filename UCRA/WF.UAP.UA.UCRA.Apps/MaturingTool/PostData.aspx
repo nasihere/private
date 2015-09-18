@@ -1,1 +1,0 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="PostData.aspx.cs" Inherits="WF.UAP.UA.UCRA.Apps.PostData" %>

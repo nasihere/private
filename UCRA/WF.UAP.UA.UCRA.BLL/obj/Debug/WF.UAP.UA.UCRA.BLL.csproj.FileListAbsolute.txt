@@ -1,3 +1,0 @@
-C:\0_Next\UAP\UA\UCRA\WF.UAP.UA.UCRA.BLL\obj\Debug\WF.UAP.UA.UCRA.BLL.csprojResolveAssemblyReference.cache
-C:\0_Next\UAP\UA\UCRA\WF.UAP.UA.UCRA.BLL\obj\Debug\WF.UAP.UA.UCRA.BLL.cas.Services.IAJAXHelper.resources
-C:\0_Next\UAP\UA\UCRA\WF.UAP.UA.UCRA.BLL\obj\Debug\WF.UAP.UA.UCRA.BLL.csproj.GenerateResource.Cache
