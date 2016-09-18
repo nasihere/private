@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/data.js"></script>
+<script src="/js/chartTheme.js"></script>
+<script src="/js/chartPie.js"></script>
+<script type="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<body style="background-color:#2a2a2b; padding:10px">
+
+
+<div class="row">
+  
+  <div class="col col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+    
+
+    <div class="dropdown open pull-right ">
+       
+      <div class="dropdown-menu" style="padding:10px" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="?type=GAS">GAS</a> |
+        <a class="dropdown-item" href="?type=OIL">OIL</a> |
+        <a class="dropdown-item" href="?type=GOLD">GOLD</a> |
+        <a class="dropdown-item" href="?type=SNP">SNP</a> |
+        <a class="dropdown-item" href="?type=SOCIAL">SOCIAL</a> |
+        <a class="dropdown-item" href="?type=ALL">All</a>
+      </div>
+    </div>
+  </div>
+
+</div
+
+<div class="row">
+  <!-- 
+  <div class="col col-lg-6 col-md-6 col-sm-12 col-xs-12">
+    <div id="containerVolume"></div>
+    <table id="datatableVolume" style='display:none'></table>
+  </div>
+ -->
+  <div class="col col-lg-6 col-md-6 col-sm-12 col-xs-12">
+    <div id="container"></div>
+    <table id="datatable" style='display:none'></table>
+  </div>
+</div>
+
+
+
+<div class="row">
+  
+</div>
+<div class="row">
+  <div class="col col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <h1>Bidder</h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col col-lg-4 col-md-4 col-sm-4 col-xs-6">
+    <div id="pieContainerGAS" style="min-width: 200px; height: 200px; margin: 0 auto"></div>
+ </div>
+ <div class="col col-lg-4 col-md-4 col-sm-4 col-xs-6">
+    <div id="pieContainerOIL" style="min-width: 200px; height: 200px; margin: 0 auto"></div>
+ </div>
+ <div class="col col-lg-4 col-md-4 col-sm-4 col-xs-6">
+    <div id="pieContainerGOLD" style="min-width: 200px; height: 200px; margin: 0 auto"></div>
+ </div>
+  <div class="col col-lg-4 col-md-4 col-sm-4 col-xs-6">
+    <div id="pieContainerSNP" style="min-width: 200px; height: 200px; margin: 0 auto"></div>
+  </div>
+<!-- 
+  <div class="col col-lg-4 col-md-4 col-sm-4 col-xs-6">
+    <div id="pieContainerSOCIAL" style="min-width: 200px; height: 200px; margin: 0 auto"></div>
+  </div> -->
+
+</div>
+
+
+
+
+<div class="row">
+  <div class="col col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <pre id="jsonData"></pre>
+ </div>
+
+</div>
+
+<div class="row" style="display:none;">
+  <div class="col col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <pre>
+      <h4>Red Color</h4>
+        <h7>When red <i>BAR</i> line increased tremendously and <i>BIDDER</i> red slice is smaller, that means bearish are demanded for that stocks. Other word, that stocks will go up as per the investor. Good time to buy.</h7>
+       
+      </pre>
+      <pre>
+        <h4>Green Color</h4>
+          <h7>When Green <i>BAR</i> line increased tremendously and <i>BIDDER</i> green slice is smaller, that means bullish are demanded for that stocks. Other word, that stocks will go up as per the investor. Good time to hold/buy.</h7>
+         
+      </pre>
+
+       <pre>
+        <h4>Red / Green Color</h4>
+          <h7>When Red <i>BAR</i> line inverse pf green bar  <i>BIDDER</i> green and red slices are equal, that means stock may be go any direction. Stay away! Invest Small Amount. Invest in both. Good time to sell/buy.</h7>
+         
+      </pre>
+
+ </div>
+
+</div>
+
+<script type="text/javascript">
+$(function () {
+  function fetch() {
+          $.get( "/getQuote", function( data ) {
+            //console.log(data);  
+            drawChart(data);
+           // drawChartVolume(data);
+            drawBidDiff('pieContainerGAS', data.pie[0], data.pie[0]);
+            drawBidDiff('pieContainerOIL', data.pie[1], data.pie[1]);
+            drawBidDiff('pieContainerGOLD', data.pie[2], data.pie[2]);
+            drawBidDiff('pieContainerSNP', data.pie[3], data.pie[3]);
+            // drawBidDiff('pieContainerSOCIAL', data.pie[4].name, data.pie[4].series);
+            jsonPrint(data.data);
+        });
+      }
+    fetch();
+    setInterval(function(){ fetch() }, 8000);
+ });
+</script>
+
+</body>

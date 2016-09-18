@@ -4,16 +4,11 @@
   "description": "Volumne Indicator Alarm",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
-  "engines": {
-    "node": "5.9.1"
-  },
-  "dependencies": {
-    "express": "^4.14.0",
-    "request": "^2.74.0"
+  "devDependencies": {
+    "robinhood": "^0.3.1"
   }
 }
