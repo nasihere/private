@@ -1,7 +1,7 @@
 <?php
     session_start(); 
     $ses_id = session_id();
-    $link = mysql_connect('naszus.ipagemysql.com', 'nasz', 'Nasir@1234'); 
+    $link = mysql_connect('naszus.xxxxxxx.com', 'nasz', 'xxxx@1234'); 
     mysql_select_db(shifakent); 
     if (!$link) { 
         die('Could not connect: ' . mysql_error()); 

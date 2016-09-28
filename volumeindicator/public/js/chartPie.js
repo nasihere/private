@@ -1,16 +1,18 @@
 function jsonPrint(data) {
     $('#jsonData').html(JSON.stringify(data,null,4));
 }
-function drawBidDiff (container,typeParam, dataParam) {
+function drawBidDiff (container, dataParam) {
    // var series1 = [data[0], ];
-    if (typeParam === undefined) return;
+    if (dataParam === undefined) return;
     var data = dataParam.series;
-    var type = typeParam.name;
+    var type = dataParam.name;
     var series = [
                 [data[0][0],-data[0][1]],
                 [data[0][1],-data[1][1]]
             ];
     drawBidDemand(container, type, series);
+
+
 }
 function drawBidDemand(container,type, series) {
 
@@ -108,7 +110,7 @@ function drawChart(data) {
             animation: false
         },
         title: {
-            text: 'Volume Current'
+            text: 'Volume Percent'
         },
         series: {
             animation: false
@@ -117,8 +119,7 @@ function drawChart(data) {
             allowDecimals: false,
             title: {
                 text: 'Number'
-            },
-            min: 0, max: 400
+            }
         },
         tooltip: {
             formatter: function () {

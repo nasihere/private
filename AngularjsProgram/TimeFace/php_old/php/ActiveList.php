@@ -6,9 +6,9 @@
 	}
     $p = $_REQUEST;     
 	if ($ran == 0)
-         $link = mysql_connect('naszus.ipagemysql.com', 'nasz', 'Nasir@1234'); 
+         $link = mysql_connect('naszus.xxxxxxxx.com', 'nasz', 'xxxxxxxx@1234'); 
     else
-         $link = mysql_connect('naszus.ipagemysql.com', 'nasz'.$ran, 'Nasir@1234'); 
+         $link = mysql_connect('naszus.xxxxxxxx.com', 'nasz'.$ran, 'xxxxxxxx@1234'); 
     mysql_select_db(elogger); 
     if (!$link) { 
         die('Could not connect: ' . mysql_error()); 

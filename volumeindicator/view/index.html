@@ -3,13 +3,16 @@
 <script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
 <script src="https://code.highcharts.com/highcharts.js"></script>
 <script src="https://code.highcharts.com/modules/data.js"></script>
+<script src="https://code.highcharts.com/highcharts-more.js"></script>
 <script src="/js/chartTheme.js"></script>
 <script src="/js/chartPie.js"></script>
+<script src="/js/chartSpeedoMeter.js"></script>
 <script type="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/css/style.css">
 <body style="background-color:#2a2a2b; padding:10px">
 
-
+<!-- 
 <div class="row">
   
   <div class="col col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
@@ -28,19 +31,28 @@
     </div>
   </div>
 
-</div
+</div> -->
+
+
 
 <div class="row">
-  <!-- 
-  <div class="col col-lg-6 col-md-6 col-sm-12 col-xs-12">
-    <div id="containerVolume"></div>
-    <table id="datatableVolume" style='display:none'></table>
-  </div>
- -->
-  <div class="col col-lg-6 col-md-6 col-sm-12 col-xs-12">
+  <div class="col col-lg-6 col-md-6 col-sm-6 col-xs-6"><div id="speedContainerUGAZ" class='speedo'></div></div>
+  <div class="col col-lg-6 col-md-6 col-sm-6 col-xs-6"><div id="speedContainerDGAZ" class='speedo'></div></div>
+  <div class="col col-lg-6 col-md-6 col-sm-6 col-xs-6"><div id="speedContainerUWTI" class='speedo'></div></div>
+  <div class="col col-lg-6 col-md-6 col-sm-6 col-xs-6"><div id="speedContainerDWTI" class='speedo'></div></div>
+  <div class="col col-lg-6 col-md-6 col-sm-6 col-xs-6"><div id="speedContainerNUGT" class='speedo'></div></div>
+  <div class="col col-lg-6 col-md-6 col-sm-6 col-xs-6"><div id="speedContainerDUST" class='speedo'></div></div>
+  <div class="col col-lg-6 col-md-6 col-sm-6 col-xs-6"><div id="speedContainerSVXY" class='speedo'></div></div>
+  <div class="col col-lg-6 col-md-6 col-sm-6 col-xs-6"><div id="speedContainerUVXY" class='speedo'></div></div>
+</div>
+
+
+<div class="row">
+  <div class="col col-lg-12 col-md-12 col-sm-12 col-xs-12">
     <div id="container"></div>
-    <table id="datatable" style='display:none'></table>
+      <table id="datatable" style='display:none'></table>
   </div>
+
 </div>
 
 
@@ -83,6 +95,7 @@
 
 </div>
 
+
 <div class="row" style="display:none;">
   <div class="col col-lg-12 col-md-12 col-sm-12 col-xs-12">
     <pre>
@@ -104,19 +117,40 @@
 
  </div>
 
+
+
+<!-- 
+
+
+  !-->
 </div>
 
 <script type="text/javascript">
 $(function () {
   function fetch() {
           $.get( "/getQuote", function( data ) {
-            //console.log(data);  
+           // console.log(data.speed);  
             drawChart(data);
            // drawChartVolume(data);
-            drawBidDiff('pieContainerGAS', data.pie[0], data.pie[0]);
-            drawBidDiff('pieContainerOIL', data.pie[1], data.pie[1]);
-            drawBidDiff('pieContainerGOLD', data.pie[2], data.pie[2]);
-            drawBidDiff('pieContainerSNP', data.pie[3], data.pie[3]);
+            drawBidDiff('pieContainerGAS', data.pie[0]);
+            drawBidDiff('pieContainerOIL', data.pie[1]);
+            drawBidDiff('pieContainerGOLD', data.pie[2]);
+            drawBidDiff('pieContainerSNP', data.pie[3]);
+          
+
+            drawVolumeDemand('speedContainerUGAZ', data.speed[0]);
+            drawVolumeDemand('speedContainerDGAZ', data.speed[1]);
+            
+            drawVolumeDemand('speedContainerUWTI', data.speed[2]);
+            drawVolumeDemand('speedContainerDWTI', data.speed[3]);
+            
+            drawVolumeDemand('speedContainerNUGT', data.speed[4]);
+            drawVolumeDemand('speedContainerDUST', data.speed[5]);
+          
+            drawVolumeDemand('speedContainerUVXY', data.speed[6]);
+            drawVolumeDemand('speedContainerSVXY', data.speed[7]);
+          
+
             // drawBidDiff('pieContainerSOCIAL', data.pie[4].name, data.pie[4].series);
             jsonPrint(data.data);
         });

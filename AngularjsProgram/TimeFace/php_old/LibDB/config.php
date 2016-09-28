@@ -1,3 +1,4 @@
+
 <?php
 	date_default_timezone_set('Africa/Lagos');
     $p = $_REQUEST;     
@@ -9,7 +10,7 @@
     	
     }
 	else{
-	    	$link = mysql_connect('naszus.ipagemysql.com', 'dev', '123456'); 
+	    	$link = mysql_connect('naszus.xxxxx.com', 'dev', '123456'); 
 	}
 	
     mysql_select_db(elogger); 

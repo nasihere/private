@@ -1,6 +1,6 @@
 <?php
 
-       $link = mysql_connect('naszus.ipagemysql.com', 'nasz', 'Nasir@1234');
+       $link = mysql_connect('naszus.XXXX.com', 'nasz', 'XXXX@1234');
        if (!$link) {
             die('Could not connect: ' . mysql_error());
         }
