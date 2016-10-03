@@ -7,12 +7,10 @@ export class Navbar extends React.Component{
                 <div className="container-fluid">
                     <div className="navbar-header">
                         <ul className="nav navbar-nav">
-                            <li className="active" >
-                                <Link activeClassName={'active'} to={'/home'}>Home</Link>
-                            </li>
-                            <li>
-                                <Link activeClassName={'active'} to={'/contact'}>Contact</Link>
-                            </li>
+                            <li><Link activeClassName={'active'} to={'/aboutUs'}>About Us</Link></li>
+                             <li><Link activeClassName={'active'} to={'/services'}>Services</Link></li>
+                            <li><Link activeClassName={'active'} to={'/home'}>Home</Link></li>
+                            <li><Link activeClassName={'active'} to={'/contactUs'}>Contact Us</Link></li>
                         </ul>
                     </div>
                 </div>
