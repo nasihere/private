@@ -49,7 +49,7 @@
 // var obj2 = {num:5};
 
 // var addToThis = function(a,b,c) {
-// 	return this.num + a + b + c;node 
+// 	return this.num + a + b + c; 
 // }
 
 // let val = addToThis.call(obj, 1, 2, 3); // functionName.call(object, functionArgument);
@@ -67,7 +67,7 @@
 var obj = {num:2};
 
 var addToThis = function(a,b,c) {
-	return this.num + a + b + c;node 
+	return this.num + a + b + c;
 }
 
 

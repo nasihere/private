@@ -1,0 +1,147 @@
+<ion-navbar *navbar class="tab-nav">
+	<ion-buttons start>
+		<button (click)="toggleSearchbar()">
+			<ion-icon name="search"></ion-icon>
+		</button>
+	</ion-buttons>
+
+  	<ion-title>Rewards</ion-title>
+
+	<ion-buttons end>
+		<button (click)="handleRewardHistory()">
+			History
+		</button>
+	</ion-buttons>
+</ion-navbar>
+
+<ion-toolbar [attr.primary]="isAndroid ? '' : null" class="rewards-segments">
+    <ion-segment [(ngModel)]="rewardtype" [attr.light]="isAndroid ? '' : null">
+        <ion-segment-button value="purchase">
+            Purchase
+        </ion-segment-button>
+        <ion-segment-button value="redeem">
+            Redeem
+        </ion-segment-button>
+        <ion-segment-button value="gift">
+            Gift
+        </ion-segment-button>
+    </ion-segment>
+</ion-toolbar>
+
+
+<ion-header-bar class="rewards-topinfo">
+	<ion-searchbar id="searchBar" [hidden]="hideSearchbar" [(ngModel)]="keyword" (cancel)="userPressedCancel()" (keyup.enter)="keyHasBeenPressed()"></ion-searchbar>
+
+	<!-- TOP ELEMENT WITH POINT TOTALS -->
+	<rewardsinfobar [userrewardsinfo]="userrewardsinfo"></rewardsinfobar>
+</ion-header-bar>
+
+
+<ion-content class="tab-rewards">
+    <!-- Body -->
+
+
+  	<button (click)="checkout()">Purchase</button>
+
+
+
+		<!-- SHOW LIST OF POINTS PURCHASES -->
+		<div [ngSwitch]="rewardtype">
+				<ion-list *ngSwitchWhen="'purchase'">
+						<div *ngFor="#result of purchaserewards; #i = index">
+								<rewardspurchase [feedinfo]="result"></rewardspurchase>
+						</div>
+				</ion-list>
+		</div>
+
+		<!-- SHOW LIST OF REDEEM REWARDS -->
+		<div [ngSwitch]="rewardtype">
+				<ion-list *ngSwitchWhen="'redeem'">
+						<div *ngFor="#result of redeemrewards; #i = index">
+								<rewardsredeem [feedinfo]="result"></rewardsredeem>
+						</div>
+				</ion-list>
+		</div>
+
+		<!-- GIFT PODIIM POINTS SECTION -->
+		<div [ngSwitch]="rewardtype">
+			<div *ngSwitchWhen="'gift'">
+				<div class="giftheader"></div>
+				<div class="giftinfo">
+					<ion-list>
+						<form [ngFormModel]="giftPointsForm">
+								<ion-item>
+									<ion-label stacked class="large-font">How many Points do you want to gift?</ion-label>
+									<ion-select [(ngModel)]="podiimpoints">
+										<ion-option value="500" checked="true">500 Points</ion-option>
+										<ion-option value="1000">1000 Points</ion-option>
+										<ion-option value="2500">2500 Points</ion-option>
+										<ion-option value="5000">5000 Points</ion-option>
+										<ion-option value="10000">10000 Points</ion-option>
+										<ion-option value="25000">25000 Points</ion-option>
+										<ion-option value="50000">50000 Points</ion-option>
+									 </ion-select>
+								</ion-item>
+								<div class="giftor">OR</div>
+								<ion-item>
+									<ion-label stacked class="large-font">Custom Points</ion-label>
+									<ion-input ngControl="points" type="text" placeholder="Enter Points to Gift">
+									</ion-input>
+								</ion-item>
+
+								<ion-item>
+									<ion-row>
+										<ion-col class="col-70">
+											<div class="large-font giftwho">Who do you want to Gift?</div>
+										</ion-col>
+										<ion-col class="col-30 text-right">
+											<button small primary (click)="handleSelectPerson()">Select</button>
+										</ion-col>
+									</ion-row>
+								</ion-item>
+
+								<!-- LIST OF USERS, WILL LIKELY BE CONVERTED INTO A COMPONENT -->
+								<ion-item>
+									<ion-row center>
+										<ion-col class="col-30 text-center">
+										<ion-avatar item-right>
+											<img src="build/images/stanshaul-sm.jpg">
+										</ion-avatar>
+										</ion-col>
+										<ion-col width-50>
+										<div class="feedtitle">Denise Vargas</div>
+										<div class="feedinfo">37, Paris, France</div>
+										</ion-col>
+										<ion-col width-20 class="text-center">
+										<ion-icon name="close-circle" (click)="handleRemovePerson()"></ion-icon>
+										</ion-col>
+									</ion-row>
+								</ion-item>
+
+								<div class="buttonwrap text-center">
+									<button outline round type="button" class="btn-full" (click)="handleGifting()">Gift The Points!</button>
+								</div>
+						</form>
+					</ion-list>
+				</div>
+			</div>
+
+		</div>
+
+</ion-content>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

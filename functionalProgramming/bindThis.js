@@ -42,6 +42,6 @@ let dog = {
 	}
 }
 dog.talk(); // 'undefined'
-let talkFunction = dog.talk;
-let boundFunction = talkFunction.bind(dog);
-boundFunction(); // 'woof'
+let talkFunction = dog.talk.bind(dog)();
+//let boundFunction = talkFunction.bind(dog);
+//boundFunction(); // 'woof'

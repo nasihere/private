@@ -1,0 +1,63 @@
+<ion-navbar *navbar class="tab-nav">
+<ion-title>Required Information</ion-title>
+</ion-navbar>
+
+<ion-content class="required">
+  <!-- Body -->
+  <div class="registerheader"></div>
+  <div class="registerphone transparent">
+    <form [ngFormModel]="requiredForm">
+      <ion-list>
+        <ion-item>
+          <ion-label stacked>Name</ion-label>
+          <ion-input ngControl="name" type="text" placeholder="Enter your full name">
+          </ion-input>
+        </ion-item>
+        <p [hidden]="requiredForm.controls.name.pristine || requiredForm.controls.name.valid">Please provide a name</p>
+        <ion-item>
+          <ion-label stacked>Username</ion-label>
+          <ion-input ngControl="username" type="text" placeholder="Enter a username">
+          </ion-input>
+        </ion-item>
+        <p [hidden]="requiredForm.controls.username.pristine || requiredForm.controls.username.valid">Please provide a Username</p>
+        <ion-item>
+          <ion-label stacked>Date of Birth</ion-label>
+          <ion-input ngControl="birthday" type="date" placeholder="Enter your birth date">
+          </ion-input>
+        </ion-item>
+        <p [hidden]="requiredForm.controls.birthday.pristine || requiredForm.controls.birthday.valid">Please provide a birth date</p>
+        <ion-item>
+          <ion-label stacked>Gender</ion-label>
+          <ion-select [(ngModel)]="gender">
+            <ion-option value="M">Male</ion-option>
+            <ion-option value="F">Female</ion-option>
+           </ion-select>
+        </ion-item>
+        <p [hidden]="requiredForm.controls.gender.untouched || requiredForm.controls.gender.valid">Please provide your gender</p>
+        <ion-item>
+          <ion-label stacked>Email</ion-label>
+          <ion-input ngControl="email" type="email" placeholder="Enter an email">
+          </ion-input>
+        </ion-item>
+        <p [hidden]="requiredForm.controls.email.pristine || requiredForm.controls.email.valid">Please provide an email</p>
+        <ion-item>
+          <ion-label stacked>Mobile Number</ion-label>
+          <ion-input ngControl="mobile" type="tel" placeholder="Enter a phone number">
+          </ion-input>
+        </ion-item>
+        <p [hidden]="requiredForm.controls.mobile.pristine || requiredForm.controls.mobile.valid">Please provide a mobile number</p>
+        <div class="buttonwrap text-center">
+          <button outline round (click)="handleRequiredNext()" type="button" class="btn-full">Next</button>
+        </div>
+       </ion-list>
+    </form>
+  </div>
+
+  <!-- Footer -->
+  <div id="setupfooter">
+    <div class="footernav">
+      <p class="text-muted">By creating an account, you agree to Podiim’s <button clear (click)="openTOS()">Terms of Service</button>, <button clear (click)="openPrivacy()">Privacy Policy</button>, <button clear (click)="openRewardsTerms()">Rewards Terms</button>. <button clear (click)="openAboutUs()">About Us</button>.</p>
+    </div>
+  </div>
+
+</ion-content>

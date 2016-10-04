@@ -1,0 +1,33 @@
+<!-- HANDLES FOLLOWING PEOPLE -->
+<ion-item-sliding class="peoplefollowing">
+  <ion-item>
+    <ion-row center>
+      <ion-col width-20 class="text-left">
+        <ion-avatar item-right>
+          <img [src]="feedinfo.icon" [ngClass]="{'white-border': !feedinfo.challengedyet, 'black-border': feedinfo.challengedyet}">
+        </ion-avatar>
+      </ion-col>
+      <ion-col width-50>
+        <div class="usertitle">{{feedinfo.name}}</div>
+        <div class="feedinfo">{{feedinfo.age}}, {{feedinfo.city}}, {{feedinfo.country}}</div>
+      </ion-col>
+      <ion-col class="text-right followerchk">
+        <ion-icon [hidden]="!feedinfo.follower" name="checkmark"></ion-icon>
+      </ion-col>
+    </ion-row>
+  </ion-item>
+  <ion-item-options>
+    <button sl_challenge (click)="handleChallenge(feedinfo)">
+      <ion-icon name="timer" sl_icons></ion-icon>
+      Challenge
+    </button>
+    <button sl_chagain [hidden]="feedinfo.following" (click)="handleFollow(feedinfo)">
+      <ion-icon name="thumbs-up" sl_icons></ion-icon>
+      Follow
+    </button>
+    <button sl_chagain [hidden]="!feedinfo.following" (click)="handleUnfollow(feedinfo)">
+      <ion-icon name="thumbs-down" sl_icons></ion-icon>
+      Unfollow
+    </button>
+  </ion-item-options>
+</ion-item-sliding>

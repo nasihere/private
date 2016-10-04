@@ -1,0 +1,8 @@
+<!-- CHOOSE YOUR CHALLENGER FOR NEW CHALLENGE -->
+<ion-item class="choosechallenger">
+	<ion-checkbox [(ngModel)]="feedinfo.chosen"></ion-checkbox>
+	<ion-avatar item-right>
+		<img [src]="feedinfo.icon" [ngClass]="{'white-border': !feedinfo.challengedyet, 'black-border': feedinfo.challengedyet}">
+	</ion-avatar>
+	<ion-label class="usertitle">{{feedinfo.name}}</ion-label>
+</ion-item>

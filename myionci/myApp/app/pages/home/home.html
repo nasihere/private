@@ -1,0 +1,49 @@
+<ion-content class="home">
+
+  <!-- Image Wrapper -->
+  <div id="bgwrapper">
+
+    <!-- Body -->
+    <div class="welcomewrap text-center">
+      <ion-row center>
+        <ion-col width-90>
+            <span class="welcome1 color-white">WELCOME TO</span>
+        </ion-col>
+      </ion-row >
+      <ion-row center>
+        <ion-col width-90>
+            <img alt="" class="img-responsive center-block welcomelogo" src="build/images/podiimlogo.png">
+        </ion-col>
+      </ion-row >
+      <ion-row center>
+        <ion-col width-90>
+            <span class="welcomemsg color-white">Challenge Yourself & Your friends.<br>Have fun. Exercise.<br>Earn Rewards.</span>
+        </ion-col>
+      </ion-row >
+    </div>
+
+    <div class="welcome-hiw-wrap">
+      <div class="buttonwrap text-center">
+         <button outline round (click)="openHowItWorks()" type="button" class="btn-full color-white border-white">See How It Works</button>
+      </div>
+    </div>
+    <div class="welcome-lisu-wrap text-center">
+      <ion-row center>
+        <ion-col width-50>
+          <button clear primary (click)="openLogin()">Log In</button>
+        </ion-col>
+        <ion-col width-50>
+          <button clear primary (click)="openRegister()">Sign Up</button>
+        </ion-col>
+      </ion-row >
+    </div>
+  </div>
+
+</ion-content>
+
+<!-- Footer -->
+<div id="setupfooter">
+  <div class="footernav">
+    <p class="text-muted">By creating an account, you agree to Podiim’s <button clear (click)="openTOS()">Terms of Service</button>, <button clear (click)="openPrivacy()">Privacy Policy</button>, <button clear (click)="openRewardsTerms()">Rewards Terms</button>. <button clear (click)="openAboutUs()">About Us</button>.</p>
+  </div>
+</div>

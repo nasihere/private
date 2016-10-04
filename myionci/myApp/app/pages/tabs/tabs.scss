@@ -1,0 +1,117 @@
+.tabstyle {
+  .tab-button {
+    background-color: $tabbar-color;
+    min-width: 0;
+    padding: 0px 2px;
+  }
+
+  tabbar {
+    border-color: $tabbar-color;
+    background: $tabbar-color;
+  }
+
+  .tab-button[aria-selected=true] {
+    color: black;
+    .tab-button-icon {
+      opacity: 0;
+    }
+  }
+
+  .tab-button[aria-selected=false] {
+    color: $icon-bg-selected;
+    .tab-button-icon {
+      opacity: 0;
+    }
+  }
+
+  /*
+  ** Set all tabs to their desired icon and background color when selected and deselected
+  ** Class is tab-button - select by position
+  */
+  .tab-button:nth-child(1)[aria-selected=true] {
+      background: url('../images/homeactiveicon.png') no-repeat center, $icon-bg-selected;
+      background-position: 50% 20%;
+      background-size: 30px;
+  }
+
+  .tab-button:nth-child(1)[aria-selected=false] {
+      background: url('../images/homeicon.png') no-repeat center, $icon-bg-notselected;
+      background-position: 50% 20%;
+      background-size: 30px;
+  }
+
+  .tab-button:nth-child(2)[aria-selected=true] {
+      background: url('../images/challengesactiveicon.png') no-repeat center, $icon-bg-selected;
+      background-position: 50% 20%;
+      background-size: 30px;
+  }
+  .tab-button:nth-child(2)[aria-selected=false] {
+      background: url('../images/challengesicon.png') no-repeat center, $icon-bg-notselected;
+      background-position: 50% 20%;
+      background-size: 30px;
+  }
+
+  .tab-button:nth-child(3)[aria-selected=true] {
+      background: url('../images/peopleactiveicon.png') no-repeat center, $icon-bg-selected;
+      background-position: 50% 20%;
+      background-size: 30px;
+  }
+
+  .tab-button:nth-child(3)[aria-selected=false] {
+      background: url('../images/peopleicon.png') no-repeat center, $icon-bg-notselected;
+      background-position: 50% 20%;
+      background-size: 30px;
+  }
+
+  .tab-button:nth-child(4)[aria-selected=true] {
+      background: url('../images/rewardsactiveicon.png') no-repeat center, $icon-bg-selected;
+      background-position: 50% 20%;
+      background-size: 30px;
+  }
+  .tab-button:nth-child(4)[aria-selected=false] {
+      background: url('../images/rewardsicon.png') no-repeat center, $icon-bg-notselected;
+      background-position: 50% 20%;
+      background-size: 30px;
+  }
+
+  .tab-button:nth-child(5)[aria-selected=true] {
+      background: url('../images/moreactiveicon.png') no-repeat center, $icon-more-selected;
+      background-position: 50% 20%;
+      background-size: 30px;
+  }
+
+  .tab-button:nth-child(5)[aria-selected=false] {
+      background: url('../images/moreicon.png') no-repeat center, $icon-bg-notselected;
+      background-position: 50% 20%;
+      background-size: 30px;
+  }
+}
+
+/*
+** Setup Header Styling for tab pages
+*/
+.tab-nav {
+  .toolbar-background {
+      border-bottom-width: 1px;
+      border-bottom-style: solid;
+      border-color: $tabnav-bg-color;
+      background: $tabnav-bg-color;
+  }
+  .toolbar-title {
+    color: white;
+  }
+}
+
+.more-button{
+  position: absolute !important;
+  right: 0px;
+  bottom: 0px;
+  width: 20%;
+  padding: 0px;
+}
+
+
+
+
+
+

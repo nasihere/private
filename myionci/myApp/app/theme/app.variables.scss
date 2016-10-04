@@ -1,0 +1,84 @@
+// http://ionicframework.com/docs/v2/theming/
+// Responsive Width Sizes
+$break-xsmall:      320px;
+$break-small:       480px;
+$break-medium:      768px;
+$break-large:       992px;
+
+$break-iphone5w:    320px;
+$break-iphone5mw:   568px;
+$break-iphone6w:    375px;
+$break-iphone6mw:   667px;
+$break-iphone6pw:   414px;
+$break-iphone6pmw:  736px;
+
+// General Colors
+$podiim_yellow:       #FFCD00;
+$site_red:            #FF0000;
+$site_green:          #339933;
+
+// Custom Site Colors
+$podiimtxt:           $podiim_yellow;
+$background-color:    #383838;
+$bgwrapper-color:     #1C1C1C;
+$modal-bg-color:      #D7D7D7;
+$list-sep-color:      #565656;
+$icon-more-selected:  #f4f4f4;
+$icon-bg-selected:    $podiim_yellow;
+$icon-bg-notselected: #30302F;
+$tabbar-color:        #30302F;
+$tabnav-bg-color:     #4F4F4D;
+
+// Rewards Colors
+$purchase_amount:     #32db64;
+$purchase_points:     #f4f4f4;
+$purchase_desc:       $podiim_yellow;
+$purchase_discount:   $podiim_yellow;
+$redeem_points:       #32db64;
+$redeem_desc:         $podiim_yellow;
+
+
+// App Shared Variables
+// --------------------------------------------------
+// To customize the look and feel of this app, you can override
+// the Sass variables found in Ionic's source scss files. Setting
+// variables before Ionic's Sass will use these variables rather than
+// Ionic's default Sass variable values. App Shared Sass imports belong
+// in the app.core.scss file and not this file. Sass variables specific
+// to the mode belong in either the app.ios.scss or app.md.scss files.
+
+
+// App Shared Color Variables
+// --------------------------------------------------
+// It's highly recommended to change the default colors
+// to match your app's branding. Ionic uses a Sass map of
+// colors so you can add, rename and remove colors as needed.
+// The "primary" color is the only required color in the map.
+// Both iOS and MD colors can be further customized if colors
+// are different per mode.
+
+$colors: (
+  primary:    $podiimtxt,
+  secondary:  #32db64,
+  danger:     #f53d3d,
+  light:      #f4f4f4,
+  dark:       #222,
+  favorite:   #69BB7B,
+
+  // Custom colors
+
+  // Sliders
+  sl_icons:       $podiimtxt,
+  sl_challenge:   #69BB7B,
+  sl_friend:      #f53d3d,
+  sl_accept:      #69BB7B,
+  sl_reject:      #f53d3d,
+  sl_counter:     #f4f4f4,
+  sl_winner:      #69BB7B,
+  sl_loser:       #f53d3d,
+  sl_chagain:     #f4f4f4,
+  sl_socialize:   #69BB7B,
+  sl_smacktalk:   #f53d3d,
+  sl_complete:    #6dcaf5
+);
+

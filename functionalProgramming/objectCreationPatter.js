@@ -1,5 +1,5 @@
-//contsruc pattern
 //factory pattern
+//contsruc pattern
 //prototype pattern
 //dynamic pattern
 

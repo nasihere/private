@@ -1,0 +1,53 @@
+.loginverify {
+  .verifyheader {
+    padding-top: 0%;
+  }
+
+  .verifycode {
+    padding-top: 0%;
+  }
+
+  .verifycode .buttonwrap {
+    padding-bottom: 20px;
+  }
+
+  .verifyresend {
+    padding-top: 10%;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  .verifyresend .resendwrap {
+    padding-bottom: 10px;
+  }
+
+  .resendtxt {
+    font-size: 16px;
+    color: white;
+  }
+
+  .resendtxt a {
+    color: #FFCD00;
+  }
+
+  .verifyresend button {
+    line-height: normal;
+    color: $podiimtxt;
+    font-size: 16px;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: transparent;
+    vertical-align: top;
+  };
+
+  .verifycode p {
+    margin-left: 15px;
+    color: $podiimtxt;
+  };
+
+  .messagewrap {
+    padding-bottom: 5%;
+  }
+}

@@ -1,0 +1,35 @@
+.required {
+  .registerheader {
+    padding-top: 0%;
+  };
+
+  .registerphone {
+    padding-top: 0%;
+  };
+
+  .registerphone .buttonwrap {
+    padding-bottom: 20px;
+  };
+
+  .registeror {
+    padding-top: 10%;
+    padding-bottom: 10%;
+    @media screen and (min-width: $break-xsmall) {
+      padding-top: 0%;
+      padding-bottom: 2%;
+    }
+    @media screen and (min-width: $break-small) {
+      padding-top: 0%;
+      padding-bottom: 2%;
+    }
+    @media only screen and (min-device-width: $break-iphone6w) and (max-device-width: $break-iphone6mw) and (orientation : portrait) {
+      padding-top: 10%;
+      padding-bottom: 10%;
+    }
+    @media only screen and (min-device-width: $break-iphone6pw) and (max-device-width: $break-iphone6pmw) and (orientation : portrait) {
+      padding-top: 10%;
+      padding-bottom: 10%;
+    }
+   };
+
+}

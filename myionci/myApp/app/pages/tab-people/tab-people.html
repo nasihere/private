@@ -1,0 +1,67 @@
+<ion-navbar *navbar class="tab-nav">
+	<ion-buttons start>
+		<button (click)="toggleSearchbar()">
+			<ion-icon name="search"></ion-icon>
+		</button>
+	</ion-buttons>
+
+    <ion-title>People</ion-title>
+
+    <ion-buttons end>
+        <button (click)="handleInvite()">
+            Invite
+        </button>
+    </ion-buttons>
+</ion-navbar>
+
+<ion-toolbar [attr.primary]="isAndroid ? '' : null" class="people-segments">
+    <ion-segment [(ngModel)]="peopletype" [attr.light]="isAndroid ? '' : null">
+        <ion-segment-button value="following">
+            Following
+        </ion-segment-button>
+        <ion-segment-button value="followers">
+            Followers
+        </ion-segment-button>
+        <ion-segment-button value="suggested">
+            Suggested
+        </ion-segment-button>
+    </ion-segment>
+</ion-toolbar>
+
+
+<ion-header-bar class="people-topinfo">
+	<ion-searchbar id="searchBar" [hidden]="hideSearchbar" [(ngModel)]="keyword" (cancel)="userPressedCancel()" (keyup.enter)="keyHasBeenPressed()"></ion-searchbar>
+</ion-header-bar>
+
+<ion-content class="tab-people">
+    <!-- Body -->
+
+    <!-- PEOPLE WHO YOU FOLLOW -->
+    <div [ngSwitch]="peopletype">
+        <ion-list *ngSwitchWhen="'following'">
+            <div *ngFor="#result of following; #i = index">
+                <peoplefollowing [feedinfo]="result"></peoplefollowing>
+            </div>
+        </ion-list>
+    </div>
+
+    <!-- PEOPLE WHO FOLLOW YOU -->
+    <div [ngSwitch]="peopletype">
+        <ion-list *ngSwitchWhen="'followers'">
+            <div *ngFor="#result of followers; #i = index">
+                <peoplefollowers [feedinfo]="result"></peoplefollowers>
+            </div>
+        </ion-list>
+    </div>
+
+    <!-- SUGGESTED PEOPLE -->
+    <div [ngSwitch]="peopletype">
+        <ion-list *ngSwitchWhen="'suggested'">
+            <div *ngFor="#result of suggested; #i = index">
+                <peoplesuggested [feedinfo]="result"></peoplesuggested>
+            </div>
+        </ion-list>
+    </div>
+
+</ion-content>
+

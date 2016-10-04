@@ -1,0 +1,182 @@
+.tab-rewards {
+	/*
+	** ADDITIONAL FEED STYLING
+	*/
+	.container {
+		padding-right: 15px;
+		padding-left: 15px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+	.position-left {
+		position: absolute;
+		left: 15px;
+	}
+
+	.position-center {
+		position: absolute;
+		left: 50%;
+	}
+
+	.position-right {
+		position: absolute;
+		right: 15px;
+	}
+
+	.top-negative-margin{
+		margin-top: -5px;
+	}
+	.row {
+		margin-right: -15px;
+		margin-left: -15px;
+	}
+	.no-vertical-padding {
+		padding-top: 0px !important;
+		padding-bottom: 0px !important;
+	}
+
+	/*
+	** Ionic list style overides
+	*/
+	.item {
+		padding-left: 0px;
+	}
+
+	.item-inner {
+		padding-right: 0px;
+		border-bottom: 0px;
+	}
+
+	ion-label {
+		margin: 4px 4px 4px 0;
+	}
+
+
+	ion-list > .item:last-child,
+	ion-list > ion-item-sliding:last-child .item {
+		border-bottom: 1px solid $list-sep-color;
+	}
+
+	.toolbar-background {
+		border: 0;
+	}
+
+	ion-label{
+		white-space: normal;
+	}
+
+	.large-font{
+		font-size: large;
+	}
+
+	.giftheader {
+		padding-top: 0%;
+	}
+
+	.giftinfo {
+		padding-top: 5%;
+		padding-left: 7%;
+		padding-right: 7%;
+	}
+
+	.giftor {
+		font-size: 14px;
+		color: $podiimtxt;
+		margin-bottom: 10px;
+	}
+
+	.giftwho {
+		color: $podiimtxt;
+	}
+
+	ion-row {
+		padding: 0px;
+	}
+
+	.button-outline {
+		border-width: 1px;
+	    border-style: solid;
+	    border-color: $podiimtxt;
+	    color: black;
+	    background-color: $podiimtxt;
+	}
+
+	.feedtitle {
+		font-size: 17px;
+		color: $podiimtxt;
+	}
+
+	.feedinfo {
+		font-size: 14px;
+		color: white;
+	}
+
+	ion-icon {
+	    font-size: 1.8em;
+	}
+
+	/*
+	** Make profile icon bigger
+	*/
+	ion-avatar {
+		min-width: 4.0rem;
+		min-height: 4.0rem;
+		padding-top: 2px;
+	}
+
+	ion-avatar img {
+		max-width: 4.0rem;
+		max-height: 4.0rem;
+		border-radius: 2.0rem;
+	}
+
+	/*
+	** Purchase Listing
+	*/
+	.purchaseprice {
+		color: $purchase_amount;
+		font-size: 14px;
+	}
+
+	.purchasepoints {
+		color: $purchase_points;
+	}
+
+	.purchasedesc {
+		color: $purchase_desc;
+		font-size: 12px;
+	}
+
+	.purchasediscount {
+		color: $purchase_discount;
+		font-size: 12px;
+	}
+
+	/*
+	** Redeem Listing
+	*/
+	.redeempoints {
+		color: $redeem_points;
+		font-size: 14px;
+	}
+
+	.redeemdesc {
+		color: $redeem_desc;
+		font-size: 14px;
+	}
+
+}
+
+/*
+** Fix Segment Nav Info. & Search Bar
+*/
+.rewards-segments {
+  .toolbar-background {
+    background-color: $background-color;
+    border: 0;
+  }
+}
+
+.rewards-topinfo {
+	background-color: $background-color;
+}

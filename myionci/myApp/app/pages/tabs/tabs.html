@@ -1,0 +1,9 @@
+<ion-tabs id="navtabs" class="tabstyle" tabbarPlacement="bottom" [selectedIndex]="0">
+  <ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="pulse" [tabBadge]="homebadges" tabBadgeStyle="danger"></ion-tab>
+  <ion-tab [root]="tab2Root" tabTitle="Challenges" tabIcon="chatbubbles" [tabBadge]="challengebadges" tabBadgeStyle="danger"></ion-tab>
+  <ion-tab [root]="tab3Root" tabTitle="People" tabIcon="cog" [tabBadge]="peoplebadges" tabBadgeStyle="danger"></ion-tab>
+  <ion-tab [root]="tab4Root" tabTitle="Rewards" tabIcon="water" [tabBadge]="rewardbadges" tabBadgeStyle="danger"></ion-tab>
+  <ion-tab [root]="tab5Root" tabTitle="More" tabIcon="leaf" [tabBadge]="morebadges" tabBadgeStyle="danger"></ion-tab>
+</ion-tabs>
+<div class="tab-button more-button" (click)="showModal()">
+</div>

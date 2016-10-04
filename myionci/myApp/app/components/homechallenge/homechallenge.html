@@ -1,0 +1,56 @@
+<!-- SOMEONE CHALLENGED YOU -->
+<ion-item-sliding>
+  <ion-item>
+    <ion-row center>
+      <ion-col width-20 class="no-vertical-padding">
+        <ion-avatar item-left>
+          <img [src]="feedinfo.icon">
+        </ion-avatar>
+      </ion-col>
+      <ion-col width-50>
+        <div class="feedtitle">{{feedinfo.name}}</div>
+        <div class="feedinfo">has challenged you...</div>
+      </ion-col>
+      <ion-col class="col-30 text-right">
+        <span class="feedpoints">{{feedinfo.reward}}</span>
+          <span class="feedpointsicon">
+              <img alt="" src="build/images/podiumpoints_sm.png">
+          </span>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col width-20>
+      </ion-col>
+      <ion-col width-33>
+        <div class="feeddatetitle">STARTS AT</div>
+        <div class="feeddate">{{feedinfo.start}}</div>
+      </ion-col>
+      <ion-col width-33>
+        <div class="feeddatetitle">END ON</div>
+        <div class="feeddate">{{feedinfo.end}}</div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col width-20>
+      </ion-col>
+      <ion-col width-50>
+        <div class="feedeventtitle">{{feedinfo.type | uppercase}}</div>
+        <div class="feedevent">{{feedinfo.description}}</div>
+      </ion-col>
+    </ion-row>
+  </ion-item>
+  <ion-item-options>
+    <button sl_counter (click)="handleAcceptAndCounter(feedinfo)">
+      <ion-icon name="timer" sl_icons></ion-icon>
+      Accept<br>&<br>Counter
+    </button>
+    <button sl_reject (click)="handleReject(feedinfo)">
+      <ion-icon name="thumbs-down" sl_icons></ion-icon>
+      Reject
+    </button>
+    <button sl_accept (click)="handleAccept(feedinfo)">
+      <ion-icon name="thumbs-up" sl_icons></ion-icon>
+      Accept
+    </button>
+  </ion-item-options>
+</ion-item-sliding>

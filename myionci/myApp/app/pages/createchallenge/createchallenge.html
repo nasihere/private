@@ -1,0 +1,175 @@
+<ion-navbar *navbar class="tab-nav">
+<ion-title>New Challenge</ion-title>
+</ion-navbar>
+
+<ion-content class="createchallenge">
+    <!-- Body -->
+
+  <div class="container top-padding">
+    <form [ngFormModel]="challengeform" (ngSubmit)="onSubmit(challengeform.value)">
+
+
+    <!-- GENERAL CHALLENGE INFO -->
+
+      <div class="color-white general-padding">GENERAL</div>
+
+      <ion-list>
+         <ion-item>
+          <ion-label stacked>Competition Name</ion-label>
+          <ion-input [ngFormControl]="challengeform.controls['name']" type="text" placeholder="Name the challenge">
+          </ion-input>
+        </ion-item>
+        <p class="color-red container" [hidden]="challengeform.controls.name.pristine || challengeform.controls.name.valid">Please provide a competition name</p>
+
+        <ion-item>
+          <ion-label stacked>Purpose</ion-label>
+          <ion-select [ngFormControl]="challengeform.controls['purpose']">
+            <ion-option value="health" checked="true">Health and Fitness</ion-option>
+           </ion-select>
+        </ion-item>
+
+        <ion-item>
+          <ion-label stacked>Time Frame</ion-label>
+          <ion-select [ngFormControl]="challengeform.controls['timeframe']">
+            <ion-option value="1day" checked="true">1 Day</ion-option>
+            <ion-option value="2days">2 Days</ion-option>
+            <ion-option value="3days">3 Days</ion-option>
+            <ion-option value="1week">1 Week</ion-option>
+            <ion-option value="2weeks">2 Weeks</ion-option>
+            <ion-option value="1month">1 Month</ion-option>
+           </ion-select>
+        </ion-item>
+
+        <ion-item>
+          <ion-label stacked>Start Date</ion-label>
+          <ion-input [ngFormControl]="challengeform.controls['startdate']" type="date" placeholder="Start date">
+          </ion-input>
+        </ion-item>
+      </ion-list>
+
+      <div class="color-white general-padding">SPORTS & METRICS</div>
+      <ion-list>
+        <ion-item>
+          <ion-label stacked>Type of Challenge</ion-label>
+          <ion-select [ngFormControl]="challengeform.controls['challengetype']">
+            <ion-option value="1v1" checked="true">One on One</ion-option>
+            <ion-option value="myself">Challenge Myself</ion-option>
+            <ion-option value="other">Challenge Other</ion-option>
+           </ion-select>
+        </ion-item>
+
+        <ion-item>
+          <ion-label stacked>Category</ion-label>
+          <ion-select [ngFormControl]="challengeform.controls['category']">
+            <ion-option value="running" checked="true">Running</ion-option>
+            <ion-option value="cycling">Cycling</ion-option>
+            <ion-option value="swimming">Swimming</ion-option>
+            <ion-option value="lifting">Lifting</ion-option>
+           </ion-select>
+        </ion-item>
+
+        <ion-item>
+          <ion-label stacked>Challenge Course</ion-label>
+          <ion-select [ngFormControl]="challengeform.controls['challengecourse']">
+            <ion-option value="distance" checked="true">Distance</ion-option>
+            <ion-option value="time">Time</ion-option>
+            <ion-option value="reps">Reps</ion-option>
+           </ion-select>
+        </ion-item>
+
+         <ion-item>
+          <ion-label stacked>Describe the Challenge</ion-label>
+          <ion-input [ngFormControl]="challengeform.controls['description']" type="text" placeholder="Describe the challenge">
+          </ion-input>
+        </ion-item>
+        <p class="color-red container" [hidden]="challengeform.controls.description.pristine || challengeform.controls.description.valid">Please provide a description of the challenge</p>
+
+
+        <ion-item>
+          <ion-label stacked>Proof of Completion</ion-label>
+          <ion-select [ngFormControl]="challengeform.controls['proof']">
+            <ion-option value="uploadpic" checked="true">Upload a Picture</ion-option>
+            <ion-option value="enterURL">Enter a URL</ion-option>
+            <ion-option value="enterresults">Enter the Results</ion-option>
+            <ion-option value="location">Location Check-in</ion-option>
+           </ion-select>
+        </ion-item>
+
+         <ion-item>
+          <ion-label stacked>Describe How To Prove Completion (Optional)</ion-label>
+          <ion-input [ngFormControl]="challengeform.controls['proofdescription']" type="text" placeholder="Take a picture at the finish line!">
+          </ion-input>
+        </ion-item>
+      </ion-list>
+
+
+
+      <!-- SOCIAL AND REWARDS -->
+
+      <div class="color-white general-padding">SOCIAL & REWARDS</div>
+
+      <ion-list>
+
+        <ion-item>
+          <ion-label stacked>Challenge Privacy</ion-label>
+          <ion-select [ngFormControl]="challengeform.controls['privacy']">
+            <ion-option value="private" checked="true">Private</ion-option>
+            <ion-option value="public">Public</ion-option>
+           </ion-select>
+        </ion-item>
+
+        <ion-item>
+          <ion-label stacked>Reward</ion-label>
+          <ion-select [ngFormControl]="challengeform.controls['reward']">
+            <ion-option value="100P" checked="true">100P</ion-option>
+            <ion-option value="250P">250P</ion-option>
+            <ion-option value="500P">500P</ion-option>
+            <ion-option value="1000P">1000P</ion-option>
+            <ion-option value="all">All my Podiims</ion-option>
+           </ion-select>
+        </ion-item>
+
+
+
+        <!-- COMPETITORS -->
+        <div class="color-white general-padding">COMPETITORS</div>
+
+        <div *ngFor="#result of everyperson; #i = index">
+          <choosechallenger [feedinfo]="result"></choosechallenger>
+        </div>
+
+        <ion-item>
+          <ion-label stacked>Socialize (Optional)</ion-label>
+          <ion-select [ngFormControl]="challengeform.controls['socialize']" multiple="true">
+            <ion-option value="none" checked="true">None</ion-option>
+            <ion-option value="twitter">Twitter</ion-option>
+            <ion-option value="facebook">Facebook</ion-option>
+           </ion-select>
+        </ion-item>
+
+
+        <ion-row center>
+          <ion-col width-20>
+            <ion-checkbox [ngFormControl]="challengeform.controls['readterms']" class="checkbox-padding"></ion-checkbox>
+          </ion-col>
+          <ion-col>
+            <span class="usertitle">I agree with the</span>
+            <span class="linktext" (click)="openSafetyTerms()">Terms of Safety</span>
+          </ion-col>
+        </ion-row>
+
+
+
+      </ion-list>
+
+      <div class="buttonwrap text-center">
+        <button outline round type="submit" class="btn-full">Submit</button>
+      </div>
+      <div class="buttonwrap text-center">
+        <button (click)="openActiveChallengePage()" outline round type="button" class="btn-full">Active Challenge</button>
+      </div>
+    </form>
+  </div>
+
+
+</ion-content>

@@ -1,0 +1,16 @@
+<!-- PURCHASE PODIIM POINTS -->
+<ion-item>
+  <ion-row>
+    <ion-col width-20 class="text-center">
+      <div class="purchaseprice">{{feedinfo.currencysymbol+feedinfo.price}}</div>
+    </ion-col>
+    <ion-col width-50>
+      <div class="purchasepoints">{{feedinfo.points}} Points</div>
+      <div class="purchasedesc">{{feedinfo.description}}</div>
+      <div *ngIf="feedinfo.savingspercent > 0" class="purchasediscount">{{feedinfo.savingspercent+"% discount"}}</div>
+    </ion-col>
+    <ion-col class="col-30 text-right">
+      <button small primary (click)="handleBuy(feedinfo)">Buy</button>
+    </ion-col>
+  </ion-row>
+</ion-item>

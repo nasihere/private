@@ -1,0 +1,60 @@
+<ion-navbar *navbar class="tab-nav">
+	<ion-buttons start>
+		<button (click)="toggleSearchbar()">
+			<ion-icon name="search"></ion-icon>
+		</button>
+	</ion-buttons>
+
+  	<ion-title>Home</ion-title>
+
+	<ion-buttons end>
+		<button (click)="handleShowMyProfile()">
+			<ion-avatar>
+				<img [src]="userprofile.icon">
+			</ion-avatar>
+		</button>
+	</ion-buttons>
+</ion-navbar>
+
+<ion-header-bar class="home-topinfo">
+	<ion-searchbar id="searchBar" [hidden]="hideSearchbar" [(ngModel)]="keyword" (cancel)="userPressedCancel()" (keyup.enter)="keyHasBeenPressed()"></ion-searchbar>
+
+	<!-- Show the Info Bar -->
+	<homeinfobar></homeinfobar>
+</ion-header-bar>
+
+<ion-content class="tab-home">
+
+	<!-- Body -->
+	<div class="homephone container">
+
+		<!-- Show the feed list -->
+		<ion-list>
+			<div *ngFor="#result of results; #i = index">
+				<div [ngSwitch]="result.itemtype">
+					<template [ngSwitchWhen]="'challenge'">
+						<homechallenge [feedinfo]="result"></homechallenge>
+					</template>
+					<template [ngSwitchWhen]="'completed'">
+						<homecompleted [feedinfo]="result"></homecompleted>
+					</template>
+					<template [ngSwitchWhen]="'joined'">
+						<homejoined [feedinfo]="result"></homejoined>
+					</template>
+					<template [ngSwitchWhen]="'won'">
+						<homewon [feedinfo]="result" [userprofile]="userprofile"></homewon>
+					</template>
+					<template [ngSwitchWhen]="'lost'">
+						<homelost [feedinfo]="result" [userprofile]="userprofile"></homelost>
+					</template>
+					<template ngSwitchDefault>
+					</template>
+				</div>
+			</div>
+		</ion-list>
+
+	</div>
+
+</ion-content>
+
+

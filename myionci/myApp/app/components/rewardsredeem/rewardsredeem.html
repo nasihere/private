@@ -1,0 +1,19 @@
+<!-- REDEEM REWARDS -->
+<ion-item>
+  <ion-row>
+    <ion-col width-15 class="text-center">
+      <div class="redeempoints">{{feedinfo.points}} Points</div>
+    </ion-col>
+    <ion-col width-20>
+        <span class="redeemicon">
+            <img alt="" src="{{feedinfo.icon}}">
+        </span>
+    </ion-col>
+    <ion-col width-45>
+      <div class="redeemdesc">{{feedinfo.description}}</div>
+    </ion-col>
+    <ion-col class="col-30 text-right">
+      <button small primary (click)="handleBuy(feedinfo)">Redeem</button>
+    </ion-col>
+  </ion-row>
+</ion-item>

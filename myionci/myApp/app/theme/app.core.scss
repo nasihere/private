@@ -1,0 +1,350 @@
+// http://ionicframework.com/docs/v2/theming/
+
+/*
+** Color Styling
+*/
+.color-white {
+  color: white !important;
+}
+
+.color-yellow {
+  color: $podiim_yellow !important;
+}
+
+.color-red {
+  color: $site_red !important;
+}
+
+.color-green {
+  color: $site_green !important;
+}
+
+.border-white {
+  border: 1px solid white;
+}
+
+.border-yellow {
+  border: 1px solid $podiim_yellow;
+}
+
+.transparent{
+  background:rgba(255,255,255,0.1);
+}
+
+.bg-yellow {
+  background-color: $podiim_yellow;
+}
+
+/*
+** Site Styling
+*/
+html {
+  position: relative;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+html,
+body {
+  margin:0;
+  padding:0;
+  height:100%;
+}
+
+#bgwrapper {
+  background-color: $bgwrapper-color;
+  background-image: url("../images/bg.png");
+  background-size: cover;
+  min-height:100%;
+}
+
+#wrapper {
+  background-color: $background-color;
+  background-size: cover;
+  min-height:100%;
+  position:relative;
+}
+
+#header {
+  min-height:64px;
+}
+
+.vertical-align {
+  display: flex;
+  align-items: center;
+}
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: $podiimtxt;
+  text-decoration: none;
+}
+
+.displaytxt {
+  color: white;
+  font-size: 16px;
+}
+
+.text-muted {
+  color: $podiimtxt;
+}
+
+.text-muted .button-inner  {
+  padding-top: 1px;
+}
+
+.img-right {
+  display: inline !important;
+}
+
+.no-pad {
+  padding-right: 5px !important;
+  padding-left: 5px !important;
+}
+
+.no-pad-left {
+  padding-left: 0px !important;
+}
+
+.no-pad-right {
+  padding-right: 0px !important;
+}
+
+.center-block {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+img {
+  vertical-align: middle;
+  border: 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.white-border{
+  border: 2px solid white;
+}
+
+.black-border{
+  border: 2px solid black;
+}
+
+.col-30 {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 30%;
+  -ms-flex: 0 0 30%;
+  flex: 0 0 30%;
+  max-width: 30%;
+}
+
+.item-inner ion-label,
+.item-input ion-label,
+.select-icon
+.select-icon-inner,
+.select-text,
+.text-input {
+  color: $podiim_yellow;
+}
+
+.registerphone p {
+  margin-left: 15px;
+  color: $podiim_yellow;
+}
+
+.registersm .buttonwrap {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+/*
+** Button/Anchor Styling
+*/
+.buttonwrap {
+  padding-top: 25px;
+  padding-bottom: 0px;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.btn-full {
+  width: 90%;
+}
+
+/*
+** Message Styling
+*/
+.messagewrap {
+  padding-top: 10px;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.messagetxt {
+  font-size: 16px;
+  color: $podiimtxt;
+}
+
+/*
+** Setup Footer Styling
+*/
+#content {
+  padding-bottom:33px;   /* Height of the footer element + 5 px buffer */
+}
+
+#mainfooter {
+  height: 33px;
+}
+
+.footernav {
+  padding-left: 3%;
+  padding-right: 3%;
+  font-size: 10px;
+  background-color: black;
+}
+
+.footernav button {
+  color: white;
+  font-size: 10px;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: transparent;
+  vertical-align: top;
+}
+
+#setupfooter {
+  width:100%;
+  background-color: black;
+  position:absolute;
+  bottom:0;
+  left:0;
+  z-index: 10000;
+}
+
+/*
+** Setup Info styling
+*/
+.tctitle h3 {
+  font-size: 18px;
+}
+
+.tcparagraph {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.tcparagraph h4 {
+  font-size: 14px;
+}
+
+.tcparagraph li, .tcparagraph p {
+  font-size: 12px;
+}
+
+/*
+** Profile Image Styling
+*/
+ion-avatar img,
+ion-thumbnail img {
+  display: inline-block;
+}
+
+.nav-profile-pic {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 44px;
+  width: 44px;
+}
+
+.circleborder {
+  border: 2px solid rgba(255,205,0,0.80);
+  border-radius: 100%;
+  display: inline-block;
+  padding: 1px 1px;
+}
+
+.profile-smallcircle {
+  height: 30px;
+  border-radius: 50%;
+  position: relative;
+  left: 0px;
+}
+
+.circleborderwht {
+  border: 2px solid rgba(255, 255, 255, 0.80);
+  border-radius: 100%;
+  display: inline-block;
+  padding: 1px 1px;
+}
+
+/*
+** Alignment
+*/
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+// App Shared Imports
+// --------------------------------------------------
+// These are the imports which make up the design of this app.
+// By default each design mode includes these shared imports.
+// App Shared Sass variables belong in app.variables.scss.
+@import "../pages/profile/profile.scss";
+@import "../pages/tab-challenges/tab-challenges.scss";
+@import "../pages/createchallenge/createchallenge.scss";
+@import "../pages/activechallenge/activechallenge.scss";
+@import "../pages/tab-home/tab-home.scss";
+@import "../components/homeinfobar/homeinfobar.scss";
+@import "../components/rewardsinfobar/rewardsinfobar.scss";
+@import "../components/historywon/historywon.scss";
+@import "../components/historylost/historylost.scss";
+@import "../components/historygifted/historygifted.scss";
+@import "../components/historypurchase/historypurchase.scss";
+@import "../components/peoplefollowers/peoplefollowers.scss";
+@import "../components/peoplefollowing/peoplefollowing.scss";
+@import "../components/peoplesuggested/peoplesuggested.scss";
+@import "../components/choosechallenger/choosechallenger.scss";
+@import "../pages/tab-more/tab-more.scss";
+@import "../pages/tab-people/tab-people.scss";
+@import "../pages/tab-rewards/tab-rewards.scss";
+@import "../pages/tabs/tabs.scss";
+@import "../pages/history/history.scss";
+@import "../pages/home/home.scss";
+@import "../pages/login/login.scss";
+@import "../pages/loginverify/loginverify.scss";
+@import "../pages/register/register.scss";
+@import "../pages/registerverify/registerverify.scss";
+@import "../pages/required/required.scss";
+@import "../pages/optional/optional.scss";
+@import "../pages/aboutus/aboutus.scss";
+@import "../pages/rewardsterms/rewardsterms.scss";
+@import "../pages/privacypolicy/privacypolicy.scss";
+@import "../pages/safetyterms/safetyterms.scss";
+@import "../pages/tos/tos.scss";
+@import "../pages/faq/faq.scss";
+@import "../pages/contactus/contactus.scss";
+

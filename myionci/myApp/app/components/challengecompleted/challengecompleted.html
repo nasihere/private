@@ -1,0 +1,40 @@
+<!-- SOMEONE WON/LOST VS ANOTHER PERSON (NOT YOU) -->
+<ion-item-sliding>
+  <ion-item>
+    <ion-row>
+      <ion-col width-20>
+        <ion-avatar item-left>
+          <img [src]="feedinfo.icon_win">
+        </ion-avatar>
+      </ion-col>
+      <ion-col width-50>
+        <div class="feedtitle">{{feedinfo.name_win}}</div>
+        <div class="feedinfo"><strong>WON</strong> a challenge with</div>
+        <div class="feedtitle">{{feedinfo.name_lose}}</div>
+      </ion-col>
+      <ion-col class="col-30 text-right">
+        <ion-avatar item-right>
+          <img [src]="feedinfo.icon_lose">
+        </ion-avatar>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col width-20>
+      </ion-col>
+      <ion-col width-80>
+        <div class="feedeventtitle">{{feedinfo.type | uppercase}}</div>
+        <div class="feedevent">{{feedinfo.description}}</div>
+      </ion-col>
+    </ion-row>
+  </ion-item>
+  <ion-item-options>
+    <button sl_winner (click)="handleChallengeWinner(feedinfo)">
+      <ion-icon name="timer" sl_icons></ion-icon>
+      Challenge<br>{{feedinfo.name_win}}
+    </button>
+    <button sl_loser (click)="handleChallengeLoser(feedinfo)">
+      <ion-icon name="timer" sl_icons></ion-icon>
+      Challenge<br>{{feedinfo.name_lose}}
+    </button>
+  </ion-item-options>
+</ion-item-sliding>

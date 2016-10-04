@@ -1,0 +1,151 @@
+<ion-navbar *navbar class="tab-nav">
+<ion-title>Active Challenge</ion-title>
+</ion-navbar>
+
+<ion-content class="activechallenge">
+    <!-- Body -->
+
+  <div class="container">
+
+    <ion-row class="top-padding">
+      <ion-col class="usertitle text-center">
+        {{challengeinfo.duration}}
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="text-center title-text">
+        {{challengeinfo.title}}
+      </ion-col>
+    </ion-row>
+
+
+    <ion-row style="height: 80px;">
+      <ion-avatar class="avatar-left">
+        <img [src]="thisuser.icon" class="white-border">
+      </ion-avatar>
+      <div [hidden]="!challengeinfo.isleading">
+        <div class="gold-border leading-border-left">
+        </div>
+        <span class="color-white leading-text-left">LEADING</span>
+      </div>
+      <div class="white-line-wrapper">
+        <div class="white-line-style"></div>
+      </div>
+      <span class="title-text vs-position">VS</span>
+      <ion-avatar class="avatar-right">
+        <img [src]="challenger.icon" class="white-border">
+      </ion-avatar>
+      <div [hidden]="challengeinfo.isleading">
+        <div class="gold-border leading-border-right">
+        </div>
+        <span class="color-white leading-text-right">LEADING</span>
+      </div>
+    </ion-row>
+
+
+    <div class="buttonwrap text-center">
+      <button (click)="handleUpdateResults()" outline round type="button" class="btn-full">Update your Results</button>
+    </div>
+
+    <ion-row class="no-padding-bottom">
+      <ion-col class="text-center title-text-small">
+        {{challengeinfo.activity | uppercase}}
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="usertitle text-center">
+        {{challengeinfo.description}}
+      </ion-col>
+    </ion-row>
+
+    <div class="buttonwrap-small text-center">
+      <button (click)="handleReward()" outline round type="button" class="btn-full">{{challengeinfo.reward}}P</button>
+    </div>
+
+
+
+    <ion-row>
+      <ion-col width-50 class="text-left color-white">
+        {{thisuser.name}}
+      </ion-col>
+      <ion-col width-50 class="text-right color-white">
+        {{challenger.name}}
+      </ion-col>
+    </ion-row>
+
+
+    <ion-row class="category-padding">
+      <ion-col class="text-center categorytitle no-padding-bottom">
+        Cumulative Distance
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <!-- WHITE TEXT FOR CATEGORIES YOU ARE LOSING -->
+      <ion-col width-50 class="text-left usertitle" [ngClass]="{'color-white': thisuser.totaldistance <= challenger.totaldistance}">
+        {{thisuser.totaldistance}} Miles
+      </ion-col>
+      <ion-col width-50 class="text-right usertitle" [ngClass]="{'color-white': thisuser.totaldistance >= challenger.totaldistance}">
+        {{challenger.totaldistance}} Miles
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="category-padding">
+      <ion-col class="text-center categorytitle no-padding-bottom" >
+        Favorite Distance
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col width-50 class="text-left usertitle" [ngClass]="{'color-white': thisuser.favdistance <= challenger.favdistance}">
+        {{thisuser.favdistance}} miles
+      </ion-col>
+      <ion-col width-50 class="text-right usertitle" [ngClass]="{'color-white': thisuser.favdistance >= challenger.favdistance}">
+        {{challenger.favdistance}} miles
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="category-padding">
+      <ion-col class="text-center categorytitle no-padding-bottom">
+        Average Speed
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col width-50 class="text-left usertitle" [ngClass]="{'color-white': thisuser.averagespeed <= challenger.averagespeed}">
+        {{thisuser.averagespeed}} mph
+      </ion-col>
+      <ion-col width-50 class="text-right usertitle" [ngClass]="{'color-white': thisuser.averagespeed >= challenger.averagespeed}">
+        {{challenger.averagespeed}} mph
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="category-padding">
+      <ion-col class="text-center categorytitle no-padding-bottom">
+        Top Speed
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col width-50 class="text-left usertitle" [ngClass]="{'color-white': thisuser.maxspeed <= challenger.maxspeed}">
+        {{thisuser.maxspeed}} mph
+      </ion-col>
+      <ion-col width-50 class="text-right usertitle" [ngClass]="{'color-white': thisuser.maxspeed >= challenger.maxspeed}">
+        {{challenger.maxspeed}} mph
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="category-padding">
+      <ion-col class="text-center categorytitle no-padding-bottom">
+        Average Elevation
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col width-50 class="text-left usertitle" [ngClass]="{'color-white': thisuser.elevation <= challenger.elevation}">
+        {{thisuser.elevation}} ft
+      </ion-col>
+      <ion-col width-50 class="text-right usertitle" [ngClass]="{'color-white': thisuser.elevation >= challenger.elevation}">
+        {{challenger.elevation}} ft
+      </ion-col>
+    </ion-row>
+
+  </div>
+
+
+</ion-content>

@@ -1,0 +1,40 @@
+<ion-navbar *navbar class="tab-nav">
+<ion-title>Verification</ion-title>
+</ion-navbar>
+
+<ion-content class="registerverify">
+    <!-- Body -->
+  <div class="verifyheader"></div>
+  <div class="verifycode transparent">
+    <form [ngFormModel]="registerVerifyForm">
+      <div class="messagewrap">
+        <span class="messagetxt">Once you receive your verification code, please enter it below and sign in.</span>
+      </div>
+      <ion-list>
+         <ion-item>
+          <ion-label stacked>Code</ion-label>
+          <ion-input ngControl="code" type="text" placeholder="Enter verification code">
+          </ion-input>
+        </ion-item>
+        <p [hidden]="registerVerifyForm.controls.code.pristine || registerVerifyForm.controls.code.valid">Please provide a verification code</p>
+        <div class="buttonwrap text-center">
+          <button outline round (click)="handleDigitsVerify()" type="button" class="btn-full">Sign In</button>
+        </div>
+       </ion-list>
+    </form>
+  </div>
+
+  <div class="verifyresend">
+      <div class="resendwrap text-center">
+          <p class="resendtxt">Didn’t get the code? <button clear (click)="handleResendCode()">Tap to resend.</button></p>
+      </div>
+  </div>
+
+</ion-content>
+
+<!-- Footer -->
+<div id="setupfooter">
+    <div class="footernav">
+        <p class="text-muted">By creating an account, you agree to Podiim’s <button clear (click)="openTOS()">Terms of Service</button>, <button clear (click)="openPrivacy()">Privacy Policy</button>, <button clear (click)="openRewardsTerms()">Rewards Terms</button>. <button clear (click)="openAboutUs()">About Us</button>.</p>
+    </div>
+</div>

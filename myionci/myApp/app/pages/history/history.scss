@@ -1,0 +1,85 @@
+.history {
+  .container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .feedtitle {
+    font-weight: bold;
+    font-size: 14px;
+    color: $podiimtxt;
+  }
+
+  .feedinfo {
+    font-size: 13px;
+    color: white;
+  }
+
+  .feedwonpoints {
+    font-weight: bold;
+    font-size: 12px;
+    color: $podiimtxt;
+  }
+
+  .feeddesc {
+    font-weight: bold;
+    font-size: 14px;
+    color: $podiimtxt;
+  }
+
+  .vertical-padding {
+    padding: 9px 0px;
+  }
+
+  .feedeventtitle {
+    font-size: 12px;
+    color: $podiimtxt;
+  }
+
+  .feedevent {
+    font-size: 12px;
+    color: white;
+  }
+
+  .gold-border {
+    border: 2px solid gold;
+  }
+
+  .points-padding {
+    padding-top: 8px;
+  }
+
+  .row {
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+
+  ion-col{
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+
+  .item {
+    padding-left: 0px;
+  }
+
+  .item-inner {
+    padding-right: 0px;
+    border-bottom: 1px solid $list-sep-color;
+  }
+
+  ion-label {
+    margin: 4px 4px 4px 0;
+  }
+
+  ion-row {
+    padding: 0px;
+  }
+
+  ion-list > .item:last-child,
+  ion-list > ion-item-sliding:last-child .item {
+    border-bottom: 1px solid $list-sep-color;
+  }
+}

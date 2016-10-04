@@ -1,0 +1,26 @@
+<!-- SOMEONE JOINED PODIIM -->
+<ion-item-sliding>
+  <ion-item>
+    <ion-row center>
+      <ion-col width-20>
+        <ion-avatar item-left>
+          <img [src]="feedinfo.icon">
+        </ion-avatar>
+      </ion-col>
+      <ion-col width-80>
+        <div class="feedtitle">{{feedinfo.name}}</div>
+        <div class="feedinfo"><strong>({{feedinfo.nickname}} from {{feedinfo.where}})</strong> just joined Podiim.</div>
+      </ion-col>
+    </ion-row>
+  </ion-item>
+  <ion-item-options>
+    <button sl_challenge (click)="handleChallenge(feedinfo)">
+      <ion-icon name="timer" sl_icons></ion-icon>
+      Challenge
+    </button>
+    <button sl_friend (click)="handleFriend(feedinfo)">
+      <ion-icon name="contacts" sl_icons></ion-icon>
+      Friend
+    </button>
+  </ion-item-options>
+</ion-item-sliding>

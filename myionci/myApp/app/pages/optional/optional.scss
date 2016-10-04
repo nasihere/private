@@ -1,0 +1,56 @@
+.optional {
+  .optionalheader {
+    padding-top: 0%;
+  }
+
+  .optionalinfo {
+    padding-top: 5%;
+  }
+
+  .optionalinfo .buttonwrap {
+    padding-bottom: 20px;
+  }
+
+  .imagewrap {
+    position: relative;
+  }
+
+  .questionimages {
+    background-color: transparent;
+    background-image: url("/images/bg_optional.png");
+    background-size: cover;
+    height: 100px;
+    position:relative;
+  }
+
+  .setavatar {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    margin-left: -50px;
+  }
+
+  .setcover {
+    position: absolute;
+    top: 15%;
+    left: 85%;
+    width: 40px;
+    margin-left: -5px;
+    margin-top: 33px;
+  }
+
+  ion-list-header {
+    color: $podiimtxt;
+  };
+
+  .optionalinfo p {
+    margin-left: 15px;
+    color: $podiimtxt;
+  };
+
+  .toolbar-background {
+    background: green !important;
+  }
+
+}

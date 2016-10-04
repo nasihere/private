@@ -1,0 +1,132 @@
+.tab-challenges {
+  /*
+  ** Challenge/Feed
+  */
+  .challengeheader {
+    padding-top: 0%;
+  }
+
+  .challengephone {
+    padding-top: 0%;
+  }
+
+  .feedtitle {
+    font-weight: bold;
+    font-size: 14px;
+    color: $podiimtxt;
+  }
+
+  .feedinfo {
+    font-size: 12px;
+    color: white;
+  }
+
+  .feedwonpoints,
+  .feedpoints {
+    font-weight: bold;
+    font-size: 18px;
+    color: $podiimtxt;
+  }
+
+  .feedwonpoints {
+    font-size: 10px;
+  }
+
+  .feedwonpointsicon img {
+    height: 15px;
+  }
+
+  .feedeventtitle,
+  .feeddatetitle {
+    font-weight: bold;
+    font-size: 10px;
+    color: $podiimtxt;
+  }
+
+  .feedevent,
+  .feeddate {
+    font-size: 12px;
+    color: white;
+  }
+
+  /*
+  ** ADDITIONAL FEED STYLING
+  */
+  .container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .position-left {
+    position: absolute;
+    left: 15px;
+  }
+
+  .position-center {
+    position: absolute;
+    left: 50%;
+  }
+
+  .position-right {
+    position: absolute;
+    right: 15px;
+  }
+
+  .top-negative-margin{
+    margin-top: -5px;
+  }
+
+  .row {
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+
+  .no-vertical-padding {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+  }
+
+  ion-col{
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+
+  /*
+  ** ELEMENT STYLE OVERRIDES
+  */
+  .item {
+    padding-left: 0px;
+  }
+
+  .item-inner {
+    padding-right: 0px;
+    border-bottom: 1px solid $list-sep-color;
+  }
+
+  ion-label {
+    margin: 4px 4px 4px 0;
+  }
+
+  ion-row {
+    padding: 0px;
+  }
+
+  ion-list > .item:last-child,
+  ion-list > ion-item-sliding:last-child .item {
+    border-bottom: 1px solid $list-sep-color;
+  }
+}
+
+/*
+** Fix Segment Nav Info. & Search Bar
+*/
+.challenges-segments {
+  .toolbar-background {
+    background-color: $background-color;
+  }
+}
+
+.challenge-topinfo {
+  background-color: $background-color;
+}

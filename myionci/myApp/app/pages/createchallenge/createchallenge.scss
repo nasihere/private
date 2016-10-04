@@ -1,0 +1,93 @@
+.createchallenge {
+  .container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .top-padding {
+    padding-top: 20px;
+  }
+
+  .select-icon .select-icon-inner {
+      border-top: 8px solid;
+      border-right: 8px solid transparent;
+      border-left: 8px solid transparent;
+  }
+
+  .select-icon {
+      position: absolute;
+      right: 25px;
+      bottom: 16px;
+  }
+
+  .usertitle {
+    font-family: 'SF-UI-Text-Semibold';
+    font-size: 17px;
+    color: $podiimtxt;
+  }
+
+  .linktext {
+    font-family: 'SF-UI-Text-Semibold';
+    font-size: 17px;
+    color: aqua;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  .general-padding{
+    padding: 15px;
+  }
+
+  .checkbox-padding{
+    padding: 15px 10px 10px 10px;
+  }
+
+  .select-text {
+    color: white !important;
+  }
+
+  ion-list > .item:first-child {
+      border-top: none;
+  }
+
+  ion-list > .item:last-child {
+      border-bottom: none;
+  }
+
+  ion-list .item-inner {
+      border-bottom: none;
+  }
+
+  ion-list {
+      margin: -1px 0 20px 0;
+  }
+
+  ion-select {
+      padding: 12px 8px 13px 0px;
+  }
+
+  ion-label[stacked] {
+      font-size: 1.2rem;
+      margin-bottom: 0px;
+  }
+
+  .item-label-stacked .text-input {
+      color: white !important;
+  }
+
+  .button-outline {
+      border-width: 1px;
+      border-style: solid;
+      border-color: $podiim_yellow;
+      color: black;
+      background-color: $podiim_yellow;
+  }
+
+  .buttonwrap {
+    padding-bottom: 10%;
+  }
+}

@@ -1,0 +1,25 @@
+<!-- HISTORY GIFTED -->
+<ion-item-sliding>
+  <ion-item class="historygifted">
+    <ion-row class="vertical-padding">
+      <ion-col width-20 class="text-left points-padding">
+        <span class="feedwonpoints color-red">{{feedinfo.reward}}<br>Points</span>
+      </ion-col>
+      <ion-col width-50>
+        <div class="feeddesc">Gifted to {{feedinfo.name}}</div>
+        <div class="feedevent">{{feedinfo.date}}</div>
+      </ion-col>
+      <ion-col width-30 class="text-right">
+        <ion-avatar item-right>
+          <img [src]="feedinfo.icon">
+        </ion-avatar>
+      </ion-col>
+    </ion-row>
+  </ion-item>
+  <ion-item-options>
+    <button sl_chagain (click)="handleChallenge(feedinfo)">
+      <ion-icon name="timer" sl_icons></ion-icon>
+      Challenge
+    </button>
+  </ion-item-options>
+</ion-item-sliding>

@@ -1,0 +1,28 @@
+<!-- TOP ELEMENT WITH NOTIFICATIONS AND CHALLENGE BUTTON -->
+<div class="homenav">
+  <ion-row center>
+    <ion-col width-25>
+      <span class="homenava1">ACTIVE</span>
+      <span class="homenava2"><BR>CHALLENGES</span>
+    </ion-col>
+    <ion-col width-10>
+      <div>
+        <span class="homenavacnt">
+          <ion-badge secondary>5</ion-badge>
+        </span>
+      </div>
+    </ion-col>
+    <ion-col width-10>
+      <div>
+        <span class="homenavnotify">
+            <ion-badge danger>1</ion-badge>
+        </span>
+      </div>
+    </ion-col>
+    <ion-col width-55 class="homecreateachallenge">
+      <div (click)="handleCreateAChallenge()">
+        <img class="img-responsive img-right" alt="" src="build/images/startchallengbtn.png">
+      </div>
+    </ion-col>
+  </ion-row>
+</div>

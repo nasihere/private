@@ -1,0 +1,70 @@
+.tab-people {
+  .usertitle {
+    font-weight: bold;
+    font-size: 17px;
+    color: $podiimtxt;
+  }
+
+  .feedinfo {
+    font-size: 12px;
+    color: white;
+  }
+
+  .followerchk ion-icon,
+  .followingchk ion-icon,
+  {
+    font-size: 2.8em;
+    padding-right: 10px;
+  }
+
+  .item {
+    padding-left: 0px;
+  }
+
+  .item-inner {
+    padding-right: 0px;
+    border-bottom: 1px solid #565656;
+  }
+
+  ion-label {
+    margin: 4px 4px 4px 0;
+  }
+
+  ion-list > .item:last-child,
+  ion-list > ion-item-sliding:last-child .item {
+    border-bottom: 1px solid $list-sep-color;
+  }
+
+  ion-label{
+    white-space: normal;
+  }
+
+  /*
+  ** Make profile icon bigger
+  */
+  ion-avatar {
+    min-width: 4.0rem;
+    min-height: 4.0rem;
+    padding-top: 2px;
+  }
+
+  ion-avatar img {
+    max-width: 4.0rem;
+    max-height: 4.0rem;
+    border-radius: 2.0rem;
+  }
+}
+
+/*
+** Fix Segment Nav Info. & Search Bar
+*/
+.people-segments {
+  .toolbar-background {
+    background-color: $background-color;
+    border: 0;
+  }
+}
+
+.people-topinfo {
+	background-color: $background-color;
+}

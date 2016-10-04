@@ -1,0 +1,80 @@
+<ion-navbar *navbar class="tab-nav">
+<ion-title>Optional Information</ion-title>
+  <ion-buttons end>
+    <button (click)="handleSkipOptional()">
+      <span primary>Skip</span>
+    </button>
+  </ion-buttons>
+</ion-navbar>
+
+<ion-content class="optional">
+  <!-- Body -->
+  <div class="optionalheader"></div>
+  <div class="optionalinfo">
+    <form [ngFormModel]="optionalForm">
+      <ion-list>
+        <div class="questionimages">
+          <div class="imagewrap">
+            <img (click)="handleSetAvatar()" alt="" class="img-responsive setavatar" src="build/images/set_avatar.png">
+            <img (click)="handleSetCover()" alt="" class="img-responsive setcover" src="build/images/set_cover.png">
+          </div>
+        </div>
+        <ion-item>
+          <ion-label stacked>Country Code</ion-label>
+          <ion-select [(ngModel)]="countrycode">
+            <ion-option value="US" checked="true">United States</ion-option>
+            <ion-option value="GB">United Kingdon</ion-option>
+          </ion-select>
+        </ion-item>
+        <p [hidden]="optionalForm.controls.countrycode.untouched || optionalForm.controls.countrycode.valid">Please select your Country</p>
+        <ion-item>
+          <ion-label stacked>State</ion-label>
+          <ion-select [(ngModel)]="state">
+            <ion-option value="CA" checked="true">California</ion-option>
+            <ion-option value="NY">New York</ion-option>
+          </ion-select>
+        </ion-item>
+        <p [hidden]="optionalForm.controls.state.untouched || optionalForm.controls.state.valid">Please select your State</p>
+        <ion-item>
+          <ion-label stacked>City</ion-label>
+          <ion-input ngControl="city" type="text" placeholder="Enter a city">
+          </ion-input>
+        </ion-item>
+        <p [hidden]="optionalForm.controls.city.pristine || optionalForm.controls.city.valid">Please provide a City</p>
+        <ion-list-header>
+          Activities
+        </ion-list-header>
+          <ion-item>
+            <ion-label>Cycling</ion-label>
+            <ion-toggle energized value="cycling"></ion-toggle>
+          </ion-item>
+        <ion-item>
+          <ion-label>Running</ion-label>
+          <ion-toggle energized value="running"></ion-toggle>
+        </ion-item>
+        <ion-item>
+          <ion-label>Walking</ion-label>
+          <ion-toggle energized value="walking"></ion-toggle>
+        </ion-item>
+        <ion-list-header>
+          Opt-in
+        </ion-list-header>
+        <ion-item>
+          <ion-label>Contact you via email</ion-label>
+          <ion-toggle checked="true"></ion-toggle>
+        </ion-item>
+        <div class="buttonwrap text-center">
+          <button outline round (click)="handleOptionalDone()" type="button" class="btn-full">Done</button>
+        </div>
+      </ion-list>
+    </form>
+  </div>
+
+</ion-content>
+
+<!-- Footer -->
+<div id="setupfooter">
+  <div class="footernav">
+    <p class="text-muted">By creating an account, you agree to Podiim’s <button clear (click)="openTOS()">Terms of Service</button>, <button clear (click)="openPrivacy()">Privacy Policy</button>, <button clear (click)="openRewardsTerms()">Rewards Terms</button>. <button clear (click)="openAboutUs()">About Us</button>.</p>
+  </div>
+</div>

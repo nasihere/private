@@ -1,0 +1,40 @@
+  <ion-content (click)="close()" class="transparent-background">
+  	<div (click)="preventClose($event)" class="tab-more transparent-background">
+  		<div padding class="more-modal-style">
+			<ion-list style="margin-bottom: 0px;">
+				<ion-item (click)="openFAQ()" class="moreregular">
+					FAQ
+				</ion-item>
+				<ion-item (click)="openAboutUs()" class="moreregular">
+					About Us
+				</ion-item>
+				<ion-item (click)="openContactUs()" class="moreregular">
+					Contact Us
+				</ion-item>
+				<ion-item (click)="openTOS()" class="moreregular">
+					Terms of Service
+				</ion-item>
+				<ion-item (click)="openPrivacy()" class="moreregular">
+					Privacy Policy
+				</ion-item>
+				<ion-item (click)="openRewardsTerms()" class="moreregular">
+					About Rewards
+				</ion-item>
+				<ion-item (click)="goToProfile()" class="morebold">
+					My Profile
+				</ion-item>
+				<ion-item (click)="goToNotifications()" class="morebold">
+					Notifications
+					<ion-badge danger item-right>{{notificationstxt}}</ion-badge>
+				</ion-item>
+				<ion-item (click)="goToSettings()" class="morebold">
+					Settings
+				</ion-item>
+				<ion-item (click)="logOut()" class="morelogout">
+					Logout
+				</ion-item>
+			</ion-list>
+		</div>
+	</div>
+  </ion-content>
+

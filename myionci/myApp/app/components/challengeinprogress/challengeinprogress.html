@@ -1,0 +1,73 @@
+<!-- SOMEONE CHALLENGED YOU -->
+<ion-item-sliding>
+  <ion-item>
+    <ion-row center>
+      <ion-col width-20 class="no-vertical-padding">
+        <ion-avatar item-left>
+          <img [src]="feedinfo.icon">
+        </ion-avatar>
+      </ion-col>
+      <ion-col width-50 *ngIf="(feedinfo.name == userprofile.name)">
+        <div class="feedtitle">-- YOU --</div>
+        <div class="feedinfo">have accepted<br><span class="feedtitle">{{feedinfo.name_from}}'s</span> challenge...</div>
+      </ion-col>
+      <ion-col width-50 *ngIf="(!(feedinfo.name == userprofile.name))">
+        <div class="feedtitle">{{feedinfo.name}}</div>
+        <div class="feedinfo">has accepted this challenge...</div>
+      </ion-col>
+      <ion-col class="col-30 text-right">
+        <ion-avatar item-right>
+          <img [src]="feedinfo.icon_from">
+        </ion-avatar>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col width-20>
+      </ion-col>
+      <ion-col width-33>
+        <div class="feeddatetitle">STARTS AT</div>
+        <div class="feeddate">{{feedinfo.start}}</div>
+      </ion-col>
+      <ion-col width-33>
+        <div class="feeddatetitle">END ON</div>
+        <div class="feeddate">{{feedinfo.end}}</div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col width-20>
+      </ion-col>
+      <ion-col width-50>
+        <div class="feedeventtitle">{{feedinfo.type | uppercase}}</div>
+        <div class="feedevent">{{feedinfo.description}}</div>
+      </ion-col>
+      <ion-col class="col-30 text-right">
+        <span class="feedwonpoints">{{feedinfo.reward}}</span>
+          <span class="feedwonpointsicon">
+              <img alt="" src="build/images/podiumpoints_sm.png">
+          </span>
+      </ion-col>
+    </ion-row>
+  </ion-item>
+  <ion-item-options>
+    <button sl_counter (click)="handleNewChallenge(feedinfo)" *ngIf="(feedinfo.name == userprofile.name)">
+      <ion-icon name="timer" sl_icons></ion-icon>
+      Challenge<br>{{feedinfo.name_from}}<br>Back
+    </button>
+    <button sl_complete (click)="handleCompleted(feedinfo)" *ngIf="(feedinfo.name == userprofile.name)">
+      <ion-icon name="flag" sl_icons></ion-icon>
+      Complete<br>Challenge
+    </button>
+    <button sl_counter (click)="handleNewChallenge(feedinfo)" *ngIf="(!(feedinfo.name == userprofile.name))">
+      <ion-icon name="timer" sl_icons></ion-icon>
+      New<br>Challenge
+    </button>
+    <button sl_smacktalk (click)="handleSmackTalk(feedinfo)" *ngIf="(!(feedinfo.name == userprofile.name))">
+      <ion-icon name="flash" sl_icons></ion-icon>
+      Smack Talk
+    </button>
+    <button sl_socialize (click)="handleSocialize(feedinfo)">
+      <ion-icon name="chatbubbles" sl_icons></ion-icon>
+      Socialize
+    </button>
+  </ion-item-options>
+</ion-item-sliding>

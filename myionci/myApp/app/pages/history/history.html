@@ -1,0 +1,31 @@
+<ion-navbar *navbar class="tab-nav">
+  <ion-title>History</ion-title>
+</ion-navbar>
+
+<ion-content class="history">
+  <!-- Body -->
+
+  <ion-list class="container">
+    <div *ngFor="#result of allhistory; #i = index">
+      <div [ngSwitch]="result.historytype">
+        <template [ngSwitchWhen]="'won'">
+          <historywon [feedinfo]="result"></historywon>
+        </template>
+        <template [ngSwitchWhen]="'lost'">
+          <historylost [feedinfo]="result"></historylost>
+        </template>
+        <template [ngSwitchWhen]="'purchase'">
+          <historypurchase [feedinfo]="result"></historypurchase>
+        </template>
+        <template [ngSwitchWhen]="'gifted'">
+          <historygifted [feedinfo]="result"></historygifted>
+        </template>
+        <template ngSwitchDefault>
+        </template>
+      </div>
+    </div>
+  </ion-list>
+
+
+</ion-content>
+
